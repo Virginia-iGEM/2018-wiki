@@ -31,7 +31,7 @@ Contains all webcontent that will be found on http://2018.igem.org/Team:Virginia
 
 - Modify `gulpfile.js` so that separate directories, `build-dev` and `build-live` are created for each respective build.
   - Modify `gulpfile.js` so that the `default` task runs both `dev` and `live` builds independently, pushing them into to `bulid-dev` and `build-live` respectively.
-- Fix MathJax with [#10 - Misc from this article](https://2016.igem.org/Team:Peshawar/Wiki)
+- [Completed] Fix MathJax with [#10 - Misc from this article](https://2016.igem.org/Team:Peshawar/Wiki) 
 - Modify dev/html.js so that it also accepts markdown files.
   - The code's there, just commented out; need to keep markdown processor from mangling `<!DOCTYPE>` tag.
   - Should probably compile markdown files exclusively and load them in using templates.
