@@ -100,7 +100,7 @@ Our tool does a few important things to standardize editing the wiki through a s
 
 Our build system supports two different build environments: `dev - development`, meant for running the wiki on your local machine, and `live`, which produces content that can be automatically uploaded to your team's iGEM Wiki page.
 
-In order to build both, you will need to first install [Node.js](https://nodejs.org/), then install all Node packages listed under [Build Dependencies](https://github.com/Mantissa-23/VGEM-2018/tree/master/wiki#build-dependencies). This can be done by first entering the `wiki` directory, e.g. with `cd wiki` and entering the following commands in any console with npm on its path:
+In order to build both, you will need to first install [Node.js](https://nodejs.org/), then install all Node packages listed under [Build Dependencies](https://github.com/Virginia-iGEM/2018-wiki/blob/master/package.json). This can be done by first entering the `wiki` directory, e.g. with `cd wiki` and entering the following commands in any console with npm on its path:
 
 `npm install`
 
