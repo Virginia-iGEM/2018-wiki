@@ -83,7 +83,7 @@ This is an interactive presentation that gives the reader an intuition for what 
 7. User is left to play around with the sandbox all they want. A little flashing blue arrow at the bottom of the game prompts them to scroll down to read about the project.
 
 ## 6 Build Tool 
-## `igemwiki-transform`
+`igemwiki-transform`
 
 Note: Name is tentative and should probably get a vote. You should probably also make this paragraph less passive-aggressive.
 
