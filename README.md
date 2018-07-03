@@ -6,15 +6,15 @@ Contains all webcontent that will be found on http://2018.igem.org/Team:Virginia
 
 ## 2 Table of Contents
 
-1. **Description**
-2. **Table of Contents**
-3. **Todo**: Fine-grained todo list. _Look here if you need something to do._
-4. **Roadmap:** Long-term task lisk. Broadly outlines what is needed to bring the wiki to completion.
-5. **Interactive**: Section describing the interactive component that will be the centerpiece of our home page.
-6. **Build-Tool**: Section for `wiki-competent`, used to automate preprocessing of files and pushing them to the iGEM wiki.
-7. **Build Dependencies**: Node Package Manager (NPM) packages required to run the build tool.
-8. **Live Dependencies**: Bower packages that must be uploaded to the iGEM wiki for our content to function properly.
-9. **Attributions and Works Cited**
+1. [**Description**](#1-description)
+2. [**Table of Contents**](#2-table-of-contents)
+3. [**Todo**](#3-todo): Fine-grained todo list. _Look here if you need something to do._
+4. [**Roadmap**](#4-roadmap): Long-term task lisk. Broadly outlines what is needed to bring the wiki to completion.
+5. [**Interactive**](#5-interactive): Section describing the interactive component that will be the centerpiece of our home page.
+6. [**Build Tool**](#6-build-tool): Section for `wiki-competent`, used to automate preprocessing of files and pushing them to the iGEM wiki.
+7. [**Build Dependencies**](#7-build-dependencies): Node Package Manager (NPM) packages required to run the build tool.
+8. [**Live Dependencies**](#8-live-dependencies): Bower packages that must be uploaded to the iGEM wiki for our content to function properly.
+9. [**Attributions and Works Cited**](#9-attributions-and-works-cited)
 
 ## 3 Todo
 
@@ -82,7 +82,8 @@ This is an interactive presentation that gives the reader an intuition for what 
 6. Upon redoing the experiment, they'll find that nearly all the bacteria flash
 7. User is left to play around with the sandbox all they want. A little flashing blue arrow at the bottom of the game prompts them to scroll down to read about the project.
 
-## 6 Build Tool: `igemwiki-transform`
+## 6 Build Tool 
+## `igemwiki-transform`
 
 Note: Name is tentative and should probably get a vote. You should probably also make this paragraph less passive-aggressive.
 
