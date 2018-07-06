@@ -9,12 +9,11 @@
   "keywords": [],
   "author": "Dylan Culfogienis",
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "bower": "^1.8.4",
     "gulp": "github:gulpjs/gulp#4.0",
-    "igem-wikibrick": "github:Virginia-iGEM/igem-wikibrick"
+    "igem-wikibrick": "git+https://github.com/Virginia-iGEM/igem-wikibrick.git"
   },
   "repository": {
     "type": "git",
@@ -23,6 +22,5 @@
   "bugs": {
     "url": "https://github.com/Mantissa-23/VGEM-2018/issues"
   },
-  "homepage": "https://github.com/Mantissa-23/VGEM-2018#readme",
-  "browserslist": "defaults"
+  "homepage": "https://github.com/Mantissa-23/VGEM-2018#readme"
 }
