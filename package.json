@@ -14,7 +14,8 @@
     "bower": "^1.8.4",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-hub": "^0.8.0",
-    "igem-wikibrick": "git+https://github.com/Virginia-iGEM/igem-wikibrick.git"
+    "igem-wikibrick": "git+https://github.com/Virginia-iGEM/igem-wikibrick.git",
+    "string-format": "^2.0.0"
   },
   "repository": {
     "type": "git",
