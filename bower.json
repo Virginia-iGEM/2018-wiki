@@ -5,7 +5,7 @@
   "authors": [
     "Mantissa-23 <dylanculfogienis@gmail.com>"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://github.com/Mantissa-23/VGEM-2018",
   "private": true,
   "ignore": [
@@ -17,8 +17,6 @@
   ],
   "dependencies": {
     "fontawesome": "^5.0.13",
-    "bourbon": "^5.0.1",
-    "neat": "^2.1.0",
     "jquery": "^3.3.1"
   }
 }
