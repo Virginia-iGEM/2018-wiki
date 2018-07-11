@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="dist/js/vendor.js"></script>
+  <!--link rel="stylesheet" href="dist/css/vendor.css"-->
   <script>
     $(function() {
-      $('#common-head').replaceWith('templates/head.html');
+      $('#virginia-header').load('./templates/header.html');
+      $('#virginia-footer').load('./templates/footer.html');
     })
   </script>
-  <div id='#common-head'></div>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/wiki.js"></script>
   <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -17,7 +23,7 @@
     <p>Placeholder for iGEM Navbar</p>
   </div>
   <div id="virginia-header"></div>
-  <div id="main" class="thetop">
+  <div id="main" class="top">
       <!--Images-->
     <div id="text">
       <h1> Project Description</h1>
