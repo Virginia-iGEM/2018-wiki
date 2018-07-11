@@ -38,10 +38,18 @@ img {
     width: auto;
     height: auto;
     position: relative;
-    @include grid-container;
+    //@include grid-container;
     background-color: $background-light-color;
     //@include grid-visual;
     
+    h1 {
+        padding: 3% 1%;
+    }
+    p {
+        margin: 1%;
+        line-height: 2em;
+    }
+    /*
     div#media{    
         @include grid-column(4, $grid-content);
         text-align: center;
@@ -50,16 +58,8 @@ img {
         bottom: 20px;
     }
     div#text{
-        @include grid-column(8, $grid-content);
-        h1 {
-            padding: 3% 1%;
-        }
-        p {
-            margin: 1%;
-            line-height: 2em;
-        }
     }
-    
+    */
 }
 
 #media {
