@@ -35,7 +35,9 @@ var login = function(logincount) {
                     login(logincount).then(resolve);
                 }
                 else{
+                    console.log("Try running gulp publish again.");
                     throw error;
+                    resolve();
                 }
             });
         }

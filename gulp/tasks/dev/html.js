@@ -91,7 +91,9 @@ relative2absolute = function($, file) {
         // Remove iGEM Navbar Placeholder
         removeplaceholders = $('#igem-navbar-placeholder').replaceWith('');
 
-        Promise.all([images, stylesheets, scripts, index, links, removeplaceholders]).then(resolve);
+        Promise.all([images, stylesheets, scripts, index, links, removeplaceholders]).then(function(){
+            console.log("HTML is done with URL replacement.")
+        }).then(resolve);
     });
 }
 // Function shared by all HTML processing tasks for development builds. 

@@ -12,7 +12,7 @@ var targets = require(global.targets);
 var srcs = targets.buildsrc;
 var dests = targets.buildtarget;
 
-// Task to stage library JS, such as JQuery, Bootstrap and any future live dependencies.
+// Task to stage library JS, such as JQuery, Bourbon and Neat and any future live dependencies.
 // Note: See bower.json for exceptions important to successfully uploading bootstrap.
 gulp.task('build:bower:js', () => gulp
     .src(mainBowerFiles('**/*.js'), {base: 'bower_components' })
