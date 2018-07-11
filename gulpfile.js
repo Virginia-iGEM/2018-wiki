@@ -1,8 +1,7 @@
-var gulp = require('igem-wikibrick/gulpfile');
-var path = require('path');
+var gulp = require('igem-wikibrick/gulpfile'); // Require gulp from the igem-wikibrick module
+var path = require('path'); // Need path to to absolutify dirname
 
-global.wikibrick = require('./config')(path.resolve(__dirname)); // Pass in local directory name
-
-var config = global.wikibrick;
-
-//console.log(config.browsersync.development.server);
+// Pass in local directory name, needed for configuration generation
+// for igem-wikibrick. This same configuration file is made a global
+// variable, so you can use it in your own gulp tasks.
+global.wikibrick = require('./config')(path.resolve(__dirname)); 
