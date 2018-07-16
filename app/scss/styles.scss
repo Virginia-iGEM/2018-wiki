@@ -35,7 +35,8 @@ img {
     );
     color: $text-dark-color;
     padding: 1% 1%;
-    width: auto;
+    width: 974px;
+    margin: 0 auto;
     height: auto;
     position: relative;
     //@include grid-container;
@@ -46,7 +47,7 @@ img {
         padding: 3% 1%;
     }
     p {
-        margin: 2%;
+        //margin: 2%;
         line-height: 2em;
     }
     ul{
