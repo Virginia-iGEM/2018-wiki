@@ -13,7 +13,8 @@ $text-dark-color:                 #666666;
 $link-color:                #EB5F0C;
 */
 
-/* Cherenkov Colors
+ /*Cherenkov Colors*/
+ /*
 $background-dark-color:#282828;
 $background-light-color:#C3C3D8;
 $accent-color: #BFFBF9;
@@ -33,7 +34,19 @@ $text-dark-color: #FFF0EF;
 $link-color: #FBB645;
 */
 
+/*Clean theme*/
+$background-dark-color: #4484CE;
+$background-light-color: rgb(255,255,255);
+$accent-color: #F19F4D;
+$accent-light-color: #F9CF00;
+$text-light-color: rgb(255, 255, 255);
+$text-dark-color: #0A1612;
+$link-color: rgb(255, 218, 159);
+
+
+
 // Current site colors
+/*
 $background-dark-color: rgb(37, 37, 37);
 $background-light-color: rgb(247, 245, 233);
 $accent-color: rgb(44, 106, 148);
@@ -41,6 +54,7 @@ $accent-light-color: rgb(0, 195, 255);
 $text-light-color: rgb(255, 253, 255);
 $text-dark-color: rgb(129, 127, 116);
 $link-color: rgb(255, 218, 159);
+*/
 
 $breakpoint: 1000px; // If the screen is under this width, switch to mobile view
 
