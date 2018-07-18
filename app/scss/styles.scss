@@ -14,7 +14,8 @@ div#textbody{
     margin: 0;
     padding: 0;
     border: 0;
-}
+    overflow: hidden;
+    }
 
 a {
     text-decoration: none;
@@ -41,13 +42,12 @@ img {
         gutter: 60px,
         color: blue,
     );
-    color: $text-dark-color;
+    // color: $text-dark-color;
     padding: 1% 1%;
     width: 974px;
     margin: 0 auto;
     height: auto;
     position: relative;
-    //@include grid-container;
     background-color: $background-light-color;
     //@include grid-visual;
     
