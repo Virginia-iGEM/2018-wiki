@@ -13,6 +13,7 @@ a {
     color: $accent-color;
     transition: all 0.2s ease-in-out;
     &:hover {
+        text-decoration: none;
         color: $accent-light-color;
         text-shadow: 0px 0px 8px $accent-light-color;
     }
@@ -27,6 +28,9 @@ img {
 }
 
 #main {
+    font-size: $font-size;
+    font-family: $font-family;
+
     height: 100%;
     $grid-content: (
         columns: 12,

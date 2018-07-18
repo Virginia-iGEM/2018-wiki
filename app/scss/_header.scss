@@ -17,10 +17,12 @@
         gutter: 0px,
     );
 
+    font-size: $font-size;
+    font-family: $font-family;
+
     // BEGIN STYLING
     &, * {
         box-sizing: border-box; // Use box sizing for entire navbar to avoid clipping
-        font-size: 1em;
     }
     // Stick to top of window
     position: sticky; // Stick to top of screen
