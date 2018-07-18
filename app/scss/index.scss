@@ -13,10 +13,13 @@
 
     div {
         //@include grid-visual;
+        /*
         @include grid-column(6);
         @include grid-media($category-grid) {
             @include grid-column(2);
         }
+        */
+
         position: relative;
 
         a {

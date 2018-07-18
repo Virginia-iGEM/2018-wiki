@@ -2,7 +2,7 @@
 
 /*Applies to all*/
 body, #mw-content-text {
-    font-family: "Lato";
+    font-family: $font-family;
     margin: 0;
     padding: 0;
     border: 0;
@@ -26,24 +26,45 @@ img {
     max-width: 100%;
     overflow: hidden;
 }
+.template{
+    background-size: cover;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}
+
+#text{
+    background-color: $template-dark-color;
+
+}
+
+hr {
+    border:.75px solid #4484CE;
+}
 
 #main {
     font-size: $font-size;
     font-family: $font-family;
-
     height: 100%;
-    $grid-content: (
-        columns: 12,
+    //@include grid-container;
+    
+    img {
+        width: 100%;
+    }
+    display: grid;
+    /* 3 columns*/
+    grid-template-columns: 700px 400px 200px;
+    /*    $grid-content: (
+        columns: 6,
         gutter: 60px,
         color: blue,
-    );
+    );*/
     color: $text-dark-color;
-    padding: 1% 1%;
-    width: 974px;
+    //padding: 1% 5%;
+    //width: 5000px;
     margin: 0 auto;
     height: auto;
     position: relative;
-    //@include grid-container;
     background-color: $background-light-color;
     //@include grid-visual;
     
