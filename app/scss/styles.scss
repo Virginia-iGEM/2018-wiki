@@ -8,20 +8,12 @@ body, #mw-content-text {
     border: 0;
 }
 
-div#textbody{
-    font-family: "Lato";
-    font-size: medium;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    overflow: hidden;
-    }
-
-a {
+a, a:visited {
     text-decoration: none;
     color: $accent-color;
     transition: all 0.2s ease-in-out;
     &:hover {
+        text-decoration: none;
         color: $accent-light-color;
         text-shadow: 0px 0px 8px $accent-light-color;
     }
@@ -36,6 +28,9 @@ img {
 }
 
 #main {
+    font-size: $font-size;
+    font-family: $font-family;
+
     height: 100%;
     $grid-content: (
         columns: 12,
