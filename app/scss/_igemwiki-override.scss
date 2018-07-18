@@ -7,6 +7,10 @@ $igem-navbar-height: 16px; // Variable for the height of the required iGEM Navba
     display: none;
 }
 
+#body{
+    font: sans-serif;
+}
+
 #content { // Make content behave like one would expect a body to
     width: 100vw;
     padding: 0px;

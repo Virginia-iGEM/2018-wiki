@@ -8,6 +8,14 @@ body, #mw-content-text {
     border: 0;
 }
 
+div#textbody{
+    font-family: "Lato";
+    font-size: medium;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 a {
     text-decoration: none;
     color: $accent-color;
