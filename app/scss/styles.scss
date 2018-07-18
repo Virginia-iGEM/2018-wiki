@@ -8,7 +8,7 @@ body, #mw-content-text {
     border: 0;
 }
 
-a {
+a, a:visited {
     text-decoration: none;
     color: $accent-color;
     transition: all 0.2s ease-in-out;
