@@ -42,7 +42,7 @@ ul {
 }
 
 #igem-navbar-placeholder { // Placeholder that "subs in" for the iGEM navbar on dev builds
-    height: $igem-navbar-height - 2px;
+    height: $igem-navbar-height;
     position: fixed;
     display: block;
     background-color: #383838;
