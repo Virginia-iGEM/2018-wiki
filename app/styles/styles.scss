@@ -393,6 +393,7 @@ header {
     0% {
         opacity: 0;
         @include transform(scale(.5));
+<<<<<<< Updated upstream
     }
 
     60% {
@@ -428,6 +429,43 @@ header {
         display: inline-block;
     }
 
+=======
+    }
+
+    60% {
+        opacity: 1;
+        @include transform(scale(1.2));
+    }
+
+    100% {
+        @include transform(scale(1));
+    }
+}
+
+.cd-timeline-content {
+    width:250px;
+    //height:100px;
+    position: relative;
+    margin-left: 100px;
+    background: $color-3;
+    @include border-radius;
+    padding: 1em;
+    box-shadow: 0 3px 0 darken($background, 5%);
+    @include clearfix;
+
+    h2 {
+        color: $color-1;
+    }
+
+    p, .cd-read-more, .cd-date {
+        @include font-size(13px);
+    }
+
+    .cd-read-more, .cd-date {
+        display: inline-block;
+    }
+
+>>>>>>> Stashed changes
     p {
         margin: 1em 0;
         line-height: 1.6;
@@ -537,6 +575,7 @@ header {
     /* inverse bounce effect on even content blocks */
     .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
         @include animation(cd-bounce-2-inverse .6s);
+
     }
 }
 
