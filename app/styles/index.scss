@@ -12,13 +12,6 @@
     overflow: hidden;
 
     div {
-        //@include grid-visual;
-        /*
-        @include grid-column(6);
-        @include grid-media($category-grid) {
-            @include grid-column(2);
-        }
-        */
 
         position: relative;
 
@@ -68,11 +61,5 @@
     display: none;
     @include circular;
     background-color: $background-dark-color;
-    //margin: 10%;
-    //position: absolute;
-    //top: 50%;
-    //left: 50%;
-    //width: 50%;
-    //height: 50%;
     transform: translate(-50%, -50%);
 }

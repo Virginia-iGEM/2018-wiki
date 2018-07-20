@@ -7,27 +7,30 @@
 </head>
 
 <body>
-  {{> navbar}}
-    <!--Gutter for timeline-->
-    <div id="timeline" class="template">
+  <div section="thirds-grid">
+    {{> navbar}}
+      <!--Gutter for timeline-->
+    <div id="a-single-column" class="template">
       {{> timeline}}
     </div> 
-  <div id="main" class="top">
-      <!--Images-->
-    {{> contentsub}}
-    <!--Gutter for images-->
-    <div id="image" class="template">
+    <div id="a-single-column" class="top">
+        <!--Content-->
+      {{> contentsub}}
+    </div>
+      <!--Gutter for images-->
+    <div id="a-single-column" class="template">
       <h1>Images</h1>
     </div>
 
 
-    <div id="media">
-      <div class="petri-dish">
+      <div id="media">
+        <div class="petri-dish">
 
+        </div>
+      <!--div-->
       </div>
-      <!--Content and text-->
-    </div>
-  </div>
+      <!--div class="thirds-grid-->"
+    </section>
 
 <!--
   <div class="category-gallery">
@@ -70,7 +73,8 @@
   </div>
 -->
 
-  {{> footer}}
+{{> footer}}
+
 </body>
 </html>
 
