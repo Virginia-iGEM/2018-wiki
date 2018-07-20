@@ -19,6 +19,7 @@ a, a:visited {
     }
 }
 
+
 img {
     width: auto; 
     height: auto;
@@ -43,52 +44,46 @@ hr {
 }
 
 #main {
-    font-size: $font-size;
-    font-family: $font-family;
-    height: 100%;
-    //@include grid-container;
+  @include common-style;
+  font-size: $font-size;
+  font-family: $font-family;
+  height: 100%;
+  //@include grid-container;
+  
+  img {
+      width: 100%;
+  }
+  display: grid;
+  /* 3 columns*/
+  grid-template-columns: 700px 20px 500px;
+  /*    $grid-content: (
+      columns: 6,
+      gutter: 60px,
+      color: blue,
+  );*/
+  color: $text-dark-color;
+  //padding: 1% 5%;
+  //width: 5000px;
+  margin: 0 auto;
+  height: auto;
+  position: relative;
+  background-color: $background-light-color;
+  //@include grid-visual;
     
-    img {
-        width: 100%;
-    }
-    display: grid;
-    /* 3 columns*/
-    grid-template-columns: 700px 20px 500px;
-    /*    $grid-content: (
-        columns: 6,
-        gutter: 60px,
-        color: blue,
-    );*/
-    color: $text-dark-color;
-    //padding: 1% 5%;
-    //width: 5000px;
-    margin: 0 auto;
-    height: auto;
-    position: relative;
-    background-color: $background-light-color;
-    //@include grid-visual;
-    
-    h1 {
-        padding: 3% 1%;
-    }
-    p {
-        //margin: 2%;
-        line-height: 2em;
-    }
-    ul{
-        padding-left: 2%;
-    }
-    /*
-    div#media{    
-        @include grid-column(4, $grid-content);
-        text-align: center;
-        position: absolute;
-        top: 40px;
-        bottom: 20px;
-    }
-    div#text{
-    }
-    */
+  ul{
+    padding-left: 2%;
+  }
+  /*
+  div#media{    
+      @include grid-column(4, $grid-content);
+      text-align: center;
+      position: absolute;
+      top: 40px;
+      bottom: 20px;
+  }
+  div#text{
+  }
+  */
 }
 
 #media {
