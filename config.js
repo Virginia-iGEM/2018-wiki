@@ -103,12 +103,23 @@ module.exports = function(root) {
     var userenv = argv.env || shortflag || 'dev'; // Try env variable, else fallback on shortflag, else assume we're in dev
     var environment = Object.assign(environments[userenv], {name: userenv});
 
+    const glossary = {
+        "quorom sensing": "Def1"
+    }
+
     var handlebarsHelpers = function(file, t) {
 
         return {
             contentpath: function(context) {
                 return path.posix.join('/content/', path.basename(file.path));
+            },
+            define: function(context) {
+                if (context in glossary) {
+                    var word_defination = glossary[context];
+                return `<div class="tooltip">${context}<span class="tooltiptext">${context}</span> </div>`;
+                }
             }
+
         }
     }
     return {
