@@ -7,13 +7,15 @@
 </head>
 
 <body>
-  <div section="thirds-grid">
+
     {{> navbar}}
+    <div section="thirds-grid">
       <!--Gutter for timeline-->
     <div id="a-single-column" class="template">
-      {{> timeline}}
+      <h1>Hello</h1>
+      <!--{{> timeline}}-->
     </div> 
-    <div id="a-single-column" class="top">
+    <div id="a-single-column" class="template">
         <!--Content-->
       {{> contentsub}}
     </div>
@@ -30,7 +32,7 @@
       <!--div-->
       </div>
       <!--div class="thirds-grid-->"
-    </section>
+
 
 <!--
   <div class="category-gallery">
@@ -72,9 +74,10 @@
     </div>
   </div>
 -->
-
-{{> footer}}
-
+  <div id="footer" class="template">
+    {{> footer}}
+  </div>
+  </div> 
 </body>
 </html>
 
