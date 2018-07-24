@@ -25,11 +25,13 @@ $grid-layout: (
     gutter: 2rem,
     );
 
-$grid-layout--tablet-up:(
+$grid-layout-tablet-up:(
     columns: 7,
     gutter: 2rem,
-    // media: "(min-width: 768px)",
+    media: "(min-width: 768px)",
     );
+
+/*Code referenced from https://neat.bourbon.io/examples/*/
 
 .thirds-grid {
     @include grid-container;
@@ -39,7 +41,7 @@ $grid-layout--tablet-up:(
   @include grid-column(1, $grid-layout);
   margin: 2rem;
 
-  @include grid-media($grid-layout--tablet-up){
+  @include grid-media($grid-layout-tablet-up){
     @include grid-column(1);
   }
 }
@@ -48,7 +50,7 @@ $grid-layout--tablet-up:(
   @include grid-column(1, $grid-layout);
   margin-bottom: 2rem;
 
-  @include grid-media($grid-layout--tablet-up){
+  @include grid-media($grid-layout-tablet-up){
     @include grid-column(2);
   }
 }
@@ -57,7 +59,7 @@ $grid-layout--tablet-up:(
   @include grid-column(1, $grid-layout);
   margin-bottom: 2rem;
 
-  @include grid-media($grid-layout--tablet-up){
+  @include grid-media($grid-layout-tablet-up){
     @include grid-column(4);
   }
 }
