@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512"
+   height="512"
+   viewBox="0 0 135.46666 135.46667"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="Gradients2.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient871"
+       inkscape:collect="always">
+      <stop
+         id="stop865"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:0.9848485" />
+      <stop
+         id="stop869"
+         offset="1"
+         style="stop-color:#00acdb;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient871"
+       id="radialGradient823"
+       cx="67.657738"
+       cy="229.34224"
+       fx="67.657738"
+       fy="229.34224"
+       r="67.846725"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.23183385,0,0,0.23183385,17.494615,175.63841)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="261.05827"
+     inkscape:cy="269.82267"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-161.53332)">
+    <path
+       style="fill:none;fill-opacity:1;stroke:#00acdb;stroke-width:3.68036222;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 42.073429,237.1697 c 4.123138,7.58435 9.93463,4.63332 9.93463,4.63332"
+       id="path891"
+       inkscape:connector-curvature="0" />
+    <circle
+       style="opacity:1;fill:url(#radialGradient823);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.22678745;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.9977925"
+       id="path815"
+       cx="33.179966"
+       cy="228.80769"
+       r="15.729167" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot828"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.33333588px;line-height:1.25;font-family:'Poiret One';-inkscape-font-specification:'Poiret One';letter-spacing:0px;word-spacing:0px;fill:#00acdb;fill-opacity:1;stroke:#00acdb;stroke-opacity:1"
+       transform="matrix(0.26458333,0,0,0.26458333,12.329605,164.95918)"><flowRegion
+         id="flowRegion830"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.33333588px;font-family:'Poiret One';-inkscape-font-specification:'Poiret One';fill:#00acdb;fill-opacity:1;stroke:#00acdb;stroke-opacity:1"><rect
+           id="rect832"
+           width="277.14285"
+           height="62.5"
+           x="167.5"
+           y="229.14285"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.33333588px;font-family:'Poiret One';-inkscape-font-specification:'Poiret One';fill:#00acdb;fill-opacity:1;stroke:#00acdb;stroke-opacity:1" /></flowRegion><flowPara
+         id="flowPara834"
+         style="font-size:53.33333588px;fill:#00acdb;fill-opacity:1;stroke:#00acdb;stroke-opacity:1">U O R U S</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Montserrat;-inkscape-font-specification:Montserrat;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="77.436005"
+       y="232.57912"
+       id="text838"><tspan
+         sodipodi:role="line"
+         id="tspan836"
+         x="77.436005"
+         y="232.57912"
+         style="stroke-width:0.26458332">  </tspan></text>
+  </g>
+</svg>
