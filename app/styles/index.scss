@@ -2,7 +2,7 @@
 
 // divides up the grid into three parts
 
-$thirds-grid:(
+/*$thirds-grid:(
     columns: 3,
     gutter: 60px,
     );
@@ -18,38 +18,33 @@ $thirds-grid:(
 $grid-layout: (
     columns: 1,
     gutter: 2rem,
-    );
-/*
-$grid-layout--tablet-up:(
-    columns: 5,
+    );*/
+
+$grid-layout: (
+    columns: 1,
     gutter: 2rem,
-    media: "(min-width: 768px)",
     );
 
-$custom-thirds-grid: (
-  columns: 3,
-  gutter: 60px,
-);
+$grid-layout--tablet-up:(
+    columns: 7,
+    gutter: 2rem,
+    // media: "(min-width: 768px)",
+    );
 
 .thirds-grid {
     @include grid-container;
 }
 
-.template {
-    @include grid-column(1, $custom-thirds-grid);
-}
-*/
-/*
-#timeline {
+#thirds-grid__timeline {
   @include grid-column(1, $grid-layout);
   margin: 2rem;
 
   @include grid-media($grid-layout--tablet-up){
-    @include grid-column(3);
+    @include grid-column(1);
   }
 }
 
-#images {
+#thirds-grid__images {
   @include grid-column(1, $grid-layout);
   margin-bottom: 2rem;
 
@@ -57,8 +52,17 @@ $custom-thirds-grid: (
     @include grid-column(2);
   }
 }
-*/
-#footer {
+
+#thirds-grid__content {
+  @include grid-column(1, $grid-layout);
+  margin-bottom: 2rem;
+
+  @include grid-media($grid-layout--tablet-up){
+    @include grid-column(4);
+  }
+}
+
+#thirds-grid__footer {
     @include grid-column(1, $grid-layout);
     margin-bottom: 2rem;
 }
