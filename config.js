@@ -106,7 +106,7 @@ module.exports = function(root) {
     var environment = Object.assign(environments[userenv], {name: userenv});
 
     const glossary = {
-        "quorom sensing": "Def1"
+        "quorum sensing": "Def1"
     }
 
     var handlebarsHelpers = function(file, t) {
@@ -117,8 +117,11 @@ module.exports = function(root) {
             },
             define: function(context) {
                 if (context in glossary) {
-                    var word_defination = glossary[context];
-                return `<div class="tooltip">${context}<span class="tooltiptext">${context}</span> </div>`;
+                    var word_definition = glossary[context];
+                    return `<div class="tooltip">${context}<span class="tooltiptext">${word_definition}</span> </div>`;
+                }
+                else {
+                    return context;
                 }
             }
 
@@ -126,7 +129,7 @@ module.exports = function(root) {
     }
 
     var markdownOptions = {
-
+        sanitize: false
     }
     return {
         teaminfo: teaminfo,
