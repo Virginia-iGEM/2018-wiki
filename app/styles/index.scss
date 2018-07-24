@@ -1,5 +1,68 @@
 @import "common";
 
+// divides up the grid into three parts
+
+$thirds-grid:(
+    columns: 3,
+    gutter: 60px,
+    );
+
+.thirds-grid {
+    @include grid-container;
+}
+
+#a-single-column {
+  @include grid-column(1, $thirds-grid);
+}
+
+$grid-layout: (
+    columns: 1,
+    gutter: 2rem,
+    );
+/*
+$grid-layout--tablet-up:(
+    columns: 5,
+    gutter: 2rem,
+    media: "(min-width: 768px)",
+    );
+
+$custom-thirds-grid: (
+  columns: 3,
+  gutter: 60px,
+);
+
+.thirds-grid {
+    @include grid-container;
+}
+
+.template {
+    @include grid-column(1, $custom-thirds-grid);
+}
+*/
+/*
+#timeline {
+  @include grid-column(1, $grid-layout);
+  margin: 2rem;
+
+  @include grid-media($grid-layout--tablet-up){
+    @include grid-column(3);
+  }
+}
+
+#images {
+  @include grid-column(1, $grid-layout);
+  margin-bottom: 2rem;
+
+  @include grid-media($grid-layout--tablet-up){
+    @include grid-column(2);
+  }
+}
+*/
+#footer {
+    @include grid-column(1, $grid-layout);
+    margin-bottom: 2rem;
+}
+
 .category-gallery {
     $category-grid: (
         gutter: 30px,
@@ -12,13 +75,6 @@
     overflow: hidden;
 
     div {
-        //@include grid-visual;
-        /*
-        @include grid-column(6);
-        @include grid-media($category-grid) {
-            @include grid-column(2);
-        }
-        */
 
         position: relative;
 
@@ -68,11 +124,5 @@
     display: none;
     @include circular;
     background-color: $background-dark-color;
-    //margin: 10%;
-    //position: absolute;
-    //top: 50%;
-    //left: 50%;
-    //width: 50%;
-    //height: 50%;
     transform: translate(-50%, -50%);
 }
