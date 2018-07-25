@@ -2,6 +2,78 @@
 @import "neat";
 
 /*Applies to all*/
+
+
+// divides up the grid into three parts
+
+/*$thirds-grid:(
+    columns: 3,
+    gutter: 60px,
+    );
+
+.thirds-grid {
+    @include grid-container;
+}
+
+#a-single-column {
+  @include grid-column(1, $thirds-grid);
+}
+
+$grid-layout: (
+    columns: 1,
+    gutter: 2rem,
+    );*/
+
+$grid-layout: (
+    columns: 1,
+    gutter: 2rem,
+    );
+
+$grid-layout-tablet-up:(
+    columns: 7,
+    gutter: 2rem,
+    media: "(min-width: 768px)",
+    );
+
+/*Code referenced from https://neat.bourbon.io/examples/*/
+
+.thirds-grid {
+    @include grid-container;
+}
+
+#thirds-grid__timeline {
+  @include grid-column(1, $grid-layout);
+  margin: 2rem;
+
+  @include grid-media($grid-layout-tablet-up){
+    @include grid-column(1);
+  }
+}
+
+#thirds-grid__images {
+  @include grid-column(1, $grid-layout);
+  margin-bottom: 2rem;
+
+  @include grid-media($grid-layout-tablet-up){
+    @include grid-column(2);
+  }
+}
+
+#thirds-grid__content {
+  @include grid-column(1, $grid-layout);
+  margin-bottom: 2rem;
+
+  @include grid-media($grid-layout-tablet-up){
+    @include grid-column(4);
+  }
+}
+
+#thirds-grid__footer {
+    @include grid-column(1, $grid-layout);
+    margin-bottom: 2rem;
+}
+
+
 body, #mw-content-text {
     font-family: $font-family;
     margin: 0;
@@ -18,20 +90,6 @@ a, a:visited {
         color: $accent-light-color;
         text-shadow: 0px 0px 8px $accent-light-color;
     }
-}
-// divides up the grid into three parts
-
-$thirds-grid:(
-    columns: 3,
-    gutter: 60px,
-    );
-
-.thirds-grid {
-    @include grid-container;
-}
-
-#a-single-column {
-  @include grid-column(1, $thirds-grid);
 }
 
 img {
@@ -138,10 +196,10 @@ $link: #acb7c0; // anchor tags
 $background: $background-light-color; // body background color
 
 $color-1: #303e49; // blue dark
-$color-2: #c03b44; // red
+$color-2: $accent-light-color; 
 $color-3: #ffffff; // white
-$color-4: #75ce66; // green
-$color-5: #f0ca45; // yellow
+$color-4: $accent-light-color; 
+$color-5: $accent-light-color; 
 
 // variables - fonts 
 
@@ -198,7 +256,7 @@ html * {
 }
 
 *, *:after, *:before {
-    @include box-sizing(border-box);
+    box-sizing: border-box;
 }
 
 body {
@@ -231,12 +289,13 @@ Modules - reusable parts of our design
 
 -------------------------------- */
 
-.cd-container { /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+/* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+.cd-container { 
     width: 90%;
     max-width: $L; // breakpoints inside partials > _layout.scss
     margin: 0 auto;
 
-    &::after { /* clearfix */
+    &::after { 
         content: '';
         display: table;
         clear: both;
@@ -329,19 +388,20 @@ header {
 }
 
 .cd-timeline-img {
-    position: absolute;
+    position: absolute; 
     top: 0;
     left: 0;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     box-shadow: 0 0 0 4px $color-3, inset 0 2px 0 rgba(#000, .08), 0 3px 0 4px rgba(#000, .05) ;
 
     img {
+        /*actual image inside the circle*/
         display: block;
-        width: 24px;
-        height: 24px;
-        position: relative;
+        width: 20px;
+        height: 20px;
+        position: absolute;
         left: 50%;
         top: 50%;
         margin-left: -12px;
@@ -376,33 +436,16 @@ header {
 
         .cssanimations &.bounce-in {
             visibility: visible;
-            @include animation(cd-bounce-1 .6s);
         }
     }
 }
 
 
-@include keyframes(cd-bounce-1) {
-    0% {
-        opacity: 0;
-        @include transform(scale(.5));
-    }
-
-    60% {
-        opacity: 1;
-        @include transform(scale(1.2));
-    }
-
-    100% {
-        @include transform(scale(1));
-    }
-}
-
 .cd-timeline-content {
-    width:250px;
+    width:100px;
     //height:100px;
     position: relative;
-    margin: 50px;
+    margin: 50px; //50px
     margin-left: 50px;
     background: $color-3;
     @include border-radius;
@@ -413,36 +456,12 @@ header {
     h2 {
         color: $color-1;
     }
+/**/
 
-    p, .cd-read-more, .cd-date {
-        @include font-size(13px);
-    }
-
-    .cd-read-more, .cd-date {
-        display: inline-block;
-    }
 
     p {
         margin: 1em 0;
         line-height: 1.6;
-    }
-
-    .cd-read-more {
-        float: right;
-        padding: .8em 1em;
-        background: $link;
-        color: $color-3;
-        @include border-radius;
-
-        .no-touch &:hover {
-            background-color: lighten($link, 5%);
-        }
-    }
-
-    .cd-date {
-        float: left;
-        padding: .8em 0;
-        opacity: .7;
     }
 
     &::before {
@@ -464,10 +483,6 @@ header {
         p {
             @include font-size(16px);
         }
-
-        .cd-read-more, .cd-date {
-            @include font-size(14px);
-        }
     }
 
     @include MQ(L) {
@@ -482,17 +497,6 @@ header {
             border-left-color: $color-3;
         }
 
-        .cd-read-more {
-            float: left;
-        }
-
-        .cd-date {
-            position: absolute;
-            width: 100%;
-            left: 122%;
-            top: 6px;
-            @include font-size(16px);
-        }
 
         .cd-timeline-block:nth-child(even) & {
             float: right;
@@ -504,16 +508,6 @@ header {
                 border-color: transparent;
                 border-right-color: $color-3;
             }
-
-            .cd-read-more {
-                float: right;
-            }
-
-            .cd-date {
-                left: auto;
-                right: 122%;
-                text-align: right;
-            }
         }
 
         .cssanimations &.is-hidden {
@@ -522,7 +516,6 @@ header {
 
         .cssanimations &.bounce-in {
             visibility: visible;
-            @include animation(cd-bounce-2 .6s);
         }
     }
 }
@@ -530,42 +523,12 @@ header {
 @include MQ(L) {
     /* inverse bounce effect on even content blocks */
     .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
-        @include animation(cd-bounce-2-inverse .6s);
     }
 }
 
-@include keyframes(cd-bounce-2) {
-    0% {
-        opacity: 0;
-        @include transform(translateX(-100px));
-    }
 
-    60% {
-        opacity: 1;
-        @include transform(translateX(20px));
-    }
-
-    100% {
-        @include transform(translateX(0));
-    }
-}
-
-@include keyframes(cd-bounce-2-inverse) {
-    0% {
-        opacity: 0;
-        @include transform(translateX(100px));
-    }
-
-    60% {
-        opacity: 1;
-        @include transform(translateX(-20px));
-    }
-
-    100% {
-        @include transform(translateX(0));
-    }
-}
 
 
 @import "header";
 @import "footer";
+@import "tooltips";
