@@ -116,10 +116,10 @@ img {
     font-size: $font-size;
     font-family: $font-family;
     height: 100%;
-
+/*
     img {
         width: 100%;
-    }
+    }*/
 
     margin: 0 auto;
     height: auto;
@@ -495,3 +495,4 @@ header {
 @import "header";
 @import "footer";
 @import "tooltips";
+@import "team";
