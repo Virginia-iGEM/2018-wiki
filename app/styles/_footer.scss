@@ -26,7 +26,6 @@ $accent        : $accent-light-color; //#c648c8;
         @include block-height($footer-height);
         * {
             float: left;
-            margin: auto 1rem;
         }
     }
     div.spacer {

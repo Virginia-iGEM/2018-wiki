@@ -37,7 +37,7 @@ $grid-layout-tablet-up:(
 
 /*Code referenced from https://neat.bourbon.io/examples/*/
 
-.thirds-grid {
+#thirds-grid {
     @include grid-container;
 }
 
@@ -74,13 +74,13 @@ $grid-layout-tablet-up:(
 }
 
 
-body, #mw-content-text {
+/*body, #mw-content-text {
     font-family: $font-family;
     margin: 0;
     padding: 0;
     border: 0;
 }
-
+*/
 a, a:visited {
     text-decoration: none;
     color: $accent-color;
@@ -116,10 +116,10 @@ img {
     font-size: $font-size;
     font-family: $font-family;
     height: 100%;
-
+/*
     img {
         width: 100%;
-    }
+    }*/
 
     margin: 0 auto;
     height: auto;
