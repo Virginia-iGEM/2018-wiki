@@ -37,7 +37,7 @@ $grid-layout-tablet-up:(
 
 /*Code referenced from https://neat.bourbon.io/examples/*/
 
-.thirds-grid {
+#thirds-grid {
     @include grid-container;
 }
 
@@ -74,13 +74,13 @@ $grid-layout-tablet-up:(
 }
 
 
-body, #mw-content-text {
+/*body, #mw-content-text {
     font-family: $font-family;
     margin: 0;
     padding: 0;
     border: 0;
 }
-
+*/
 a, a:visited {
     text-decoration: none;
     color: $accent-color;
@@ -111,7 +111,7 @@ img {
 
 }
 
-#main {
+#thirds-grid {
     @include common-style;
     font-size: $font-size;
     font-family: $font-family;
@@ -191,7 +191,6 @@ img {
 
 /*variables - colors*/
 
-$main-text: #7f8c97; // main text
 $link: #acb7c0; // anchor tags
 $background: $background-light-color; // body background color
 
@@ -201,10 +200,6 @@ $color-3: #ffffff; // white
 $color-4: $accent-light-color; 
 $color-5: $accent-light-color; 
 
-// variables - fonts 
-
-$primary-font: 'Droid Serif', serif;
-$secondary-font: 'Open Sans', sans-serif;
 
 // mixins - rem fallback - credits: http://zerosixthree.se/
 
