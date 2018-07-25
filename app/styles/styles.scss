@@ -111,7 +111,7 @@ img {
 
 }
 
-#main {
+#thirds-grid {
     @include common-style;
     font-size: $font-size;
     font-family: $font-family;
@@ -121,7 +121,6 @@ img {
         width: 100%;
     }
 
-    color: $text-dark-color;
     margin: 0 auto;
     height: auto;
     position: relative;

@@ -118,7 +118,7 @@ module.exports = function(root) {
             define: function(context) {
                 if (context in glossary) {
                     var word_definition = glossary[context];
-                    return `<div class="tooltip">${context}<span class="tooltiptext">${word_definition}</span> </div>`;
+                    return `<span class="tooltip">${context}<span class="tooltiptext">${word_definition}</span> </span>`;
                 }
                 else {
                     return context;
