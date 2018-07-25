@@ -106,7 +106,7 @@ module.exports = function(root) {
     var environment = Object.assign(environments[userenv], {name: userenv});
 
     const glossary = {
-        "quorum sensing": "Def1"
+        "quorum sensing": ["Short Def","Long Def"]
     }
 
     var handlebarsHelpers = function(file, t) {
@@ -117,8 +117,9 @@ module.exports = function(root) {
             },
             define: function(context) {
                 if (context in glossary) {
-                    var word_definition = glossary[context];
-                    return `<div class="tooltip">${context}<span class="tooltiptext">${word_definition}</span> </div>`;
+                    var word_short_definition = glossary[context][0];
+                    var word_long_definition = glossary[context][1];
+                    return `<div class="tooltip">${context}<span class="shortdef">${word_short_definition}</span><span class="longdef">${word_long_definition}</span> </div>`;
                 }
                 else {
                     return context;

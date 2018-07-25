@@ -121,7 +121,6 @@ img {
         width: 100%;
     }
 
-    color: $text-dark-color;
     margin: 0 auto;
     height: auto;
     position: relative;
@@ -249,39 +248,6 @@ $L:     1170px;
 Primary style
 
 -------------------------------- */
-
-html * {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-*, *:after, *:before {
-    box-sizing: border-box;
-}
-
-body {
-    font: {
-        size: 100%;
-        family: $primary-font;
-    }
-    color: $main-text;
-    background-color: $background;
-}
-
-a {
-    color: $link;
-    text-decoration: none;
-    font-family: $secondary-font;
-}
-
-img {
-    max-width: 100%;
-}
-
-h1, h2 {
-    font-family: $secondary-font;
-    font-weight: bold;
-}
 
 /* -------------------------------- 
 
