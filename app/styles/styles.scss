@@ -1,16 +1,6 @@
 @import "common";
-
-$grid-layout: (
-  columns: 4,
-  gutter: 2rem,
-);
-
-$grid-layout-media:(
-  columns: 1,
-  gutter: 2rem,
-  media: $breakpoint
-);
-
+$grid-layout: ( columns: 1, gutter: 2rem, );
+$grid-layout-media:( columns: 12, gutter: 2rem, media: $breakpoint);
 // Use body, #mw-content-text to affect the whole page for both the wiki and the
 // local build
 main {
@@ -20,7 +10,8 @@ main {
   border: 0;
 }
 
-a, a:visited {
+a,
+a:visited {
   text-decoration: none;
   color: $accent-color;
   transition: all 0.2s ease-in-out;
@@ -32,13 +23,12 @@ a, a:visited {
 }
 
 img {
-  width: auto; 
+  width: auto;
   height: auto;
   max-height: 100%;
   max-width: 100%;
   overflow: hidden;
 }
-
 
 main {
   @include grid-container;
@@ -50,26 +40,21 @@ main {
   height: auto;
   position: relative;
   background-color: $background-light-color;
-  
   nav {
     @include grid-column(1, $grid-layout);
     margin: 2rem;
-
-    @include grid-media($grid-layout-media){
-      @include grid-column(1);
+    @include grid-media($grid-layout-media) {
+      @include grid-column(2);
     }
   }
-
   article {
-    @include grid-column(2, $grid-layout);
+    @include grid-column(1, $grid-layout);
     margin-bottom: 2rem;
-
-    @include grid-media($grid-layout-media){
-      @include grid-column(1);
+    @include grid-media($grid-layout-media) {
+      @include grid-column(10);
     }
   }
-
-  & > * {
+  &>* {
     background-size: cover;
     padding-right: 30px;
     padding-bottom: 50px;
@@ -77,10 +62,10 @@ main {
   }
 }
 
-@import "scrollbar";
-@import "header";
-@import "footer";
-@import "tooltips";
-@import "navline";
 @import "pages/index";
 @import "pages/team";
+@import "header";
+@import "scrollbar";
+@import "tooltips";
+@import "navline";
+@import "footer";
