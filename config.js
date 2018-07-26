@@ -12,7 +12,7 @@ module.exports = function(root) {
   // Teaminfo. Duh.
   const teaminfo = {
     year: 2018,
-    name: 'Virginia'
+    teamName: 'Virginia'
   }
 
   // Listed file sources for all tasks. Note use of glob patterns and wildcarding.
@@ -64,11 +64,11 @@ module.exports = function(root) {
   var secure = ''; // Change to 's' to enable secure html
   // URLs used by realtive2absolute
   var urls = {
-    standard: `http${secure}://${teaminfo.year}.igem.org/Team:${teaminfo.name}/`,
-    template: `http${secure}://${teaminfo.year}.igem.org/Template:${teaminfo.name}/`,
-    js: `http${secure}://${teaminfo.year}.igem.org/Template:${teaminfo.name}/js/`,
-    css: `http${secure}://${teaminfo.year}.igem.org/Template:${teaminfo.name}/css/`,
-    files: `http${secure}://${teaminfo.year}.igem.org/File:T--${teaminfo.name}--{0}`,
+    standard: `http${secure}://${teaminfo.year}.igem.org/Team:${teaminfo.teamName}/`,
+    template: `http${secure}://${teaminfo.year}.igem.org/Template:${teaminfo.teamName}/`,
+    js: `http${secure}://${teaminfo.year}.igem.org/Template:${teaminfo.teamName}/js/`,
+    css: `http${secure}://${teaminfo.year}.igem.org/Template:${teaminfo.teamName}/css/`,
+    files: `http${secure}://${teaminfo.year}.igem.org/File:T--${teaminfo.teamName}--{0}`,
   }
 
   // Suffixes used by relative2absolute
