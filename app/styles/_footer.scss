@@ -11,6 +11,7 @@ footer {
   border-top: 1px solid $accent-color;
   color: $text-light-color;
   padding: 25px; //@include grid-visual;
+  positioN: relative;
   z-index: 999;
 
   div.footer-name {

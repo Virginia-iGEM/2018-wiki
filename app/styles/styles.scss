@@ -6,7 +6,7 @@ $grid-layout: (
 );
 
 $grid-layout-media:( 
-  columns: 12, 
+  columns: 16, 
   gutter: 2rem, 
   media: $breakpoint
 );
@@ -41,11 +41,11 @@ main {
   height: auto;
   position: relative;
   background-color: $background-light-color;
-  z-index: -1;
+  z-index: 1;
   article {
     @include grid-column(1, $grid-layout);
     @include grid-media($grid-layout-media) {
-      @include grid-column(10);
+      @include grid-column(14);
     }
   }
   &>* {
