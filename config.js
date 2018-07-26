@@ -139,7 +139,7 @@ module.exports = function(root) {
     environments: environments,
     targets: {
       root: root,
-      clean: [path.join(build, '/**'), '!' + build, '!' + path.join(build, '/imagemap.json')], // Clean directives; kill everything but imagemap.json
+      clean: path.join(build, '/**'),
       app: app,
       build: build,
       buildsrc: buildsrc, 
