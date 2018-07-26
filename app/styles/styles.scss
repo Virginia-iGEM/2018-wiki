@@ -1,14 +1,15 @@
 @import "common";
-$grid-layout: ( columns: 1, gutter: 2rem, );
-$grid-layout-media:( columns: 12, gutter: 2rem, media: $breakpoint);
-// Use body, #mw-content-text to affect the whole page for both the wiki and the
-// local build
-main {
-  @include common-style;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
+
+$grid-layout: ( 
+  columns: 1, 
+  gutter: 2rem, 
+);
+
+$grid-layout-media:( 
+  columns: 12, 
+  gutter: 2rem, 
+  media: $breakpoint
+);
 
 a,
 a:visited {
@@ -49,16 +50,15 @@ main {
   }
   article {
     @include grid-column(1, $grid-layout);
-    margin-bottom: 2rem;
     @include grid-media($grid-layout-media) {
       @include grid-column(10);
     }
   }
   &>* {
     background-size: cover;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    padding-left: 80px;
+    //padding-right: 30px;
+    //padding-bottom: 50px;
+    //padding-left: 80px;
   }
 }
 

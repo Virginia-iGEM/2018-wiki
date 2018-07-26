@@ -18,14 +18,13 @@ header {
       gutter: 0px,
   );
 
-  font-size: $font-size;
-  font-family: $font-family;
+  @include common-style;
 
   // BEGIN STYLING
-  &,
-  * {
+  &, * {
     box-sizing: border-box; // Use box sizing for entire navbar to avoid clipping
-  } // Stick to top of window
+  }
+  // Stick to top of window
   position: sticky; // Stick to top of screen
   top: $igem-navbar-height; // Compensate for the iGEM Wiki builtin navbar.
   margin: 0 auto;
@@ -33,7 +32,9 @@ header {
   z-index: 999; // This goes over *everything*
   width: max-content;
   text-align: center;
-  transition: all 0.1s; //transform: translateX(25vw);
+
+  transition: all 0.1s;
+  //transform: translateX(25vw);
   opacity: 1;
   &.scrollUp {
     //transform: translateY(-$nav-height) translateX(25vw);
@@ -41,7 +42,8 @@ header {
   }
 
   #navbar {
-    height: $nav-height; //width: 100%;
+    height: $nav-height;
+    //width: 100%;
     display: block;
     @include shadow-2;
     ul {
@@ -57,8 +59,7 @@ header {
         line-height: $nav-height; // Center text
         height: $nav-height; // Set container height to navbar height
         /*a, related to link*/
-        a,
-        a:visited {
+        a, a:visited {
           display: flex;
           align-items: center;
           padding: 0 20px;
@@ -90,20 +91,22 @@ header {
         ul {
           @include grid-container;
           @include shadow-2;
-          position: absolute; // Slide-down animation
+          position: absolute;
+
+          // Slide-down animation
           z-index: -1; // Show up underneath the navbar
           visibility: hidden;
           opacity: 0;
           top: 100%;
           transform: translateY(-2em);
           transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+
           li {
             @include grid-column(1, $nav-grid-dropdown);
             overflow: hidden;
           }
         }
-        &:focus>ul,
-        &:hover>ul {
+        &:focus > ul, &:hover > ul {
           // All for animation
           //display: block;
           z-index: 1; // Is placed underneath navbar
@@ -115,5 +118,5 @@ header {
       }
     }
   }
+}
 
-  }
