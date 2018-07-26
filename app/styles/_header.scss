@@ -1,7 +1,7 @@
 header {
   // Establish variables
   $nav-height: 3em; // Navbar height
-  $nav-padding: 1em;
+  $nav-padding: 0em;
   /*Keeps the nav bar sticking on the top*/ 
   $nav-background-color: $background-dark-color;
   $nav-text-color: $text-light-color;
@@ -32,6 +32,8 @@ header {
   z-index: 999; // This goes over *everything*
   width: max-content;
   text-align: center;
+  background-color: $nav-background-color;
+  width: 100%;
 
   transition: all 0.1s;
   //transform: translateX(25vw);
@@ -44,14 +46,14 @@ header {
   #navbar {
     height: $nav-height;
     //width: 100%;
-    display: block;
+    display: flex;
+    justify-content: center;
     @include shadow-2;
     ul {
       //@include grid-container;
       list-style: none;
       margin: 0px;
       padding: 0px;
-      background-color: $nav-background-color;
       li {
         //@include grid-column(1, $nav-grid);
         float: left;
@@ -94,11 +96,11 @@ header {
           position: absolute;
 
           // Slide-down animation
-          z-index: -1; // Show up underneath the navbar
           visibility: hidden;
           opacity: 0;
           top: 100%;
-          transform: translateY(-2em);
+          left: 50%;
+          transform: translateX(-50%) translateY(-2em);
           transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 
           li {
@@ -109,10 +111,10 @@ header {
         &:focus > ul, &:hover > ul {
           // All for animation
           //display: block;
-          z-index: 1; // Is placed underneath navbar
+          //z-index: 1; // Is placed underneath navbar
           visibility: visible; // Becomes visible
           opacity: 1; // Fades in
-          transform: translateY(0%); // Slides down
+          transform: translateX(-50%) translateY(0%); // Slides down
           transition-delay: 0s, 0s, 0.3s;
         }
       }
