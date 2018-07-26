@@ -93,34 +93,42 @@ module.exports = function(root) {
     }
   }
 
-  var shortflag;
-  if (argv.l) {
-    shortflag = 'live'
-  }
-  else if (argv.d) {
-    shortflag = 'dev'
-  }
+    var shortflag;
+    if (argv.l) {
+        shortflag = 'live'
+    }
+    else if (argv.d) {
+        shortflag = 'dev'
+    }
 
-  var userenv = argv.env || shortflag || 'dev'; // Try env variable, else fallback on shortflag, else assume we're in dev
-  var environment = Object.assign(environments[userenv], {name: userenv});
+    var userenv = argv.env || shortflag || 'dev'; // Try env variable, else fallback on shortflag, else assume we're in dev
+    var environment = Object.assign(environments[userenv], {name: userenv});
 
-  const glossary = {
-    "quorum sensing": "Def1"
-  }
+    const glossary = {
+        "quorum sensing": ["Short Def","Long Def"],
+        "autoinducer": ["Short Def","Long Def"],
+        "operon": ["Short Def","Long Def"],
+        "Lsr operon": ["Short Def","Long Def"],
+        "E.coli": ["Short Def","Long Def"]
+    }
 
-  var handlebarsHelpers = function(file, t) {
+    var handlebarsHelpers = function(file, t) {
 
-    return {
-      contentpath: function(context) {
-        return path.posix.join('/content/', path.basename(file.path));
-      },
-      define: function(context) {
-        if (context in glossary) {
-          var word_definition = glossary[context];
-          return `<span class="tooltip">${context}<span class="tooltiptext">${word_definition}</span> </span>`;
-        }
-        else {
-          return context;
+        return {
+            contentpath: function(context) {
+                return path.posix.join('/content/', path.basename(file.path));
+            },
+            define: function(context) {
+                if (context in glossary) {
+                    var word_short_definition = glossary[context][0];
+                    var word_long_definition = glossary[context][1];
+                    return `<div class="tooltip">${context}<span class="shortdef">${word_short_definition}</span><span class="longdef">${word_long_definition}</span> </div>`;
+                }
+                else {
+                    return context;
+                }
+            }
+
         }
       }
     }
