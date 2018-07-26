@@ -13,6 +13,7 @@
   background-color: $background-light-color;
   overflow: hidden;
   position: relative;
+
   a {
     position: relative;
     display: block;
@@ -51,4 +52,21 @@
       transition: opacity ease-in-out 0.2s, background-color ease-in-out 0.7s;
     }
   }
+}
+
+.team-bio {
+  margin: 6%;
+  line-height: 2em;
+  font-size: $font-size;
+  font-family: $font-family;
+  color: $text-dark-color;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+}
+.hidden { 
+  display: none; 
+}
+.unhidden { 
+  display: block; 
 }
