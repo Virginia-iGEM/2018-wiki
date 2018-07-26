@@ -41,13 +41,7 @@ main {
   height: auto;
   position: relative;
   background-color: $background-light-color;
-  nav {
-    @include grid-column(1, $grid-layout);
-    margin: 2rem;
-    @include grid-media($grid-layout-media) {
-      @include grid-column(2);
-    }
-  }
+  z-index: -1;
   article {
     @include grid-column(1, $grid-layout);
     @include grid-media($grid-layout-media) {

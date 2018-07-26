@@ -1,7 +1,5 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
-$timing: 265ms;
-$iconColor: $accent-color; //#ff003c;
-$accent: $accent-light-color; //#c648c8;
+
 footer {
   $footer-height: 6rem; // Footer height
   $footer-grid: ( columns: 12, gutter: 0px);
@@ -13,6 +11,8 @@ footer {
   border-top: 1px solid $accent-color;
   color: $text-light-color;
   padding: 25px; //@include grid-visual;
+  z-index: 999;
+
   div.footer-name {
     @include grid-column(5, $footer-grid);
     @include block-height($footer-height);
@@ -34,6 +34,10 @@ footer {
 }
 
 /*Code courtesy of https://codepen.io/brandondward/pen/RpyaKL*/
+
+$timing: 265ms;
+$iconColor: $accent-color; //#ff003c;
+$accent: $accent-light-color; //#c648c8;
 
 .social-container {
   //@include grid-visual;
