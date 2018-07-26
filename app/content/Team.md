@@ -3,12 +3,12 @@
 Our team has been hard at work in the lab! See what everyone's been doing.
 
 <p>
-<div id="team-bio">
-	<div id="2018Ngozi">
+<div class="team-bio">
+	<div class="hidden 2018Ngozi">
 		Ngozi
 	</div>
-	<div id="2018Dylan">
-		Dylan
+	<div class="hidden 2018Dylan">
+		Dylan Culfogienis, Class of 2020. 
 	</div>
 </div> 
 </p>
