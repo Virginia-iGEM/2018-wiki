@@ -6,7 +6,7 @@ $(document).ready(function () {
   'use strict';
   
    var c, currentScrollTop = 0,
-       navbar = $('#virginia-header');
+       navbar = $('header');
 
    $(window).scroll(function () {
       var a = $(window).scrollTop();

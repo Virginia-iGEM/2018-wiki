@@ -1,495 +1,71 @@
 @import "common";
-@import "neat";
 
-/*Applies to all*/
+$grid-layout: ( 
+  columns: 1, 
+  gutter: 2rem, 
+);
 
+$grid-layout-media:( 
+  columns: 12, 
+  gutter: 2rem, 
+  media: $breakpoint
+);
 
-// divides up the grid into three parts
-
-/*$thirds-grid:(
-    columns: 3,
-    gutter: 60px,
-    );
-
-.thirds-grid {
-    @include grid-container;
-}
-
-#a-single-column {
-  @include grid-column(1, $thirds-grid);
-}
-
-$grid-layout: (
-    columns: 1,
-    gutter: 2rem,
-    );*/
-
-$grid-layout: (
-    columns: 1,
-    gutter: 2rem,
-    );
-
-$grid-layout-tablet-up:(
-    columns: 7,
-    gutter: 2rem,
-    media: "(min-width: 768px)",
-    );
-
-/*Code referenced from https://neat.bourbon.io/examples/*/
-
-#thirds-grid {
-    @include grid-container;
-}
-
-#thirds-grid__timeline {
-  @include grid-column(1, $grid-layout);
-  margin: 2rem;
-
-  @include grid-media($grid-layout-tablet-up){
-    @include grid-column(1);
-  }
-}
-
-#thirds-grid__images {
-  @include grid-column(1, $grid-layout);
-  margin-bottom: 2rem;
-
-  @include grid-media($grid-layout-tablet-up){
-    @include grid-column(2);
-  }
-}
-
-#thirds-grid__content {
-  @include grid-column(1, $grid-layout);
-  margin-bottom: 2rem;
-
-  @include grid-media($grid-layout-tablet-up){
-    @include grid-column(4);
-  }
-}
-
-#thirds-grid__footer {
-    @include grid-column(1, $grid-layout);
-    margin-bottom: 2rem;
-}
-
-
-/*body, #mw-content-text {
-    font-family: $font-family;
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-*/
-a, a:visited {
+a,
+a:visited {
+  text-decoration: none;
+  color: $accent-color;
+  transition: all 0.2s ease-in-out;
+  &:hover {
     text-decoration: none;
-    color: $accent-color;
-    transition: all 0.2s ease-in-out;
-    &:hover {
-        text-decoration: none;
-        color: $accent-light-color;
-        text-shadow: 0px 0px 8px $accent-light-color;
-    }
+    color: $accent-light-color;
+    text-shadow: 0px 0px 8px $accent-light-color;
+  }
 }
 
 img {
-    width: auto; 
-    height: auto;
-    max-height: 100%;
-    max-width: 100%;
-    overflow: hidden;
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
-.template{
+
+main {
+  @include grid-container;
+  @include common-style;
+  font-size: $font-size;
+  font-family: $font-family;
+  height: 100%;
+  margin: 0 auto;
+  height: auto;
+  position: relative;
+  background-color: $background-light-color;
+  nav {
+    @include grid-column(1, $grid-layout);
+    margin: 2rem;
+    @include grid-media($grid-layout-media) {
+      @include grid-column(2);
+    }
+  }
+  article {
+    @include grid-column(1, $grid-layout);
+    @include grid-media($grid-layout-media) {
+      @include grid-column(10);
+    }
+  }
+  &>* {
     background-size: cover;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    padding-left: 80px;
-}
-
-#text{
-    background-color: $template-dark-color;
-
-}
-
-#thirds-grid {
-    @include common-style;
-    font-size: $font-size;
-    font-family: $font-family;
-    height: 100%;
-/*
-    img {
-        width: 100%;
-    }*/
-
-    margin: 0 auto;
-    height: auto;
-    position: relative;
-    background-color: $background-light-color;
-    
-  ul {
-    padding-left: 2%;
+    //padding-right: 30px;
+    //padding-bottom: 50px;
+    //padding-left: 80px;
   }
 }
 
-#media {
-    color: $text-dark-color;
-    width: 100%;
-    height: 100%;
-}
-
-
-/*scroll bar*/
-.scrolltop {
-    display:none;
-    width:100%;
-    margin:0 auto;
-    position:fixed;
-    bottom:20px;
-    right:10px; 
-}
-
-.scroll {
-    position:absolute;
-    right:20px;
-    bottom:20px;
-    background:#b2b2b2;
-    background:rgba(178,178,178,0.7);
-    padding:20px;
-    text-align: center;
-    margin: 0 0 0 0;
-    cursor:pointer;
-    transition: 0.5s;
-    -moz-transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;        
-}
-
-.scroll:hover {
-    background:rgba(178,178,178,1.0);
-    transition: 0.5s;
-    -moz-transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;        
-}
-
-.scroll:hover .fa {
-    padding-top:-10px;
-}
-
-.scroll .fa {
-    font-size:30px;
-    margin-top:-5px;
-    margin-left:1px;
-    transition: 0.5s;
-    -moz-transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;    
-}
-
-/*Code referenced from https://codepen.io/codyhouse/pen/FdkEf*/
-
-/*variables - colors*/
-
-$link: #acb7c0; // anchor tags
-$background: $background-light-color; // body background color
-
-$color-1: #303e49; // blue dark
-$color-2: $accent-light-color; 
-$color-3: #ffffff; // white
-$color-4: $accent-light-color; 
-$color-5: $accent-light-color; 
-
-
-// mixins - rem fallback - credits: http://zerosixthree.se/
-
-@function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return $remSize * 1rem;
-}
-
-@mixin font-size($size) {
-  font-size: $size;
-  font-size: calculateRem($size);
-}
-
-// mixins - border radius
-
-@mixin border-radius($radius:.25em) {
-  border-radius: $radius;
-}
-
-// layout - breakpoints
-   
-$S:     320px;   
-$M:     768px;     
-$L:     1170px;     
-
-// layout - media queries
-
-@mixin MQ($canvas) {
-  @if $canvas == S {
-   @media only screen and (min-width: $S) { @content; } 
-  }
-  @else if $canvas == M {
-   @media only screen and (min-width: $M) { @content; } 
-  }
-  @else if $canvas == L {
-   @media only screen and (min-width: $L) { @content; } 
-  }
-}
-
-/* -------------------------------- 
-
-Primary style
-
--------------------------------- */
-/* -------------------------------- 
-
-Modules - reusable parts of our design
-
--------------------------------- */
-
-/* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
-.cd-container { 
-    width: 90%;
-    max-width: $L; // breakpoints inside partials > _layout.scss
-    margin: 0 auto;
-
-    &::after { 
-        content: '';
-        display: table;
-        clear: both;
-    }
-}
-
-/* -------------------------------- 
-
-Main components 
-
--------------------------------- */
-
-header {
-    height: 200px;
-    line-height: 200px;
-    text-align: center;
-    background: $color-1;
-
-    h1 {
-        color: $color-3;
-        @include font-size(18px);
-    }
-
-    @include MQ(L) {
-        height: 300px;
-        line-height: 300px;
-
-        h1 {
-            @include font-size(24px);
-        }
-    }
-}
-
-#cd-timeline {
-    position: relative;
-    padding: 2em 0;
-    margin: {
-        top: 2em;
-        bottom: 2em;
-    }
-
-    &::before {
-        /* this is the vertical line */
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 18px;
-        height: 100%;
-        width: 4px;
-        background: darken($background, 5%);
-    }
-
-    @include MQ(L) {
-        margin: {
-            top: 3em;
-            bottom: 3em;
-        }
-
-        &::before {
-            left: 50%;
-            margin-left: -2px;
-        }
-    }
-}
-
-.cd-timeline-block {
-    position: relative;
-    margin: 2em 0;
-    @include clearfix;
-
-    &:first-child {
-        margin-top: 0;
-    }
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-
-    @include MQ(L) {
-        margin: 4em 0;
-
-        &:first-child {
-            margin-top: 0;
-        }
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-}
-
-.cd-timeline-img {
-    position: absolute; 
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px $color-3, inset 0 2px 0 rgba(#000, .08), 0 3px 0 4px rgba(#000, .05) ;
-
-    img {
-        /*actual image inside the circle*/
-        display: block;
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        margin-left: -12px;
-        margin-top: -12px;
-    }
-
-    &.cd-picture {
-        background: $color-4;
-    }
-
-    &.cd-movie {
-        background: $color-2;
-    }
-
-    &.cd-location {
-        background: $color-5;
-    }
-
-    @include MQ(L) {
-        width: 60px;
-        height: 60px;
-        left: 50%;
-        margin-left: -30px;
-
-        /* Force Hardware Acceleration in WebKit */
-        -webkit-transform: translateZ(0);
-        -webkit-backface-visibility: hidden;
-
-        .cssanimations &.is-hidden {
-            visibility: hidden;
-        }
-
-        .cssanimations &.bounce-in {
-            visibility: visible;
-        }
-    }
-}
-
-
-.cd-timeline-content {
-    width:100px;
-    //height:100px;
-    position: relative;
-    margin: 50px; //50px
-    margin-left: 50px;
-    background: $color-3;
-    @include border-radius;
-    padding: 1em;
-    box-shadow: 0 3px 0 darken($background, 5%);
-    @include clearfix;
-
-    h2 {
-        color: $color-1;
-    }
-/**/
-
-
-    p {
-        margin: 1em 0;
-        line-height: 1.6;
-    }
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 16px;
-        right: 100%;
-        height: 0;
-        width: 0;
-        border: 7px solid transparent;
-        border-right: 7px solid $color-3;
-    }
-
-    @include MQ(M) {
-        h2 {
-            @include font-size(20px);
-        }
-
-        p {
-            @include font-size(16px);
-        }
-    }
-
-    @include MQ(L) {
-        margin-left: 0;
-        padding: 1.6em;
-        width: 45%;
-
-        &::before {
-            top: 24px;
-            left: 100%;
-            border-color: transparent;
-            border-left-color: $color-3;
-        }
-
-
-        .cd-timeline-block:nth-child(even) & {
-            float: right;
-
-            &::before {
-                top: 24px;
-                left: auto;
-                right: 100%;
-                border-color: transparent;
-                border-right-color: $color-3;
-            }
-        }
-
-        .cssanimations &.is-hidden {
-            visibility: hidden;
-        }
-
-        .cssanimations &.bounce-in {
-            visibility: visible;
-        }
-    }
-}
-
-@include MQ(L) {
-    /* inverse bounce effect on even content blocks */
-    .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
-    }
-}
-
-
-
-
+@import "pages/index";
+@import "pages/team";
 @import "header";
-@import "footer";
+@import "scrollbar";
 @import "tooltips";
-@import "team";
+@import "navline";
+@import "footer";
