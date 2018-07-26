@@ -13,7 +13,7 @@ $grid-layout-media:(
 
 // Use body, #mw-content-text to affect the whole page for both the wiki and the
 // local build
-body, #mw-content-text {
+main {
   @include common-style;
   margin: 0;
   padding: 0;

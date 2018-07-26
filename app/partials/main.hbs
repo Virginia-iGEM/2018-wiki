@@ -1,4 +1,7 @@
 <main id="top">
   {{> timeline}}
-  {{> contentsub}}
+  <article></article>
+  <script>
+      $('article').load('{{contentpath}}');
+  </script>
 </main>
