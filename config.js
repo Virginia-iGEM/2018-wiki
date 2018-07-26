@@ -106,7 +106,11 @@ module.exports = function(root) {
     var environment = Object.assign(environments[userenv], {name: userenv});
 
     const glossary = {
-        "quorum sensing": ["Short Def","Long Def"]
+        "quorum sensing": ["Short Def","Long Def"],
+        "autoinducer": ["Short Def","Long Def"],
+        "operon": ["Short Def","Long Def"],
+        "Lsr operon": ["Short Def","Long Def"],
+        "E.coli": ["Short Def","Long Def"]
     }
 
     var handlebarsHelpers = function(file, t) {
