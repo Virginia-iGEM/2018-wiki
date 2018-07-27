@@ -5,7 +5,7 @@ nav {
   }
   box-sizing: border-box;
   position: relative;
-  background-color: $background-light;
+  background-color: $background-light-1;
   min-height: 100vh;
   margin: 0;
   padding: 2em;
@@ -32,6 +32,16 @@ nav {
       padding: 1vh 0;
       position: relative;
       left: -5px;
+      ul {
+        display: none;
+        font-size: 0.8em;
+        li {
+          padding: 0.5vh 0;
+        }
+      }
+      &.current ul{
+        display: block;
+      }
     }
   }
 }

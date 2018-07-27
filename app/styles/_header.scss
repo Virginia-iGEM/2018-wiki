@@ -3,8 +3,8 @@ header {
   $nav-height: 3em; // Navbar height
   $nav-padding: 0em;
   /*Keeps the nav bar sticking on the top*/ 
-  $nav-background-color: $background-dark;
-  $nav-text-color: $accent-cold-1;
+  $nav-background-color: $background-light;
+  $nav-text-color: $accent-cold-2;
   $nav-accent-color: $accent-warm;
   $nav-link-color: $accent-warm;
 
@@ -37,10 +37,10 @@ header {
 
   transition: all 0.1s;
   //transform: translateX(25vw);
-  opacity: 1;
+  //opacity: 1;
   &.scrollUp {
-    //transform: translateY(-$nav-height) translateX(25vw);
-    opacity: 0;
+    transform: translateY(-$nav-height);
+    //opacity: 0;
   }
 
   #navbar {
@@ -48,7 +48,7 @@ header {
     //width: 100%;
     display: flex;
     justify-content: center;
-    @include shadow-2;
+    @include shadow-1;
     ul {
       //@include grid-container;
       list-style: none;
@@ -92,7 +92,7 @@ header {
         }
         ul {
           @include grid-container;
-          @include shadow-2;
+          @include shadow-1;
           position: absolute;
 
           // Slide-down animation
