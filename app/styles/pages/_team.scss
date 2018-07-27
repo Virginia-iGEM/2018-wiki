@@ -60,9 +60,9 @@
   font-size: $font-size;
   font-family: $font-family;
   color: $text-dark;
-  -webkit-box-shadow: 0 10px 6px -6px #777;
-  -moz-box-shadow: 0 10px 6px -6px #777;
-  box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 0 5px #999;
+  -webkit-box-shadow: 0 0 5px #999;
+  box-shadow: 0 0 5px #999;
 }
 .hidden { 
   display: none; 
@@ -70,3 +70,4 @@
 .unhidden { 
   display: block; 
 }
+
