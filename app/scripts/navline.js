@@ -1,23 +1,23 @@
 var sitemap = {
     '': 'project',
     
-    'Overview_Project': 'project',
-    'Description': 'project',
-    'Design': 'project',
-    'Experiments': 'project',
-    'Notebook': 'project',
-    'InterLab': 'project',
-    'Model': 'project',
-    'Results': 'project',
-    'Demonstrate': 'project',
-    'Improve': 'project',
+    'Overview_Project': 'quorus',
+    'Description': 'quorus',
+    'Design': 'quorus',
+    'Experiments': 'quorus',
+    'Notebook': 'quorus',
+    'InterLab': 'quorus',
+    'Model': 'quorus',
+    'Results': 'quorus',
+    'Demonstrate': 'quorus',
+    'Improve': 'quorus',
 
-    'Parts': 'parts',
-    'Basic_Part': 'parts',
-    'Composite_Part': 'parts',
-    'Part_Collection': 'parts',
+    'Parts': 'quorus',
+    'Basic_Part': 'quorus',
+    'Composite_Part': 'quorus',
+    'Part_Collection': 'quorus',
 
-    'Safety': 'safety',
+    'Safety': 'quorus',
 
     'Overview_HP': 'hp',
     'Human_Practices': 'hp',
@@ -27,12 +27,12 @@ var sitemap = {
     'Collaborations': 'team',
     'Attributions': 'team',
 
-    'Applied_Design': 'awards',
-    'Entrepreneurship': 'awards',
-    'Hardware': 'awards',
-    'Measurement': 'awards',
-    'Model': 'awards',
-    'Software': 'awards'
+    'Applied_Design': 'competition',
+    'Entrepreneurship': 'competition',
+    'Hardware': 'competition',
+    'Measurement': 'competition',
+    'Model': 'competition',
+    'Software': 'competition'
 }
 $(document).ready(function() {
     var curnavitem = window.location.href;
