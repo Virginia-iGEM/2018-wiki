@@ -1,3 +1,16 @@
+.darkened {
+  z-index: 9999;
+  position: fixed;
+  min-width: 100vw;
+  min-height: 100vh;
+  color: $background-dark;
+  background-color: $background-dark;
+  * {
+    display: none;
+    visibility: 0;
+    //z-index: -1;
+  }
+}
 .category-gallery {
   $category-grid: ( gutter: 30px, media: 1000px, );
   @include grid-container;
