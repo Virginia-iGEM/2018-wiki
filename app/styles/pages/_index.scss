@@ -2,7 +2,7 @@
   $category-grid: ( gutter: 30px, media: 1000px, );
   @include grid-container;
   padding: 3% 5%;
-  background-color: $background-light-color;
+  background-color: $background-light;
   overflow: hidden;
   div {
     position: relative;
@@ -49,6 +49,6 @@
 .petri-dish {
   display: none;
   @include circular;
-  background-color: $background-dark-color;
+  background-color: $background-dark;
   transform: translate(-50%, -50%);
 }

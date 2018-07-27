@@ -37,6 +37,7 @@ $link-color: #FBB645;
 
 /*Clean, bright theme*/
 /*https://www.canva.com/learn/website-color-schemes*/
+/*
 $background-dark-color: #4484CE;
 $background-light-color: rgb(255,255,255);
 $accent-color: #F19F4D;
@@ -45,6 +46,7 @@ $text-light-color: rgb(255, 255, 255);
 $text-dark-color: #0A1612;
 $link-color: rgb(255, 218, 159);
 $template-dark-color: #D9D9D9;
+*/
 
 // Current site colors
 /*
@@ -56,6 +58,18 @@ $text-light-color: rgb(255, 253, 255);
 $text-dark-color: rgb(129, 127, 116);
 $link-color: rgb(255, 218, 159);
 */
+
+$background-dark:   #1a1a1a;
+$background-light:  #fffefb;
+//$background-light:  #ffffff;
+$accent-warm:       #eb00c2;
+$accent-warm-1:     #a7018b;
+$accent-cold:       #26fffa;
+$accent-cold-1:     rgb(36, 190, 228);
+$text-dark:           $background-dark;
+$text-light:          $background-light;
+
+//$link-color:                $accent-cold-1;
 
 $breakpoint: 1000px; // If the screen is under this width, switch to mobile view
 
@@ -93,7 +107,7 @@ $font-size: medium;
     line-height: 2em;
     font-size: $font-size;
     font-family: $font-family;
-    color: $text-dark-color;
+    color: $text-dark;
   }
 }
 

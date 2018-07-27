@@ -7,9 +7,9 @@ footer {
   font-family: $font-family;
   @include grid-container;
   box-sizing: border-box;
-  background-color: $background-dark-color;
-  border-top: 1px solid $accent-color;
-  color: $text-light-color;
+  background-color: $background-dark;
+  //border-top: 1px solid $accent-color;
+  color: $text-light;
   padding: 25px; //@include grid-visual;
   positioN: relative;
   z-index: 999;
@@ -37,8 +37,8 @@ footer {
 /*Code courtesy of https://codepen.io/brandondward/pen/RpyaKL*/
 
 $timing: 265ms;
-$iconColor: $accent-color; //#ff003c;
-$accent: $accent-light-color; //#c648c8;
+$iconColor: $accent-warm; //#ff003c;
+$accent: $accent-cold; //#c648c8;
 
 .social-container {
   //@include grid-visual;

@@ -3,10 +3,10 @@ header {
   $nav-height: 3em; // Navbar height
   $nav-padding: 0em;
   /*Keeps the nav bar sticking on the top*/ 
-  $nav-background-color: $background-dark-color;
-  $nav-text-color: $text-light-color;
-  $nav-accent-color: $accent-light-color;
-  $nav-link-color: $link-color;
+  $nav-background-color: $background-dark;
+  $nav-text-color: $text-light;
+  $nav-accent-color: $accent-cold-1;
+  $nav-link-color: $accent-warm;
 
   // Custom grids for navbar and dropdown
   $nav-grid: (
@@ -81,8 +81,8 @@ header {
             width: auto;
           }
           &:hover {
-            color: $accent-light-color;
-            text-shadow: 0px 0px 8px $accent-light-color;
+            color: $nav-accent-color;
+            text-shadow: 0px 0px 8px $nav-accent-color;
           }
           /*adds the arrow to dropdowns, selects not only-child*/
           &:not(:only-child):after {

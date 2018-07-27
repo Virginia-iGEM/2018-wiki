@@ -14,12 +14,12 @@ $grid-layout-media:(
 a,
 a:visited {
   text-decoration: none;
-  color: $accent-color;
+  color: $accent-cold-1;
   transition: all 0.2s ease-in-out;
   &:hover {
     text-decoration: none;
-    color: $accent-light-color;
-    text-shadow: 0px 0px 8px $accent-light-color;
+    color: $accent-warm-1;
+    text-shadow: 0px 0px 8px $accent-warm;
   }
 }
 
@@ -40,7 +40,7 @@ main {
   margin: 0 auto;
   height: auto;
   position: relative;
-  background-color: $background-light-color;
+  background-color: $background-light;
   z-index: 1;
   article {
     @include grid-column(1, $grid-layout);
