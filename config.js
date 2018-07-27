@@ -64,10 +64,10 @@ module.exports = function(root) {
   var secure = ''; // Change to 's' to enable secure html
   // URLs used by realtive2absolute
   var urls = {
-    standard: `http${secure}://${teaminfo.year}.igem.org/Team:${teaminfo.teamName}/`,
-    template: `http${secure}://${teaminfo.year}.igem.org/Template:${teaminfo.teamName}/`,
-    js: `http${secure}://${teaminfo.year}.igem.org/Template:${teaminfo.teamName}/js/`,
-    css: `http${secure}://${teaminfo.year}.igem.org/Template:${teaminfo.teamName}/css/`,
+    standard: `http${secure}://${teaminfo.year}.igem.org/Team:${teaminfo.teamName}`,
+    template: `http${secure}://${teaminfo.year}.igem.org/Template:${teaminfo.teamName}`,
+    js: `http${secure}://${teaminfo.year}.igem.org/Template:${teaminfo.teamName}/js`,
+    css: `http${secure}://${teaminfo.year}.igem.org/Template:${teaminfo.teamName}/css`,
     files: `http${secure}://${teaminfo.year}.igem.org/File:T--${teaminfo.teamName}--{0}`,
   }
 
@@ -104,10 +104,7 @@ module.exports = function(root) {
   var environment = Object.assign(environments[userenv], {name: userenv});
 
   const glossary = {
-    "quorum sensing": [
-        "The ability of microorganisms to sense their density, and indirectly, the size of their population.", 
-        "Quorum sensing has a myriad of uses for bacteria and for scientists and engineers. The most common example of its usefulness to microorganisms is the delay release of a toxin or poison in pathogenic organisms. In synthetic biology, quroum sensing is useful for triggering the expression of a gene or for regulating cocultures."
-    ]
+    "quorum sensing": "Def1"
   }
 
   var handlebarsHelpers = function(file, t) {
@@ -118,9 +115,8 @@ module.exports = function(root) {
       },
       define: function(context) {
         if (context in glossary) {
-          var short_def = glossary[context][0];
-          var long_def = glossary[context][1];
-          return `<span class="tooltip">${context}<span class="shortdef">${short_def}</span><span class="longdef">${long_def}</span></span>`;
+          var word_definition = glossary[context];
+          return `<span class="tooltip">${context}<span class="tooltiptext">${word_definition}</span> </span>`;
         }
         else {
           return context;
