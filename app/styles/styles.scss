@@ -2,12 +2,14 @@
 
 $grid-layout: ( 
   columns: 1, 
-  gutter: 2rem, 
+  //gutter: 2rem, 
+  gutter: 0
 );
 
 $grid-layout-media:( 
   columns: 16, 
-  gutter: 2rem, 
+  //gutter: 2rem, 
+  gutter: 0,
   media: $breakpoint
 );
 
