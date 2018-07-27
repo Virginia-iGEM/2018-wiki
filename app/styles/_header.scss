@@ -4,8 +4,8 @@ header {
   $nav-padding: 0em;
   /*Keeps the nav bar sticking on the top*/ 
   $nav-background-color: $background-dark;
-  $nav-text-color: $text-light;
-  $nav-accent-color: $accent-cold-1;
+  $nav-text-color: $accent-cold-1;
+  $nav-accent-color: $accent-warm;
   $nav-link-color: $accent-warm;
 
   // Custom grids for navbar and dropdown
@@ -76,7 +76,7 @@ header {
           img {
             display: inline-block;
             padding: 0.5rem;
-            max-height: 100%;
+            min-height: 100%;
             height: auto;
             width: auto;
           }
