@@ -34,7 +34,8 @@ img {
 }
 
 main {
-  @include grid-container;
+  display: flex;
+  flex-direction: row;
   @include common-style;
   font-size: $font-size;
   font-family: $font-family;
@@ -45,9 +46,13 @@ main {
   background-color: $background-light;
   z-index: 1;
   article {
-    @include grid-column(1, $grid-layout);
-    @include grid-media($grid-layout-media) {
-      @include grid-column(14);
+    margin-top: 2em;
+    img, aside {
+      width: 30em;
+      float: right;
+      position: relative;
+      transform: translateY(-50%);
+      margin-left: 5em;
     }
   }
   &>* {

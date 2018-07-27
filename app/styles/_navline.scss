@@ -1,30 +1,39 @@
 nav {
-  @include grid-column(1, $grid-layout);
-  @include grid-media($grid-layout-media) {
-    @include grid-column(2);
-  }
   box-sizing: border-box;
   position: relative;
-  background-color: $background-light-1;
   min-height: 100vh;
+  align-items: flex-end;
+  background-color: $background-light-1;
+  flex-basis: 15em;
+  flex-grow: 5em;
+  flex-shrink: 0;
   margin: 0;
-  padding: 2em;
+  //padding: 2em;
   // Add vertical line
-  &::before {
-    content: '';
-    position: fixed;
-    clear: both;
-    top: 0px;
-    left: 3em;
-    bottom: 0px;
-    transform: translateX(-50%);
-    width: 4px;
-    background-color: $background-dark;
-  }
   #line {
     position: fixed;
+    height: 100vh;
+    top: 0;
+    &::before {
+      content: '';
+      position: fixed;
+      clear: both;
+      top: 0px;
+      left: 3em;
+      bottom: 0px;
+      transform: translateX(-50%);
+      width: 4px;
+      background-color: $background-dark;
+    }
+    ul {
+      padding-top: calc(2em + 2em);
+    }
     //overflow: hidden;
     li {
+      a {
+        padding-left: 2em;
+        white-space: nowrap;
+      }
       list-style: none;
       width: calc(100% - 4em);
       max-width: 400px;
@@ -32,6 +41,9 @@ nav {
       padding: 3em 2em 0 2em;
       position: relative;
       left: -5px;
+      a:hover::before{
+        background-color: $accent-warm-1;
+      }
       a::before {
         content: '';
         position: absolute;
@@ -61,6 +73,11 @@ nav {
       }
       &.current ul{
         display: block;
+      }
+
+      &.home a::before {
+        background-image: '/images/logos/medallion_small.png';
+        background-clip: border-box;
       }
     }
   }
