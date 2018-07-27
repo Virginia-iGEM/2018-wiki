@@ -1,5 +1,5 @@
 .darkened {
-  z-index: 9999;
+  z-index: 1000;
   position: fixed;
   min-width: 100vw;
   min-height: 100vh;
@@ -9,6 +9,17 @@
     display: none;
     visibility: 0;
     //z-index: -1;
+  }
+  &>.logo {
+    //background-color: red;
+    display: block;
+    visibility: 1;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: visible;
+    max-width: 512px;
   }
 }
 .category-gallery {
