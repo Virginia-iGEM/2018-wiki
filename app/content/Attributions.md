@@ -1,6 +1,7 @@
 # Attributons
 
 ## Advisors
+<hr>
 
 **Amin Zargar's** paper, _"Enhancing Intercellular Coordination: Rewiring Quorum Sensing Networks for Increased Protein Expression through Autonomous Induction"_ has been an invaluable resource for our project. We were fortunate enough to be able to contact Zargar through Skype and ask him for various advice on our project.
 
@@ -12,15 +13,26 @@
 
 
 ## Sponsors
+<hr>
+
 We would like to thank our sponsors for their support:
 
 ### Academic Sponsors
-- Experiential Learning Fund
-- University of Virginia
-- Melur K. Ramasurbramanian, University of Virginia Vice President of Research 
+![UVA](/images/Sponsors/University_Of_Virginia_Logo_transparent.png) 
+
+We would like to thank the **University of Virginia** and the **University of Virginia Experiential Learning Fund** for their support. Without them, we would not have the resources to complete our project.
+
+![VPR](/images/Sponsors/VPR.jpg)
+
+**Melur K. Ramasurbramanian**, University of Virginia Vice President of Research 
 
 ### Corporate Sponsors
-- GenScript   
-- Integrated DNA Technologies (IDT)
-- New England BioLabs
-- PurSolutions, LLC
+![GenScript](/images/Sponsors/Genscript_logo_transparent.png)  
+
+![IDT](/images/Sponsors/IDT_logo_transparent.png) 
+
+![NEB](/images/Sponsors/NewEnglandBiolabs_logo_transparent.png)
+
+![PurSolutions](/images/Sponsors/purSolutions_logo_transparent.png)
+
+

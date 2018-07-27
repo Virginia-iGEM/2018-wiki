@@ -1,13 +1,12 @@
 
 $(document).ready(function() {
 	var previous = " ";
-    $("img").click(function(event) {
+    $("#image_gallery").click(function(event) {
         var id_name = event.target.id;
         id_name = id_name.replace(/[0-9]/g, ''); //regex for alphabets, no numbers
         var id_toggle = document.getElementById(id_name); //get ID of names under class "team-bio"
         if(document.getElementById(id_name)){ //if ID exists
 			if((previous != id_name) && (previous != " ")){ //if you click a diff image
-				console.log(previous);
 				var id_previous = document.getElementById(previous);
 				$(id_previous).toggle("hidden");
 				console.log(id_previous);
