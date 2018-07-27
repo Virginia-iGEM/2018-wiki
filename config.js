@@ -104,7 +104,10 @@ module.exports = function(root) {
   var environment = Object.assign(environments[userenv], {name: userenv});
 
   const glossary = {
-    "quorum sensing": "Def1"
+    "quorum sensing": [
+        "The ability of microorganisms to sense their density, and indirectly, the size of their population.", 
+        "Quorum sensing has a myriad of uses for bacteria and for scientists and engineers. The most common example of its usefulness to microorganisms is the delay release of a toxin or poison in pathogenic organisms. In synthetic biology, quroum sensing is useful for triggering the expression of a gene or for regulating cocultures."
+    ]
   }
 
   var handlebarsHelpers = function(file, t) {
@@ -115,8 +118,9 @@ module.exports = function(root) {
       },
       define: function(context) {
         if (context in glossary) {
-          var word_definition = glossary[context];
-          return `<span class="tooltip">${context}<span class="tooltiptext">${word_definition}</span> </span>`;
+          var short_def = glossary[context][0];
+          var long_def = glossary[context][1];
+          return `<span class="tooltip">${context}<span class="shortdef">${short_def}</span><span class="longdef">${long_def}</span></span>`;
         }
         else {
           return context;
