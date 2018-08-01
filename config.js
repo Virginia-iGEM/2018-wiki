@@ -104,11 +104,22 @@ module.exports = function(root) {
   var environment = Object.assign(environments[userenv], {name: userenv});
 
   const glossary = {
-    "quorum sensing": ["Short Def", "Long Def"],
-    "autoinducer": ["Short Def", "Long Def"],
-    "operon": ["Short Def", "Long Def"],
+    "quorum sensing": ["In biology, quorum sensing is the ability to detect and to respond to cell population density by gene regulation.", "Long Def"],
+    "operon": ["In genetics, an operon is a functioning unit of DNA containing a cluster of genes under the control of a single promoter.", "Long Def"],
     "Lsr operon": ["Short Def", "Long Def"],
-    "E.coli": ["Short Def", "Long Def"]
+    "E.coli": ["E. coli (Escherichia coli) is one of several types of bacteria that normally inhabit the intestine of humans and animals.", "Long Def"],
+    "biofilms": ["ggregate of microorganisms in which cells that are frequently embedded within a self-produced matrix of extracellular polymeric substances (EPSs) adhere to each other and/or to a surface.","LD"],
+    "virulence": ["Virulence provides a quantitative measure of the pathogenicity or the likelihood of a microbe to cause disease.", "LD"],
+    "Autoinducer-2": ["A member of a family of signaling molecules used in quorum sensing.", "LD"],
+    "phosphorylation": ["A biochemical process that involves the addition of phosphate to an organic compound. ","LD"],
+    "pLsr": ["A promoter of the Lsr Operon","LD"],
+    "T7 RNA Polymerase": ["A RNA polymerase from the T7 bacteriophage that catalyzes the formation of RNA from DNA in the 5'→ 3' direction.","LD"],
+    "LsrK": ["SD","LD"],
+    "LsrACDB": ["SD","LD"],
+    "LuxS": ["SD","LD"],
+    "YdgG": ["SD","LD"],
+    "sfGFP": ["SD","LD"],
+    "autoinduction": ["The induction of something by itself or without external stimuli.","LD"]
   }
 
   var handlebarsHelpers = function(file, t) {
@@ -121,7 +132,7 @@ module.exports = function(root) {
         if (context in glossary) {
                     var word_short_definition = glossary[context][0];
                     var word_long_definition = glossary[context][1];
-                    return `<span class="tooltip">${context}<span class="shortdef">${word_short_definition}</span><span class="longdef">${word_long_definition}</span> </span>`;
+                    return `<span class="tooltip">${context}<span class="shortdef">${word_short_definition}</span><span class="longdef" tabindex = "1">${word_long_definition}</span> </span>`;
         }
         else {
           return context;
