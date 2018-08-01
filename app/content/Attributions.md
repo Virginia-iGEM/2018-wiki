@@ -12,7 +12,7 @@ Keith Kozminski (_Photo taken from the Department of Biology at UVA_)
 **Jason Papin** is our modeling advisor; with his help, we have developed several models that represent various aspects of our project. We are thankful for all the advice and encouragement that Professor Papin has given us throughout our research! 
 
 ![JasonPapin](/images/Sponsosr/Papin.jpg)
-
+Jason Papin (_Photo taken from UVA Today_)
 
 ## Attributions
 <hr>
