@@ -6,8 +6,8 @@ We went to the Kids College summer camp held at Charlottesville Albemarle Techni
 
 We helped them run the gels, understand the gel, talked about our project, and helped them brainstorm about what kind of world problem they could solve with synthetic biology. The students came up with many interesting project ideas related to synthetic biology, it was definitely a huge success for letting students in the community explore the field of synthetic biology.
 
-![SummerCamp1](/images/HumanPractices/UVA2018_Outreach.JPG)
-![SummerCamp2](/images/HumanPractices/UVA2018_Outreach1.JPG)
+![SummerCamp1](/images/HumanPractices/UVA2018_Outreach.jpg)
+![SummerCamp2](/images/HumanPractices/UVA2018_Outreach1.jpg)
 
 ## Public Forum
 
