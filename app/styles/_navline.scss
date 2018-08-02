@@ -1,21 +1,23 @@
 nav {
-  box-sizing: border-box;
+  $large-pip-size: 2em;
+  $small-pip-size: 1em;
+
+  @include shadow-2;
+  //box-sizing: border-box;
   position: relative;
   min-height: 100vh;
   align-items: flex-end;
-  background-color: $background-light-1;
+  background-color: $background-light;
   flex-basis: 15em;
-  flex-grow: 5em;
   flex-shrink: 0;
   margin: 0;
-  //padding: 2em;
-  // Add vertical line
   #line {
     position: fixed;
     height: 100vh;
     top: 0;
+    // Add vertical line
     &::before {
-      content: '';
+      content: "";
       position: fixed;
       clear: both;
       top: 0px;
@@ -25,58 +27,65 @@ nav {
       width: 4px;
       background-color: $background-dark;
     }
-    ul {
-      padding-top: calc(2em + 2em);
-    }
-    //overflow: hidden;
     li {
-      a {
-        padding-left: 2em;
-        white-space: nowrap;
-      }
+      vertical-align: middle;
       list-style: none;
       width: calc(100% - 4em);
       max-width: 400px;
-      margin: auto;
-      padding: 3em 2em 0 2em;
+      //margin: auto;
       position: relative;
       left: -5px;
-      a:hover::before{
-        background-color: $accent-warm-1;
+      a {
+        //padding-left: 2em;
+        white-space: nowrap;
+        &:hover::before {
+          background-color: $accent-warm-1;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          width: $large-pip-size;
+          height: $large-pip-size;
+          border: 2px solid $background-light;
+          background-color: $accent-cold-1;
+          border-radius: 100%;
+          bottom: 0;
+          //transform: translateY(90%);
+          right: $large-pip-size + 4em;
+          z-index: 100;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -7px;
+          width: 100%;
+          height: 2px;
+          background-color: $background-dark;
+        }
       }
-      a::before {
-        content: '';
-        position: absolute;
-        width: 64px;
-        height: 64px;
-        border: 3px solid $background-light;
-        background-color: $accent-cold-1;
-        border-radius: 100%;
-        top: 3.5em;
-        transform: translateY(-50%);
-        right: 6.55em;
-        z-index: 100;
-      }
+      // Submenus
       ul {
         display: none;
         font-size: 0.8em;
-        padding-top: 3em;
+        //padding-top: 3em;
         li {
           a::before {
-            width: 12px;
-            height: 12px;
-            right: 5.35em;
-            top: 0.75em;
+            width: $small-pip-size;
+            height: $small-pip-size;
+            right: $small-pip-size + 4.3em;
+            //top: 0.75em;
           }
-          padding: 0.5vh 0;
+          //padding: 0.5vh 0;
         }
       }
-      &.current ul{
+      // Expand submenus for current section
+      &.current ul {
         display: block;
       }
-
+      // Add images
       &.home a::before {
-        background-image: '/images/logos/medallion_small.png';
+        background-image: "/images/logos/medallion_small.png";
         background-clip: border-box;
       }
     }

@@ -1,5 +1,5 @@
 var sitemap = {
-    '': 'project',
+    '': 'home',
     
     'Overview_Project': 'quorus',
     'Description': 'quorus',
