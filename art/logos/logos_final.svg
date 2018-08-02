@@ -19,6 +19,13 @@
    sodipodi:docname="logos_final.svg">
   <defs
      id="defs4639">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 148.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="210 : 148.5 : 1"
+       inkscape:persp3d-origin="105 : 99 : 1"
+       id="perspective4921" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient3916-4"
@@ -499,6 +506,24 @@
        y1="131.09297"
        x2="249.03783"
        y2="131.09297" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient48403"
+       id="linearGradient5398"
+       gradientUnits="userSpaceOnUse"
+       x1="84.153297"
+       y1="189.88673"
+       x2="119.0671"
+       y2="159.98596" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient48403"
+       id="linearGradient5400"
+       gradientUnits="userSpaceOnUse"
+       x1="84.153297"
+       y1="189.88673"
+       x2="119.0671"
+       y2="159.98596" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -507,9 +532,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="-535.73707"
-     inkscape:cy="234.27017"
+     inkscape:zoom="0.7"
+     inkscape:cx="63.451342"
+     inkscape:cy="373.84847"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
