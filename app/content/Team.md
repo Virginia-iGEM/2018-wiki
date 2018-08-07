@@ -26,7 +26,7 @@ Our team has been hard at work in the lab! See what everyone's been doing.
 	</div>
 		<div class= "hidden" id="Paul">
 		<h4>Paul Imbrogulio</h4>
-		<p>Paul is a second year studying chemical engineering. He is a member of the wetlab committee and our miniprep master. He does not have a quotable quote at the moment.</p>
+		<p>Paul is a second year studying chemical engineering. He is a member of the wetlab committee and our miniprep master. His quote is, "Can I pitch it in the incubator?" </p>
 		<br>
 	</div>
 		<div class= "hidden" id="Joseph">
