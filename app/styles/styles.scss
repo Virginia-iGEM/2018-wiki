@@ -45,13 +45,20 @@ main {
   position: relative;
   background-color: $background-light-1;
   z-index: 1;
+  overflow: hidden;
+
   article {
     margin-top: 2em;
-    img, aside {
+    //padding-right: 20px;
+
+
+    img {
       width: 30em;
+      flex: 0 0 30em;
       float: right;
+      clear: both;
       position: relative;
-      transform: translateY(-50%);
+      //transform: translateY(-50%);
       margin-left: 5em;
     }
   }
@@ -62,6 +69,8 @@ main {
     //padding-left: 80px;
   }
 }
+
+
 
 @import "pages/index";
 @import "pages/team";
