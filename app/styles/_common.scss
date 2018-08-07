@@ -85,32 +85,39 @@ $font-size: medium;
 
 @mixin common-style {
   h1, h2, h3, h4, h5, h6 {
-    padding: 3% 10%;
+    margin-top: 2em;
+    margin-bottom: 2em;
     font-weight: bold;
     font-size: $font-size;
     font-family: $font-family;
   }
   h1 {
+    margin-left: 2em;
     font-size: 2.2em;
   }
   h2 {
+    margin-left: 3em;
     font-size: 2em;
   }
   h3 {
+    margin-left: 4em;
     font-size: 1.8em;
   }
   h4 {
+    margin-left: 4em;
     font-size: 1.6em;
   }
   h5 {
+    margin-left: 4em;
     font-size: 1.4em;
   }
   h6 {
+    margin-left: 4em;
     font-size: 1.2em;
   }
 
   p {
-    margin: 6%;
+    margin: 3em 4em;
     line-height: 2em;
     font-size: $font-size;
     font-family: $font-family;
