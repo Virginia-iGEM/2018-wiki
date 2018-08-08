@@ -1,4 +1,4 @@
-# Human Practices
+# Integrated Human Practices
 
 ## Paper Making
 
