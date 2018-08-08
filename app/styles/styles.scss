@@ -13,6 +13,40 @@ $grid-layout-media:(
   media: $breakpoint
 );
 
+/*this creates columns of two for Overview page*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 5px;
+}
+.grid-selection {
+    padding: 20px;
+    @include shadow-1;
+    box-sizing: border-box;
+    margin: 10px;
+    margin-bottom: auto;
+    flex: 1;
+
+
+/*Button for Overview*/
+  a.button {
+    cursor: pointer;
+    display: inline-block;
+    background-color: $accent-cold-1;
+    padding: 15px 32px;
+    border: hidden;
+    @include shadow-1;
+    color: $text-light;
+  }
+
+  .button:hover {
+    @include shadow-2;
+  }
+}
+
+
 a,
 a:visited {
   text-decoration: none;
@@ -45,13 +79,20 @@ main {
   position: relative;
   background-color: $background-light-1;
   z-index: 1;
+  overflow: hidden;
+
   article {
     margin-top: 2em;
-    img, aside {
-      width: 30em;
+    //padding-right: 20px;
+
+
+    img {
+      //width: 30em;
+      flex: 0 0 30em;
       float: right;
+      clear: both;
       position: relative;
-      transform: translateY(-50%);
+      //transform: translateY(-50%);
       margin-left: 5em;
     }
   }
@@ -62,6 +103,8 @@ main {
     //padding-left: 80px;
   }
 }
+
+
 
 @import "pages/index";
 @import "pages/team";

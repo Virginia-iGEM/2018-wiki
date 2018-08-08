@@ -1,37 +1,23 @@
 # Attributons
 
-## Advisors
-<hr>
-
-**Keith Kozminski** has been our amazing advisor guiding our research and keeping us on track for the iGEM Jamboree. From teaching a prepatory iGEM course in the spring to helping us with various aspects of our project, Professor Kozminski's wise words and advice is an important part of our team. 
-
-![KeithKozminski](/images/Sponsors/Kozminski.jpg)
-Keith Kozminski (_Photo taken from the Department of Biology at UVA_)
-
-
-**Jason Papin** is our modeling advisor; with his help, we have developed several models that represent various aspects of our project. We are thankful for all the advice and encouragement that Professor Papin has given us throughout our research! 
-
-![JasonPapin](/images/Sponsosr/Papin.jpg)
-Jason Papin (_Photo taken from UVA Today_)
-
-## Attributions
-<hr>
-
-**William E. Bentley** is a professor in the Chemical and Biomolecular Engineering department at the University of Maryland and the Distinguished Professor and Chair of the Fischell Department of Bioengineering. Since his research focuses on the expression of biologically active proteins, we have referenced many of his papers within the context of our research. 
 
 ![WilliamBentley](/images/Sponsors/Bentley.png)
-William E. Bentley (_Photo taken from UMD faculty website_)
 
+**William E. Bentley** is a professor in the Chemical and Biomolecular Engineering department at the University of Maryland and the Distinguished Professor and Chair of the Fischell Department of Bioengineering. Since much of his research focuses on the expression of biologically active proteins and quorum sensing, we have referenced many of his papers within the context of our research. 
+
+(_Photo taken from UMD faculty website_)
+
+![DrewEndy](/images/Sponsors/Endy.jpg)
 
 **Drew Endy** is a prominent figure in the synthetic biology community and the professor of bioengineering at Stanford University in California. We are thankful for his help in shipping us a plasmid for our project. 
 
-![DrewEndy](/images/Sponsors/Endy.jpg)
-Drew Endy (_Photo taken from indiebio.co_)
-
-
-**Steven Graff's** paper, _"A Mathematical Model to Study the Role of the Lsr Intergenic Region in Mediation of Autoinducer-2 Quorum Sensing in_ Escherichia Coli" has been an important reference with regards to our project. After reaching out, Steven Graff has graciously allowed us to use his models and data and given us invaluable advice for our project.
+(_Photo taken from indiebio.co_)
 
 ![StevenGraff](/images/Sponsors/Graff.jpg)
+
+**Steven Graff's** paper, _"A Mathematical Model to Study the Role of the Lsr Intergenic Region in Mediation of Autoinducer-2 Quorum Sensing in_ Escherichia Coli" has been an important reference for our project. After we reached out to him, Steven Graff graciously allowed us to use his models and data and has given us invaluable advice for our modeling our project.
+
+
 Steven Graff (_Photo taken from LinkedIn_)
 
 
@@ -60,7 +46,7 @@ Amin Zargar (_Photo taken from LinkedIn_)
 
 
 ## Sponsors
-<hr>
+
 
 We would like to thank our sponsors for their support:
 

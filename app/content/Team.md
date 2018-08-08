@@ -2,6 +2,21 @@
 
 Our team has been hard at work in the lab! See what everyone's been doing.
 
+## Advisors
+
+
+![KeithKozminski](/images/Sponsors/Kozminski.jpg)
+
+**Keith Kozminski** is our amazing advisor who helps guide our research and keeps us on track for the iGEM Jamboree. From teaching a prepatory iGEM course in the spring to helping us with various aspects of our project, Professor Kozminski's wise words and advice has warmed our hearts. 
+
+(_Photo taken from the Department of Biology at UVA_)
+
+![JasonPapin](/images/Sponsors/Papin.jpg)
+
+**Jason Papin** is our modeling advisor; with his help and advice, we have developed several models that have significantly shaped our project. We are thankful for all the advice and encouragement that Professor Papin has given us throughout our research! 
+
+(_Photo taken from UVA Today_)
+
 <p>
 <div class="team-bio">
 	<div class= "hidden" id="Ngozi">
@@ -26,7 +41,7 @@ Our team has been hard at work in the lab! See what everyone's been doing.
 	</div>
 		<div class= "hidden" id="Paul">
 		<h4>Paul Imbrogulio</h4>
-		<p>Paul is a second year studying chemical engineering. He is a member of the wetlab committee and our miniprep master. He does not have a quotable quote at the moment.</p>
+		<p>Paul is a second year studying chemical engineering. He is a member of the wetlab committee and our miniprep master. His quote is, "Can I pitch it in the incubator?" </p>
 		<br>
 	</div>
 		<div class= "hidden" id="Joseph">
