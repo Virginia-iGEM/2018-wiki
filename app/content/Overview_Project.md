@@ -1,6 +1,6 @@
-# Description 
+# Description Overview 
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores consequuntur modi maiores blanditiis aperiam, hic molestias, doloremque aliquid dolorum temporibus eum a earum architecto dignissimos odit porro dolor! Earum, aspernatur.
+Our project, Quourus, explores quorum sensing and how it can be applied to various fields such as biomanufacturing. Learn more about the various aspects of our project by clicking on the links below. 
 
 <div class="row">
 	<div class="grid-selection">

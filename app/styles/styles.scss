@@ -34,7 +34,7 @@ $grid-layout-media:(
 
 /*Button for Overview*/
   a.button {
-    margin-left: 2em;
+    margin-left: 3em;
     cursor: pointer;
     display: inline-block;
     background-color: $accent-cold-1;
@@ -114,6 +114,7 @@ main {
 
 @import "pages/index";
 @import "pages/team";
+@import "pages/attributions";
 @import "header";
 @import "scrollbar";
 @import "tooltips";
