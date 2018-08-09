@@ -17,21 +17,24 @@ $grid-layout-media:(
 .row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: row;
   padding: 5px;
+
 }
+
 .grid-selection {
-    padding: 20px;
-    @include shadow-1;
-    box-sizing: border-box;
-    margin: 10px;
-    margin-bottom: auto;
-    flex: 1;
+  @include shadow-1;
+  padding: 20px;
+  margin: 10px;
+  height: 500px;
+  width: 350px;
+  position: relative;
 
 
 /*Button for Overview*/
   a.button {
+    margin-left: 2em;
     cursor: pointer;
     display: inline-block;
     background-color: $accent-cold-1;
@@ -39,6 +42,9 @@ $grid-layout-media:(
     border: hidden;
     @include shadow-1;
     color: $text-light;
+    /*set position at absolute from bottom*/
+    position: absolute;
+    bottom: 30px;
   }
 
   .button:hover {
