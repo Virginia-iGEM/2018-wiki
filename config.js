@@ -62,7 +62,7 @@ module.exports = function(root) {
         bowerjs: buildtarget.bowerjs.concat('**/*.js'),
         bowercss: buildtarget.bowercss.concat('**/*.css'),
         files: [path.join(build, `images/**/*.${imagetypes}`), path.join(build, `fonts/**/*.${fonttypes}`)]
-    }
+    };
 
     var secure = ''; // Change to 's' to enable secure html
     // URLs used by realtive2absolute
@@ -72,13 +72,13 @@ module.exports = function(root) {
         js: `http${secure}://${teaminfo.year}.igem.org/Template:${teaminfo.teamName}/js`,
         css: `http${secure}://${teaminfo.year}.igem.org/Template:${teaminfo.teamName}/css`,
         files: `http${secure}://${teaminfo.year}.igem.org/File:T--${teaminfo.teamName}--{0}`,
-    }
+    };
 
     // Suffixes used by relative2absolute
     var suffixes = {
         js: '?action=raw&ctype=text/javascript',
         css: '?action=raw&ctype=text/css'
-    }
+    };
 
     var environments = {
         dev: {
@@ -93,14 +93,14 @@ module.exports = function(root) {
             relative2absolute: true,
             serve: false
         }
-    }
+    };
 
     var shortflag;
     if (argv.l) {
-        shortflag = 'live'
+        shortflag = 'live';
     }
     else if (argv.d) {
-        shortflag = 'dev'
+        shortflag = 'dev';
     }
 
     var userenv = argv.env || shortflag || 'dev'; // Try env variable, else fallback on shortflag, else assume we're in dev
@@ -123,7 +123,7 @@ module.exports = function(root) {
         "YdgG": ["SD","LD"],
         "sfGFP": ["SD","LD"],
         "autoinduction": ["The induction of something by itself or without external stimuli.","LD"]
-    }
+    };
 
     var handlebarsHelpers = function(file, t) {
 
@@ -141,12 +141,13 @@ module.exports = function(root) {
                     return context;
                 }
             }
-        }
-    }
+        };
+    };
 
     var markdownOptions = {
         sanitize: false
-    }
+    };
+
     return {
         teaminfo: teaminfo,
         uploadmap: path.join(root, 'uploadmap.json'),
@@ -180,5 +181,5 @@ module.exports = function(root) {
             options: markdownOptions
         },
         browserslist: ["defaults"]
-    }
+    };
 };
