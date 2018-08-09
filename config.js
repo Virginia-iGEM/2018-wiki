@@ -29,7 +29,7 @@ module.exports = function(root) {
     css: path.join(app, 'styles/**/*.css'),
     scss: path.join(app, 'styles/**/*.scss'),
     js: path.join(app, 'scripts/**/*.js'),
-    images: path.join(app, 'images/**/*.{png,jpg}'),
+    images: path.join(app, 'images/**/*.{png,jpg,gif}'),
     fonts: path.join(app, 'fonts/**/*.{ttf,otf,woff}')
   }
 
@@ -58,7 +58,7 @@ module.exports = function(root) {
     js: path.join(buildtarget.js, '*.js'),
     bowerjs: buildtarget.bowerjs.concat('**/*.js'),
     bowercss: buildtarget.bowercss.concat('**/*.css'),
-    files: [path.join(build, 'images/**/*.{png,jpg}'), path.join(build, 'fonts/**/*.{ttf,otf,woff}')]
+    files: [path.join(build, 'images/**/*.{png,jpg,gif}'), path.join(build, 'fonts/**/*.{ttf,otf,woff}')]
   }
 
   var secure = ''; // Change to 's' to enable secure html
