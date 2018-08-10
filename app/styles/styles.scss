@@ -14,7 +14,30 @@ $grid-layout-media:(
 );
 
 /*this creates columns of two for Overview page*/
-.row {
+.col1 {
+  width: 20%;
+  position: relative;
+  left: 4%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 5px;
+}
+.col2 {
+  width: 20%;
+  position: relative;
+  left: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 5px;
+}
+.col3 {
+  width: 20%;
+  position: relative;
+  left: 70%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

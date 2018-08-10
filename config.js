@@ -115,7 +115,7 @@ module.exports = function(root) {
     "pLsr": ["A promoter of the Lsr Operon","LD"],
     "T7 RNA Polymerase": ["A RNA polymerase from the T7 bacteriophage that catalyzes the formation of RNA from DNA in the 5'→ 3' direction.","LD"],
     "LsrK": ["SD","LD"],
-    "LsrACDB": ["SD","LD"],
+    "LsrACDB": ["SD","LD"], 
     "LuxS": ["SD","LD"],
     "YdgG": ["SD","LD"],
     "sfGFP": ["SD","LD"],
