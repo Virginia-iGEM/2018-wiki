@@ -178,3 +178,6 @@ typings/
 
 # Ignore scratch work directory
 **/spike
+
+# Ignore files in `bitmap` directories because they're regenerable
+bitmaps
