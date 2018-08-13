@@ -1,48 +1,40 @@
-var sitemap = {
-    '': 'home',
-    
-    'Overview_Project': 'quorus',
-    'Description': 'quorus',
-    'Design': 'quorus',
-    'Experiments': 'quorus',
-    'Notebook': 'quorus',
-    'InterLab': 'quorus',
-    'Model': 'quorus',
-    'Results': 'quorus',
-    'Demonstrate': 'quorus',
-    'Improve': 'quorus',
+window.onload = function() {
+    console.log("bliegh");
+    var toc = "";
+    var level = 0;
 
-    'Parts': 'quorus',
-    'Basic_Part': 'quorus',
-    'Composite_Part': 'quorus',
-    'Part_Collection': 'quorus',
+    document.getElementById("main-content").innerHTML =
+        document.getElementById("main-content").innerHTML.replace(
+            /<h([\d]) id="(.+)">([^<]+)<\/h([\d])>/gi,
+            function (str, openLevel, id, titleText, closeLevel) {
 
-    'Safety': 'quorus',
+                if (openLevel != closeLevel) {
+                    return str;
+                }
+                
+                if (openLevel > level) {
+                    toc += (new Array(openLevel - level + 1)).join("<ul>");
+                }
+                else if (openLevel < level) {
+                    toc += (new Array(level - openLevel + 1)).join("</ul>");
+                }
 
-    'Overview_HP': 'hp',
-    'Human_Practices': 'hp',
-    'Public_Engagement': 'hp',
+                level = parseInt(openLevel);
 
-    'Team': 'team',
-    'Collaborations': 'team',
-    'Attributions': 'team',
+                toc += "<li><a href=\"#" + id + "\">" + titleText
+                    + "</a></li>";
 
-    'Applied_Design': 'competition',
-    'Entrepreneurship': 'competition',
-    'Hardware': 'competition',
-    'Measurement': 'competition',
-    'Model': 'competition',
-    'Software': 'competition'
-}
-$(document).ready(function() {
-    var curnavitem = window.location.href;
-    if(curnavitem.match(/igem\.org/i)) { // We know we're live
-        curnavitem = curnavitem.replace(/(http:\/\/)?\d{4}\.igem\.org\.Team:\w+\/?/i, '');
+                return str;
+            }
+        );
+
+    if (level) {
+        toc += (new Array(level +1)).join("</ul>");
     }
-    else {
-        curnavitem = curnavitem.replace(/(http:\/\/)?localhost:\d+\/?/, '');
-        curnavitem = curnavitem.replace(/\.html/i, '');
-    }
-    console.log(curnavitem);
-    $('.' + sitemap[curnavitem]).addClass('current');
-})
+
+    console.log(toc);
+
+    document.getElementById("toc").innerHTML += toc;
+
+    console.log("done!");
+};
