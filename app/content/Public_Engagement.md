@@ -1,16 +1,9 @@
-# Public Engagement
+<h1> Public Engagement </h1>
 
-## Summer Camp
+<p> Innovative educational tools and public engagement activities have the ability to discuss the science behind synthetic biology, spark new scientific curiosity and establish a public dialogue about synthetic biology from voices and views outside the lab. </p>
 
-We went to the Kids College summer camp held at Charlottesville Albemarle Technical Education Center (CATEC) “Manipulating Life Itself & Human Cyborg” in collaboration with Charlottesville Open Bio Lab. The students of the summer camp was aged between 12 to 16.
+<p> On this page, your team should document your Education and Public Engagement work and activities. Describe your team’s efforts to include more people in shaping synthetic biology (such as creating or building upon innovative educational tools and/or public engagement activities to establish two-way dialogue with new communities, and/or engaging new groups in discussions about synthetic biology and public values). Describe your approach, why you chose it, and what was learned by everyone involved (including yourselves!). </p>
 
-We helped them run the gels, understand the gel, talked about our project, and helped them brainstorm about what kind of world problem they could solve with synthetic biology. The students came up with many interesting project ideas related to synthetic biology, it was definitely a huge success for letting students in the community explore the field of synthetic biology.
+<p> This work may relate to or overlap with the work you document on your Human Practices page. Whereas Integrated Human Practices relates to the process of refining your project purpose and design, this page may highlight significant efforts that go beyond your particular project focus and/or address a significant broader concern in iGEM. <p> 
 
-![SummerCamp1](/images/HumanPractices/UVA2018_Outreach.jpg)
-![SummerCamp2](/images/HumanPractices/UVA2018_Outreach1.jpg)
-
-## Public Forum
-
-While trying to reach out to some bio-manufacturing companies, a company turned us down and said that they did not want to be associated with “genetic engineered bacteria”. We followed up with them and had a short talk about why they did not wanted to be associated about genetic engineered bacteria. We found out that the only reason they tried so hard to get non-GMO certified, and emphasized on that was solely because of “customer reasons”, because customers prefer “non-GMO” products. We were actually surprised about how customers preferred non-GMO over GMO products. We wanted to provide a platform for people in the Charlottesville community to talk about why they are against or supporting GMO products, and express their opinions on GMO products. Not only about GMO food, but also about GMO-related pharmaceutical products, or daily products such as paper. 
-
-On Wednesday, September 26th 2018, the 2018 Virginia iGEM team collaborated with Charlottesville Open Bio Labs to hold a public forum, _Do You Know GMO?_ The event brought people together to discuss about their thoughts on GMO. 
+<p> How have you developed new opportunities to include more people in shaping synthetic biology? Innovative educational tools and public engagement activities have the ability to establish a two-way dialogue with new communities by discussing public values and the science behind synthetic biology. Document your approach and what was learned by everyone involved to compete for this award. </p>

@@ -1,3 +1,11 @@
-# Description 
+<h1> Notebook </h1>
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores consequuntur modi maiores blanditiis aperiam, hic molestias, doloremque aliquid dolorum temporibus eum a earum architecto dignissimos odit porro dolor! Earum, aspernatur.
+<p> Document the dates you worked on your project. This should be a detailed account of the work done each day for your project. </p>
+
+<p> This page should contain: </p>
+<ul>
+	<li> Chronological notes of what your team is doing. </li>
+	<li> Brief descriptions of daily important events. </li>
+	<li> Pictures of your progress. </li>
+	<li> Mention who participated in what task. </li>
+</ul>

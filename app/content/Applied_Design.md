@@ -1,3 +1,4 @@
-# Description 
+<h1> Applied Design </h1>
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores consequuntur modi maiores blanditiis aperiam, hic molestias, doloremque aliquid dolorum temporibus eum a earum architecto dignissimos odit porro dolor! Earum, aspernatur.
+<p> This page is for teams who have developed a synbio product to solve a real world problem in an elegant way. The team will have considered how well the product addresses the problem versus other potential solutions, how the product integrates or disrupts other products and processes, and how its lifecycle can more broadly impact our lives and environments in positive and negative ways. </p>
+

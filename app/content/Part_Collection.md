@@ -1,3 +1,5 @@
-# Description 
+<h1> Part Collection </h1>
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores consequuntur modi maiores blanditiis aperiam, hic molestias, doloremque aliquid dolorum temporibus eum a earum architecto dignissimos odit porro dolor! Earum, aspernatur.
+<p> Did your team make a lot of great parts? Is there a theme that ties all your parts together? Do you have more than 10 parts in this collection? Did you make a CRISPR collection, a MoClo collection, or a collection of awesome pigment parts? Describe your parts collection on this page, so the judges can evaluate you for the Best Part Collection award. </p>
+
+<p> While you should put all the characterization information for your parts on the Registry, you are encouraged to explain how all your parts form a collection on this page. </p>

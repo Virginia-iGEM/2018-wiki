@@ -1,3 +1,5 @@
-# Description 
+<h1> Composite Parts </h1>
 
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores consequuntur modi maiores blanditiis aperiam, hic molestias, doloremque aliquid dolorum temporibus eum a earum architecto dignissimos odit porro dolor! Earum, aspernatur.
+<p> A composite part is a functional unit of DNA consisting of two or more basic parts assembled together. BBa_I13507 is an example of a composite part, consisting of an RBS, a protein coding region for a red fluorescent protein, and a terminator. </p>
+
+<p> New composite BioBrick devices can be made by combining existing BioBrick Parts (like Inverters, Amplifiers, Smell Generators, Protein Balloon Generators, Senders, Receivers, Actuators, and so on). </p>

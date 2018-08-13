@@ -1,21 +1,5 @@
-# Parts 
+<h1> Parts </h1>
 
-Check out our parts!
+<p> Each team will make new parts during iGEM and will submit them to the Registry of Standard Biological Parts. The iGEM software provides an easy way to present the parts your team has created. </p>
 
-<div class="row">
-	<div class="grid-selection">
-		<h1>Basic Parts</h1>
-		<p>Check out our best basic parts! </p>
-		<a href="/Basic_Part.html" class="button">Basic Parts</a>
-	</div>	
-	<div class="grid-selection">
-		<h1>Composite Parts</h1>
-		<p>Come see our composite parts. </p>
-		<a href="/Notebook.html" class="button">Composite Parts</a>
-	</div>
-		<div class="grid-selection">
-		<h1>Parts Collection</h1>
-		<p>Our extensive library of parts.</p>
-		<a href="/Demonstrate.html" class="button">Parts Collection</a>
-	</div>
-</div>
+<p> Remember that the goal of proper part documentation is to describe and define a part, so that it can be used without needing to refer to the primary literature. Registry users in future years should be able to read your documentation and be able to use the part successfully. Also, you should provide proper references to acknowledge previous authors and to provide for users who wish to know more. </p>

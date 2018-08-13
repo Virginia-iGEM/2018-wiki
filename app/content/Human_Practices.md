@@ -1,16 +1,13 @@
-# Integrated Human Practices
+<h1> Integrated Human Practices </h1>
 
-## Paper Making
+<p> At iGEM we believe societal considerations should be upfront and integrated throughout the design and execution of synthetic biology projects. “Human Practices” refers to iGEM teams’ efforts to actively consider how the world affects their work and the work affects the world. Through your Human Practices activities, your team should demonstrate how you have thought carefully and creatively about whether your project is responsible and good for the world. We invite you to explore issues relating (but not limited) to the ethics, safety, security, and sustainability of your project, and to show how this exploration feeds back into your project purpose, design and execution. </p>
 
-Since an important part of our project is focused on biomanufacturing, we teamed up with Kombucha Biomaterials, LLC. Their company focuses on using alternative, robust materials and methods that are sustainible and cost effective to make cellulose from kombucha to make paper. 
+<p> On this page, your team should document all of your Human Practices work and activities. You should write about the Human Practices topics you considered in your project, document any activities you conducted to explore these topics (such as engaging with experts and stakeholders), describe why you took a particular approach (including referencing any work you built upon), and explain if and how you integrated takeaways from your Human Practices work back into your project purpose, design and/or execution. </p>
 
-We sat in on a paper making session and learned all the steps. Here's our team in paper-making action: 
+<p> If your team has gone above and beyond in work related to safety, then you should document this work on your Safety wiki page and provide a description and link on this page. If your team has developed education and public engagement efforts that go beyond a focus on your particular project, and for which would like to nominate your team for the Best Education and Public Engagement Special Prize, you should document this work on your Education and Education wiki page and provide a description and link here. </p>
 
-![Paper Making](/images/HumanPractices/papermaking.jpg)
-Some team members measuring out and diluting the kombucha solution onto the sheets. (_Photo taken by Angela Yi_)
+<p> Silver and Gold Medal Criterion </p>
 
-![Paper Making2](/images/HumanPractices/papermaking2.jpg)Ryan and Grace learning how to lay out the sheeets of kombucha onto pieces of cardboard to allow it to dry out. (_Photo taken by Angela Yi_)
+<p> Convince the judges you have thought carefully and creatively about whether your work is responsible and good for the world. Document how you have investigated these issues and engaged with your relevant communities, why you chose this approach, and what you have learned. Please note that surveys will not fulfill this criteria unless you follow scientifically valid methods. </p>
 
-## Public Engagement
-
-We're giving back to the community! [See what we've been up to.](/Public_Engagement.html)
+<p> Expand on your silver medal activity by demonstrating how you have integrated the investigated issues into the purpose, design and/or execution of your project. Document how your project has changed based upon your human practices work. </p>
