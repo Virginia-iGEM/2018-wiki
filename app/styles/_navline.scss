@@ -1,2 +1,17 @@
 nav {
+  padding: 3em 2em;
+  white-space: nowrap;
+  h1 {
+    font-size: 1em;
+  }
+  ul { // Primary ToC
+    li { // First-level headers
+      padding: 0.5em 0em;
+      ul { // Subheaders
+        li { // Second-level headers
+          padding: 0.5em 0 0.5em 1em;
+        }
+      }
+    }
+  }
 }
