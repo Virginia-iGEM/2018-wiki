@@ -1,15 +1,26 @@
 nav {
-  padding: 3em 2em;
-  white-space: nowrap;
-  h1 {
-    font-size: 1em;
-  }
-  ul { // Primary ToC
-    li { // First-level headers
-      padding: 0.5em 0em;
-      ul { // Subheaders
-        li { // Second-level headers
-          padding: 0.5em 0 0.5em 1em;
+  #toc {
+    position: sticky;
+    padding: 3em 2em;
+    white-space: nowrap;
+    h1 {
+      font-size: 1em;
+    }
+    ul { // Primary ToC
+      li { // First-level headers
+        padding: 0.5em 0em;
+        ul { // Subheaders
+          // For expand animation
+          height: 0;
+          overflow: hidden;
+          transition: all 0.2s;
+          &.current {
+            height: auto;
+          }
+
+          li { // Second-level headers
+            padding: 0.5em 0 0.5em 1em;
+          }
         }
       }
     }
