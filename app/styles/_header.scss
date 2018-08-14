@@ -1,5 +1,6 @@
 header {
   // Establish variables
+  $nav-height-expanded: 20em;
   $nav-padding: 0em;
   /*Keeps the nav bar sticking on the top*/ 
   $nav-background-color: $background-dark-1;
@@ -40,27 +41,36 @@ header {
     transform: translateY(-$nav-height);
     //opacity: 0;
   }
+  overflow: hidden;
+
 
   #navbar {
     height: $nav-height;
+    &:hover, &:focus {
+      height: auto;
+      & > ul > li {
+        height: auto;
+      }
+    }
     //width: 100%;
     display: flex;
     justify-content: center;
-    //@include shadow-1;
+    padding-bottom: 1em;
     ul {
-      //@include grid-container;
+      display: flex;
       list-style: none;
       margin: 0px;
       padding: 0px;
       li {
+        flex: 1;
         //@include grid-column(1, $nav-grid);
         float: left;
         position: relative; // This is required for dropdowns to be positioned relative to the navbar instead of the browser window
         line-height: $nav-height; // Center text
-        height: $nav-height; // Set container height to navbar height
+        //height: $nav-height; // Set container height to navbar height
         /* dividers for easier/organized view*/
         .divider {
-          height: 1.5px;
+          flex: 0 0 1px;
           overflow: hidden;
           background-color: $nav-accent-color;
         }
@@ -69,9 +79,8 @@ header {
           display: flex;
           align-items: center;
           padding: 0 20px;
-          height: 100%;
           width: 100%;
-          background: $nav-background-color;
+          //background: $nav-background-color;
           color: $nav-text-color;
           font-size: 1em;
           white-space: nowrap; // Text is occluded instead of wrapped
@@ -79,7 +88,7 @@ header {
           transition: all 0.2s ease-in-out;
           img {
             display: inline-block;
-            padding: 0.5rem;
+            margin: 0.1rem;
             min-height: 100%;
             height: auto;
             width: auto;
@@ -95,31 +104,18 @@ header {
           }
         }
         ul {
-          @include grid-container;
-          @include shadow-1;
-          position: absolute;
+          display: flex;
+          flex-direction: column;
 
           // Slide-down animation
-          visibility: hidden;
-          opacity: 0;
-          top: 100%;
-          left: 50%;
-          transform: translateX(-50%) translateY(-2em);
+          //visibility: hidden;
+          //opacity: 0;
+          //transform: translateX(-50%) translateY(-2em);
           transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
-
           li {
-            @include grid-column(1, $nav-grid-dropdown);
             overflow: hidden;
+            font-size: 0.8em;
           }
-        }
-        &:focus > ul, &:hover > ul {
-          // All for animation
-          //display: block;
-          //z-index: 1; // Is placed underneath navbar
-          visibility: visible; // Becomes visible
-          opacity: 1; // Fades in
-          transform: translateX(-50%) translateY(0%); // Slides down
-          transition-delay: 0s, 0s, 0.3s;
         }
       }
     }
