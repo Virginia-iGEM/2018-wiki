@@ -1,3 +1,6 @@
+// Code courtesy of Ates Goral
+// https://stackoverflow.com/a/187946
+
 window.onload = function() {
     console.log("bliegh");
     var toc = "";
@@ -7,10 +10,6 @@ window.onload = function() {
         document.getElementById("main-content").innerHTML.replace(
             /<h([\d]) id="(.+)">([^<]+)<\/h([\d])>/gi,
             function (str, openLevel, id, titleText, closeLevel) {
-
-                if (openLevel != closeLevel) {
-                    return str;
-                }
                 
                 if (openLevel > level) {
                     toc += (new Array(openLevel - level + 1)).join("<ul>");
@@ -19,10 +18,12 @@ window.onload = function() {
                     toc += (new Array(level - openLevel + 1)).join("</ul>");
                 }
 
+                toc += "</li>";
+
                 level = parseInt(openLevel);
 
                 toc += "<li><a href=\"#" + id + "\">" + titleText
-                    + "</a></li>";
+                    + "</a>";
 
                 return str;
             }
