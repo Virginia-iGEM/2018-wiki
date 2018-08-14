@@ -1,15 +1,17 @@
+/*Nav bar*/
+
 header {
-  // Establish variables
-  $nav-height: 3em; // Navbar height
+  /* Establish variables*/
+  $nav-height: 3em; /* Navbar height*/
   $nav-padding: 0em;
   /*Keeps the nav bar sticking on the top*/ 
   $nav-background-color: $background-light;
   $nav-text-color: $accent-cold-2;
   $nav-accent-color: $accent-warm-1;
 
-  // Custom grids for navbar and dropdown
+  /* Custom grids for navbar and dropdown*/
   $nav-grid: (
-    columns: 8, // 1 column for each item
+    columns: 8, /* 1 column for each item*/
     gutter: 0px,
   );
   $nav-grid-dropdown: (
@@ -19,46 +21,40 @@ header {
 
   @include common-style;
 
-  // BEGIN STYLING
+  /* BEGIN STYLING*/
   &, * {
-    box-sizing: border-box; // Use box sizing for entire navbar to avoid clipping
+    box-sizing: border-box; /* Use box sizing for entire navbar to avoid clipping*/
   }
-  // Stick to top of window
-  position: sticky; // Stick to top of screen
-  top: $igem-navbar-height; // Compensate for the iGEM Wiki builtin navbar.
+  /* Stick to top of window*/
+  position: sticky; /* Stick to top of screen*/
+  top: $igem-navbar-height; /* Compensate for the iGEM Wiki builtin navbar.*/
   margin: 0 auto;
   padding: $nav-padding 0;
-  z-index: 999; // This goes over *everything*
+  z-index: 999; /* This goes over *everything*/
   width: max-content;
   text-align: center;
   background-color: $nav-background-color;
   width: 100%;
 
   transition: all 0.1s;
-  //transform: translateX(25vw);
-  //opacity: 1;
   &.scrollUp {
     transform: translateY(-$nav-height);
-    //opacity: 0;
   }
 
   #navbar {
     height: $nav-height;
-    //width: 100%;
     display: flex;
     justify-content: center;
     @include shadow-1;
     ul {
-      //@include grid-container;
       list-style: none;
       margin: 0px;
       padding: 0px;
       li {
-        //@include grid-column(1, $nav-grid);
         float: left;
-        position: relative; // This is required for dropdowns to be positioned relative to the navbar instead of the browser window
-        line-height: $nav-height; // Center text
-        height: $nav-height; // Set container height to navbar height
+        position: relative; /* This is required for dropdowns to be positioned relative to the navbar instead of the browser window*/
+        line-height: $nav-height; /* Center text*/
+        height: $nav-height; /* Set container height to navbar height*/
         /* dividers for easier/organized view*/
         .divider {
           height: 1.5px;
@@ -75,8 +71,8 @@ header {
           background: $nav-background-color;
           color: $nav-text-color;
           font-size: 1em;
-          white-space: nowrap; // Text is occlude dinstead of wrapped
-          // Re-add link glow to fix animation
+          white-space: nowrap; /* Text is occlude dinstead of wrapped */
+          /* Re-add link glow to fix animation*/
           transition: all 0.2s ease-in-out;
           img {
             display: inline-block;
@@ -100,7 +96,7 @@ header {
           @include shadow-1;
           position: absolute;
 
-          // Slide-down animation
+          /* Slide-down animation*/
           visibility: hidden;
           opacity: 0;
           top: 100%;
@@ -114,12 +110,10 @@ header {
           }
         }
         &:focus > ul, &:hover > ul {
-          // All for animation
-          //display: block;
-          //z-index: 1; // Is placed underneath navbar
-          visibility: visible; // Becomes visible
-          opacity: 1; // Fades in
-          transform: translateX(-50%) translateY(0%); // Slides down
+          /* All for animation*/
+          visibility: visible; /* Becomes visible */
+          opacity: 1; /* Fades in */
+          transform: translateX(-50%) translateY(0%); /* Slides down */
           transition-delay: 0s, 0s, 0.3s;
         }
       }

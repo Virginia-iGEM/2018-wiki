@@ -1,16 +1,15 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 footer {
-  $footer-height: 6rem; // Footer height
+  $footer-height: 6rem; /* Footer height */
   $footer-grid: ( columns: 12, gutter: 0px);
   font-size: $font-size;
   font-family: $font-family;
   @include grid-container;
   box-sizing: border-box;
   background-color: $background-dark;
-  //border-top: 1px solid $accent-color;
   color: $text-light;
-  padding: 25px; //@include grid-visual;
+  padding: 25px; 
   positioN: relative;
   z-index: 999;
 
@@ -23,8 +22,7 @@ footer {
   }
   div.spacer {
     @include grid-column(4, $footer-grid);
-    @include block-height($footer-height); //text-align: center;
-  }
+    @include block-height($footer-height); /*text-align: center*/  }
   div.social-container {
     @include grid-column(3, $footer-grid);
   }
@@ -35,16 +33,15 @@ footer {
 }
 
 /*Code courtesy of https://codepen.io/brandondward/pen/RpyaKL*/
+/*Social media icons*/
 
 $timing: 265ms;
-$iconColor: $accent-warm; //#ff003c;
-$accent: $accent-cold; //#c648c8;
+$iconColor: $accent-warm; /*#ff003c;*/
+$accent: $accent-cold; /*#c648c8;*/
 
 .social-container {
-  //@include grid-visual;
   @include grid-column(3);
   width: 400px; //margin: 40vh auto;
-  //text-align: right;
 }
 
 .social-icons {
@@ -65,7 +62,7 @@ $accent: $accent-cold; //#c648c8;
     transition: all $timing ease-out;
   }
   a {
-    display: inline-block; //@include grid-visual;
+    display: inline-block; /*@include grid-visual;*/
     &:before {
       @include transformScale();
       content: " ";

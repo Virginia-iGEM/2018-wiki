@@ -1,14 +1,12 @@
 @import "common";
 
 $grid-layout: ( 
-  columns: 1, 
-  //gutter: 2rem, 
+  columns: 1,
   gutter: 0
 );
 
 $grid-layout-media:( 
   columns: 16, 
-  //gutter: 2rem, 
   gutter: 0,
   media: $breakpoint
 );
@@ -89,34 +87,19 @@ main {
 
   article {
     margin-top: 2em;
-    //padding-right: 20px;
-
 
     img {
-      //width: 30em;
       flex: 0 0 30em;
       float: right;
       clear: both;
       position: relative;
-      //transform: translateY(-50%);
       margin-left: 5em;
     }
   }
   &>* {
     background-size: cover;
-    //padding-right: 30px;
-    //padding-bottom: 50px;
-    //padding-left: 80px;
   }
 }
 
-
-
-@import "pages/index";
-@import "pages/team";
-@import "pages/attributions";
 @import "header";
-@import "scrollbar";
-@import "tooltips";
-@import "navline";
 @import "footer";

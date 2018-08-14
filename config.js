@@ -13,7 +13,7 @@ module.exports = function(root) {
   const teaminfo = {
     year: 2018,
     teamName: 'Virginia'
-  }
+  };
 
   // Listed file sources for all tasks. Note use of glob patterns and wildcarding.
   // Used by any build tasks.
@@ -31,7 +31,7 @@ module.exports = function(root) {
     js: path.join(app, 'scripts/**/*.js'),
     images: path.join(app, 'images/**/*.{png,jpg,gif}'),
     fonts: path.join(app, 'fonts/**/*.{ttf,otf,woff}')
-  }
+  };
 
   // Destination directory for build, source directories for upload.
   // Used by any build tasks.
@@ -102,25 +102,6 @@ module.exports = function(root) {
 
   var userenv = argv.env || shortflag || 'dev'; // Try env variable, else fallback on shortflag, else assume we're in dev
   var environment = Object.assign(environments[userenv], {name: userenv});
-
-  const glossary = {
-    "quorum sensing": ["In biology, quorum sensing is the ability to detect and to respond to cell population density by gene regulation.", "Long Def"],
-    "operon": ["In genetics, an operon is a functioning unit of DNA containing a cluster of genes under the control of a single promoter.", "Long Def"],
-    "Lsr operon": ["Short Def", "Long Def"],
-    "E.coli": ["E. coli (Escherichia coli) is one of several types of bacteria that normally inhabit the intestine of humans and animals.", "Long Def"],
-    "biofilms": ["ggregate of microorganisms in which cells that are frequently embedded within a self-produced matrix of extracellular polymeric substances (EPSs) adhere to each other and/or to a surface.","LD"],
-    "virulence": ["Virulence provides a quantitative measure of the pathogenicity or the likelihood of a microbe to cause disease.", "LD"],
-    "Autoinducer-2": ["A member of a family of signaling molecules used in quorum sensing.", "LD"],
-    "phosphorylation": ["A biochemical process that involves the addition of phosphate to an organic compound. ","LD"],
-    "pLsr": ["A promoter of the Lsr Operon","LD"],
-    "T7 RNA Polymerase": ["A RNA polymerase from the T7 bacteriophage that catalyzes the formation of RNA from DNA in the 5'→ 3' direction.","LD"],
-    "LsrK": ["SD","LD"],
-    "LsrACDB": ["SD","LD"],
-    "LuxS": ["SD","LD"],
-    "YdgG": ["SD","LD"],
-    "sfGFP": ["SD","LD"],
-    "autoinduction": ["The induction of something by itself or without external stimuli.","LD"]
-  }
 
   var handlebarsHelpers = function(file, t) {
 
