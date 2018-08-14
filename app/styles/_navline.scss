@@ -5,21 +5,27 @@ nav {
     padding: 3em 2em;
     white-space: nowrap;
     h1 {
-      font-size: 1em;
+      font-size: 1.5em;
     }
     ul { // Primary ToC
       li { // First-level headers
         padding: 0.5em 0em;
+        a {
+          font-size: 1.3em;
+        }
         ul { // Subheaders
           // For expand animation
+          padding-top: 0.75em;
           height: 0;
           overflow: hidden;
-          transition: all 0.2s;
           &.current {
             height: auto;
           }
 
           li { // Second-level headers
+            a {
+              font-size: 1em;
+            }
             padding: 0.5em 0 0.5em 1em;
           }
         }
