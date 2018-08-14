@@ -49,6 +49,7 @@ ul {
   // Placeholder that "subs in" for the iGEM navbar on dev builds
   height: $igem-navbar-height;
   position: fixed;
+  top: 0; // Push to top of screen
   display: block;
   background-color: #383838;
   border-bottom: solid black 2px;

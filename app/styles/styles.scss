@@ -1,5 +1,7 @@
 @import "common";
 
+$nav-height: 3em; // Navbar height
+
 $grid-layout: ( 
   columns: 1, 
   //gutter: 2rem, 
@@ -76,6 +78,7 @@ img {
 main {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   @include common-style;
   font-size: $font-size;
   font-family: $font-family;
@@ -87,10 +90,10 @@ main {
   z-index: 1;
 
   article {
-    margin-top: 2em;
+    margin-top: $nav-height + 2em;
     //padding-right: 20px;
-    max-width: 61.8vw;
-
+    flex: 3;
+    max-width: 1200px;
 
     img {
       //width: 30em;
@@ -110,9 +113,16 @@ main {
   }
 }
 
+#rightgutter {
+  flex: 1;
+}
+
 @media screen and (max-width: $breakpoint) {
   main {
     flex-direction: column;
+    article {
+      flex: 1;
+    }
   }
 }
 

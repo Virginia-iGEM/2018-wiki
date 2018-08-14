@@ -1,8 +1,9 @@
 nav {
+  flex: 1;
   #toc {
     position: sticky;
     top: 0;
-    padding: 3em 2em;
+    padding: $nav-height + 3em 2em;
     white-space: nowrap;
     h1 {
       font-size: 1.5em;
@@ -30,6 +31,14 @@ nav {
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint) {
+  nav>#toc {
+    ul>li>ul {
+      height: auto;
     }
   }
 }
