@@ -1,5 +1,6 @@
 nav {
-  flex: 1;
+  flex: 1 0;
+  max-width: 30em;
   #toc {
     position: sticky;
     top: 0;
