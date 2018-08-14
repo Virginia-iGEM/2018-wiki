@@ -106,23 +106,24 @@ module.exports = function(root) {
     var userenv = argv.env || shortflag || 'dev'; // Try env variable, else fallback on shortflag, else assume we're in dev
     var environment = Object.assign(environments[userenv], {name: userenv});
 
+/*tooltip*/
     const glossary = {
-        "quorum sensing": ["In biology, quorum sensing is the ability to detect and to respond to cell population density by gene regulation.", "Long Def"],
-        "operon": ["In genetics, an operon is a functioning unit of DNA containing a cluster of genes under the control of a single promoter.", "Long Def"],
-        "Lsr operon": ["Short Def", "Long Def"],
-        "E.coli": ["E. coli (Escherichia coli) is one of several types of bacteria that normally inhabit the intestine of humans and animals.", "Long Def"],
-        "biofilms": ["ggregate of microorganisms in which cells that are frequently embedded within a self-produced matrix of extracellular polymeric substances (EPSs) adhere to each other and/or to a surface.","LD"],
-        "virulence": ["Virulence provides a quantitative measure of the pathogenicity or the likelihood of a microbe to cause disease.", "LD"],
-        "Autoinducer-2": ["A member of a family of signaling molecules used in quorum sensing.", "LD"],
-        "phosphorylation": ["A biochemical process that involves the addition of phosphate to an organic compound. ","LD"],
-        "pLsr": ["A promoter of the Lsr Operon","LD"],
-        "T7 RNA Polymerase": ["A RNA polymerase from the T7 bacteriophage that catalyzes the formation of RNA from DNA in the 5'→ 3' direction.","LD"],
-        "LsrK": ["SD","LD"],
-        "LsrACDB": ["SD","LD"],
-        "LuxS": ["SD","LD"],
-        "YdgG": ["SD","LD"],
-        "sfGFP": ["SD","LD"],
-        "autoinduction": ["The induction of something by itself or without external stimuli.","LD"]
+        "Autoinducer-2": ["A member of a family of signaling molecules used in quorum sensing."],
+        "autoinduction": ["The induction of something by itself or without external stimuli."],
+        "biofilms": ["Aggregate of microorganisms in which cells that are frequently embedded within a self-produced matrix of extracellular polymeric substances (EPSs) adhere to each other and/or to a surface."],
+        "E.coli": ["Also known as Escherichia coli, it is a type of bacteria that normally inhabits the intestine of humans and animals."],
+        "LsrACDB": ["Import protein for A1-2."],        
+        "LsrK": ["A1-2 kinase, which catalyzes the phosphorylation of A1-2 to phospho-AI-2."],        
+        "Lsr operon": ["Genes that regulate other genes responsible for protein synthesis. "], 
+        "LuxS": ["An enzyme closely linked to AI-2 production."],    
+        "operon": ["In genetics, an operon is a functioning unit of DNA containing a cluster of genes under the control of a single promoter."],
+        "phosphorylation": ["A biochemical process that involves the addition of phosphate to an organic compound. "],
+        "pLsr": ["A promoter of the Lsr Operon."],
+        "quorum sensing": ["The ability to detect and to respond to cell population density by gene regulation."],
+        "sfGFP": ["Super folding green flourescent protein that is commonly used for protein expression levels."],
+        "T7 RNA Polymerase": ["A RNA polymerase from the T7 bacteriophage that catalyzes the formation of RNA from DNA in the 5'→ 3' direction."],        
+        "virulence": ["Provides a quantitative measure of the pathogenicity or the likelihood of a microbe to cause disease."],
+        "YdgG": ["A protein that enhances transport of AI-2."]  
     };
 
     var handlebarsHelpers = function(file, t) {
