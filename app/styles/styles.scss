@@ -92,14 +92,28 @@ main {
     //padding-right: 20px;
 
 
-    img {
+    img, figure {
       //width: 30em;
       flex: 0 0 30em;
       float: right;
       clear: both;
       position: relative;
       //transform: translateY(-50%);
-      margin-left: 5em;
+      //margin-left: 5em;
+      padding: 5px;
+    }
+    /*adding captions*/
+    figure {
+      margin: 0;
+      padding: 5px;
+      display: table;
+    }
+    figcaption {
+      text-align: center;
+      padding: 10px;
+      display: table-caption; 
+      caption-side: bottom;
+      font-style: italic;
     }
   }
   &>* {
