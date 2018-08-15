@@ -8,13 +8,22 @@ $(document).ready(function () {
    var c, currentScrollTop = 0,
        navbar = $('header');
 
+    var hovered = false;
+
+    navbar.hover(function() {
+        hovered = true;
+    },
+    function() {
+        hovered = false;
+    });
+
    $(window).scroll(function () {
       var a = $(window).scrollTop();
       var b = navbar.height();
      
       currentScrollTop = a;
      
-      if (c < currentScrollTop && a > b + b) {
+      if (c < currentScrollTop && a > b + b && navbar && !hovered) {
         navbar.addClass("scrollUp");
       } else if (c > currentScrollTop && !(a <= b)) {
         navbar.removeClass("scrollUp");
