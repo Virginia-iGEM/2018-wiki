@@ -1,25 +1,31 @@
 nav {
   flex: 1 0;
   max-width: 30em;
+
   #toc {
+    padding: $nav-height + 3em 2em;
     position: sticky;
     top: 0;
-    padding: $nav-height + 3em 2em;
     white-space: nowrap;
+
     h1 {
       font-size: 1.5em;
     }
+
     ul { // Primary ToC
       li { // First-level headers
-        padding: 0.5em 0em;
+        padding: .5em 0;
+
         a {
           font-size: 1.3em;
         }
+
         ul { // Subheaders
           // For expand animation
-          padding-top: 0.75em;
           height: 0;
           overflow: hidden;
+          padding: .75em 0 .5em 1em;
+
           &.current {
             height: auto;
           }
@@ -28,7 +34,6 @@ nav {
             a {
               font-size: 1em;
             }
-            padding: 0.5em 0 0.5em 1em;
           }
         }
       }

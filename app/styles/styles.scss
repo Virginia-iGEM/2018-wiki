@@ -1,52 +1,51 @@
-@import "common";
+@import 'common';
 
 $nav-height: 3em; // Navbar height
 
-$grid-layout: ( 
-  columns: 1, 
-  //gutter: 2rem, 
+$pgridp-layout: (
+  columns: 1,
   gutter: 0
 );
 
-$grid-layout-media:( 
-  columns: 16, 
-  //gutter: 2rem, 
+$grid-layout-media: (
+  columns: 16,
+  //gutter: 2rem,
   gutter: 0,
   media: $breakpoint
 );
 
-/*this creates columns of two for Overview page*/
+//this creates columns of two for Overview page
 .row {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  flex-direction: row;
   padding: 5px;
 
 }
 
 .grid-selection {
   @include shadow-1;
-  padding: 20px;
-  margin: 10px;
   height: 500px;
-  width: 350px;
+  margin: 10px;
+  padding: 20px;
   position: relative;
+  width: 350px;
 
 
-/*Button for Overview*/
+  //Button for Overview
   a.button {
-    margin-left: 3em;
+    //set position at absolute from bottom
+    @include shadow-1;
+    background-color: $accent-cold-1;
+    border: hidden;
+    bottom: 30px;
+    color: $text-light;
     cursor: pointer;
     display: inline-block;
-    background-color: $accent-cold-1;
+    margin-left: 3em;
     padding: 15px 32px;
-    border: hidden;
-    @include shadow-1;
-    color: $text-light;
-    /*set position at absolute from bottom*/
     position: absolute;
-    bottom: 30px;
   }
 
   .button:hover {
@@ -55,61 +54,54 @@ $grid-layout-media:(
 }
 
 
-a,
-a:visited {
-  text-decoration: none;
+a, a:visited {
   color: $accent-cold-1;
-  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  transition: color text-shadow .2s ease-in-out;
+
   &:hover {
-    text-decoration: none;
     color: $accent-warm-1;
-    text-shadow: 0px 0px 8px $accent-warm;
+    text-shadow: 0 0 8px $accent-warm;
   }
 }
 
 img {
-  width: auto;
   height: auto;
   max-height: 100%;
   max-width: 100%;
   overflow: hidden;
+  width: auto;
 }
 
 main {
+  @include common-style;
+  background-color: $background-light-1;
   display: flex;
   flex-direction: row;
-  justify-content: right;
-  @include common-style;
-  font-size: $font-size;
   font-family: $font-family;
-  height: 100%;
-  margin: 0 auto;
+  font-size: $font-size;
   height: auto;
+  justify-content: right;
+  margin: 0 auto;
   position: relative;
-  background-color: $background-light-1;
   z-index: 1;
 
   article {
-    margin-top: $nav-height + 2em;
-    //padding-right: 20px;
     flex: 0 0 65em;
+    margin-top: $nav-height + 2em;
     text-align: justify;
 
     img {
-      //width: 30em;
+      clear: both;
       flex: 0 0 30em;
       float: right;
-      clear: both;
-      position: relative;
-      //transform: translateY(-50%);
       margin-left: 5em;
+      position: relative;
     }
   }
+
   &>* {
     background-size: cover;
-    //padding-right: 30px;
-    //padding-bottom: 50px;
-    //padding-left: 80px;
   }
 }
 
@@ -126,11 +118,11 @@ main {
   }
 }
 
-@import "pages/index";
-@import "pages/team";
-@import "pages/attributions";
-@import "header";
-@import "scrollbar";
-@import "tooltips";
-@import "navline";
-@import "footer";
+@import 'pages/index';
+@import 'pages/team';
+@import 'pages/attributions';
+@import 'header';
+@import 'scrollbar';
+@import 'tooltips';
+@import 'navline';
+@import 'footer';
