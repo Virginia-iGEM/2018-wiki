@@ -1,8 +1,9 @@
 header {
   // Establish variables
   $nav-height-expanded: 20em;
-  $nav-padding: 0em;
-  /*Keeps the nav bar sticking on the top*/ 
+  $nav-padding: 0;
+
+  //Keeps the nav bar sticking on the top
   $nav-background-color: $background-dark-1;
   $nav-text-color: $text-light;
   $nav-accent-color: $accent-cold;
@@ -10,111 +11,112 @@ header {
   // Custom grids for navbar and dropdown
   $nav-grid: (
     columns: 8, // 1 column for each item
-    gutter: 0px,
+    gutter: 0
   );
   $nav-grid-dropdown: (
-      columns: 1,
-      gutter: 0px,
+    columns: 1,
+    gutter: 0
   );
 
   @include common-style;
+  // Stick to top of window
+  background-color: $nav-background-color;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: $nav-padding 0;
+  position: fixed; // Stick to top of screen
+  text-align: center;
+  top: $igem-navbar-height; // Compensate for the iGEM Wiki builtin navbar.
+  transition: all .1s;
+  width: 100%;
+  z-index: 999; // This goes over *everything*
 
   // BEGIN STYLING
-  &, * {
+  &,
+  * {
     box-sizing: border-box; // Use box sizing for entire navbar to avoid clipping
   }
-  // Stick to top of window
-  position: fixed; // Stick to top of screen
-  top: $igem-navbar-height; // Compensate for the iGEM Wiki builtin navbar.
-  margin: 0 auto;
-  padding: $nav-padding 0;
-  z-index: 999; // This goes over *everything*
-  width: max-content;
-  text-align: center;
-  background-color: $nav-background-color;
-  width: 100%;
 
-  transition: all 0.1s;
-  //transform: translateX(25vw);
-  //opacity: 1;
   &.scrollUp {
     transform: translateY(-$nav-height);
     //opacity: 0;
   }
-  overflow: hidden;
-
 
   #navbar {
+    display: flex;
     height: $nav-height;
-    &:hover, &:focus {
+    justify-content: center;
+    padding-bottom: 1em;
+
+    &:hover,
+    &:focus {
       height: auto;
+
       & > ul > li {
         height: auto;
       }
     }
-    //width: 100%;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 1em;
+
     ul {
       display: flex;
       list-style: none;
-      margin: 0px;
-      padding: 0px;
+      margin: 0;
+      padding: 0;
+
       li {
         flex: 1;
-        //@include grid-column(1, $nav-grid);
         float: left;
-        position: relative; // This is required for dropdowns to be positioned relative to the navbar instead of the browser window
         line-height: $nav-height; // Center text
-        //height: $nav-height; // Set container height to navbar height
-        /* dividers for easier/organized view*/
+        position: relative; // This is required for dropdowns to be positioned relative to the navbar instead of the browser window
+
+        // dividers for easier/organized view
         .divider {
+          background-color: $nav-accent-color;
           flex: 0 0 1px;
           overflow: hidden;
-          background-color: $nav-accent-color;
         }
-        /*a, related to link*/
-        a, a:visited {
-          display: flex;
+
+        //a, related to link
+        a,
+        a:visited {
+
           align-items: center;
-          padding: 0 20px;
-          width: 100%;
-          //background: $nav-background-color;
           color: $nav-text-color;
+          display: flex;
           font-size: 1em;
+          padding: 0 20px;
+          transition: all 0.2s ease-in-out; // Re-add link glow to fix animation
           white-space: nowrap; // Text is occluded instead of wrapped
-          // Re-add link glow to fix animation
-          transition: all 0.2s ease-in-out;
+          width: 100%;
+
           img {
             display: inline-block;
-            margin: 0.1rem;
-            min-height: 100%;
             height: auto;
+            margin: .1rem;
+            min-height: 100%;
             width: auto;
           }
+
           &:hover {
             color: $nav-accent-color;
-            text-shadow: 0px 0px 8px $nav-accent-color;
+            text-shadow: 0 0 8px $nav-accent-color;
           }
-          /*adds the arrow to dropdowns, selects not only-child*/
+
+          // adds the arrow to dropdowns, selects not only-child
           &:not(:only-child):after {
-            padding-left: 4px;
             content: ' ▾';
+            padding-left: 4px;
           }
         }
+
         ul {
           display: flex;
           flex-direction: column;
+          transition: all .2s ease-in-out 0s, visibility 0s linear .3s, z-index 0s linear .01s; // Slide-down animation
 
-          // Slide-down animation
-          //visibility: hidden;
-          //opacity: 0;
-          //transform: translateX(-50%) translateY(-2em);
-          transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
           li {
+            font-size: .8em;
             overflow: hidden;
-            font-size: 0.8em;
           }
         }
       }
