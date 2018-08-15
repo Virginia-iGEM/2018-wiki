@@ -80,47 +80,48 @@ $text-light:          $background-light;
 
 $breakpoint: 1000px; // If the screen is under this width, switch to mobile view
 
-$font-family: "OpenSans";
+$font-family: "Arial";
 $font-size: medium;
 
 @mixin common-style {
   h1, h2, h3, h4, h5, h6 {
-    margin-top: 2em;
-    margin-bottom: 2em;
-    font-weight: bold;
-    font-size: $font-size;
-    font-family: $font-family;
+    margin-top: 2em !important;
+    margin-bottom: 2em !important;
+    font-weight: bold !important;
+    font-size: $font-size !important;
+    font-family: $font-family !important;
+    line-height: normal !important;
   }
   h1 {
-    margin-left: 2em;
-    font-size: 2.2em;
+    margin-left: 2em !important;
+    font-size: 2.2em !important;
   }
   h2 {
-    margin-left: 2em;
-    font-size: 2em;
+    margin-left: 2em !important;
+    font-size: 2em !important;
   }
   h3 {
-    margin-left: 4em;
-    font-size: 1.8em;
+    margin-left: 4em !important;
+    font-size: 1.8em !important;
   }
   h4 {
-    margin-left: 4em;
-    font-size: 1.6em;
+    margin-left: 4em !important;
+    font-size: 1.6em !important;
   }
   h5 {
-    margin-left: 4em;
-    font-size: 1.4em;
+    margin-left: 4em !important;
+    font-size: 1.4em !important;
   }
   h6 {
-    margin-left: 4em;
-    font-size: 1.2em;
+    margin-left: 4em !important;
+    font-size: 1.2em !important;
   }
 
   p {
-    margin: 3em 4em;
-    line-height: 2em;
-    font-size: $font-size;
-    font-family: $font-family;
+    margin: 3em 4em !important;
+    line-height: 2em !important;
+    font-size: $font-size !important;
+    font-family: $font-family !important;
     color: $text-dark;
   }
 }

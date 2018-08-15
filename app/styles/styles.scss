@@ -33,7 +33,7 @@ $grid-layout-media:(
 
 
 /*Button for Overview*/
-  a.button {
+  a.buttonoverview {
     margin-left: 3em;
     cursor: pointer;
     display: inline-block;
@@ -47,7 +47,7 @@ $grid-layout-media:(
     bottom: 30px;
   }
 
-  .button:hover {
+  .buttonoverview:hover {
     @include shadow-2;
   }
 }
