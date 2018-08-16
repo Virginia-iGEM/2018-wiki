@@ -1,6 +1,6 @@
 # Description Overview 
 
-Our project, Quourus, explores quorum sensing and how it can be applied to various fields such as biomanufacturing. Learn more about the various aspects of our project by clicking on the links below. 
+Our project, Quorus, explores quorum sensing and how it can be applied to biomanufacturing. Learn more about the various aspects of our project by clicking on the links below. 
 
 <div class="row">
 	<div class="grid-selection">
