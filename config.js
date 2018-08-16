@@ -1,4 +1,4 @@
-const path = require('path');
+﻿const path = require('path');
 
 var argv = require('yargs')
     .boolean(['--dev', '-d'])
@@ -108,22 +108,22 @@ module.exports = function(root) {
 
 /*tooltip*/
     const glossary = {
-        "Autoinducer-2": ["A member of a family of signaling molecules used in quorum sensing."],
-        "autoinduction": ["The induction of something by itself or without external stimuli."],
-        "biofilms": ["Aggregate of microorganisms in which cells that are frequently embedded within a self-produced matrix of extracellular polymeric substances (EPSs) adhere to each other and/or to a surface."],
-        "E.coli": ["Also known as Escherichia coli, it is a type of bacteria that normally inhabits the intestine of humans and animals."],
-        "LsrACDB": ["Import protein for A1-2."],        
-        "LsrK": ["A1-2 kinase, which catalyzes the phosphorylation of A1-2 to phospho-AI-2."],        
-        "Lsr operon": ["Genes that regulate other genes responsible for protein synthesis. "], 
-        "LuxS": ["An enzyme closely linked to AI-2 production."],    
-        "operon": ["In genetics, an operon is a functioning unit of DNA containing a cluster of genes under the control of a single promoter."],
-        "phosphorylation": ["A biochemical process that involves the addition of phosphate to an organic compound. "],
-        "pLsr": ["A promoter of the Lsr Operon."],
+        "Autoinducer-2": ["A universal signaling molecule used by microorganisms to coordinate group behavior through quorum sensing."],
+        "autoinduction": ["The activation of a phenotype without external stimuli."],
+        "biofilms": ["A protective, adhesive matrix of polymers typically produced after quorum activation."],
+        "E.coli": ["Escherichia coli. A commonly used chassis also found in the human gut microbiome."],
+        "LsrACDB": ["Active import protein for AI-2."],        
+        "LsrK": ["AI-2 kinase, which catalyzes the phosphorylation of A1-2 to phospho-AI-2."],        
+        "Lsr operon": ["LuxS Regulated (Lsr) operon responsive to AI-2."], 
+        "LuxS": ["An enzyme closely linked to the production of AI-2."]
+        "operon": ["A functional unit of DNA containing a cluster of genes under the control of a single promoter."],
+        "phosphorylation": [" The addition of a phosphate group to an organic compound. "],
+        "pLsr": ["The bidirectional promoter of the Lsr Operon."],
         "quorum sensing": ["The ability to detect and to respond to cell population density by gene regulation."],
-        "sfGFP": ["Super folding green flourescent protein that is commonly used for protein expression levels."],
-        "T7 RNA Polymerase": ["A RNA polymerase from the T7 bacteriophage that catalyzes the formation of RNA from DNA in the 5'→ 3' direction."],        
-        "virulence": ["Provides a quantitative measure of the pathogenicity or the likelihood of a microbe to cause disease."],
-        "YdgG": ["A protein that enhances transport of AI-2."]  
+        "sfGFP": ["superfolding Green Fluorescent Protein"],
+"T7 RNA Polymerase" : ["An RNA polymerase from the T7 bacteriophage is highly selective for the pT7 promoter."],     
+        "virulence": ["The likelihood of a microbe to cause disease based on its phenotypic state."],
+        "YdgG": ["Active export protein for AI-2."]  
     };
 
     var handlebarsHelpers = function(file, t) {
