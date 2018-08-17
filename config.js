@@ -115,7 +115,7 @@ module.exports = function(root) {
         "LsrACDB": ["Active import protein for AI-2."],        
         "LsrK": ["AI-2 kinase, which catalyzes the phosphorylation of A1-2 to phospho-AI-2."],        
         "Lsr operon": ["LuxS Regulated (Lsr) operon responsive to AI-2."], 
-        "LuxS": ["An enzyme closely linked to the production of AI-2."]
+        "LuxS": ["An enzyme closely linked to the production of AI-2."],
         "operon": ["A functional unit of DNA containing a cluster of genes under the control of a single promoter."],
         "phosphorylation": [" The addition of a phosphate group to an organic compound. "],
         "pLsr": ["The bidirectional promoter of the Lsr Operon."],

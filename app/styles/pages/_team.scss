@@ -8,6 +8,7 @@
     width: 150px;
     height: 150px;
     @include shadow-2;
+    clear: initial;
   }
   padding: 3% 5%;
   background-color: $background-light;
@@ -54,8 +55,23 @@
   }
 }
 
+/*circular images for advisors*/
+#advisor {
+   margin: 10px;
+    @include circular;
+    object-fit: cover;
+    width: 175px;
+    height: 175px;
+    //@include shadow-1;
+    flex: 0 0 30em;
+    float: right;
+    clear: both;
+    position: relative;
+    margin-left: 5em;
+}
+
 .team-bio {
-  margin: 6%;
+  margin: 20px;
   line-height: 2em;
   font-size: $font-size;
   font-family: $font-family;
@@ -63,6 +79,7 @@
   -moz-box-shadow: 0 0 5px #999;
   -webkit-box-shadow: 0 0 5px #999;
   box-shadow: 0 0 5px #999;
+  padding: 0.25px;
 }
 .hidden { 
   display: none; 
@@ -70,4 +87,3 @@
 .unhidden { 
   display: block; 
 }
-
