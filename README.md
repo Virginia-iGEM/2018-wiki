@@ -14,7 +14,7 @@ Contains all webcontent that will be found on http://2018.igem.org/Team:Virginia
 
 ## 3 Todo
 
-No items here right now.
+- Convert toc.js to JQuery instead of DOM Queries
 
 ## 4 Roadmap
 
