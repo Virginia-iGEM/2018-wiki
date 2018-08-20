@@ -1,36 +1,38 @@
+var jq = require('jquery');
+
 // Code courtesy of Ates Goral
 // https://stackoverflow.com/a/187946
 
 var updatetoc = function() {
-    var smallestoffset = -$(document).height();
+    var smallestoffset = -jq(document).height();
     var smallestheader;
 
-    $('article h1').each(function(i) { 
-        var offset = $(this).position().top - $(document).scrollTop() - Math.max(document.documentElement.clientHeight, window.innerHeight || 0)/4; // Negative offset values indicate the header's top has passed 1/4 of the way down the viewport
-        //console.log($(this).text() + ' ' + offset);
+    jq('article h1').each(function(i) { 
+        var offset = jq(this).position().top - jq(document).scrollTop() - Math.max(document.documentElement.clientHeight, window.innerHeight || 0)/4; // Negative offset values indicate the header's top has passed 1/4 of the way down the viewport
+        //console.log(jq(this).text() + ' ' + offset);
         if (offset > smallestoffset && offset <= 0) {
             smallestoffset = offset;
-            smallestheader = $(this);
+            smallestheader = jq(this);
         }
     });
 
     if (smallestheader === undefined) {
-        smallestheader = $('article h1:first');
+        smallestheader = jq('article h1:first');
     }
 
     //console.log(smallestheader.text());
 
-    $('#toc>ul>li').each(function(i) {
-        //console.log($(this).children('a').attr('href'));
+    jq('#toc>ul>li').each(function(i) {
+        //console.log(jq(this).children('a').attr('href'));
         //console.log('#' + smallestheader.attr('id'));
-        if ($(this).children('a').attr('href') === '#' + smallestheader.attr('id')) {
-            $(this).children('ul').addClass('current');
+        if (jq(this).children('a').attr('href') === '#' + smallestheader.attr('id')) {
+            jq(this).children('ul').addClass('current');
         }
         else {
-            $(this).children('ul').removeClass('current');
+            jq(this).children('ul').removeClass('current');
         }
     });
-    //console.log($(document).scrollTop());
+    //console.log(jq(document).scrollTop());
 };
 
 window.onload = function() {

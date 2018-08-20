@@ -85,13 +85,17 @@ module.exports = function(root) {
             banner: false,
             minify: false,
             relative2absolute: false,
-            serve: true
+            serve: true,
+            debug: true,
+            browserify: true
         },
         live: {
             banner: true,
             minify: false,
             relative2absolute: true,
-            serve: false
+            serve: false,
+            debug: false,
+            browserify: true
         }
     };
 
