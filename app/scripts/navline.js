@@ -35,7 +35,9 @@ var updatetoc = function() {
     //console.log(jq(document).scrollTop());
 };
 
-window.onload = function() {
+jq(document).ajaxStop(function(event, xhr, options) {
+    console.log(event);
+
     var toc = "";
     var level = 0;
 
@@ -43,7 +45,7 @@ window.onload = function() {
         document.getElementById("main-content").innerHTML.replace(
             /<h([\d]) id="(.+)">([^<]+)<\/h([\d])>/gi,
             function (str, openLevel, id, titleText, closeLevel) {
-                
+
                 if (openLevel > level) {
                     toc += (new Array(openLevel - level + 1)).join("<ul>");
                 }
@@ -62,13 +64,13 @@ window.onload = function() {
             }
         );
 
-    if (level) {
-        toc += (new Array(level +1)).join("</ul>");
-    }
+        if (level) {
+            toc += (new Array(level +1)).join("</ul>");
+        }
 
-    document.getElementById("toc").innerHTML += toc;
+        document.getElementById("toc").innerHTML += toc;
 
-    updatetoc();
-};
+        updatetoc();
+});
 
-window.onscroll = updatetoc;
+jq(document).on('scroll', updatetoc);
