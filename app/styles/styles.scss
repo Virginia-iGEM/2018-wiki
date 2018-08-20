@@ -14,7 +14,7 @@ $grid-layout-media: (
   media: $breakpoint
 );
 
-//this creates columns of two for Overview page
+/*Overview page layout*/
 .row {
   display: flex;
   flex-direction: row;
@@ -31,12 +31,22 @@ $grid-layout-media: (
   padding: 20px;
   position: relative;
   width: 350px;
+  p {
+    text-align: left;
+    margin-left: 3em;
+    display: inline-block;
+    border: hidden;
+    bottom: 70px;
+    display: inline-block;
+    margin-left: 3em;
+    padding: 15px 32px;
+    position: absolute;
+  }
 
 
 /*Button for Overview*/
   a.buttonoverview {
     margin-left: 3em;
-    cursor: pointer;
     display: inline-block;
     background-color: $accent-cold-1;
     border: hidden;
@@ -54,7 +64,7 @@ $grid-layout-media: (
   }
 }
 
-
+/*Links*/
 a, a:visited {
   color: $accent-cold-1;
   text-decoration: none;
@@ -66,6 +76,7 @@ a, a:visited {
   }
 }
 
+/*Images*/
 img {
   height: auto;
   max-height: 100%;
@@ -74,6 +85,7 @@ img {
   width: auto;
 }
 
+/*The main styling for the "meat" and content of our wiki*/
 main {
   @include common-style;
   background-color: $background-light-1;
@@ -86,6 +98,10 @@ main {
   margin: 0 auto;
   position: relative;
   z-index: 1;
+
+  .overview {
+    flex: 0 1 auto;
+  }
 
   article {
     flex: 0 0 65em;
@@ -122,10 +138,6 @@ main {
   }
 }
 
-#rightgutter {
-  flex: 1;
-}
-
 @media screen and (max-width: $breakpoint) {
   main {
     flex-direction: column;
@@ -134,6 +146,7 @@ main {
     }
   }
 }
+
 
 @import 'pages/index';
 @import 'pages/team';
