@@ -87,7 +87,8 @@ module.exports = function(root) {
             relative2absolute: false,
             serve: true,
             debug: true,
-            browserify: true
+            browserify: true,
+            importantify: true
         },
         live: {
             banner: true,
@@ -95,7 +96,8 @@ module.exports = function(root) {
             relative2absolute: true,
             serve: false,
             debug: false,
-            browserify: true
+            browserify: true,
+            importantify: true
         }
     };
 
