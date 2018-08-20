@@ -16,7 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "fontawesome": "^5.0.13",
-    "jquery": "^3.3.1"
+    "fontawesome": "^5.0.13"
   }
 }
