@@ -1,12 +1,12 @@
 var jq = require('jquery');
 
-jq(document).ready(function () {
+jq(document).ajaxStop(function () {
     'use strict';
     
     var previous = ' ';
     console.log('asdf');
 
-    jq('#image_gallery').click(function(event) {
+    jq(document).on('click', '#image_gallery', function(event) {
         var id_name = event.target.id;
         console.log(id_name);
         id_name = id_name.replace(/[0-9]/g, ''); //regex for alphabets, no numbers
@@ -27,8 +27,4 @@ jq(document).ready(function () {
             alert('This person does not exist. Try again.');
         }
     });
-
-    jq('p').on('click', function(event) {
-        console.log('click');
-    })
 });

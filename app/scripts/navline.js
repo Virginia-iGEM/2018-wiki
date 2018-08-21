@@ -36,7 +36,7 @@ var updatetoc = function() {
 };
 
 jq(document).ajaxStop(function(event, xhr, options) {
-    console.log(event);
+    //console.log(event);
 
     var toc = "";
     var level = 0;

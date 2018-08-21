@@ -1,8 +1,12 @@
-//@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 footer {
+    @include common-style;
   $footer-height: 6rem; // Footer height
-  $footer-grid: ( columns: 12, gutter: 0px);
+  $footer-grid: (
+    columns: 12,
+    gutter: 0px,
+  );
   font-size: $font-size;
   font-family: $font-family;
   @include grid-container;
@@ -11,7 +15,7 @@ footer {
   //border-top: 1px solid $accent-color;
   color: $text-light;
   padding: 25px; //@include grid-visual;
-  positioN: relative;
+  position: relative;
   z-index: 999;
 
   div.footer-name {
