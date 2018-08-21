@@ -2,7 +2,6 @@
 @import "fonts";
 @import "bourbon";
 @import "neat";
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,900italic,500italic,500,400italic);
 
 /* UVA Colors
 $background-dark-color:     #232D4B;
@@ -48,7 +47,6 @@ $link-color: rgb(255, 218, 159);
 $template-dark-color: #D9D9D9;
 */
 
-// Current site colors
 /*
 $background-dark-color: rgb(37, 37, 37);
 $background-light-color: rgb(247, 245, 233);
@@ -63,7 +61,7 @@ $background-dark:   #1a1a1a;
 $background-dark-1:   #424242;
 $background-light:  #fffefb;
 $background-light-1:  #f8f8f8;
-//$background-light:  #ffffff;
+/*$background-light:  #ffffff;*/
 $accent-warm:       #eb00c2;
 $accent-warm-1:     #aa34ba;
 $accent-warm-2:     #8a67b5;
@@ -78,7 +76,7 @@ $text-light:          $background-light;
 //$breakpoint: 1000px; // If the screen is under this width, switch to mobile view
 $breakpoint: calc(20em + 65em); // If the screen is under this width, switch to mobile view
 
-$font-family: "Arial";
+$font-family: "OpenSans";
 $font-size: medium;
 
 @mixin common-style {
