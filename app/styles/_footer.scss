@@ -13,10 +13,14 @@ footer {
   box-sizing: border-box;
   background-color: $background-dark;
   //border-top: 1px solid $accent-color;
-  color: $text-light;
+  color: $text-light !important;
   padding: 25px; //@include grid-visual;
   position: relative;
   z-index: 999;
+
+  h3 {
+    color: $text-light !important;
+  }
 
   div.footer-name {
     @include grid-column(5, $footer-grid);

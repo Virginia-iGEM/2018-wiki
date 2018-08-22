@@ -20,7 +20,7 @@ $igem-navbar-height: 16px; // Variable for the height of the required iGEM Navba
     display: none;
   }
 /* Resizes the menubar to fix the links (default is 400px) */
-/*#menubar {
+#menubar {
     width: auto;
   }
 
@@ -50,7 +50,7 @@ body {
 #sideMenu,
 #top_title {
   display: none;
-}*/
+}
 
 #content {
   // Make content behave like one would expect a body to
