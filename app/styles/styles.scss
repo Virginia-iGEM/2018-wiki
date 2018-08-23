@@ -33,7 +33,6 @@ $grid-layout-media: (
   width: 350px;
   p {
     text-align: left;
-    margin-left: 3em;
     display: inline-block;
     border: hidden;
     bottom: 70px;
@@ -67,7 +66,7 @@ $grid-layout-media: (
 /*Links*/
 a, a:visited {
   color: $accent-cold-1;
-  text-decoration: none;
+  text-decoration: none !important;
   transition: color text-shadow .2s ease-in-out;
 
   &:hover {
@@ -98,6 +97,7 @@ main {
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  line-height: normal;
 
   .overview {
     flex: 0 1 auto;
@@ -123,6 +123,7 @@ main {
       margin: 0;
       padding: 5px;
       display: table;
+      margin-left: 3em;
     }
     figcaption {
       text-align: center;
