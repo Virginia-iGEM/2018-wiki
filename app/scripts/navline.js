@@ -35,7 +35,7 @@ var updatetoc = function() {
     //console.log(jq(document).scrollTop());
 };
 
-jq(document).ajaxStop(function(event, xhr, options) {
+$(document).ajaxStop(function(event, xhr, options) {
     //console.log(event);
 
     var toc = "";
