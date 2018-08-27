@@ -103,6 +103,16 @@ main {
     flex: 0 1 auto;
   }
 
+  q {
+      font-weight: bold;
+      padding-left: 1em;
+      &::before {
+	  content: "“";
+      }
+      &::after {
+	  content: "”";
+      }
+  }
   article {
     flex: 0 0 65em;
     margin-top: $nav-height + 2em;

@@ -20,7 +20,7 @@ var updatetoc = function() {
 
     //console.log(smallestheader.text());
 
-    $('#toc>ul>li').each(function(i) {
+    $('#va-toc>ul>li').each(function(i) {
         //console.log($(this).children('a').attr('href'));
         //console.log('#' + smallestheader.attr('id'));
         if ($(this).children('a').attr('href') === '#' + smallestheader.attr('id')) {
@@ -66,7 +66,7 @@ $(document).ajaxStop(function(event, xhr, options) {
             toc += (new Array(level +1)).join("</ul>");
         }
 
-        document.getElementById("toc").innerHTML += toc;
+        document.getElementById("va-toc").innerHTML += toc;
 
         updatetoc();
 });
