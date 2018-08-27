@@ -1,3 +1,3 @@
-var jq = require('jquery');
+
 
   
