@@ -3,7 +3,7 @@ var jq = require('jquery');
 jq(document).ajaxStop(function () {
     'use strict';
     
-    var previous = ' ';
+    var previous = 'Ngozi';
 
     jq(document).on('click', '#image_gallery', function(event) {
         var id_name = event.target.id;
