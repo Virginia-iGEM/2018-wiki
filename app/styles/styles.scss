@@ -94,10 +94,10 @@ main {
   font-size: $font-size;
   height: auto;
   justify-content: right;
+  line-height: normal;
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  line-height: normal;
 
   .overview {
     flex: 0 1 auto;
