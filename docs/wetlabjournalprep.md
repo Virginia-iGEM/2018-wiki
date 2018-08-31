@@ -13,5 +13,7 @@ You should probably write a bash script that does the following:
   - Use regex `s/^ *\(.*{\)$/.labjournal \1`
 - Bump all tables to the right instead of to the left by changing from negative left margins to positive
   - Use regex `s/margin-left: -/margin-left: /g`
+- Remove the template and unnecessary metainstructions the wetlab team uses at the top of the markup
+  - Need to write a regex for this once
 
 All the partials templates are where they should belong. If you don't make a BASH script this all needs to be redone before the wiki freeze.

@@ -46,6 +46,11 @@ header {
     display: flex;
     height: $nav-height;
     justify-content: center;
+    /*
+    @media screen and (max-width: $breakpoint) {
+      justify-content: center;
+    }
+    */
     padding-bottom: 1em;
 
     &:hover,
@@ -59,14 +64,20 @@ header {
 
     ul {
       display: flex;
+      flex-direction: row;
+      @media screen and (max-width: $breakpoint) {
+        flex-direction: column;
+      }
+      justify-content: center;
       list-style: none;
       margin: 0;
+      min-width: 100%;
       padding: 0;
 
       li {
         flex: 1;
-        float: left;
         line-height: $nav-height; // Center text
+        max-width: min-content;
         position: relative; // This is required for dropdowns to be positioned relative to the navbar instead of the browser window
 
         // dividers for easier/organized view
@@ -108,7 +119,7 @@ header {
             padding-left: 4px;
           }
         }
-
+        
         ul {
           display: flex;
           flex-direction: column;
@@ -118,6 +129,13 @@ header {
             font-size: .8em;
             overflow: hidden;
           }
+        }
+
+        &:first-child {
+          margin-left: auto;
+        }
+        &:last-child {
+          margin-left: auto;
         }
       }
     }

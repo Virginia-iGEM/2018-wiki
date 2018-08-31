@@ -1,5 +1,3 @@
-
-
 // Code courtesy of Mohamed Hasan
 // https://codepen.io/Mhmdhasan/pen/mAdaQE
 
