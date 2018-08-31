@@ -1,5 +1,10 @@
 <main id="top">
   {{> navline}}
-  <article id="main-content" href="{{contentpath}}"></article>
+  <article id="main-content"></article>
+  <script>
+    $(function() {
+      $('article#main-content').load('{{contentpath}}');
+    });
+  </script>
   <div id="rightgutter"></div>
 </main>

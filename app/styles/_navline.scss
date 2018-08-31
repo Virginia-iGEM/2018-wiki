@@ -2,7 +2,7 @@ nav {
   flex: 1 0;
   max-width: 30em;
 
-  #toc {
+  #va-toc {
     padding: $nav-height + 3em 2em;
     position: sticky;
     top: 0;
@@ -42,7 +42,7 @@ nav {
 }
 
 @media screen and (max-width: $breakpoint) {
-  nav>#toc {
+  nav>#va-toc {
     ul>li>ul {
       height: auto;
     }

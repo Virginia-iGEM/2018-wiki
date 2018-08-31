@@ -6,6 +6,38 @@ var argv = require('yargs')
     .argv;
 
 module.exports = function(root) {
+    var environments = {
+        dev: {
+            banner: false,
+            minify: false,
+            relative2absolute: false,
+            serve: true,
+            debug: true,
+            browserify: false,
+            importantify: false
+        },
+        live: {
+            banner: true,
+            minify: false,
+            relative2absolute: true,
+            serve: false,
+            debug: false,
+            browserify: false,
+            importantify: false
+        }
+    };
+
+    var shortflag;
+    if (argv.l) {
+        shortflag = 'live';
+    }
+    else if (argv.d) {
+        shortflag = 'dev';
+    }
+
+    var userenv = argv.env || shortflag || 'dev'; // Try env variable, else fallback on shortflag, else assume we're in dev
+    var environment = Object.assign(environments[userenv], {name: userenv});
+
     var app = path.join(root, '/app/');
     var build = path.join(root, '/build/');
 
@@ -27,7 +59,7 @@ module.exports = function(root) {
         markdowncontent: path.join(app, 'content/**/*.md'),
         docxcontent: path.join(app, 'content/**/*.docx'),
         //drivecontent: TODO,
-        partials: path.join(app, 'partials/'),
+      partials: [path.join(app, 'partials/')],
         templates: path.join(app, 'templates/**/*.html'),
         css: path.join(app, 'styles/**/*.css'),
         scss: path.join(app, 'styles/**/*.scss'),
@@ -80,37 +112,6 @@ module.exports = function(root) {
         css: '?action=raw&ctype=text/css'
     };
 
-    var environments = {
-        dev: {
-            banner: false,
-            minify: false,
-            relative2absolute: false,
-            serve: true,
-            debug: true,
-            browserify: true,
-            importantify: false
-        },
-        live: {
-            banner: true,
-            minify: false,
-            relative2absolute: true,
-            serve: false,
-            debug: false,
-            browserify: true,
-            importantify: false
-        }
-    };
-
-    var shortflag;
-    if (argv.l) {
-        shortflag = 'live';
-    }
-    else if (argv.d) {
-        shortflag = 'dev';
-    }
-
-    var userenv = argv.env || shortflag || 'dev'; // Try env variable, else fallback on shortflag, else assume we're in dev
-    var environment = Object.assign(environments[userenv], {name: userenv});
 
 /*tooltip*/
     const glossary = {
@@ -136,8 +137,22 @@ module.exports = function(root) {
 
         return {
             contentpath: function(context) {
-                return path.posix.join('/content/', path.basename(file.path));
+		//if(environment.relative2absolute) {
+		    //return urls.template + '/' + path.basename(file.path, '.html') + suffixes.js;
+		//}
+		//else {
+		    return path.posix.join('/content/', path.basename(file.path));
+		//}
             },
+	    url: function(context1, context2) {
+		if(environment.relative2absolute) {
+		    return urls[context1] + '/' + path.basename(context2, '.html') + suffixes.js;
+		}
+		else {
+		    return path.posix.join('/content/', path.basename(context2));
+		}
+		return '';
+	    },
             define: function(context) {
                 if (context in glossary) {
                     var word_short_definition = glossary[context][0];

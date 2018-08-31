@@ -1,41 +1,39 @@
-var jq = require('jquery');
-
 // Code courtesy of Ates Goral
 // https://stackoverflow.com/a/187946
 
 var updatetoc = function() {
-    var smallestoffset = -jq(document).height();
+    var smallestoffset = -$(document).height();
     var smallestheader;
 
-    jq('article h1').each(function(i) { 
-        var offset = jq(this).position().top - jq(document).scrollTop() - Math.max(document.documentElement.clientHeight, window.innerHeight || 0)/4; // Negative offset values indicate the header's top has passed 1/4 of the way down the viewport
-        //console.log(jq(this).text() + ' ' + offset);
+    $('article h1').each(function(i) { 
+        var offset = $(this).position().top - $(document).scrollTop() - Math.max(document.documentElement.clientHeight, window.innerHeight || 0)/4; // Negative offset values indicate the header's top has passed 1/4 of the way down the viewport
+        //console.log($(this).text() + ' ' + offset);
         if (offset > smallestoffset && offset <= 0) {
             smallestoffset = offset;
-            smallestheader = jq(this);
+            smallestheader = $(this);
         }
     });
 
     if (smallestheader === undefined) {
-        smallestheader = jq('article h1:first');
+        smallestheader = $('article h1:first');
     }
 
     //console.log(smallestheader.text());
 
-    jq('#toc>ul>li').each(function(i) {
-        //console.log(jq(this).children('a').attr('href'));
+    $('#va-toc>ul>li').each(function(i) {
+        //console.log($(this).children('a').attr('href'));
         //console.log('#' + smallestheader.attr('id'));
-        if (jq(this).children('a').attr('href') === '#' + smallestheader.attr('id')) {
-            jq(this).children('ul').addClass('current');
+        if ($(this).children('a').attr('href') === '#' + smallestheader.attr('id')) {
+            $(this).children('ul').addClass('current');
         }
         else {
-            jq(this).children('ul').removeClass('current');
+            $(this).children('ul').removeClass('current');
         }
     });
-    //console.log(jq(document).scrollTop());
+    //console.log($(document).scrollTop());
 };
 
-jq(document).ajaxStop(function(event, xhr, options) {
+$(document).ajaxStop(function(event, xhr, options) {
     //console.log(event);
 
     var toc = "";
@@ -68,9 +66,9 @@ jq(document).ajaxStop(function(event, xhr, options) {
             toc += (new Array(level +1)).join("</ul>");
         }
 
-        document.getElementById("toc").innerHTML += toc;
+        document.getElementById("va-toc").innerHTML += toc;
 
         updatetoc();
 });
 
-jq(document).on('scroll', updatetoc);
+$(document).on('scroll', updatetoc);

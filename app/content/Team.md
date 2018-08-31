@@ -1,4 +1,3 @@
-
 # Our Team
 
 <figure>
@@ -6,12 +5,11 @@
 <figcaption>Our team posing in front of the University of Virginia Rotunda!</figcaption>
 </figure>
 
-##### "The only thing that motivates this team is hatred, money, and food." -Ryan Taylor    
+##### "The only thing that motivates this team is hatred, money, and food." -Ryan Taylor
 
-We are thankful for all the hard work that everyone has contributed throughout the summer! Whether it was through Wetlab, Human Practices, Modeling, or Wiki, it was all vital to the success of our project. We became better friends on the team and made a lot of good memories outside of lab through beach volleyball, potlucks, playing Super Smash Bros, and rock climbing.  
+We are thankful for all the hard work that everyone has contributed throughout the summer! Whether it was through Wetlab, Human Practices, Modeling, or Wiki, it was all vital to the success of our project. We became better friends on the team and made a lot of good memories outside of lab through beach volleyball, potlucks, playing Super Smash Bros, and rock climbing. 
 
 We are the twelve undergraduates of Virginia iGEM and here is our team!
-
 
 ## Advisors
 <img src="/images/Sponsors/Kozminski.jpg" alt="KeithKozminski" id="advisor">
@@ -23,7 +21,6 @@ We are the twelve undergraduates of Virginia iGEM and here is our team!
 
 ## Meet the Team 
 
-
 Our team has been hard at work in the lab! See what everyone's been doing.
 
 <p>
@@ -31,13 +28,14 @@ Our team has been hard at work in the lab! See what everyone's been doing.
 		<div class= "unhidden" id="Ngozi">
 			<h4>Ngozi Akingbesote</h4>
 			<img src="images/TeamPhotos/2018Ngozi.jpg" alt="2018Ngozi" id="img-bio">
-			<p>Ngozi is a third year studying human biology. She is a member of our Wetlab.  </p>
+			<p>Ngozi is a third year studying human biology. She is a member of our Wetlab; of all the people here, she's one of the hardest workers, and almost single-handedly finished our Interlab Study tasks, in addition to taking two classes and working in another lab for the duration of the project.</p>
 			<br>
 		</div>
 		<div class= "hidden" id="Dylan">
 			<h4>Dylan Culfogienis</h4>
 			<img src="images/TeamPhotos/2018Dylan1.jpg" alt="2018Dylan" id="img-bio">
-			<p>Dylan is a third year studying engineering science. Dylan is the wearer of many hats on our team, as he is a part of the Modeling, Wiki, and Human Practices committees <b>and</b> our graphics designer. His quote is, [modem noises whirring in the distance] and "gulp die". He sometimes wishes that he could cover himself in Vaseline and become a human slug. </p>
+			<q>[modem noises]</q>
+			<p>Dylan is a third year studying engineering science. He is a wearer of many hats on our team, being a part of the Modeling, Wiki, and Human Practices committees _in addition to_ our graphics designer.  He sometimes wishes that he could cover himself in Vaseline and become a human slug. </p>
 			<br>
 		</div>
 		<div class= "hidden" id="Nir">
@@ -118,6 +116,3 @@ Our team has been hard at work in the lab! See what everyone's been doing.
 	<img src="images/TeamPhotos/2018Grace.jpg" alt="2018Grace" id="2018Grace">
 	<img src="images/TeamPhotos/2018Angela.jpg" alt="2018Angela" id="2018Angela">
 </p>
-
-
-

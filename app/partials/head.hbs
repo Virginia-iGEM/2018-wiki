@@ -1,9 +1,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- <script src="/dist/js/vendor.js"></script> -->
+<script src="/dist/js/vendor.js"></script>
 <link rel="stylesheet" href="/dist/css/vendor.css">
 <link rel="stylesheet" href="/css/styles.css">
 <script src="/js/wiki.js"></script>
+<script>
+ $(function() {
+    $('header').load('/templates/header.html');
+    $('footer').load('/templates/footer.html');
+ });
+</script>
 <!--Added MathJax hack to make inline equations work-->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({

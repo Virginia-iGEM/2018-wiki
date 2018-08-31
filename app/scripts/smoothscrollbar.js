@@ -1,12 +1,12 @@
-var jq = require('jquery');
+
 
 //Code courtesy of https://codepen.io/kruxor/pen/CwpFq
 
-jq(window).scroll(function() {
-    if (jq(this).scrollTop() > 50 ) {
-        jq('.scrolltop:hidden').stop(true, true).fadeIn();
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 50 ) {
+        $('.scrolltop:hidden').stop(true, true).fadeIn();
     } else {
-        jq('.scrolltop').stop(true, true).fadeOut();
+        $('.scrolltop').stop(true, true).fadeOut();
     }
 });
-jq(function(){jq(".scroll").click(function(){jq("html,body").animate({scrollTop:jq("#top").offset().top},"1000");return false})});
+$(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$("#top").offset().top},"1000");return false})});
