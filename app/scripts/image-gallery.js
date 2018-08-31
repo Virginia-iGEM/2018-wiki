@@ -12,17 +12,24 @@ $(document).ajaxStop(function () {
         if (document.getElementById(id_name) && id_name != "image_gallery") { //if ID exists and accounting for white space
             if ((previous != id_name)) { //if you click a diff image
                 var id_previous = document.getElementById(previous);
-                $(id_previous).hide();
+                //Changes the class so that it acts as a "toggle switch"
+                $(id_previous).removeClass('unhidden');
+                $(id_previous).addClass('hidden');
+                //$(id_previous).toggleClass('hidden');
                 //console.log(id_previous);
             } 
             else if (previous == id_name) { //clicking on the same image
-                $(id_toggle).show();
+                $(id_previous).removeClass('hidden');                
+                $(id_previous).addClass('unhidden');
+                //$(id_toggle).toggleClass('unhidden');
             }
-            $(id_toggle).show(); //show bio
+            $(id_toggle).removeClass('hidden');
+            $(id_toggle).addClass('unhidden');
+            //$(id_toggle).toggleClass('unhidden'); //show bio
             previous = id_name; //checks to see if you clicked different images
         } 
         else {
-            $(previous).show();
+            $(previous).toggleClass('unhidden');
         }
     });
 });
