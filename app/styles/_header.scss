@@ -50,28 +50,42 @@ header {
     @media screen and (max-width: $breakpoint) {
       justify-content: center;
     }
-    */
-    padding-bottom: 1em;
+   */
+    padding-bottom: 3em;
 
-    &:hover,
-    &:focus {
-      height: auto;
-
-      & > ul > li {
+    @media screen and (min-width: $breakpoint) {
+      &:hover,
+      &:focus {
         height: auto;
+
+        & > ul > li {
+          height: auto;
+        }
+      }
+    }
+    @media screen and (max-width: $breakpoint) {
+      &.expanded {
+        height: auto;
+
+        & > ul > li {
+          height: auto;
+        }
       }
     }
 
     ul {
       display: flex;
+      flex: 1;
       flex-direction: row;
       @media screen and (max-width: $breakpoint) {
         flex-direction: column;
       }
+      @media screen and (min-width: $breakpoint) {
       justify-content: center;
+      }
       list-style: none;
-      margin: 0;
-      min-width: 100%;
+      //margin: 0 auto;
+      //min-width: 100%;
       padding: 0;
 
       li {
@@ -114,13 +128,18 @@ header {
           }
 
           // adds the arrow to dropdowns, selects not only-child
-          &:not(:only-child):after {
-            content: ' ▾';
-            padding-left: 4px;
+          @media screen and (min-width: $breakpoint) {
+            &:not(:only-child):after {
+                content: ' ▾';
+                padding-left: 4px;
+            }
           }
         }
         
         ul {
+          @media screen and (max-width: $breakpoint) {
+            display: none;
+          }
           display: flex;
           flex-direction: column;
           transition: all .2s ease-in-out 0s, visibility 0s linear .3s, z-index 0s linear .01s; // Slide-down animation
@@ -128,15 +147,18 @@ header {
           li {
             font-size: .8em;
             overflow: hidden;
+            margin-left: 0 !important;
           }
         }
-
-        &:first-child {
-          margin-left: auto;
-        }
-        &:last-child {
-          margin-left: auto;
-        }
+      }
+    }
+    #icon {
+      flex: 1;
+      margin: 1em !important;
+      max-width: 2em;
+      max-height: 2em;
+      @media screen and (min-width: $breakpoint) {
+        display: none;
       }
     }
   }
