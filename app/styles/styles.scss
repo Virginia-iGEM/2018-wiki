@@ -14,7 +14,7 @@ $grid-layout-media: (
   media: $breakpoint
 );
 
-/*Overview page layout*/
+//Overview page layout
 .row {
   display: flex;
   flex-direction: row;
@@ -31,22 +31,20 @@ $grid-layout-media: (
   padding: 20px;
   position: relative;
   width: 350px;
+
   p {
-    text-align: left;
-    display: inline-block;
     border: hidden;
     bottom: 70px;
     display: inline-block;
     margin-left: 3em;
     padding: 15px 32px;
     position: absolute;
+    text-align: left;
   }
 
 
-/*Button for Overview*/
+//Button for Overview
   a.buttonoverview {
-    margin-left: 3em;
-    display: inline-block;
     background-color: $accent-cold-1;
     border: hidden;
     bottom: 30px;
@@ -63,8 +61,9 @@ $grid-layout-media: (
   }
 }
 
-/*Links*/
-a, a:visited {
+//Links
+a,
+a:visited {
   color: $accent-cold-1;
   text-decoration: none !important;
   transition: color text-shadow .2s ease-in-out;
@@ -75,7 +74,7 @@ a, a:visited {
   }
 }
 
-/*Images*/
+//Images
 img {
   height: auto;
   max-height: 100%;
@@ -84,12 +83,16 @@ img {
   width: auto;
 }
 
-/*The main styling for the "meat" and content of our wiki*/
+//The main styling for the "meat" and content of our wiki
 main {
   @include common-style;
   background-color: $background-light-1;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  // @media screen and (max-width: $breakpoint) {
+  //   flex-direction: column;
+  // }
   font-family: $font-family;
   font-size: $font-size;
   height: auto;
@@ -104,48 +107,61 @@ main {
   }
 
   q {
-      font-weight: bold;
-      padding-left: 1em;
-      &::before {
-	  content: "“";
-      }
-      &::after {
-	  content: "”";
-      }
+    font-weight: bold;
+    padding-left: 1em;
+
+    &::before {
+      content: '“';
+    }
+
+    &::after {
+      content: '”';
+    }
   }
+
   article {
-    flex: 0 0 65em;
-    margin-top: $nav-height + 2em;
+    flex: 0 1 65em;
+    @media screen and (min-width: $breakpoint) {
+        margin-top: $nav-height + 2em;
+    }
+    @media screen and (max-width: $breakpoint) {
+      margin: 0 auto;
+    }
     text-align: justify;
 
-    img, figure {
+    img,
+    figure {
       //width: 30em;
+      //margin-left: 5em;
+      //transform: translateY(-50%);
+      clear: both;
       flex: 0 0 30em;
       float: right;
-      clear: both;
+      padding: 5px;
       position: relative;
-      //transform: translateY(-50%);
-      //margin-left: 5em;
-      padding: 5px;
     }
-    /*adding captions*/
+
+    //adding captions
     figure {
-      margin: 0;
-      padding: 5px;
       display: table;
+      margin: 0;
       margin-left: 3em;
+      padding: 5px;
     }
+
     figcaption {
-      text-align: center;
-      padding: 10px;
-      display: table-caption; 
       caption-side: bottom;
+      display: table-caption; 
       font-style: italic;
+      padding: 10px;
+      text-align: center;
     }
   }
 
   #rightgutter {
-    flex: 1;
+    @media screen and (min-width: $breakpoint) {
+      flex: 1;
+    }
   }
 
   &>* {
@@ -153,14 +169,6 @@ main {
   }
 }
 
-@media screen and (max-width: $breakpoint) {
-  main {
-    flex-direction: column;
-    article {
-      //flex: 1;
-    }
-  }
-}
 
 
 @import 'pages/index';

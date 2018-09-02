@@ -74,50 +74,55 @@ $text-light:          $background-light;
 //$link-color:                $accent-cold-1;
 
 //$breakpoint: 1000px; // If the screen is under this width, switch to mobile view
-$breakpoint: calc(20em + 65em); // If the screen is under this width, switch to mobile view
+$breakpoint: calc(20em + 74em); // If the screen is under this width, switch to mobile view
 
 $font-family: "OpenSans";
 $font-size: medium;
 
 @mixin common-style {
   h1, h2, h3, h4, h5, h6 {
-    margin-top: 1em !important;
-    margin-bottom: 2em !important;
-    font-weight: bold !important;
-    font-size: $font-size !important;
     font-family: $font-family !important;
+    font-size: $font-size !important;
+    font-weight: bold !important;
+    margin-bottom: 2em !important;
+    margin-top: 1em !important;
+    @media screen and (max-width: $breakpoint) {
+      //text-align: center !important;
+      //margin: auto 0;
+      margin-right: 2em;
+    }
   }
   h1 {
-    margin-left: 2em !important;
     font-size: 2.2em !important;
+    margin-left: 2em !important;
   }
   h2 {
-    margin-left: 2em !important;
     font-size: 2em !important;
+    margin-left: 2em !important;
   }
   h3 {
-    margin-left: 4em !important;
     font-size: 1.8em !important;
+    margin-left: 4em !important;
   }
   h4 {
-    margin-left: 4em !important;
     font-size: 1.6em !important;
+    margin-left: 4em !important;
   }
   h5 {
-    margin-left: 4em !important;
     font-size: 1.4em !important;
+    margin-left: 4em !important;
   }
   h6 {
-    margin-left: 4em !important;
     font-size: 1.2em !important;
+    margin-left: 4em !important;
   }
 
   p {
-    margin: 2em 2em !important;
-    line-height: 3em !important;
-    font-size: $font-size !important;
-    font-family: $font-family !important;
     color: $text-dark !important;
+    font-family: $font-family !important;
+    font-size: $font-size !important;
+    line-height: 3em !important;
+    margin: 2em 2em !important;
   }
 }
 
@@ -147,6 +152,6 @@ $font-size: medium;
 }
 
 @mixin block-height($height) {
-    line-height: $height;
     height: $height;
+    line-height: $height;
 }
