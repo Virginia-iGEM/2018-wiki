@@ -29,7 +29,7 @@ header {
   top: $igem-navbar-height; // Compensate for the iGEM Wiki builtin navbar.
   transition: all .1s;
   width: 100%;
-  z-index: 999; // This goes over *everything*
+  z-index: 9999; // This goes over *everything*
 
   // BEGIN STYLING
   &,
@@ -42,7 +42,7 @@ header {
     //opacity: 0;
   }
 
-  #navbar {
+  .navbar {
     display: flex;
     height: $nav-height;
     justify-content: center;
@@ -152,7 +152,7 @@ header {
         }
       }
     }
-    #icon {
+    .menubutton {
       cursor: pointer;
       flex: 1;
       margin: 1em !important;
