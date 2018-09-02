@@ -74,9 +74,32 @@ $(document).ajaxStop(function(event, xhr, options) {
 $(document).on('scroll', updatetoc);
 
 function openToc() {
-    $('#va-toc ul li ul').each(
-        function(index)
-        {
-            $(this).toggleClass('unhidden');
-        });
+    // Just a check to see if we're responsive or not
+    var responsive = $('header .navbar .menubutton').css('display') != 'none';
+
+    if (!responsive) {
+        $('#va-toc ul li ul').each(
+            function(index)
+            {
+                $(this).toggleClass('unhidden');
+            });
+    }
+    else {
+        var ul = $('#va-toc ul');
+        if (ul.css('display') == 'block') {
+            ul.css('display', 'none');
+        }
+        else if (ul.css('display') == 'none') {
+            ul.css('display', 'block');
+        }
+    }
 }
+
+$(window).resize(function() {
+    var responsive = $('header .navbar .menubutton').css('display') != 'none';
+    var ul = $('#va-toc ul');
+
+    if (!responsive && ul.css('display') == 'none') {
+        $('#va-toc ul').css('display', 'block');
+    }
+});

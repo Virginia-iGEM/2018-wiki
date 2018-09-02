@@ -3,15 +3,17 @@ nav {
   max-width: 40em;
   //align-self: flex-start;
   margin: 0 auto;
-  // @media screen and (max-width: $breakpoint) {
-  //   margin-left: 10%;
-  // }
 
   #va-toc {
     padding: $nav-height + 3em 2em 3em 2em;
     position: sticky;
     top: 0;
     white-space: nowrap;
+
+    // Dummy property to read with JQuery
+    //@media screen and (max-width: $breakpoint) {
+        --responsive: "true";
+    //}
 
     h1 {
       font-size: 1.5em;
@@ -25,6 +27,10 @@ nav {
     }
 
     ul { // Primary ToC
+      @media screen and (max-width: $breakpoint) {
+        //height: 0;
+        display: none;
+      }
       li { // First-level headers
         padding: .5em 0;
 
