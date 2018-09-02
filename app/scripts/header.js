@@ -34,6 +34,6 @@ $(document).ready(function () {
 
 // Hamburger menu button for mobileview
 function openMenu() {
-    navbar = $('#navbar');
+    navbar = $('.navbar');
     navbar.toggleClass('expanded');
 }

@@ -74,7 +74,7 @@ $text-light:          $background-light;
 //$link-color:                $accent-cold-1;
 
 //$breakpoint: 1000px; // If the screen is under this width, switch to mobile view
-$breakpoint: calc(20em + 74em); // If the screen is under this width, switch to mobile view
+$breakpoint: calc(20em + 76em); // If the screen is under this width, switch to mobile view
 
 $font-family: "OpenSans";
 $font-size: medium;
@@ -93,8 +93,8 @@ $font-size: medium;
     }
   }
   h1 {
-    font-size: 2.2em !important;
-    margin-left: 2em !important;
+    font-size: 2.4em !important;
+    margin-left: 1em !important;
   }
   h2 {
     font-size: 2em !important;

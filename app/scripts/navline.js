@@ -72,3 +72,11 @@ $(document).ajaxStop(function(event, xhr, options) {
 });
 
 $(document).on('scroll', updatetoc);
+
+function openToc() {
+    $('#va-toc ul li ul').each(
+        function(index)
+        {
+            $(this).toggleClass('unhidden');
+        });
+}

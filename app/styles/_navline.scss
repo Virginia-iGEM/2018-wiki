@@ -1,7 +1,11 @@
 nav {
   flex: 1 0;
-  max-width: 30em;
+  max-width: 40em;
+  //align-self: flex-start;
   margin: 0 auto;
+  // @media screen and (max-width: $breakpoint) {
+  //   margin-left: 10%;
+  // }
 
   #va-toc {
     padding: $nav-height + 3em 2em 3em 2em;
@@ -11,6 +15,13 @@ nav {
 
     h1 {
       font-size: 1.5em;
+      margin-left: 0 !important;
+    }
+
+    .menubutton {
+      cursor: pointer;
+      display: inline;
+      padding-right: 1em;
     }
 
     ul { // Primary ToC
@@ -24,10 +35,12 @@ nav {
         ul { // Subheaders
           // For expand animation
           height: 0;
+          display: block;
           overflow: hidden;
           padding: .75em 0 .5em 1em;
 
-          &.current {
+          &.current,
+          &.unhidden {
             height: auto;
           }
 
