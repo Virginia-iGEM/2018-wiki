@@ -46,14 +46,12 @@ header {
     display: flex;
     height: $nav-height;
     justify-content: center;
-    /*
-    @media screen and (max-width: $breakpoint) {
-      justify-content: center;
-    }
-   */
+    // @media screen and (max-width: $breakpoint) {
+    //   justify-content: center;
+    // }
     padding-bottom: 3em;
 
-    @media screen and (min-width: $breakpoint) {
+    @media screen and (min-width: $breakpoint-navbar) {
       &:hover,
       &:focus {
         height: auto;
@@ -63,7 +61,7 @@ header {
         }
       }
     }
-    @media screen and (max-width: $breakpoint) {
+    @media screen and (max-width: $breakpoint-navbar) {
       &.expanded {
         height: auto;
 
@@ -77,10 +75,10 @@ header {
       display: flex;
       flex: 1;
       flex-direction: row;
-      @media screen and (max-width: $breakpoint) {
+      @media screen and (max-width: $breakpoint-navbar) {
         flex-direction: column;
       }
-      @media screen and (min-width: $breakpoint) {
+      @media screen and (min-width: $breakpoint-navbar) {
         justify-content: center;
       }
       list-style: none;
@@ -104,7 +102,6 @@ header {
         //a, related to link
         a,
         a:visited {
-
           align-items: center;
           color: $nav-text-color;
           display: flex;
@@ -128,16 +125,16 @@ header {
           }
 
           // adds the arrow to dropdowns, selects not only-child
-          @media screen and (min-width: $breakpoint) {
+          @media screen and (min-width: $breakpoint-navbar) {
             &:not(:only-child):after {
-                content: ' ▾';
-                padding-left: 4px;
+              content: ' ▾';
+              padding-left: 4px;
             }
           }
         }
         
         ul {
-          @media screen and (max-width: $breakpoint) {
+          @media screen and (max-width: $breakpoint-navbar) {
             display: none;
           }
           display: flex;
@@ -152,13 +149,14 @@ header {
         }
       }
     }
+
     .menubutton {
       cursor: pointer;
       flex: 1;
       margin: 1em !important;
       max-height: 2em;
       max-width: 2em;
-      @media screen and (min-width: $breakpoint) {
+      @media screen and (min-width: $breakpoint-navbar) {
         display: none;
       }
     }

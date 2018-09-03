@@ -20,7 +20,7 @@ var updatetoc = function() {
 
     //console.log(smallestheader.text());
 
-    $('#va-toc>ul>li').each(function(i) {
+   $('#va-toc>ul>li').each(function(i) {
         //console.log($(this).children('a').attr('href'));
         //console.log('#' + smallestheader.attr('id'));
         if ($(this).children('a').attr('href') === '#' + smallestheader.attr('id')) {
@@ -75,7 +75,7 @@ $(document).on('scroll', updatetoc);
 
 function openToc() {
     // Just a check to see if we're responsive or not
-    var responsive = $('header .navbar .menubutton').css('display') != 'none';
+    var responsive = $('main article').css('margin-top') == '0px';
 
     if (!responsive) {
         $('#va-toc ul li ul').each(
@@ -96,7 +96,7 @@ function openToc() {
 }
 
 $(window).resize(function() {
-    var responsive = $('header .navbar .menubutton').css('display') != 'none';
+    var responsive = $('main article').css('margin-top') == '0px';
     var ul = $('#va-toc ul');
 
     if (!responsive && ul.css('display') == 'none') {

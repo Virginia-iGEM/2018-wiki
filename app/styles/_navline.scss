@@ -1,23 +1,17 @@
 nav {
   flex: 1 0;
-  max-width: 40em;
-  //align-self: flex-start;
   margin: 0 auto;
+  max-width: 40em;
 
   #va-toc {
-    padding: $nav-height + 3em 2em 3em 2em;
+    padding: $nav-height + 3em 2em 1em 2em;
     position: sticky;
     top: 0;
     white-space: nowrap;
 
-    // Dummy property to read with JQuery
-    //@media screen and (max-width: $breakpoint) {
-        --responsive: "true";
-    //}
-
     h1 {
       font-size: 1.5em;
-      margin-left: 0 !important;
+      margin: 1em 0 !important;
     }
 
     .menubutton {
