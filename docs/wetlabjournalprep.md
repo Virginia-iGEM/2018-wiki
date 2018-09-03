@@ -1,7 +1,7 @@
 # WetlabJournalPrep
 
 You should probably write a bash script that does the following:
-- Splits WetlabJournal.html into WetlabJournal.hbs and WetlabJournalStyles.hbs, pulling out the `<body>` and `<head>` tags and places them in the `/app/partials` directory.
+- Translates WetlabJournal.html into WetlabJournal.hbs, pulling out the `<body>` and `<head>` tags and places them in the `/app/partials` directory. Entirely expunge Google Docs styles.
   - Replace `<body>` tag with `<div class="labjournal Cxx Cyy">`
   - Remove the metadata tag from `<head>`; all we want is the styles
 - Moves images to `/app/images/LabJournal/`, overwriting any old stuff.

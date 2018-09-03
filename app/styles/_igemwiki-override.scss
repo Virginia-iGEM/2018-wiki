@@ -4,8 +4,6 @@
 $igem-navbar-height: 16px; // Variable for the height of the required iGEM Navbar. Use for sizing your own navbar.
 /* Override iGEM wiki settings, removing everything but the top navbar. */
 
-
-
 /*Taken from 2011 SDU Denmark iGEM page*/
 #contentSub, #search-controls, .firstHeading, #footer-box, #catlinks, #p-logo {
     display:none;
@@ -97,7 +95,7 @@ ul {
   background-color: #383838;
   border-bottom: solid black 2px;
   color: white;
-  z-index: 9999;
+  z-index: 99999;
   width: 100%;
   font-size: 0.75em;
   margin: 0;
