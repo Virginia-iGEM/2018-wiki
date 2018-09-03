@@ -107,6 +107,7 @@ main {
   }
 
   q {
+    display: block;
     font-weight: bold;
     padding-left: 1em;
 
@@ -169,7 +170,13 @@ main {
   }
 }
 
-
+blockquote {
+  p {
+    font-style: italic !important;
+    font-weight: bold !important;
+    font-size: 1.3em !important;
+  }
+}
 
 @import 'pages/index';
 @import 'pages/team';

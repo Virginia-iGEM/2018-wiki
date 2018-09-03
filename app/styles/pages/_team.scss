@@ -1,56 +1,64 @@
 #image_gallery, .team-bio{
   @include grid-container;
-  img {
-    @include grid-column(4);
-    margin: 10px;
-    @include circular;
-    object-fit: cover;
-    width: 150px;
-    height: 150px;
-    //@include shadow-2;
-    clear: initial;
-    cursor: pointer;
-  }
   //padding: 3% 5%;
   background-color: $background-light-1;
   overflow: hidden;
   position: relative;
 
+  img {
+    //@include shadow-2;
+    @include circular;
+    @include grid-column(4);
+    clear: initial;
+    cursor: pointer;
+    height: 150px;
+    margin: 10px;
+    object-fit: cover;
+    width: 150px;
+
+    &:hover, &.visited {
+      border: 1px solid $background-dark-1;
+    }
+  }
+
   a {
-    position: relative;
     display: block;
     overflow: hidden;
-    overflow-y: scroll;
     overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
     p {
-      font-size: 2em;
       display: none;
-      position: absolute;
-      top: 50%;
+      font-size: 2em;
       left: 50%;
-      transform: translate(-50%, -50%);
-      margin-top: -0.5em;
-      margin-left: -0.25em;
-      z-index: 9;
-      /*overlay text over*/
-      transition: all 0.2s;
+      margin-left: -.25em;
+      margin-top: -.5em;
+      position: absolute;
       text-align: center;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.2s;
+      //overlay text over
+      z-index: 9;
     }
+
     &:hover img {
       //background-color: black;
       image-orientation: from-image;
       opacity: 0.10;
     }
+
     &:hover p {
       display: block;
     }
+
     img {
       @include circular;
       @include grid-column(4);
       image-orientation: from-image;
       margin-bottom: 25px;
-      min-width: 90%;
       min-height: 90%;
+      min-width: 90%;
       transition: opacity ease-in-out 0.2s, background-color ease-in-out 0.7s;
     }
   }
@@ -58,34 +66,33 @@
 
 /*circular images for advisors*/
 #advisor {
-   margin: 10px;
-    @include circular;
-    object-fit: cover;
-    width: 175px;
-    height: 175px;
-    //@include shadow-1;
-    flex: 0 0 30em;
-    float: right;
-    clear: both;
-    position: relative;
-    margin-left: 5em;
+  //@include shadow-1;
+  @include circular;
+  clear: both;
+  flex: 0 0 30em;
+  float: right;
+  height: 175px;
+  margin: 10px;
+  margin-left: 5em;
+  object-fit: cover;
+  position: relative;
+  width: 175px;
 }
 
 .team-bio {
-  margin: 20px;
-  line-height: 2em;
-  font-size: $font-size;
-  font-family: $font-family;
-  color: $text-dark;
-  -moz-box-shadow: 0 0 5px #999;
-  -webkit-box-shadow: 0 0 5px #999;
   box-shadow: 0 0 5px #999;
-  padding: 0.25px;
+  color: $text-dark;
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: 2em;
+  margin: 20px;
+  padding: .25px;
 }
 
-.hidden { 
-  display: none; 
+.hidden {
+  display: none;
 }
-.unhidden { 
-  display: inline; 
+
+.unhidden {
+  display: inline;
 }
