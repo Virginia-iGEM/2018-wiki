@@ -1,0 +1,30 @@
+.labjournal {
+  h3 {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+    font-size: 1.4em !important;
+  }
+
+  table {
+    border: 1px solid black;
+    width: 100%;
+
+    th {
+      border: 1px solid black;
+      padding: 1em;
+
+      p {
+        margin: 0 !important;
+      }
+    }
+
+    td {
+      border: 1px solid black;
+      padding: 1em;
+
+      p {
+        margin: 0 !important;
+      }
+    }
+  }
+}
