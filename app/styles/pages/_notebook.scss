@@ -1,8 +1,8 @@
 .labjournal {
   h3 {
+    font-size: 1.4em !important;
     margin-left: 1em !important;
     margin-right: 1em !important;
-    font-size: 1.4em !important;
   }
 
   table {
@@ -24,6 +24,40 @@
 
       p {
         margin: 0 !important;
+      }
+    }
+  }
+}
+
+nav {
+  flex: 1 0;
+  margin: 0 auto;
+  max-width: 30em;
+
+  #va-timeline {
+    padding: $nav-height + 3em 2em 1em 2em;
+    position: sticky;
+    top: 0;
+    white-space: nowrap;
+
+    h1 {
+      font-size: 1.5em;
+      margin: 1em 0 !important;
+    }
+
+    .menubutton {
+      cursor: pointer;
+      display: inline;
+      padding-right: 1em;
+    }
+
+    ul { // Primary ToC
+      li { // First-level headers
+        padding: .5em 0;
+
+        a {
+          font-size: 1.3em;
+        }
       }
     }
   }

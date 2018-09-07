@@ -39,6 +39,10 @@ nav {
           overflow: hidden;
           padding: .75em 0 .5em 1em;
 
+          @media screen and (max-width: $breakpoint) {
+            height: auto;
+          }
+
           &.current,
           &.unhidden {
             height: auto;
@@ -51,14 +55,6 @@ nav {
           }
         }
       }
-    }
-  }
-}
-
-@media screen and (max-width: $breakpoint) {
-  nav>#va-toc {
-    ul>li>ul {
-      height: auto;
     }
   }
 }
