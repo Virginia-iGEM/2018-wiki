@@ -25,6 +25,7 @@ nav {
         //height: 0;
         display: none;
       }
+
       li { // First-level headers
         padding: .5em 0;
 
@@ -34,8 +35,8 @@ nav {
 
         ul { // Subheaders
           // For expand animation
-          height: 0;
           display: block;
+          height: 0;
           overflow: hidden;
           padding: .75em 0 .5em 1em;
 

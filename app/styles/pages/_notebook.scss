@@ -35,6 +35,7 @@ nav {
   max-width: 30em;
 
   #va-timeline {
+    height: 75vh;
     padding: $nav-height + 3em 2em 1em 2em;
     position: sticky;
     top: 0;
@@ -48,12 +49,42 @@ nav {
     .menubutton {
       cursor: pointer;
       display: inline;
-      padding-right: 1em;
+      padding-right: 2px;
+    }
+
+    $progressbar-width: 3px;
+    $pip-size: 10px;
+
+    .progress-container {
+      height: 100%;
+      width: $progressbar-width;
+      position: relative;
+    }
+
+    .progress-bar {
+      background-color: $accent-warm;
+      height: 100%;
+      width: 100%;
     }
 
     ul { // Primary ToC
+      position: absolute;
+      top: 300px;
       li { // First-level headers
-        padding: .5em 0;
+        //padding: .5em 0;
+        position: absolute;
+
+        &::before {
+          background-color: $background-dark;
+          border-radius: 50%;
+          border: 2px solid $background-light;
+          content: '';
+          display: inline-block;
+          min-height: $pip-size;
+          min-width: $pip-size;
+          z-index: 9;
+          margin-right: 1em;
+        }
 
         a {
           font-size: 1.3em;
