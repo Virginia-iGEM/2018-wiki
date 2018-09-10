@@ -1,7 +1,7 @@
 function relativePositions (selector) {
     // Retrieve all tables in the labjournal
     var entryList = [];
-    $().each(function(index) {
+    $(selector).each(function(index) {
         entryList.push({obj: $(this)});
     });
 
@@ -24,4 +24,14 @@ function relativePositions (selector) {
 
 $(document).ajaxStop(function() {
     var items = relativePositions('.labjournal table');
+    var root = $('#va-timeline .progress-container');
+    var rootTop = root.position().top;
+    var rootHeight = root.height();
+
+    $('#va-timeline ul li').each(function(index) {
+        var item = items[index];
+
+        var pos = rootTop + rootHeight * item.relPos;
+        $(this).css('top', pos);
+    });
 });
