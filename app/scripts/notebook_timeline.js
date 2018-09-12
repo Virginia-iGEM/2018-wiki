@@ -27,8 +27,8 @@ $(document).ajaxStop(function() {
 
     var list = $('#va-timeline ul');
 
-    // Add in shortcut entries to timeline
-    for (var item in items) {
+    // TODO: Add in shortcut entries to timeline
+    /*for (var item in items) {
         console.log(item);
         var date;
         item.obj.text().replace(/\d\d/i, function(x) {
@@ -37,7 +37,7 @@ $(document).ajaxStop(function() {
         });
         //console.log(testout);
         list.append('<li><a href="#">' + date + '</a></li>');
-    }
+    }*/
 
     var root = $('#va-timeline .progress-container');
     var rootTop = root.position().top;
