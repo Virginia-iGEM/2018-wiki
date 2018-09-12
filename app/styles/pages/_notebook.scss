@@ -57,7 +57,7 @@ nav {
     }
 
     $progressbar-width: 3px;
-    $pip-size: 10px;
+    $pip-size: 14px;
 
     .progress-container {
       height: 100%;
@@ -73,9 +73,7 @@ nav {
 
     ul { // Primary ToC
       position: absolute;
-      top: 300px;
       li { // First-level headers
-        //padding: .5em 0;
         position: absolute;
 
         &::before {
