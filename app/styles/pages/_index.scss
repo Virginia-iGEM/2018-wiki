@@ -11,10 +11,10 @@ main.landing-page {
 
   article {
     @include center-text;
+    background-color: $background-light-1;
     display: flex;
     min-width: 100vw;
     position: relative;
-    background-color: $background-light;
 
     img {
       @include center-image;
@@ -29,11 +29,12 @@ main.landing-page {
     }
 
     &.banner {
+      flex: 1 0;
       background-color: $background-dark;
       color: $text-light;
       height: 100vh;
       //overflow: none;
-      padding-top: 15vh;
+      //padding-top: 15vh;
 
       transform: translateZ(-1px) scale(2);
       z-index: -1;
@@ -41,8 +42,9 @@ main.landing-page {
       section {
         background-color: $background-dark;
         //align-self: flex-start;
-        flex: 1 0 auto;
+        flex: 1 3 auto;
         padding: $nav-height + 2em 0;
+        margin: auto 0;
         position: relative;
         //display: flex;
         //flex: 1 0 auto;
