@@ -6,15 +6,12 @@
 
   <body>
     {{> igem_placeholder}}
-    {{> header}}
-    <main id="top" class="landing-page">
-      <article id="landing-content"></article>
-        <script>
-            $(function() {
-            $('article#landing-content').load('{{contentpath}}');
-            });
-        </script>
-    </main>
+    <main id="top" class="landing-page"></main>
+    <script>
+        $(function() {
+        $('main.landing-page').load('{{contentpath}}');
+        });
+    </script>
     {{> footer}}
   </body>
 </html>

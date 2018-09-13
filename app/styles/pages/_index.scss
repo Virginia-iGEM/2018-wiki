@@ -1,15 +1,63 @@
 main.landing-page {
-    article {
+  display: flex;
+  flex-direction: column;
+  //padding: 5em 2em;
+
+  article {
     @include center-text;
-    margin: 5em 2em;
-    width: 100%;
+    position: relative;
+    display: flex;
+    min-width: 100%;
 
     img {
-        @include center-image;
+      @include center-image;
     }
 
     section {
-        width: 100%;
+      position: relative;
+      h1, h2, h3, h4, h5, h6 {
+        @include center-text;
+        margin: 1em !important;
+      }
+    }
+
+    &.banner {
+      padding-top: 20vh;
+      background-color: $background-dark-1;
+      color: $text-light;
+      height: 100vh;
+      overflow: visible;
+
+      section {
+        padding-top: $nav-height + 2em;
+        flex: 1 1;
+        align-self: flex-start;
+        top: 0;
+        position: sticky;
+      }
+    }
+
+    &.call-to-action {
+      flex-wrap: wrap;
+
+      section {
+        flex: 1 1;
+        color: $text-light;
+
+        &:first-child {
+            background-color: $accent-cold-1;
+        }
+        &:last-child {
+            background-color: $accent-warm-1;
+        }
+
+        &.scroll-action {
+          color: $text-dark;
+          @media screen and (max-width: $breakpoint) {
+            display: none;
+          }
+        }
+      }
     }
   }
 }
