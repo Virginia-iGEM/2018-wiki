@@ -121,45 +121,47 @@ main {
   }
 
   article {
-    flex: 0 1 65em;
-    @media screen and (min-width: $breakpoint) {
+    &.main-content {
+      flex: 0 1 65em;
+      @media screen and (min-width: $breakpoint) {
         margin-top: $nav-height + 2em;
-    }
-    @media screen and (max-width: $breakpoint) {
-      margin: 0 auto;
-    }
-    text-align: justify;
+      }
+      @media screen and (max-width: $breakpoint) {
+        margin: 0 auto;
+      }
+      text-align: justify;
 
-    img,
-    figure {
-      //width: 30em;
-      //margin-left: 5em;
-      //transform: translateY(-50%);
-      clear: both;
-      flex: 0 0 30em;
-      float: right;
-      padding: 5px;
-      position: relative;
-    }
+      img,
+      figure {
+        //width: 30em;
+        //margin-left: 5em;
+        //transform: translateY(-50%);
+        clear: both;
+        flex: 0 0 30em;
+        float: right;
+        padding: 5px;
+        position: relative;
+      }
 
-    //adding captions
-    figure {
-      display: table;
-      margin: 0;
-      margin-left: 3em;
-      padding: 5px;
-    }
+      //adding captions
+      figure {
+        display: table;
+        margin: 0;
+        margin-left: 3em;
+        padding: 5px;
+      }
 
-    figcaption {
-      caption-side: bottom;
-      display: table-caption; 
-      font-style: italic;
-      padding: 10px;
-      text-align: center;
+      figcaption {
+        caption-side: bottom;
+        display: table-caption; 
+        font-style: italic;
+        padding: 10px;
+        text-align: center;
+      }
     }
   }
 
-  .gutter {
+  & div.gutter {
     @media screen and (min-width: $breakpoint) {
       flex: 1;
     }

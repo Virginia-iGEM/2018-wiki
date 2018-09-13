@@ -127,6 +127,15 @@ $font-size: medium;
   }
 }
 
+@mixin center-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin center-text {
+  text-align: center;
+}
 
 @mixin shadow-1 {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);

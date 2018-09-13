@@ -61,8 +61,8 @@ $(document).ajaxStop(function(event, xhr, options) {
         var toc = "";
         var level = 0;
 
-        document.getElementById("main-content").innerHTML =
-            document.getElementById("main-content").innerHTML.replace(
+        document.getElementsByClassName("main-content")[0].innerHTML =
+            document.getElementsByClassName("main-content")[0].innerHTML.replace(
                 /<h([\d]) id="(.+)">([^<]+)<\/h([\d])>/gi,
                 function (str, openLevel, id, titleText, closeLevel) {
 
