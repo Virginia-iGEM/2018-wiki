@@ -1,10 +1,10 @@
+{{> header}}
 <article class="banner">
   <section>
-  <img src="/images/logos/dark.png" class="center">
+    <img src="/images/logos/dark_1.svg" class="center">
   <h3>Microbial Symphony</h3>
   </section>
 </article>
-{{> header}}
 <article class="call-to-action">
   <section>
     <h3>The Problem</h3>
@@ -27,3 +27,11 @@ Phasellus in mi ac orci vestibulum porta. Phasellus faucibus tincidunt dui, in r
 
 Fusce semper sollicitudin arcu, ac ultrices felis auctor nec. Proin et justo sollicitudin, efficitur ex ac, maximus ipsum. Quisque vitae vestibulum risus. Sed est neque, egestas in ullamcorper eleifend, commodo non magna. Etiam sem est, tincidunt non hendrerit auctor, sollicitudin sit amet lacus. Integer consequat sem sit amet sodales sodales. Ut metus urna, faucibus a orci eget, molestie rutrum lectus. Phasellus pellentesque aliquam erat eget laoreet. Donec blandit tincidunt ultricies. Duis sed semper ante. 
 </article>
+{{> footer}}
+
+<script>
+    $(function() {
+    $('header').load('/templates/header.html');
+    $('footer').load('/templates/footer.html');
+    });
+</script>

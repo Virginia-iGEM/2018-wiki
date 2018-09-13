@@ -88,20 +88,20 @@ ul {
 
 #igem-navbar-placeholder {
   // Placeholder that "subs in" for the iGEM navbar on dev builds
-  height: $igem-navbar-height;
-  position: fixed;
-  top: 0; // Push to top of screen
-  display: block;
-  background-color: #383838;
-  border-bottom: solid black 2px;
-  color: white;
-  z-index: 99999;
-  width: 100%;
-  font-size: 0.75em;
-  margin: 0;
-  padding: 0;
+  height: $igem-navbar-height !important;
+  position: fixed !important;
+  top: 0 !important; // Push to top of screen
+  display: block !important;
+  background-color: #383838 !important;
+  border-bottom: solid black 2px !important;
+  color: white !important;
+  z-index: 99999 !important;
+  width: 100% !important;
+  font-size: 0.75em !important;
+  margin: 0 !important;
+  padding: 0 !important;
   p {
-    margin: 0;
+    margin: 0 !important;
   }
 }
 

@@ -1,7 +1,7 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 footer {
-    @include common-style;
+  @include common-style;
   $footer-height: 6rem; // Footer height
   $footer-grid: (
     columns: 12,
@@ -16,6 +16,7 @@ footer {
   color: $text-light !important;
   padding: 25px; //@include grid-visual;
   position: relative;
+  width: 100%;
   z-index: 999;
 
   h3 {

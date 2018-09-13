@@ -1,13 +1,20 @@
 main.landing-page {
-  display: flex;
-  flex-direction: column;
+  //display: flex;
+  //flex-direction: column;
   //padding: 5em 2em;
+
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  perspective: 1px;
+  transform-style: preserve-3d;
 
   article {
     @include center-text;
-    position: relative;
     display: flex;
     min-width: 100%;
+    position: relative;
+    background-color: $background-light;
 
     img {
       @include center-image;
@@ -22,18 +29,24 @@ main.landing-page {
     }
 
     &.banner {
-      padding-top: 20vh;
-      background-color: $background-dark-1;
+      background-color: $background-dark;
       color: $text-light;
       height: 100vh;
-      overflow: visible;
+      //overflow: none;
+      padding-top: 15vh;
+
+      transform: translateZ(-1px) scale(2);
+      z-index: -1;
 
       section {
-        padding-top: $nav-height + 2em;
-        flex: 1 1;
-        align-self: flex-start;
-        top: 0;
-        position: sticky;
+        background-color: $background-dark;
+        //align-self: flex-start;
+        flex: 1 0 auto;
+        padding: $nav-height + 2em 0;
+        position: relative;
+        //display: flex;
+        //flex: 1 0 auto;
+        //top: 0;
       }
     }
 
@@ -41,14 +54,15 @@ main.landing-page {
       flex-wrap: wrap;
 
       section {
-        flex: 1 1;
         color: $text-light;
+        flex: 1 1;
 
         &:first-child {
-            background-color: $accent-cold-1;
+          background-color: $accent-cold-1;
         }
+
         &:last-child {
-            background-color: $accent-warm-1;
+          background-color: $accent-warm-1;
         }
 
         &.scroll-action {
