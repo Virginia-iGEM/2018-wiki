@@ -31,13 +31,17 @@ main.landing-page {
     &.banner {
       flex: 1 0;
       background-color: $background-dark;
-      color: $text-light;
+      color: $text-light !important;
       height: 100vh;
       //overflow: none;
       //padding-top: 15vh;
 
       transform: translateZ(-1px) scale(2);
       z-index: -1;
+
+      h1, h2, h3, h4, h5, h6 {
+        color: $text-light !important;
+      }
 
       section {
         background-color: $background-dark;
@@ -56,8 +60,12 @@ main.landing-page {
       flex-wrap: wrap;
 
       section {
-        color: $text-light;
+        color: $text-light !important;
         flex: 1 1;
+
+        h1, h2, h3, h4, h5, h6 {
+          color: $text-light !important;
+        }
 
         &:first-child {
           background-color: $accent-cold-1;
@@ -68,7 +76,7 @@ main.landing-page {
         }
 
         &.scroll-action {
-          color: $text-dark;
+          color: $text-dark !important;
           @media screen and (max-width: $breakpoint) {
             display: none;
           }
