@@ -86,28 +86,6 @@ main {
   position: relative;
   z-index: 1;
 
-  //Links
-  a,
-  a:visited {
-    color: $accent-cold-1 !important;
-    text-decoration: none !important;
-    transition: color text-shadow .2s ease-in-out;
-
-    &:hover {
-      color: $accent-warm !important;
-      text-shadow: 0 0 8px $accent-warm;
-    }
-  }
-
-  //Images
-  img {
-    height: auto;
-    max-height: 100%;
-    max-width: 100%;
-    overflow: hidden;
-    width: auto;
-  }
-
   .overview {
     flex: 0 1 auto;
   }
