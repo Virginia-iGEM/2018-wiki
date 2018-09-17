@@ -27580,7 +27580,7 @@
        height="4.1159506"
        width="37.791912"
        id="rect4851"
-       style="opacity:1;fill:#8adb91;fill-opacity:0.97254902;fill-rule:nonzero;stroke:none;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" />
+       style="opacity:1;fill:#6cf978;fill-opacity:0.97254902;fill-rule:nonzero;stroke:none;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" />
     <rect
        y="-123.26306"
        x="2652.8845"
@@ -27610,7 +27610,7 @@
        x="2552.6379"
        y="-109.93442" />
     <rect
-       style="opacity:1;fill:#4e9c55;fill-opacity:0.97254902;fill-rule:nonzero;stroke:none;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       style="opacity:1;fill:#4e9c55;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
        id="rect4893"
        width="37.791912"
        height="4.1159506"
@@ -27650,7 +27650,7 @@
        height="4.1159506"
        width="37.791912"
        id="rect4904"
-       style="opacity:1;fill:#35683a;fill-opacity:0.97254902;fill-rule:nonzero;stroke:none;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" />
+       style="opacity:1;fill:#35683a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" />
     <rect
        y="-96.010963"
        x="2652.8845"
@@ -27680,7 +27680,7 @@
        x="2552.6379"
        y="-85.063576" />
     <rect
-       style="opacity:1;fill:#212a22;fill-opacity:0.97254902;fill-rule:nonzero;stroke:none;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       style="opacity:1;fill:#212a22;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
        id="rect4914"
        width="37.791912"
        height="4.1159506"
@@ -28415,5 +28415,12 @@
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:93.33333588px;line-height:1.25;font-family:'Poiret One';-inkscape-font-specification:'Poiret One';fill:#ffffff;fill-opacity:1;stroke:#1a1a1a;stroke-width:7.00393677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill" /></flowRegion><flowPara
            id="flowPara5328-1"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:93.33333588px;line-height:1.25;font-family:'Poiret One';-inkscape-font-specification:'Poiret One';fill:#ffffff;fill-opacity:1;stroke:#1a1a1a;stroke-width:7.00393677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill">O </flowPara></flowRoot>    </g>
+    <rect
+       style="opacity:1;fill:#35683a;fill-opacity:0.97254902;fill-rule:nonzero;stroke:none;stroke-width:2.11666679;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect4712"
+       width="35.921024"
+       height="42.28204"
+       x="2716.5276"
+       y="-233.85501" />
   </g>
 </svg>
