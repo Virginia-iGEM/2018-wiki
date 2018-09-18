@@ -58,6 +58,9 @@ main.landing-page {
 
     &.call-to-action {
       flex-wrap: wrap;
+      @media screen and (max-width: $breakpoint) {
+        flex-direction: column;
+      }
 
       section {
         color: $text-light !important;
@@ -90,7 +93,10 @@ main.landing-page {
             color: $text-dark !important;
           }
           @media screen and (max-width: $breakpoint) {
-            display: none;
+            order: -1;
+            & .petri {
+                display: none;
+            }
           }
         }
       }
