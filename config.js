@@ -13,7 +13,7 @@ module.exports = function(root) {
             relative2absolute: false,
             serve: true,
             debug: true,
-            browserify: false,
+            browserify: true,
             importantify: false
         },
         live: {
@@ -22,7 +22,7 @@ module.exports = function(root) {
             relative2absolute: true,
             serve: false,
             debug: false,
-            browserify: false,
+            browserify: true,
             importantify: false
         }
     };
