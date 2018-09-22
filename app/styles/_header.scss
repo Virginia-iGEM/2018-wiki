@@ -49,7 +49,7 @@ header {
     // @media screen and (max-width: $breakpoint) {
     //   justify-content: center;
     // }
-    padding-bottom: 3em;
+    //padding-bottom: 3em;
 
     @media screen and (min-width: $breakpoint-navbar) {
       &:hover,
@@ -57,7 +57,7 @@ header {
         height: auto;
 
         & > ul > li {
-          height: auto;
+          //height: auto;
         }
       }
     }
@@ -97,6 +97,10 @@ header {
           background-color: $nav-accent-color;
           flex: 0 0 1px;
           overflow: hidden;
+        }
+
+        &:hover {
+            background-color: $background-dark-1;
         }
 
         //a, related to link
