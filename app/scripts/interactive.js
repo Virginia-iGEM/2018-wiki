@@ -25,34 +25,37 @@ $(document).ajaxStop(function() {
       .on("mouseover", function(){d3.select(this).style("fill", "aliceblue");})
       .on("mouseout", function(){d3.select(this).style("fill", "white");});
     */
-    var interactive = d3.select("petri");
-    var dim = Math.min(d3.getSize(interactive.style('width')), d3.getSize(interactive.style('height')));
+    var interactive = d3.select(".petri");
+
+    var dim = Math.min(parseInt(interactive.style('width')), parseInt(interactive.style('height')));
     var petri = interactive
         .append("svg")
         .attr("width", dim)
         .attr("height", dim);
 
     var gridSpacing = 10, // Repeat distance in pixels between cells
-        tick = 5,
+        tick = 500,
         Ny = Math.floor(dim / (gridSpacing * Math.sin(Math.PI / 3))),
         Nx = Math.floor(dim / gridSpacing),
         divprob = 0.1,
         sim = cellSim(Nx, Ny, divprob),
         display = cellDisplay(),
-        radius = delta/2 - 2,
+        radius = gridSpacing/2 - 2,
         grid = d3.map();
-    
-    display.draw();
-    sim.init();
-    sim.loadRandom();
-    d3.timeout(display.draw);
 
+    var d_inactive,
+        d_active;
+
+    var cells = d3.map();
+    var inactive = d3.map();
+    var active = d3.map();
+            
+    sim.loadRandom(0.05);
+    display.init();
+    display.draw();
+    d3.timeout(display.redraw);
 
     function cellSim(N, M, dp) {
-        var cells = d3.map();
-        var inactive = d3.map();
-        var active = d3.map();
-            
         return {
             loadRandom: loadRandom,
             reset: reset, // Initialize the simulation; resets
@@ -112,57 +115,80 @@ $(document).ajaxStop(function() {
     }
     
     function cellDisplay() {
-        var d_cells, d_active;
-        
         return {
             init: init,
             draw: draw,
-            d_cells: d_cells,
-            d_active: d_active
+            redraw: redraw
         };
 
 
         function init() {
-            d_inactive = petri.append('g').classed('cell', true);
+            d_inactive = petri.append('g').classed('inactive', true);
             d_active = petri.append('g').classed('active', true);
         } 
 
         function draw() {
             // Start by grabbing data for currently inactive cells and joining
             // it with currently displayed (if any) inactive circles
-            var current = display.d_inactive.selectAll('circle').data(sim.inactive); 
+            var current = d_inactive.selectAll('circle').data(inactive); 
+
+            console.log(inactive);
+
+            console.log(d_inactive);
+
+            current.append("circle")
+                .style("stroke", "gray")
+                .style("fill", "white")
+                .attr("r", 40)
+                .attr("cx", 50)
+                .attr("cy", 50)
+                .on("mouseover", function(){d3.select(this).style("fill", "aliceblue");})
+                .on("mouseout", function(){d3.select(this).style("fill", "white");});
 
             current
                 .enter() // Required to create new circles if we have more data than elements
                 .append('circle') // We're displaying with circles here
                 .attr('r', radius) // Set circle radius
                 .merge(current) // combine new displayed cells with old ones
-                //.style('fill') // Can take a function and return a value or just a value.
+                .style('fill', function(d) {
+                    return '#f0f0f0';
+                }) // Can take a function and return a value or just a value.
                 .attr('cx', function (d) { // Set x coordinate
+                    return d[0];
                 })
                 .attr('cy', function (d) { // Set y coordinate
+                    return d[1];
                 });
+
+            current.exit().remove();
+
+            console.log(d_inactive);
             
             // Do the same but for active cells
-            current = display.d_active.selectAll('circle').data(sim.active);
+            current = d_active.selectAll('circle').data(active);
 
             current
                 .enter() // Required to create new circles if we have more data than elements
                 .append('circle') // We're displaying with circles here
                 .attr('r', radius) // Set circle radius
                 .merge(current) // combine new displayed cells with old ones
-                //.style('fill', function(d)) // Can take a function and return a value or just a value.
+                .style('fill', function(d) {
+                    return '#208ea3';
+                }) // Can take a function and return a value or just a value.
                 .attr('cx', function (d) { // Set x coordinate
+                    return d[0] * gridSize - radius;
                 })
                 .attr('cy', function (d) { // Set y coordinate
+                    return d[1] * gridSize - radius;
                 });
 
+            current.exit().remove();
         }
 
         function redraw() {
             sim.step();
-            draw();
-            d3.timeout(redraw, tick);
+            display.draw();
+            //d3.timeout(redraw, tick);
         }
     }
 });
