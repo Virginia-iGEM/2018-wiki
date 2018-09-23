@@ -36,34 +36,23 @@ $(document).ajaxStop(function() {
     var d_inactive,
         d_active;
 
-    var cells = d3.map();
+    var cells;
 
     //init();
     loadRandom(0.25);
     draw();
     
-    var nodes = d3.range(200).map(function(i) { return {x: 50*(i % 10), y: 50*(Math.floor(i / 10)), radius: Math.random() * 12 + 4}; });
+    //var nodes = d3.range(200).map(function(i) { return {x: 50*(i % 10), y: 50*(Math.floor(i / 10)), radius: Math.random() * 18 + 5}; });
 
     petri.selectAll("circle")
-        .data(nodes.slice(1))
+        .data(cells)
         .enter().append("svg:circle")
-        .attr("r", function(d) { return d.radius - 2; })
+        .attr("r", function(d) { return radius; })
         .style("fill", function(d, i) { return '#ffffff'; })
-        .attr("cx", function(d) { return d.x; })
-        .attr("cy", function(d) { return d.y; })
+        .attr("cx", function(d) { return (d.x + 0.5 * (d.y % 2))* gridSpacing; })
+        .attr("cy", function(d) { return d.y * gridSpacing * Math.sin(Math.PI / 3); })
         .on("mouseover", function(){d3.select(this).style("fill", "red");})
         .on("mouseout", function(){d3.select(this).style("fill", "white");});
-
-    /*
-    petri.append("circle")
-        .style("stroke", "gray")
-        .style("fill", "white")
-        .attr("r", 40)
-        .attr("cx", 50)
-        .attr("cy", 50)
-        .on("mouseover", function(){d3.select(this).style("fill", "red");})
-        .on("mouseout", function(){d3.select(this).style("fill", "white");});
-    */
 
     function loadRandom(p) {
         var n = Math.floor((p || 0.05)*Nx*Ny), // How many cells are we loading in
@@ -71,10 +60,12 @@ $(document).ajaxStop(function() {
             j = d3.randomUniform(1, Ny), // Randomly generate positions on the Y axis
             d;
 
-        for (var k=0; k < n; k++) {
-            d = [Math.floor(i()) + 1, Math.floor(j()) + 1];
-            cells.set(d, d);
-        }
+        cells = d3.range(n).map(function(k) {
+            var x = Math.floor(i()) + 1,
+                y = Math.floor(j()) + 1;
+            return {x: x,
+                    y: y};
+        });
     }
 
     function step() {
