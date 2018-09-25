@@ -5,13 +5,18 @@
   </head>
 
   <body>
-		{{> igem_placeholder}}
+    {{> igem_placeholder}}
 
     {{> header}}
-    {{> main}}
-	{{> InterLabFPP1}}
-	{{> InterLabFPP2}}
-	{{> InterLabFPP3}}
+    <main id="top">
+      <div class="gutter"></div>
+      <article class="main-content">
+        {{> InterLabFPP1}}
+        {{> InterLabFPP2}}
+        {{> InterLabFPP3}}
+      </article>
+      <div class="gutter"></div>
+    </main>
     {{> footer}}
   </body>
 </html>
