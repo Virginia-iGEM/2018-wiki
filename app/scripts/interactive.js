@@ -17,9 +17,13 @@ $(document).ajaxStop(function() {
     var container = d3.select('.petri');
     var dim = parseInt(container.style('width'));
 
-    var cellRadius = 10; // Global of cells in pixels
+    var cellRadius = 14; // Global of cells in pixels
 
-    var nodes = d3.range(8).map(function() {return {radius: cellRadius - 2, splitprob: 1, age: 1}}); // Start with just one cell
+    var nodes = d3.range(8).map(function() {return {
+        radius: cellRadius - 2,
+        splitprob: 1,
+        age: 1,
+        angle: Math.random() * Math.PI * 2};}); // Start with just one cell
     
     // Establish data - this is what our simulation and display draws from
     // Establish simulation - this handles the physics portion of things
@@ -41,7 +45,7 @@ $(document).ajaxStop(function() {
     // Call the grow function every 5 seconds; cells will duplicate
     var timer = d3.interval(function() {
         restart(grow());
-    }, 1000);
+    }, 2000);
 
     var color = d3.scaleSequential(d3.interpolateLab("white", "#f7b958"))
         .domain([0, 1]);
@@ -66,29 +70,33 @@ $(document).ajaxStop(function() {
         // Transition new nodes
         node
             .transition(t)
-            .style('fill', function(d) {return color(d.splitprob);})
-            .attr('r', function(d) {return d.radius - 2;});
+            .style('stroke', function(d) {return color(d.splitprob);})
+            .style('stroke-width', 6)
+            .style('stroke-linecap', 'round');
 
         // Transition new nodes
-        node = node.enter().append('circle')
-            .style('fill', function(d) {return color(d.splitprob);})
+        node = node.enter().append('line')
+            .style('stroke', function(d) {return color(d.splitprob);})
+            .style('stroke-width', 4)
+            .style('stroke-linecap', 'round')
             //.transition(t)
-            .attr('r', function(d) {return d.radius - 4;})
             .merge(node);
 
-        if (nodes.length >= 600) {
+        if (nodes.length >= 300) {
             node
                 .transition(t)
-                .style('fill', function(d) {return '#fff';})
-                .attr('r', function(d) {return d.radius - 2;});
+                .style('stroke', '#fff')
+                .attr('stroke-width', 6);
         }
         simulation.nodes(nodes);
     }
 
     // Required to update displayed position of nodes with force simulation
     function ticked() {
-        node.attr('cx', function(d) {return d.x;})
-            .attr('cy', function(d) {return d.y;});
+        node.attr('x1', function(d) {return Math.cos(d.angle) * (d.radius - 4) + d.x;})
+            .attr('y1', function(d) {return Math.sin(d.angle) * (d.radius - 4) + d.y;})
+            .attr('x2', function(d) {return Math.cos(d.angle) * -(d.radius - 4) + d.x;})
+            .attr('y2', function(d) {return Math.sin(d.angle) * -(d.radius - 4) + d.y;});
     }
 
     var furthest = 0;
@@ -96,7 +104,7 @@ $(document).ajaxStop(function() {
 
     function grow() {
         // Stop growing if we have over 250 cells
-        if (nodes.length < 600) {
+        if (nodes.length < 300) {
             var newNodes = [];
             // For each existing cell, there is some probability of splitting
             nodes.forEach(function(n) {
@@ -123,7 +131,12 @@ $(document).ajaxStop(function() {
                     //var nx = Math.random() * 10;
                     // var ny = Math.random() * 10;
 
-                    newNodes.push({radius: cellRadius - 2, x: nx, y: ny, splitprob: 1, age: 1});
+                    newNodes.push({radius: cellRadius - 2,
+                                   x: nx,
+                                   y: ny,
+                                   splitprob: 1,
+                                   age: 1,
+                                   angle: n.angle + (Math.random() - 1) * Math.PI / 3 });
                 }
             });
 
