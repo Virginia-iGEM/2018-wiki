@@ -18,17 +18,18 @@ $(document).ajaxStop(function() {
     var container = d3.select('.petri');
     var dim = parseInt(container.style('width'));
 
-    var cellRadius = 10; // Global of cells in pixels
+    var cellRadius = 14; // Global of cells in pixels
 
-    var nodes = [{radius: cellRadius}]; // Start with just one cell
+    var nodes = [{radius: cellRadius, splitprob: 1, age: 1}]; // Start with just one cell
     
     // Establish data - this is what our simulation and display draws from
     // Establish simulation - this handles the physics portion of things
     var simulation = d3.forceSimulation(nodes)
-        .force('charge', d3.forceManyBody().strength(-30)) // Repulse cells 
+        .force('charge', d3.forceManyBody().strength(1).distanceMax(cellRadius * 7)) // Repulse cells 
         .force('center', d3.forceCenter()) // Push cells towards center
-        .force('collision', d3.forceCollide(function(d) {return d.radius + 2;})) // Make cells collide with each other
-        .alphaTarget(1) // Make solver settle more quickly
+        .force('collision', d3.forceCollide(function(d) {return d.radius;})) // Make cells collide with each other
+        .velocityDecay(0.5)
+        .alphaTarget(0.8) // Make solver settle more quickly
         .on('tick', ticked); // Call any functions that need to run every time the simulation ticks
 
     // Establish SVG drawing
@@ -40,8 +41,11 @@ $(document).ajaxStop(function() {
 
     // Call the grow function every 5 seconds; cells will duplicate
     d3.interval(function() {
-        restart(grow(nodes));
-    }, 2000);
+        restart(grow());
+    }, 1000);
+
+    var color = d3.scaleSequential(d3.interpolateLab("white", "steelblue"))
+        .domain([0, 1]);
 
     function restart(nodes) {
         // transition
@@ -51,22 +55,26 @@ $(document).ajaxStop(function() {
         node = node.data(nodes);
 
         // Exit any nodes that don't make good data points
+        /*
         node.exit()
             .style('fill', '#b26745')
             .transition(t)
             .attr('r, 1e-6')
             .remove();
+        */
 
-        // Change existing nodes
+        // Transition new nodes
         node
             .transition(t)
-            .style('fill', '#3a403d')
-            .attr('r', function(d) {return d.radius;});
+            .style('fill', function(d) {return color(d.splitprob);})
+            .attr('r', function(d) {return d.radius - 2;});
 
-        // Transition in new nodes
+        // FUCK
+        
+        // Transition new nodes
         node = node.enter().append('circle')
-            .style('fill', '#45b29d')
-            .attr('r', function(d) {return d.radius;})
+            .style('fill', function(d) {return color(d.splitprob);})
+            .attr('r', function(d) {return d.radius - 4;})
             .merge(node);
 
         simulation.nodes(nodes);
@@ -78,15 +86,48 @@ $(document).ajaxStop(function() {
             .attr('cy', function(d) {return d.y;});
     }
 
-    var splitprob = 0.90;
+    var furthest = 0;
 
     function grow() {
-        if (nodes.length < 200) {
-            for (i = 0; i < nodes.length; i++) {
-                if (Math.random() < splitprob) {
-                    nodes.push({radius: cellRadius});
+        if (nodes.length < 300) {
+            var newNodes = [];
+            nodes.forEach(function(n) {
+                //console.log(n.age);
+                //console.log(n);
+                if (Math.random() < n.splitprob) {
+                    var nx = n.x,
+                        ny = n.y;
+                    var mag = Math.sqrt(Math.pow(nx,2) + Math.pow(ny, 2));
+                    var rnx = cellRadius * (Math.random() - 0.5) * 2;
+                    var rny = cellRadius * (Math.random() - 0.5) * 2;
+                    nx = nx + cellRadius * (nx) / mag + rnx;
+                    ny = ny + cellRadius * (ny) / mag + rny;
+
+                    mag = Math.sqrt(Math.pow(nx, 2) + Math.pow(ny, 2));
+                    if (mag > furthest) {
+                        furthest = mag;
+                    }
+
+                    //var nx = Math.random() * cellRadius * 2;
+                    //var ny = Math.random() * cellRadius * 2;
+
+
+                    //var nx = Math.random() * 10;
+                    // var ny = Math.random() * 10;
+
+                    newNodes.push({radius: cellRadius - 2, x: nx, y: ny, splitprob: 1, age: 1});
                 }
-            }
+            });
+
+            nodes = nodes.concat(newNodes);
+
+            //Scale splitprob based on how far out cells are
+            nodes.forEach(function(n) {
+                var mag = Math.sqrt(Math.pow(n.x, 2) + Math.pow(n.y, 2));
+                n.splitprob = Math.pow(n.age * Math.min(mag / furthest, 1), 1);
+                //console.log(n.splitprob);
+                n = n.age * 0.9;
+            });
         }
         return nodes;
     }
