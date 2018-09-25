@@ -9,6 +9,35 @@ main.landing-page {
   perspective: 1px;
   transform-style: preserve-3d;
 
+  button {
+    width: 10em;
+    border: 0;
+    outline: 0;
+    padding: 1em;
+    color: $text-light;
+    font-size: 1.3em;
+
+    &.constitutive_button {
+      background-color: $accent-warm;
+      box-shadow: 0px 0px 4px $accent-warm;
+      margin: auto 3em 3em auto;
+
+      &:hover {
+        box-shadow: 0px 0px 8px $accent-warm;
+      }
+    }
+
+    &.inducible_button {
+      background-color: $accent-cold;
+      box-shadow: 0px 0px 4px $accent-cold;
+      margin: auto auto 3em 3em;
+
+      &:hover {
+        box-shadow: 0px 0px 8px $accent-cold;
+      }
+    }
+  }
+
   article {
     @include center-text;
     background-color: $background-light-1;

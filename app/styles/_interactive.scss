@@ -1,15 +1,20 @@
 .petri {
   background-color: $background-dark-1;
   width: 100%;
-  padding-top: 100%;
 
+  /*
   & .links line {
     stroke: #999;
     stroke-opacity: 0.6;
   }
+  */
   
   & .nodes circle {
-    stroke: #fff;
-    stroke-width: 1.5px;
+    //stroke: #fff;
+    //stroke-width: 1.5px;
+    fill: #fff;
+    &:hover {
+      fill: blue;
+    }
   }
 }

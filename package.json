@@ -19,6 +19,7 @@
     "d3": "^5.7.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "igem-wikibrick": "^0.7.3",
+    "jeezy": "^1.12.17",
     "string-format": "^2.0.0"
   },
   "repository": {
