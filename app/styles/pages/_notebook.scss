@@ -1,18 +1,26 @@
 .labjournal {
+  // Remove our default margins on headers so the table isn't ridiculously overpadded
   h3 {
     font-size: 1.4em !important;
     margin-left: 1em !important;
     margin-right: 1em !important;
   }
 
+  // This is just be debugging, setting all dates to red. I needed to find a
+  // selector that would owrk with the mess that is the lab notebook.
+  // Ignore it.
   h3>.c53, h3>.c21, h3>.c3 {
     color: red;
   }
 
+  // Here we're actually styling the table.
   table {
+    // Give the whole table a black outline
     border: 1px solid black;
+    // Make the table span the whole article in width
     width: 100%;
 
+    // Style "headers" - the cells at the top of the table
     th {
       border: 1px solid black;
       padding: 1em;
@@ -22,6 +30,7 @@
       }
     }
 
+    // Style regular cells
     td {
       border: 1px solid black;
       padding: 1em;
