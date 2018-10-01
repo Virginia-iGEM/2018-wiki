@@ -24,6 +24,22 @@
   <defs
      id="defs2">
     <linearGradient
+       id="linearGradient7255"
+       inkscape:collect="always">
+      <stop
+         id="stop7249"
+         offset="0"
+         style="stop-color:#68119d;stop-opacity:1" />
+      <stop
+         style="stop-color:#7a6df0;stop-opacity:1"
+         offset="0.5"
+         id="stop7251" />
+      <stop
+         id="stop7253"
+         offset="1"
+         style="stop-color:#68119d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
        inkscape:collect="always"
        id="linearGradient6463">
       <stop
@@ -608,7 +624,7 @@
        gradientUnits="userSpaceOnUse" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient6463"
+       xlink:href="#linearGradient7255"
        id="linearGradient6933"
        x1="3154.0088"
        y1="2370.6531"
@@ -2028,6 +2044,15 @@
        y1="2370.6531"
        x2="4333.1875"
        y2="2370.6531" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7255"
+       id="linearGradient7265"
+       x1="2387.6084"
+       y1="1984.2644"
+       x2="2656.2422"
+       y2="1984.2644"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      inkscape:snap-global="false"
@@ -2040,9 +2065,9 @@
      showgrid="true"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="4149.0616"
-     inkscape:cx="1657.2416"
-     inkscape:zoom="0.175"
+     inkscape:cy="3964.5791"
+     inkscape:cx="1393.6229"
+     inkscape:zoom="0.12374369"
      inkscape:pageshadow="2"
      inkscape:pageopacity="1"
      borderopacity="1.0"
@@ -6834,5 +6859,12 @@
        height="391.28256"
        x="2152.5344"
        y="1940.374" />
+    <rect
+       style="opacity:1;fill:url(#linearGradient7265);fill-opacity:1.0;fill-rule:nonzero;stroke:#330159;stroke-width:76.19999695;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect7257"
+       width="192.43405"
+       height="286.51294"
+       x="2425.7083"
+       y="1841.0079" />
   </g>
 </svg>
