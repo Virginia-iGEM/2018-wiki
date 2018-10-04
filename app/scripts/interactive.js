@@ -10,9 +10,6 @@
 var d3 = require('d3');
 
 $(document).ajaxStop(function() {
-    // Apparently this is the best way to deepcopy. Javscript please??
-    var deepcopy = (obj => JSON.parse ( JSON.stringify(obj) ) ); 
-
     // Set interactive height to be equal to the width
     $('.petri').css('height', $('.petri').css('width'));
 
@@ -39,18 +36,19 @@ $(document).ajaxStop(function() {
 
     // SIMULATION/MVC INITIALIZATION
     // Establish our intial cells - just one.
-    var initialState = d3.range(1).map(function() {return {
+    var initialState = function() {
+        return d3.range(1).map(function() {return {
         radius: cellRadius - 2,
         splitprob: 1,
         age: 1,
         angle: Math.random() * Math.PI * 2};}); // Start with just one cell
+    };
 
-    // Deepcopy initialState into nodes so we can reuse it later
-    var nodes = deepcopy(initialState); 
+    var globalNodes = initialState();
     
     // Establish data - this is what our simulation and display draws from
     // Establish simulation - this handles the physics portion of things
-    var simulation = d3.forceSimulation(nodes)
+    var simulation = d3.forceSimulation(globalNodes)
     // Attract nearby cells, but only within a certain distance
         .force('charge', d3.forceManyBody().strength(1).distanceMax(cellRadius * 7)) 
     // Push cells towards center
@@ -66,7 +64,7 @@ $(document).ajaxStop(function() {
 
     // Restart with the grow function every 3 seconds; cells will duplicate
     var timer = d3.interval(function() {
-        restart(grow());
+        globalNodes = restart(grow(globalNodes));
     }, growthTime);
 
     // Used to visualize ranges of vars, particularly cell splitprob
@@ -77,12 +75,15 @@ $(document).ajaxStop(function() {
     var t = d3.transition()
         .duration(750);
 
+    var resettingMedium = false;
+
     // Called every time we need to introduce new nodes, both to the
     // display and the simulation
     function restart(nodes) {
 
         node = node.data(nodes);
 
+        console.log(nodes.length);
         // Exit any nodes that don't make good data points
         node.exit()
             .style('stroke', '#b26745')
@@ -99,10 +100,10 @@ $(document).ajaxStop(function() {
 
         // Transition new nodes
         node = node.enter().append('line')
+            //.transition(t)
             .style('stroke', function(d) {return color(d.splitprob);})
             .style('stroke-width', 4)
             .style('stroke-linecap', 'round')
-        //.transition(t)
             .merge(node);
 
         if (nodes.length >= maxColonySize) {
@@ -112,7 +113,9 @@ $(document).ajaxStop(function() {
                 .attr('stroke-width', 6);
         }
         simulation.nodes(nodes);
-    }
+
+        return nodes;
+    };
 
     // Required to update displayed position of nodes with force simulation
     function ticked() {
@@ -127,8 +130,14 @@ $(document).ajaxStop(function() {
 
     // This function is called and passed to reset()
     // It steps the cell growth simulation forward, adding new cells to our list of cells
-    function grow() {
-        console.log(nodes.length);
+    function grow(nodes) {
+        if(resettingMedium) {
+            nodes = initialState();
+            furthest = 0;
+            resettingMedium = false;
+            console.log(nodes);
+        }
+        //console.log(nodes);
         // Stop growing if we have over 250 cells
         if (nodes.length < maxColonySize) {
             var newNodes = [];
@@ -189,18 +198,14 @@ $(document).ajaxStop(function() {
     }
 
     function resetMedium() {
-        console.log(initialState);
-        nodes = deepcopy(initialState);
+        resettingMedium = true;
         if (!growing) {
             timer.restart(function() {
                 restart(grow());
             }, growthTime);
         }
-        //restart(nodes);
-    //     timer = d3.interval(function() {
-    //         restart(grow());
-    //     }, growthTime);
     }
+
 
     $('.constitutive_button').click(function() {
         resetMedium();
