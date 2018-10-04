@@ -90,13 +90,13 @@ $(document).ajaxStop(function() {
             .transition(t)
             .attr('stroke-width', '1e-6')
             .remove();
-
         // Transition new nodes
         node
-            .transition(t)
+            //.transition(t)
             .style('stroke', function(d) {return color(d.splitprob);})
             .style('stroke-width', 6)
             .style('stroke-linecap', 'round');
+
 
         // Transition new nodes
         node = node.enter().append('line')
@@ -106,9 +106,10 @@ $(document).ajaxStop(function() {
             .style('stroke-linecap', 'round')
             .merge(node);
 
+
         if (nodes.length >= maxColonySize) {
             node
-                .transition(t)
+                //.transition(t)
                 .style('stroke', '#fff')
                 .attr('stroke-width', 6);
         }
@@ -200,8 +201,9 @@ $(document).ajaxStop(function() {
     function resetMedium() {
         resettingMedium = true;
         if (!growing) {
-            timer.restart(function() {
-                restart(grow());
+            timer.stop();
+            timer = d3.interval(function() {
+                globalNodes = restart(grow(globalNodes));
             }, growthTime);
         }
     }
