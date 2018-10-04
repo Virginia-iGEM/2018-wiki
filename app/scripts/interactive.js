@@ -10,6 +10,7 @@
 var d3 = require('d3');
 
 $(document).ajaxStop(function() {
+    var toolbarHeight = 64;
     // Set interactive height to be equal to the width
     $('.petri').css('height', $('.petri').css('width'));
 
@@ -19,7 +20,7 @@ $(document).ajaxStop(function() {
     // Establish dimensions of simulation
     var dim = parseInt(container.style('width'));
     // Establish SVG drawing
-    var svg = container.append('svg').attr('width', dim).attr('height', dim);
+    var svg = container.append('svg').attr('width', dim).attr('height', dim - toolbarHeight);
     // Add styling to center container
     var g = svg.append('g').attr('transform', 'translate(' + dim / 2 + ',' + dim / 2 + ')');
     // This is the group we'll actually draw cells to
@@ -28,21 +29,90 @@ $(document).ajaxStop(function() {
     // PARAMETERS
     // Global radius of grown cells in pixels
     var cellRadius = 14,
+        // The colony size, after which, cells will stop replicating.
         maxColonySize = 250,
+        // The effect of cell age on reproduction probability. To the power of this number.
         agePower = 1/2,
+        // The effect of cell distance from center on reproduction probability. To the power of this number.
         distancePower = 2,
+        // How quickly cells age; multiplied by current cell age every generation.
         agingFactor = 0.85,
+        // Time between generations
         growthTime = 1000; 
+
+    // STATE VARIABLES
+    var timer; // Used to store the interval call to restart(grow()) that causes cells to replicate every growthTime
+    var resettingMedium = false; // Called when the user resets the medium
+    var furthest = 0; // Used to hold which cell is the furthest from the center for distance growth prob scaling. Reset to zero on each sim.
+    var growing = false; // True when the cells are growing.
+    var inducer = false; // True when the user has added the inducer to the cells
+
+    // MISC VARIABLES
+    // Used to visualize splitprob
+    var color = d3.scaleSequential(d3.interpolateLab("white", "#f7b958"))
+        .domain([0, 1]);
+    // transition function used for display updates
+    var t = d3.transition()
+        .duration(750);
 
     // SIMULATION/MVC INITIALIZATION
     // Establish our intial cells - just one.
-    var initialState = function() {
+
+    // Debug state shows cell color as a function of split probability
+    var debugState = () => {
         return d3.range(1).map(function() {return {
         radius: cellRadius - 2,
         splitprob: 1,
         age: 1,
-        angle: Math.random() * Math.PI * 2};}); // Start with just one cell
+        angle: Math.random() * Math.PI * 2,
+            color: function() {
+                return color(this.splitprob);
+            } 
+        };}); // Start with just one cell
     };
+
+    var simpleState = () => {
+        return d3.range(1).map(function() {return {
+        radius: cellRadius - 2,
+        splitprob: 1,
+        age: 1,
+        angle: Math.random() * Math.PI * 2,
+            color: function() {
+                return '#fff';
+            } 
+        };}); // Start with just one cell
+    };
+
+    // Color is just always glowing blue
+    var constitutiveState = () => {
+        return d3.range(1).map(function() {return {
+        radius: cellRadius - 2,
+        splitprob: 1,
+        age: 1,
+        angle: Math.random() * Math.PI * 2,
+            color: function() {
+                return '#6e5eff';
+            } 
+        };}); // Start with just one cell
+    };
+
+    // Color only glows once the user has added the inducer
+    var inducedState = () => {
+        return d3.range(1).map(function() {return {
+        radius: cellRadius - 2,
+        splitprob: 1,
+        age: 1,
+        angle: Math.random() * Math.PI * 2,
+            color: function() {
+                if (inducer) {
+                    return '#6e5eff';
+                }
+                return '#fff';
+            } 
+        };}); // Start with just one cell
+    };
+
+    var initialState = debugState;
 
     var globalNodes = initialState();
     
@@ -62,20 +132,16 @@ $(document).ajaxStop(function() {
     // Call any functions that need to run every time the simulation ticks
         .on('tick', ticked); 
 
-    // Restart with the grow function every 3 seconds; cells will duplicate
-    var timer = d3.interval(function() {
-        globalNodes = restart(grow(globalNodes));
-    }, growthTime);
-
-    // Used to visualize ranges of vars, particularly cell splitprob
-    var color = d3.scaleSequential(d3.interpolateLab("white", "#f7b958"))
-        .domain([0, 1]);
-
-    // transition function used for display updates
-    var t = d3.transition()
-        .duration(750);
-
-    var resettingMedium = false;
+    // FUNCTIONS
+    
+    // Required to update displayed position of nodes with force simulation
+    // Called every step of the force simulation.
+    function ticked() {
+        node.attr('x1', function(d) {return Math.cos(d.angle) * (d.radius - 4) + d.x;})
+            .attr('y1', function(d) {return Math.sin(d.angle) * (d.radius - 4) + d.y;})
+            .attr('x2', function(d) {return Math.cos(d.angle) * -(d.radius - 4) + d.x;})
+            .attr('y2', function(d) {return Math.sin(d.angle) * -(d.radius - 4) + d.y;});
+    }
 
     // Called every time we need to introduce new nodes, both to the
     // display and the simulation
@@ -86,14 +152,14 @@ $(document).ajaxStop(function() {
         console.log(nodes.length);
         // Exit any nodes that don't make good data points
         node.exit()
-            .style('stroke', '#b26745')
+            .style('stroke', function(d) {return d.color();})
             .transition(t)
             .attr('stroke-width', '1e-6')
             .remove();
         // Transition new nodes
         node
             //.transition(t)
-            .style('stroke', function(d) {return color(d.splitprob);})
+            .style('stroke', function(d) {return d.color();})
             .style('stroke-width', 6)
             .style('stroke-linecap', 'round');
 
@@ -101,7 +167,7 @@ $(document).ajaxStop(function() {
         // Transition new nodes
         node = node.enter().append('line')
             //.transition(t)
-            .style('stroke', function(d) {return color(d.splitprob);})
+            .style('stroke', function(d) {return d.color();})
             .style('stroke-width', 4)
             .style('stroke-linecap', 'round')
             .merge(node);
@@ -110,24 +176,13 @@ $(document).ajaxStop(function() {
         if (nodes.length >= maxColonySize) {
             node
                 //.transition(t)
-                .style('stroke', '#fff')
+                .style('stroke', function(d) {return d.color();})
                 .attr('stroke-width', 6);
         }
         simulation.nodes(nodes);
 
         return nodes;
-    };
-
-    // Required to update displayed position of nodes with force simulation
-    function ticked() {
-        node.attr('x1', function(d) {return Math.cos(d.angle) * (d.radius - 4) + d.x;})
-            .attr('y1', function(d) {return Math.sin(d.angle) * (d.radius - 4) + d.y;})
-            .attr('x2', function(d) {return Math.cos(d.angle) * -(d.radius - 4) + d.x;})
-            .attr('y2', function(d) {return Math.sin(d.angle) * -(d.radius - 4) + d.y;});
     }
-
-    var furthest = 0;
-    var growing = true;
 
     // This function is called and passed to reset()
     // It steps the cell growth simulation forward, adding new cells to our list of cells
@@ -175,7 +230,8 @@ $(document).ajaxStop(function() {
                         splitprob: 1,
                         age: 1,
                         // New cells have similar but slightly different angles to their parents
-                        angle: n.angle + (Math.random() - 1) * Math.PI / 3
+                        angle: n.angle + (Math.random() - 1) * Math.PI / 3,
+                        color: n.color
                     }); 
                 }
             });
@@ -200,8 +256,10 @@ $(document).ajaxStop(function() {
 
     function resetMedium() {
         resettingMedium = true;
+        globalNodes = restart(grow(globalNodes));
         if (!growing) {
-            timer.stop();
+            if (timer)
+                timer.stop();
             timer = d3.interval(function() {
                 globalNodes = restart(grow(globalNodes));
             }, growthTime);
@@ -209,8 +267,24 @@ $(document).ajaxStop(function() {
     }
 
 
+
+    // DOM function bindings
     $('.constitutive_button').click(function() {
+        initialState = constitutiveState;
+        growthTime = 4000;
         resetMedium();
+    });
+
+    var initialGrowth = false;
+    $('main').scroll(function() {
+        var offset = $('.petri').position().top - $('main').scrollTop();
+        //console.log(offset);
+        if (!initialGrowth && offset >= 0) {
+            initialGrowth = true;
+            initialState = simpleState;
+            growthTime = 1000;
+            resetMedium();
+        }
     });
 });
 /*
