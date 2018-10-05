@@ -1,6 +1,6 @@
 @import 'common';
 
-$nav-height: 3em; // Navbar height
+$nav-height: 4em; // Navbar height
 
 $pgridp-layout: (
   columns: 1,
@@ -110,7 +110,7 @@ main {
   q {
     display: block;
     font-weight: bold;
-    padding-left: 1em;
+    padding-left: 4em;
 
     &::before {
       content: '“';

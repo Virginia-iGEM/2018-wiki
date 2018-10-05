@@ -31,28 +31,28 @@ Our team has been hard at work in the lab! See what everyone's been doing.
 			<h4>Ngozi Akingbesote</h4>
 			<img src="images/TeamPhotos/2018Ngozi.jpg" alt="2018Ngozi" id="img-bio">
                      <q>...</q>
-			<p>Ngozi is a third year studying human biology. She is a member of our Wetlab; of all the people here, she's one of the hardest workers, and almost single-handedly finished our Interlab Study tasks, in addition to taking two classes and working in another lab for the duration of the project.</p>
+			<p>Ngozi is a third year studying human biology. She is a member of our Wetlab; she almost single-handedly finished our Interlab Study tasks, in addition to taking two classes and working in another lab for the duration of the project.</p>
 			<br>
 		</div>
 		<div class= "hidden" id="Dylan">
 			<h4>Dylan Culfogienis</h4>
 			<img src="images/TeamPhotos/2018Dylan1.jpg" alt="2018Dylan" id="img-bio">
 			<q>[modem noises]</q>
-			<p>Dylan is a third year studying engineering science. He is a wearer of many hats on our team, being a part of the Modeling, Wiki, and Human Practices committees _in addition to_ our graphics designer.  He sometimes wishes that he could cover himself in Vaseline and become a human slug. </p>
+			<p>Dylan is a third year studying engineering science. In addition to being devastatingly handsome, he is a wearer of many hats on our team, being a part of the Modeling, Wiki, and Human Practices committees _in addition to_ our graphics designer and co-CFO. His main project was the Wiki, including the gorgeous styling, rugged backend tools that make it work, interactive components and the inspired graphic design seen throughout the project.</p>
 			<br>
 		</div>
 		<div class= "hidden" id="Nir">
 			<h4>Nir Diskin</h4>
 			<img src="images/TeamPhotos/2018Nir1.jpg" alt="2018Nir" id="img-bio">
                      <q>It's like far... But not.</q>
-			<p>Nir is a second year studying biomedical engineering. As our collaboration head, he aggressively sends out emails to businesses and other individuals to collaborate with. He is also a member of Modeling and Human Practices.</p>
+			<p>Nir is a second year studying biomedical engineering. As our collaboration head, he aggressively sends out emails to businesses and other individuals to collaborate with. He is also a member of Modeling and Human Practices. His biggest project was the financial analysis that became both a human practices project in collaboration with one of our sponsors, and partial justification for the value of our project.</p>
 			<br>
 		</div>
 		<div class= "hidden" id="Will">
 			<h4> William Huang </h4>
 			<img src="images/TeamPhotos/2018Will1.jpg" alt="2018Will" id="img-bio">
                      <q>I’m already dreaming about my nap tomorrow.</q>
-			<p>Will is a second year who is majoring in biology and minoring in biochemistry. He is a part of Wetlab and Human Practices and his quirky personality helps to brighten up the lab.</p>	
+			<p>Will is a second year who is majoring in biology and minoring in biochemistry. He is a part of Wetlab and Human Practices and his quirky personality helps to brighten up the lab. He puts his all into the lab, riding the roller coaster of successes and setbacks and ultimately being one of the hardest working members of the Wetlab team.</p>	
 			<br>
 		</div>
 		<div class= "hidden" id="Paul">
@@ -66,7 +66,7 @@ Our team has been hard at work in the lab! See what everyone's been doing.
 			<h4>Joseph Outten</h4>
 			<img src="images/TeamPhotos/2018Joseph1.jpg" alt="2018Joseph" id="img-bio">
                      <q>Fruit tastes better straight off the tree.</q>
-			<p>Joseph is a third year majoring in computer science and biology. He is a part of the Modeling and Human Practices committees. In his free time, likes to play basketball and go rock climbing with friends.
+			<p>Joseph is a third year majoring in computer science and biology. He is our co-Chief Financial Officer, a part of the Modeling and Human Practices committees, and was responsible for whipping the team into shape when it came time for Wiki writeups.  In his free time, likes to play basketball and go rock climbing with friends.
 			</p>
 			<br>
 		</div>
@@ -74,7 +74,7 @@ Our team has been hard at work in the lab! See what everyone's been doing.
 			<h4>Nick Marotta</h4>
 			<img src="images/TeamPhotos/2018Nick1.jpg" alt="2018Nick" id="img-bio">
                      <q>...</q>
-			<p>Nick is a fourth year biology major and the head of our Wetlab. He is a master at beach volleyball.</p>
+			<p>Nick is a fourth year biology major and the head of our Wetlab. Nick is known for his spontaneous comedy night-grade stories; he is a master of beach volleyball.</p>
 			<br>
 		</div>
 		<div class= "hidden" id="Kevin">
@@ -85,32 +85,31 @@ Our team has been hard at work in the lab! See what everyone's been doing.
 			<br>
 		</div>
 		<div class= "hidden" id="Ryan">
-			<h4>Ryan Taylor</h4>
+			<h4>...</h4>
 			<img src="images/TeamPhotos/2018Ryan1.jpg" alt="2018Ryan" id="img-bio">
                      <q>I like math idk</q>
-                     <q>My teammates are asexual</q>
-			<p>Ryan is a third year majoring in physics with a minor in biomedical engineering. He is our fearless captain of the Virginia iGEM team and head of the modeling committee. He is also involved in wetlab, human practices, and wiki. He is often seen in the lab playing with dry ice and other lab equipment and making sure that everyone is staying on track.</p>
+			<p>Ryan is a third year majoring in physics with a minor in biomedical engineering. He is the fearless captain of the Virginia iGEM team and head of the modeling committee. He is also involved in wetlab, human practices, and wiki. He is often seen in the lab playing with dry ice and other lab equipment and making sure that everyone is staying on track.</p>
 			<br>
 		</div>
 		<div class= "hidden" id="Vignesh">
 			<h4>Vignesh Valaboju</h4>
 			<img src="images/TeamPhotos/2018Vignesh1.jpg" alt="2018Vignesh" id="img-bio">
                      <q>I did not touch my skin today</q>
-			<p>Vignesh is a second year majoring in biomedical engineering and a member of the wetlab. He was (and still is) for our scrapped "Dark iGEM" theme, where we all dress up in black and make our project sound as evil as possible.</p>
+			<p>Vignesh is a second year majoring in biomedical engineering and a key member of Wetlab. He was (and still is) for our scrapped "Dark iGEM" theme, where we all dress up in black and make our project sound as evil as possible.</p>
 			<br>
 		</div>
 		<div class= "hidden" id="Grace">
 			<h4>Grace Wu</h4>
 			<img src="images/TeamPhotos/2018Grace1.jpg" alt="2018Grace" id="img-bio">
                      <q>Are we there yet?</q>
-			<p>Grace is a third year majoring in computer science. She is the Wiki Chief Programmer and is a part of the Modeling team. She likes to listen to lo-fi hip hop while studying and running in her free time.</p>
+			<p>Grace is a third year majoring in computer science. She is the head of the Wiki committee and is a part of the Modeling team. She likes to listen to lo-fi hip hop while studying and running in her free time.</p>
 			<br>
 		</div>
 		<div class= "hidden" id="Angela">
 			<h4>Angela Yi</h4>
 			<img src="images/TeamPhotos/2018Angela1.jpg" alt="2018Angela" id="img-bio">
             <q>Teach me how to gain weight.</q>
-			<p>Angela is a four year majoring in systems engineering. She is the head of Human Practices. She is famous for roasting people in the lab.</p>
+			<p>Angela is a four year majoring in systems engineering. She is the head of Human Practices, and responsible for planning our numerous public outreach events. She is famous for roasting people in the lab.</p>
 			<br>
 		</div>
 	</div> 

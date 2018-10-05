@@ -1,7 +1,7 @@
 // Code courtesy of Mohamed Hasan
 // https://codepen.io/Mhmdhasan/pen/mAdaQE
 
-$(document).ready(function () {
+$(document).ajaxStop(function () {
     
     'use strict';
     
@@ -30,10 +30,13 @@ $(document).ready(function () {
         }
         c = currentScrollTop;
     });
+
+    // Hamburger menu button for mobileview
+    var openMenu = function () {
+        navbar = $('.navbar');
+        navbar.toggleClass('expanded');
+    };
+
+    $('header .navbar .menubutton').click(openMenu);
 });
 
-// Hamburger menu button for mobileview
-function openMenu() {
-    navbar = $('.navbar');
-    navbar.toggleClass('expanded');
-}
