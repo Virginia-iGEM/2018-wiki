@@ -18,6 +18,11 @@ body {
   margin: 0;
 }
 
+.banner {
+  margin-top: $nav-height + 1em;
+  max-width: 100%;
+}
+
 //Overview page layout
 .row {
   display: flex;
@@ -142,6 +147,7 @@ main {
         float: right;
         padding: 5px;
         position: relative;
+
       }
 
       //adding captions
