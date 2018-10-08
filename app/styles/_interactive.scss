@@ -1,6 +1,9 @@
 .petri {
   background-color: $background-dark-1;
   width: 100%;
+  @include circular;
+  position: sticky;
+  top: 15vh;
 
   /*
   & .links line {

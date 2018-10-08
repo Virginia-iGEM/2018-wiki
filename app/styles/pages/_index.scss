@@ -10,12 +10,12 @@ main.landing-page {
   transform-style: preserve-3d;
 
   button {
-    width: 10em;
     border: 0;
-    outline: 0;
-    padding: 1em;
     color: $text-light;
     font-size: 1.3em;
+    outline: 0;
+    padding: 1em;
+    width: 10em;
 
     &.constitutive_button {
       background-color: $accent-warm;
@@ -44,6 +44,7 @@ main.landing-page {
     display: flex;
     min-width: 100vw;
     position: relative;
+    padding-top: 20vh;
 
     img {
       @include center-image;
@@ -58,9 +59,9 @@ main.landing-page {
     }
 
     &.banner {
-      flex: 1 0;
       background-color: $background-dark;
       color: $text-light !important;
+      flex: 1 0;
       height: 100vh;
       //overflow: none;
       //padding-top: 15vh;
@@ -74,14 +75,10 @@ main.landing-page {
 
       section {
         background-color: $background-dark;
-        //align-self: flex-start;
         flex: 1 3 auto;
-        padding: $nav-height + 2em 0;
         margin: auto 0;
+        padding: $nav-height + 2em 0;
         position: relative;
-        //display: flex;
-        //flex: 1 0 auto;
-        //top: 0;
       }
     }
 
@@ -92,12 +89,12 @@ main.landing-page {
       }
 
       section {
-        margin: 2em;
         color: $text-light !important;
-        flex: 1 1;
-
         display: flex;
         flex-direction: column;
+        flex: 1 1;
+        margin: 2em;
+        position: relative;
 
         h1, h2, h3, h4, h5, h6, p {
           color: $text-light !important;
@@ -107,14 +104,14 @@ main.landing-page {
         }
 
         &:first-child {
-          background-color: $accent-bright-2;
+          //background-color: $accent-bright-2;
           justify-content: center;
-          text-align: justify;
           margin-left: 3em;
+          text-align: justify;
         }
 
         &:last-child {
-          background-color: $accent-warm-2;
+          //background-color: $accent-warm-2;
           justify-content: center;
           text-align: justify;
         }
