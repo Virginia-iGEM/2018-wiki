@@ -27,7 +27,7 @@ header {
   position: fixed; // Stick to top of screen
   text-align: center;
   top: $igem-navbar-height; // Compensate for the iGEM Wiki builtin navbar.
-  transition: all .1s;
+  transition: all .2s ease-in-out;
   width: 100%;
   z-index: 9999; // This goes over *everything*
 
@@ -43,6 +43,7 @@ header {
   }
 
   .navbar {
+    font-family: 'Raleway', serif !important;
     display: flex;
     height: $nav-height;
     justify-content: center;
@@ -90,7 +91,9 @@ header {
         flex: 1;
         line-height: $nav-height; // Center text
         max-width: min-content;
+        max-height: min-content;
         position: relative; // This is required for dropdowns to be positioned relative to the navbar instead of the browser window
+        transition: all .2s ease-in-out;
 
         // dividers for easier/organized view
         .divider {
@@ -100,7 +103,9 @@ header {
         }
 
         &:hover {
+          a, li {
             background-color: $background-dark-1;
+          }
         }
 
         //a, related to link
@@ -143,9 +148,10 @@ header {
           }
           display: flex;
           flex-direction: column;
-          transition: all .2s ease-in-out 0s, visibility 0s linear .3s, z-index 0s linear .01s; // Slide-down animation
+          transition: all .2s ease-in-out; // Slide-down animation
 
           li {
+            min-width: 100%;
             font-size: .8em;
             margin-left: 0 !important;
             overflow: hidden;
