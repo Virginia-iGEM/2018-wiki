@@ -8,6 +8,7 @@ main.landing-page {
   overflow-y: scroll;
   perspective: 1px;
   transform-style: preserve-3d;
+  scroll-behavior: smooth;
 
   button {
     border: 0;
@@ -44,7 +45,18 @@ main.landing-page {
     display: flex;
     min-width: 100vw;
     position: relative;
-    padding-top: 20vh;
+    scroll-behavior: smooth;
+    //padding-top: 20vh;
+
+    .sticky {
+      position: sticky;
+      overflow: hidden;
+      top: 0;
+    }
+
+    p {
+      margin: 1em 0 1em 0 !important;
+    }
 
     img {
       @include center-image;
@@ -69,6 +81,10 @@ main.landing-page {
       transform: translateZ(-1px) scale(2);
       z-index: -1;
 
+      img {
+        width: 70%;
+      }
+
       h1, h2, h3, h4, h5, h6 {
         color: $text-light !important;
       }
@@ -89,7 +105,7 @@ main.landing-page {
       }
 
       section {
-        color: $text-light !important;
+        color: $text-dark !important;
         display: flex;
         flex-direction: column;
         flex: 1 1;
@@ -97,23 +113,39 @@ main.landing-page {
         position: relative;
 
         h1, h2, h3, h4, h5, h6, p {
-          color: $text-light !important;
+          color: $text-dark !important;
         }
         p {
           font-size: 1.3em !important;
         }
 
+        .card {
+          p {
+            &::first-letter {
+              font-size: 1.6em;
+              //font-weight: bold;
+              font-family: 'Raleway', serif !important;
+              margin-right: -0.05em;
+            }
+          }
+        }
+
         &:first-child {
-          //background-color: $accent-bright-2;
           justify-content: center;
           margin-left: 3em;
           text-align: justify;
+          .card {
+            //background-color: $accent-bright-2;
+            //border: solid $background-dark 2px;
+          }
         }
 
         &:last-child {
-          //background-color: $accent-warm-2;
           justify-content: center;
           text-align: justify;
+          .card {
+            //background-color: $accent-warm-2;
+          }
         }
 
         &.scroll-action {

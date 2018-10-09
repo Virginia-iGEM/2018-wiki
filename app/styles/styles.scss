@@ -138,6 +138,13 @@ main {
       }
       text-align: justify;
 
+      & > p {
+        &::first-letter {
+          font-size: 1.3em;
+          font-family: 'Raleway', serif !important;
+          //margin-right: -0.05em;
+        }
+      }
       img,
       figure {
         //width: 30em;

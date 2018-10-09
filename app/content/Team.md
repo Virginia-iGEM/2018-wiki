@@ -109,7 +109,7 @@ Our team has been hard at work in the lab! See what everyone's been doing.
 			<h4>Angela Yi</h4>
 			<img src="images/TeamPhotos/2018Angela1.jpg" alt="2018Angela" id="img-bio">
             <q>Teach me how to gain weight.</q>
-			<p>Angela is a four year majoring in systems engineering. She is the head of Human Practices, and responsible for planning our numerous public outreach events. She is famous for roasting people in the lab.</p>
+			<p>Angela is a fourth-year majoring in Systems Engineering. As the head of Human Practices, she is the main point of contact with companies and other teams. She is the one that makes sure all our collaborations and events are well-planned and delivered as we wanted them to be. Fun fact, she runs half-marathons!</p>
 			<br>
 		</div>
 	</div> 
