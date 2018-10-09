@@ -269,8 +269,6 @@ $(document).ajaxStop(function() {
             }
         }
 
-
-
         // DOM function bindings
         $('.constitutive_button').click(function() {
             initialState = constitutiveState;

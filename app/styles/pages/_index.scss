@@ -46,16 +46,21 @@ main.landing-page {
     min-width: 100vw;
     position: relative;
     scroll-behavior: smooth;
+    align-items: flex-start;
     //padding-top: 20vh;
 
     .sticky {
       position: sticky;
       overflow: hidden;
-      top: 0;
+      top: -2em;
+      z-index: -1;
+      p {
+        margin: 0em 0 !important;
+      }
     }
 
     p {
-      margin: 1em 0 1em 0 !important;
+      margin: 1em 0 !important;
     }
 
     img {
@@ -98,66 +103,71 @@ main.landing-page {
       }
     }
 
-    &.call-to-action {
-      flex-wrap: wrap;
-      @media screen and (max-width: $breakpoint) {
-        flex-direction: column;
+    flex-wrap: wrap;
+    @media screen and (max-width: $breakpoint) {
+      flex-direction: column;
+    }
+
+    section {
+      min-height: 100%;
+      color: $text-dark !important;
+      display: flex;
+      flex-direction: column;
+      flex: 1 1;
+      margin: 2em;
+      //align-items: flex-start;
+      position: relative;
+
+      h1, h2, h3, h4, h5, h6, p {
+        color: $text-dark !important;
+      }
+      p {
+        font-size: 1.3em !important;
       }
 
-      section {
-        color: $text-dark !important;
-        display: flex;
-        flex-direction: column;
-        flex: 1 1;
-        margin: 2em;
-        position: relative;
+      .card {
+        h2 {
+          text-align: left;
+        }
+        p {
+          &::first-letter {
+            font-size: 1.6em;
+            //font-weight: bold;
+            font-family: 'Raleway', serif !important;
+            margin-right: -0.05em;
+          }
+        }
+      }
 
+      &:first-child {
+        justify-content: flex-start;
+        margin-left: 3em;
+        text-align: justify;
+        .card {
+          margin: 1em 3em;
+        }
+      }
+
+      &:last-child {
+        justify-content: flex-start;
+        text-align: justify;
+        .card {
+          margin: 1em 3em;
+        }
+      }
+
+      &.scroll-action {
+        position: sticky;
         h1, h2, h3, h4, h5, h6, p {
           color: $text-dark !important;
         }
-        p {
-          font-size: 1.3em !important;
+        & .petri {
+          margin-bottom: 2em;
         }
-
-        .card {
-          p {
-            &::first-letter {
-              font-size: 1.6em;
-              //font-weight: bold;
-              font-family: 'Raleway', serif !important;
-              margin-right: -0.05em;
-            }
-          }
-        }
-
-        &:first-child {
-          justify-content: center;
-          margin-left: 3em;
-          text-align: justify;
-          .card {
-            //background-color: $accent-bright-2;
-            //border: solid $background-dark 2px;
-          }
-        }
-
-        &:last-child {
-          justify-content: center;
-          text-align: justify;
-          .card {
-            //background-color: $accent-warm-2;
-          }
-        }
-
-        &.scroll-action {
-          position: sticky;
-          h1, h2, h3, h4, h5, h6, p {
-            color: $text-dark !important;
-          }
-          @media screen and (max-width: $breakpoint) {
-            order: -1;
-            & .petri {
-                display: none;
-            }
+        @media screen and (max-width: $breakpoint) {
+          order: -1;
+          & .petri {
+            display: none;
           }
         }
       }

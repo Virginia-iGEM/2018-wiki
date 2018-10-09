@@ -10,16 +10,11 @@
 <article class="call-to-action">
 
   <section>
-    <div class="spacer" style="height: 130vh"></div>
+    <div class="spacer" style="height: 110vh"></div>
     <div class="card">
-      <p>By transforming these cells with our own plasmids, we can produce proteins of interest. This is the foundational goal of biomanufacturing.</p>
-    </div>
-    <div class="spacer" style="height: 50vh"></div>
-    <div class="card">
-      <h3>Constitutive Expression</h3>
-      <!-- <img src="/images/landing_page/lp_wildtype.svg" alt="constitutive expression"></img> -->
-      <p>This system involves hookin a gene of interest up to a constitutive promoter, resulting in constant expression. The primary benefit of this "system" is its inherent simplicity - expression will always just occur. However, when optimizing yields, a flaw in this system becomes evident; low yields.</p>
-      <button class="constitutive_button">Click to see it in action</button>
+      <h2>1.1</h3>
+      <p>By transforming these cells with our own synthetic genes, we can produce proteins of interest. This is the foundational goal of biomanufacturing.</p>
+      <img src="/images/landing_page/Plasmid-Gallery.svg">
     </div>
   </section>
 
@@ -33,25 +28,128 @@
       <div class="petri">
       </div>
       <p>
-        <strong>Strain:</strong> Unmodified E. coli
+        <strong>Strain:</strong> <span>Unmodified E. coli</span>
       </p>
       <p>
-        <strong>Division Time:</strong> 60 Minutes
+        <strong>Division Time:</strong> <span>1 hour</span>
+      </p>
+      <p>
+        <strong>Yield:</strong> <span>N/A</span>
       </p>
       <div class="spacer" style="height: 20vh"></div>
     </div>
+    <div class="spacer" style="height: 50vh"></div>
+  </section>
+
+  <section>
+    <div class="spacer" style="height: 220vh"></div>
+    <div class="card">
+      <h2>1.2</h2>
+      <p>
+        An important component of these genes is their promoter, which determines how and when they are expressed. There are two common ways genes are induced in biomanufacturing; constitutive and inducible expression.
+      </p>
+    </div>
+    <div class="spacer" style="height: 40vh"></div>
+  </section>
+
+</article>
+
+<article id="constitutive-article">
+
+  <section>
+    <div class="spacer" style="height: 50vh"></div>
+    <div class="card" id="constitutive-card">
+      <h3>2.1 Constitutive Expression</h3>
+      <!-- <img src="/images/landing_page/lp_wildtype.svg" alt="constitutive expression"></img> -->
+      <p>Constitutive promoters result in constant expression. The primary benefit of this "system" is its inherent simplicity - expression will occur with no intervention. A cell will always be producing the protein of interest, from its first division to its last.</p>
+      <!-- <button class="constitutive_button">Click to see it in action</button> -->
+    </div>
+    <div class="spacer" style="height: 120vh"></div>
+    <div class="card">
+      <p>
+        Very little protein of interest is produced because the colony isn't given the chance to mature - so many of the cells' resources are committed towards producing the protein that the colony's growth rate is reduced.
+      </p>
+    </div>
+    <div class="spacer" style="height: 50vh"></div>
+  </section>
+  
+  <section class="scroll-action">
+    <div class="card">
+      <h1>2. Constitutive Expression</h1>
+      <p>These E. coli have been modified with a constitutively promoted gene of interest.</p>
+    </div>
+    <div class="sticky" tabIndex="-1">
+      <div class="spacer" style="height: 10vh"></div>
+      <div class="petri">
+      </div>
+      <p>
+        <strong>Strain:</strong> <span>E. coli with constitutive expression</span>
+      </p>
+      <p>
+        <strong>Division Time:</strong> <span>3 hours</span>
+      </p>
+      <p>
+        <strong>Yield:</strong> <span>Low</span>
+      </p>
       <div class="spacer" style="height: 20vh"></div>
+    </div>
+    <div class="spacer" style="height: 50vh"></div>
   </section>
 
   <section>
     <div class="spacer" style="height: 150vh"></div>
     <div class="card">
-      <h3>Inducible Expression</h3>
-      <!-- <img src="/images/landing_page/lp_quorus.svg" alt="induced expression"></img> -->
-      <p>This system involves hooking the gene in question up to an inducible promoter. Growth occurs an at an accelerated rate because no metabolic activity is put towards production. Once the culture has grown to an optimal density, an artificial inducer can be added, switching production on.</p>
-      <button class="inducible_button">Click to see it in action</button>
+      <p>
+        While this is appropriate for experimentation, when optimizing for biomanufacturing, constitutive promoters begin to show their flaws.
+      </p>
     </div>
   </section>
+</article>
+
+<article id="inducible-article">
+  <section>
+    <div class="spacer" style="height: 50vh"></div>
+    <div class="card">
+      <h3>3.1 Inducible Expression</h3>
+      <!-- <img src="/images/landing_page/lp_quorus.svg" alt="induced expression"></img> -->
+      <p>Inducible promoters are an improvement over constitutive expression because they give the manufacturer a degree of control over the gene.</p>
+      <!-- <button class="inducible_button">Click to see it in action</button> -->
+    </div>
+  </section>
+  <section class="scroll-action">
+    <div class="card">
+      <h1>3. Inducible Expression</h1>
+      <p>These E. coli have been modified with an artificially inducible gene of interest.</p>
+    </div>
+    <div class="sticky" tabIndex="-1">
+      <div class="spacer" style="height: 10vh"></div>
+      <div class="petri">
+      </div>
+      <p>
+        <strong>Strain:</strong> <span>Inducible E. coli</span>
+      </p>
+      <p>
+        <strong>Division Time:</strong> <span>1 hours</span>
+      </p>
+      <p>
+        <strong>Yield:</strong> <span>High</span>
+      </p>
+      <div class="spacer" style="height: 20vh"></div>
+    </div>
+    <div class="spacer" style="height: 50vh"></div>
+  </section>
+  <section>
+    <div class="spacer" style="height: 150vh"></div>
+    <div class="card">
+      <p>
+        These promoters will only express the protein of interest in the presence of some inducer - such as the artificial inducer IPTG - is added to the culture or bioreactor.
+      </p>
+      <button class="inducible_button">Add some IPTG</button>
+    </div>
+  </section>
+</article>
+
+<article id="quorus-article">
 
 </article>
 
