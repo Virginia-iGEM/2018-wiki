@@ -30,7 +30,6 @@ Our team has been hard at work in the lab! See what everyone's been doing.
 		<div class= "unhidden" id="Ngozi">
 			<h4>Ngozi Akingbesote</h4>
 			<img src="images/TeamPhotos/2018Ngozi.jpg" alt="2018Ngozi" id="img-bio">
-                     <q>...</q>
 			<p>Ngozi is a third year studying human biology. She is a member of our Wetlab; she almost single-handedly finished our Interlab Study tasks, in addition to taking two classes and working in another lab for the duration of the project.</p>
 			<br>
 		</div>
@@ -73,7 +72,6 @@ Our team has been hard at work in the lab! See what everyone's been doing.
 		<div class= "hidden" id="Nick">
 			<h4>Nick Marotta</h4>
 			<img src="images/TeamPhotos/2018Nick1.jpg" alt="2018Nick" id="img-bio">
-                     <q>...</q>
 			<p>Nick is a fourth year biology major and the head of our Wetlab. Nick is known for his spontaneous comedy night-grade stories; he is a master of beach volleyball.</p>
 			<br>
 		</div>
@@ -85,9 +83,8 @@ Our team has been hard at work in the lab! See what everyone's been doing.
 			<br>
 		</div>
 		<div class= "hidden" id="Ryan">
-			<h4>...</h4>
+			<h4>Ryan Taylor</h4>
 			<img src="images/TeamPhotos/2018Ryan1.jpg" alt="2018Ryan" id="img-bio">
-                     <q>I like math idk</q>
 			<p>Ryan is a third year majoring in physics with a minor in biomedical engineering. He is the fearless captain of the Virginia iGEM team and head of the modeling committee. He is also involved in wetlab, human practices, and wiki. He is often seen in the lab playing with dry ice and other lab equipment and making sure that everyone is staying on track.</p>
 			<br>
 		</div>
