@@ -12,7 +12,7 @@ var d3 = require('d3');
 var triggered = false;
 
 $(document).ajaxStop(function() {
-    if (!triggered) {
+    if (!triggered && $('.petri').length > 0) {
         //var toolbarHeight = 64;
         // Set interactive height to be equal to the width
         $('.petri').css('height', $('.petri').css('width'));
@@ -152,7 +152,7 @@ $(document).ajaxStop(function() {
 
             node = node.data(nodes);
 
-            console.log(nodes.length);
+            //console.log(nodes.length);
             // Exit any nodes that don't make good data points
             node.exit()
                 .style('stroke', function(d) {return d.color();})
@@ -194,7 +194,7 @@ $(document).ajaxStop(function() {
                 nodes = initialState();
                 furthest = 0;
                 resettingMedium = false;
-                console.log(nodes);
+                //console.log(nodes);
             }
             //console.log(nodes);
             // Stop growing if we have over 250 cells
@@ -279,7 +279,7 @@ $(document).ajaxStop(function() {
         var initialGrowth = false;
         $('main').scroll(function() {
             var offset = $('#first-card').offset().top - $('main').scrollTop();
-            console.log(offset);
+            //console.log(offset);
             if (!initialGrowth && offset <= 0) {
                 initialGrowth = true;
                 initialState = simpleState;
