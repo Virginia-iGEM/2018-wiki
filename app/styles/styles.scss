@@ -145,6 +145,23 @@ main {
           //margin-right: -0.05em;
         }
       }
+
+      ul {
+        list-style-type: circle;
+        margin: 2em 2em;
+        li {
+          line-height: 1.5em;
+          margin: 0.5em 1em;
+        }
+      }
+      ol {
+        list-style-type: decimal;
+        margin: 2em 2em;
+        li {
+          line-height: 1.5em;
+          margin: 0.5em 1em;
+        }
+      }
       img,
       figure {
         //width: 30em;

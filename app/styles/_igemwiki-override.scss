@@ -22,6 +22,11 @@ $igem-navbar-height: 16px; // Variable for the height of the required iGEM Navba
     width: auto;
   }
 
+// Set unordered lists to have no margins.
+ul {
+  margin: 0 !important;
+}
+
 body {
     margin: 10px 0 0 0;
     padding: 0;}
