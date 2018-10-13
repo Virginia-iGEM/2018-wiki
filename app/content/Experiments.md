@@ -14,6 +14,23 @@ The general workflow of our team occurred as follows.
 8) Creation of BioBrick.    
 9) Sequencing of final part.  
 
+# Chemical Competent E. Coli Cells
+
+## Materials  
+
+• Pre-culture of XL1-blue, DH5α, or SCS    
+• 500 mL LB     
+• 2800 mL Fernbach flask     
+• 2.5 mL 2M MgCl2     
+• Cooling culture shaker    
+• Two 500 mL centrifuge bottle, autoclaved and chilled at 4C     
+• Liquid N2    
+• 80-160 1.5mL Eppendorf Tubes, autoclaved and chilled at 4C    
+• Cold Room    
+• 3 mL DMSO    
+• 500mL Transformation Buffer    
+
+
 # Flow Cytometry 
 
 **Purpose**: Visualize percent of sfGFP fluorescence in a population.    
