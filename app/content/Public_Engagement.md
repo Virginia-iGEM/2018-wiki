@@ -82,8 +82,13 @@ After developing the discussion packet, our team members came together with our 
 
 
 <figure>
-	<img src="/images/HumanPractices/forum1.jpg" alt=PublicForum>
-	<figcaption> Deep in dicussion about GMOs with members of the community. </figcaption>
+	<img src="/images/HumanPractices/forum2.jpg" alt=PublicForum>
+	<figcaption>Professor Kozminski in action discussing GMOs. </figcaption>
+</figure>
+
+<figure>
+	<img src="/images/HumanPractices/forum3.jpg" alt=PublicForum>
+	<figcaption> Members of the community actively engaging in discussion. </figcaption>
 </figure>
 
 

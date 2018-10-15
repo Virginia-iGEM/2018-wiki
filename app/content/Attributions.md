@@ -65,7 +65,7 @@ Paul Humphreys is a Commonwealth Professor of Philosophy of Science at UVA. Prof
 
 **Shaun Moshasha**
 
- Shaun Moshasha is the executive director of [Open Bio Labs](http://openbiolabs.org/) in Charlottesville, VA. Sean helped the human practices committee extensively. As an alumni of Virginia IGEM, he was a great resource to ask about various iGEM related procedures. 
+ Shaun Moshasha is the executive director of [Open Bio Labs](http://openbiolabs.org/) in Charlottesville, VA. Sean helped the human practices committee extensively. As an alumnus of Virginia IGEM, he was a great resource to ask about various iGEM related procedures. 
 
  He helped design our GMO forum and let us help him teach middle and high schoolers about synthetic biology at CATEC. We also had a great time making paper at Open Biolabs from bacterial cellulose. He helped us write our financial analysis report which was key to highlight the importance of our project. 
 
@@ -136,14 +136,18 @@ We would like to sincerely thank him for his dedication to the team.
 
 <figure>
 	<img src="/images/Sponsors/Marshall.jpg" alt="Marshall" id="attributions">
-	<figcaption> Photo taken from UVA Biology </figcaption>
+	<figcaption>Patty Marshall: Photo taken from UVA Biology </figcaption>
 </figure>
 
-**Patty Marshall** 
+<figure>
+	<img src="/images/Sponsors/Liberman.jpg" alt="Liberman" id="attributions">
+	<figcaption> Mary Liberman: Photo taken from UVA Biology </figcaption>
+</figure>
 
-Patty Marshall is the Grants Specialist at UVA Department of Biology and Mary Liberman, Fiscal Technician at UVA Department of Bilogy
-We would like to thank Ms. Marshall for helping our financial team handle the use of our funds. Without her assistance and administrative knowhow, our financial activities and MTAs would have been much more time consuming.
 
+**Patty Marshall and Mary Liberman** 
+
+Patty Marshall is the Grants Specialist at UVA Department of Biology and Mary Liberman, Fiscal Technician at UVA Department of Biology. We would like to thank Ms. Marshall and Ms. Liberman for helping our financial team handle the use of our funds. Without their assistance and administrative knowhow, our financial activities and MTAs would have been much more time consuming.
 
 <figure>
 	<img src="/images/Sponsors/Papin.jpg" alt="Papin" id="attributions">

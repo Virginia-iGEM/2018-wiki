@@ -62,3 +62,14 @@
 		<td>K2535019</td>
 	</tr>
 </table>
+
+# References
+Gonzalez J, Neshavan N (2006). Messing with Bacterial Quorum Sensing. Microbiology and Molecular Biology
+Reviews 70, 859-875.    
+
+Herzberg M, Kaye I, Peti W, Wood T (2006) YdgG (TqsA) Controls Biofilm Formation in Escherichia
+coli K-12 through Autoinducer 2 Transport. J Bacteriol. 2006 Jan; 188(2): 587–598.        
+
+Xavier K, Bassler B (2004). Regulation of Uptake and Processing of the Quorum-Sensing Autoinducer AI-2 in
+Escherichia coli. J Bacteriol 187, 238-245.      
+

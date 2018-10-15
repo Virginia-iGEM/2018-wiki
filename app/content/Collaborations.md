@@ -29,6 +29,17 @@ Thank you to UMaryland for holding such a successful event, we got lots of feedb
 
 ## Water Quality Test   
 
+<figure>
+    <img src="/images/Collaborations/WaterQuality1.jpg" alt=WaterQuality>
+    <figcaption> We were able to observe the chemicals that are commonly present in drinking water.</figcaption>
+</figure>
+
+<figure>
+    <img src="/images/Collaborations/WaterQuality2.jpg" alt=WaterQuality>
+    <figcaption> One of the images from the water quality test.</figcaption>
+</figure>
+
+
 <a href="http://2018.igem.org/Team:Exeter/Collaborations" target="_blank">Team Exeter</a> is creating a bioreactor that can break down perchlorate this year. They were looking for water quality reports from US local councils or water purification plants for a water assay of the drinking water, specifically testing for perchlorate.    
 
 Levels of perchlorate that cause health risks are typically associated with areas containing sites involved in the manufacture, maintenance, use and disposal of ammunition and rocket fuel. Virginia is currently not required to test for perchlorate because we are not at the risk for this kind of contamination. We went through Virginia’s Department of Health, got in contact with many people, and got a report from Fairfax County when they measured the perchlorate level in drinking water back in 2013.     
@@ -47,7 +58,11 @@ After doing the water quality test, we had a Skype meeting with members from Tea
 
 We were fortunate enough to collaborate with and mentor <a href="http://2018.igem.org/Team:RMHS_Maryland" target="_blank">RMHS</a>, a high school team who is also working with quorum sensing. Since they are in close collaboration with the University of Maryland, they were able to give us PCT6, which is an integral part of our project. As mentors, we helped RMHS with various aspects of their project, including helping edit their wiki, develop wetlab techniques, design events for human practices, and build a model.   
 
-### RMHS Human Practices Collaboration   
+As it was their first year to have an iGEM team at Richard Montgomery High School (RMHS), our team provided guidance to them on team organization and administration. The RMHS team modeled their team structure of committee on the Virginia iGEM team. Built on the team structure of committees, we had direct communications between corresponding committees, which was a huge help for for specific people to give advice on specific aspects of the project. 
+
+In regards to wetlab, we reached out to RMHS over email and video call to give suggestions on which cloning techniques would be best for their project. Additionally, we directed them to and instructed them on how to use resources, such as IDT and NEB, to obtain materials for these techniques. High school teams generally face more challenge when trying to get funding and financial support. By instructing them what free resource they can use, they are able to put the money they have into more urgent needs and make the most of the resource that they have. 
+
+Besides assisting RMHS with wetlab techniques, we also gave them advice on how they can approach modeling and incorporate it effectively into their project. We even gave them a tutorial on Simbiology to get them acquainted with the software. Since the project of both teams were both on quorum sensing, and that a big portion of our projects can be modeled by using the same system, we gave them a Simbiology model of pCT6 which can be used for future work to investigate one of their plasmid’s dynamics or expand upon to model their system in Simbiology in future iterations of their project.
 
 For public outreach and education, we collaborated with RMHS to design a one-day activity package for elementary school kids. Since both our teams’ project were related to quorum sensing, this one-day activity is aimed to let participants learn more about bacterias and even quorum sensing. Below is the schedule for the event: 
 
@@ -88,9 +103,9 @@ We were planning to host the event in collaboration with [Kid Museum](https://ki
 • Plasmid: Circular block    
 • Chromosomal DNA Ring: String  
 
-### Wetlab Collaboration
+On the wiki part, both teams revied each other’s website and gave constructive feedbacks for improvement. We also made sure that both teams have all the collaborations fully documented. 
 
-In regards to wetlab, we reached out to RMHS over email and video call to give advice on which cloning techniques would be best for their project. Additionally, we directed them to and instructed them on how to use resources, such as IDT and NEB, to obtain materials for these techniques.  
+Besides collaborating on the 2018 iGEM competition, the collaboration between Virginia iGEM and the RMHS team are also planned to expand beyond the competition. In the future, RMHS can use Virginia’s Synthetic Quorum Sensing (sQS) plasmid rather than pCT6 in their system to make it 100% iGEM compatible. Also, RMHS can run tests to verify sQS and compare it to the functionality of pCT6. In order to do this, a test could be run with pT7-sfGFP paired with either sQS or pCT6 and a comparison of fluorescence could be made. sQS would have to be ligated by using 3A assembly and moved to a low or single copy plasmid first. A one-day educational event for kids can also be delivered by using the ready-to-use packet developed by the teams this year.  
 
 
 ## Wiki 
