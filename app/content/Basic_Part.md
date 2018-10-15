@@ -37,6 +37,11 @@
 		<td>K2535012</td>
 	</tr>
 	<tr>
+		<td>LuxS</td>
+		<td>LuxS is a protein, not native to the Lsr Operon, that catalyzes the cleavage of metabolites to synthesize the autoinducer molecule AI-2 (Gonzalez et al 2006).</td>
+		<td>BBa_K2535000</td>
+	</tr>
+	<tr>
 		<td>YdgG </td>
 		<td> YdgG is a membrane transport protein, not native to the Lsr Operon, which exports AI-2 out of the cell (Herzberg et al 2006).</td>
 		<td> BBa_K2535002</td>
