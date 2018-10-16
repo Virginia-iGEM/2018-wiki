@@ -6,69 +6,115 @@
 		<th>Description</th> 
 		<th>Part</th>
 	</tr>
-	<tr>
-		<td>T7 promoter</td>
-		<td>T7 promoter controlled sfGFP used in all 2nd plasmids as an expression indicator</td>
-		<td>pT7_rbs_sfGFP_term I746909, (from iGEM07_Cambridge) </td>
+<tr>
+		<td>spacerLXf</td>
+		<td>This is a 10 nucleotide spacer used to build BBa_K2535005. When using Gibson and Golden gate assembly, the spacer at the beginning of the sequence helps create a unique sequence so that if multiple parts have the same beginning sequence, they won't be assembled in the wrong place. </td>
+		<td> K2535003</td>
 	</tr>
 	<tr>
-		<td>Constitutive sfGFP</td>
-		<td>A constitutively expressed sfGFP used as positive control in flow cytometry. </td>
-		<td>K608002 + K1365020</td>
+		<td>spacerLXr </td>
+		<td>This is a 10 nucleotide spacer used to build BBa_K2535005. When using Gibson and Golden gate assembly, the spacer at the beginning of the sequence helps create a unique sequence so that if multiple parts have the same beginning sequence, they won't be assembled in the wrong place. </td>
+		<td>K2535004</td>
+	</tr>
+	<tr>
+		<td>spacerLRf </td>
+		<td>This is a 10 nucleotide spacer used to build BBa_K2535009. When using Gibson and Golden gate assembly, the spacer at the beginning of the sequence helps create a unique sequence so that if multiple parts have the same beginning sequence, they won't be assembled in the wrong place. </td>
+		<td>K2535007</td>
+	</tr>
+	<tr>
+		<td>spacerLRr </td>
+		<td>This is a 10 nucleotide spacer used to build BBa_K2535009. When using Gibson and Golden gate assembly, the spacer at the beginning of the sequence helps create a unique sequence so that if multiple parts have the same beginning sequence, they won't be assembled in the wrong place.</td>
+		<td>K2535008 </td>
+	</tr>
+	<tr>
+		<td>spacerYf </td>
+		<td>This is a 10 nucleotide spacer used to build BBa_K2535013. When using Gibson and Golden gate assembly, the spacer at the beginning of the sequence helps create a unique sequence so that if multiple parts have the same beginning sequence, they won't be assembled in the wrong place.</td>
+		<td> K2535011</td>
+	</tr>
+	<tr>
+		<td>spacerYr</td>
+		<td>This is a 10 nucleotide spacer used to build BBa_K2535013. When using Gibson and Golden gate assembly, the spacer at the beginning of the sequence helps create a unique sequence so that if multiple parts have the same beginning sequence, they won't be assembled in the wrong place.</td>
+		<td>K2535012</td>
 	</tr>
 	<tr>
 		<td>LuxS</td>
-		<td>Built in high copy pGGA cloning vector due to simplicity of using Golden Gate assembly. LuxS is a protein, not native to the Lsr Operon, that catalyzes the cleavage of metabolites to synthesize the autoinducer molecule AI-2 (Gonzalez et al 2006). The LuxS gene is regulated by a T7 driven promoter in order to cooperate with the AI-2 sensitive plasmid that this part is used in conjunction with. </td>
-		<td>spacer_pT7_rbs_LuxS_term_spacer</td>
+		<td>LuxS is a protein, not native to the Lsr Operon, that catalyzes the cleavage of metabolites to synthesize the autoinducer molecule AI-2 (Gonzalez et al 2006).</td>
+		<td>BBa_K2535000</td>
 	</tr>
 	<tr>
-		<td>LuxS 2nd plasmid</td>
-		<td>Built in high copy pGGA cloning vector due to simplicity of using Golden Gate assembly.This is a composite part of LuxS and I746909. </td>
-		<td>pT7_rbs_sfGFP_term_LuxS</td>
+		<td>LuxS-Block</td>
+		<td>spacer_pT7_rbs_LuxS_term_spacer. LuxS is a protein, not native to the Lsr Operon, that catalyzes the cleavage of metabolites to synthesize the autoinducer molecule AI-2 (Gonzalez et al 2006). The LuxS gene is regulated by a T7 driven promoter in order to cooperate with the AI-2 sensitive plasmid that this part is used in conjunction with. </td>
+		<td> BBa_K2535005 </td>
 	</tr>
 	<tr>
-		<td>LsrK</td>
-		<td>Built in high copy pGGA cloning vector due to simplicity of using Golden Gate assembly. LsrK is a kinase that is native to the Lsr Operon. It converts intracellular AI-2 to phosphorylated AI-2 (AI-2P),  which derepresses the Lsr Operon (Xavier et al 2004). The LsrK gene is regulated by a T7 driven promoter in order to cooperate with the AI-2 sensitive plasmid that this part is used in conjunction with. 
-		</td>
-		<td>spacer_ pT7_rbs_LsrK_term_spacer</td>
+		<td>LuxS-sfGFP</td>
+		<td> pT7_rbs_sfGFP_term_LuxS-Block. This is a composite part of LuxS-Block and I746909. This part can be regulated using T7 to track LuxS expression based on the sfGFP reporter. Both LuxS and sfGFP are controlled by a T7 promoter.</td>
+		<td> K2535006</td>
 	</tr>
 	<tr>
-		<td>LsrK 2nd plasmid</td>
-		<td>Built in high copy pGGA cloning vector due to simplicity of using Golden Gate assembly.This is a composite part of LsrK and I746909. </td>
-		<td>pT7_rbs_sfGFP_term_LsrK</td>
+		<td>LsrK-Block</td>
+		<td>spacer_ pT7_rbs_LsrK_term_spacer. LsrK is a kinase that is native to the Lsr Operon. It converts intracellular AI-2 to phosphorylated AI-2 (AI-2P), which derepresses the Lsr Operon (Xavier et al 2004). The LsrK gene is regulated by a T7 driven promoter in order to cooperate with the AI-2 sensitive plasmid that this part is used in conjunction with.  </td>
+		<td>K2535009</td>
 	</tr>
 	<tr>
-		<td>YdgG</td>
-		<td>Built in high copy pGGA cloning vector due to simplicity of using Golden Gate assembly. YdgG is a membrane transport protein, not native to the Lsr Operon, which exports AI-2 out of the cell (Herzberg et al 2006). The YdgG gene is regulated by a T7 driven promoter in order to cooperate with the AI-2 sensitive plasmid that this part is used in conjunction with.  </td>
-		<td> spacer_ pT7_rbs_YdgG_term_spacer</td>
+		<td>LsrK-sfGFP</td>
+		<td>pT7_rbs_sfGFP_term_LsrK-Block. This is a composite part of LsrK-Block and I746909. This part can be regulated using T7 to track LsrK expression based on the sfGFP reporter. Both LsrK and sfGFP are controlled by a T7 promoter.</td>
+		<td>K2535010</td>
 	</tr>
 	<tr>
-		<td>YdgG 2nd plasmid</td>
-		<td>Built in high copy pGGA cloning vector due to simplicity of using Golden Gate assembly.This is a composite part of YdgG and I746909. </td>
-		<td>  pT7_rbs_sfGFP_term_YdgG</td>
+		<td>YdgG </td>
+		<td> YdgG is a membrane transport protein, not native to the Lsr Operon, which exports AI-2 out of the cell (Herzberg et al 2006).</td>
+		<td> BBa_K2535002</td>
 	</tr>
 	<tr>
-		<td>LsrK-LuxS 2nd plasmid</td>
-		<td>Built in high copy pGGA cloning vector due to simplicity of using Golden Gate assembly.This is a composite part of LsrK and LuxS put together with I746909. This part allows the upregulation of LuxS and LsrK so that intracellular AI-2 production and phosphorylation are increased concurrently. 
-		</td>
-		<td>pt7_rbs_sfGFP_term_LsrK_LuxS</td>
+		<td>YdgG-Block</td>
+		<td>spacer_ pT7_rbs_YdgG_term_spacer. YdgG is a membrane transport protein, not native to the Lsr Operon, which exports AI-2 out of the cell (Herzberg et al 2006). The YdgG gene is regulated by a T7 driven promoter in order to cooperate with the AI-2 sensitive plasmid that this part is used in conjunction with. </td>
+		<td>K2535013</td>
 	</tr>
 	<tr>
-		<td>LsrK-YdgG 2nd plasmid</td>
-		<td>Built in high copy pGGA cloning vector due to simplicity of using Golden Gate assembly.This is a composite part of LsrK and YdgG put together with I746909.  This part allows the upregulation of LuxS and YdgG so that intracellular AI-2 production and export out of the cell are increased concurrently.  </td>
-		<td>pt7_rbs_sfGFP_term_LsrK_YdgG</td>
+		<td>YdgG-sfGFP</td>
+		<td>pT7_rbs_sfGFP_term_YdgG-Block. This is a composite part of YdgG-Block and I746909. This part can be regulated using T7 to track YdgG expression based on the sfGFP reporter. Both YdgG and sfGFP are controlled by a T7 promoter. </td>
+		<td>K2535014</td>
 	</tr>
 	<tr>
-		<td>LsrK-LuxS-YdgG 2nd plasmid</td>
-		<td>Built in high copy pGGA cloning vector due to simplicity of using Golden Gate assembly.  </td>
-		<td>pt7_rbs_sfGFP_term_LsrK_LuxS_YdgG</td>
+		<td>LsrK-LuxS-sfGFP</td>
+		<td>pt7_rbs_sfGFP_term_LsrK-Block_LuxS-Block. This is a composite part of LsrK and LuxS put together with I746909 (sfGFP regulated by a T7 promoter). This part allows the upregulation of LuxS and LsrK so that intracellular AI-2 production and AI-2 phosphorylation are increased concurrently. </td>
+		<td> K2535015</td>
 	</tr>
 	<tr>
-		<td>1st plasmid</td>
-		<td>This plasmid contains an AI-2 regulated promoter, pLsr, which is bidirectional. Dimers of LsrR bind to and repress this promoter. However, AI-2P can bind to these dimers and cause them to dissociate, depressing the promoter.  Since the expression of this plasmid produces LsrR, which represses the promoter pLsr, this system is self regulating. </td>
-		<td> pLsr_rbs_LsrR_rbs_T7_term </td>
+		<td>LsrK-YdgG-sfGFP</td>
+		<td>This is a composite part of LsrK and YdgG put together with I746909 (sfGFP regulated by a T7 promoter).  This part allows the upregulation of LsrK and YdgG so that AI-2 is phosphorylated to AI-2P and AI-2 out of the cell are increased concurrently. </td>
+		<td>K2535016 </td>
+	</tr>
+	<tr>
+		<td>LuxS-YdgG-sfGFP</td>
+		<td>pt7_rbs_sfGFP_term_LuxS-Block_YdgG-Block. This is a composite part of LuxS and YdgG put together with I746909 (sfGFP regulated by a T7 promoter).  This part allows the upregulation of LuxS and YdgG so that intracellular AI-2 production and export out of the cell are increased concurrently.</td>
+		<td>K2535020</td>
+	</tr>
+	<tr>
+		<td>LsrK-LuxS-YdgG-sfGFP</td>
+		<td>pt7_rbs_sfGFP_term_LsrK_LuxS_YdgG. This is a composite part of LsrK, LuxS, and YdgG put together with I746909 (sfGFP regulated by a T7 promoter).  This part allows the upregulation of LsrK, LuxS, and YdgG so that intracellular AI-2 production, AI-2 phosphorylation, and export out of the cell are all increased concurrently.  </td>
+		<td> K2535017 </td>
+	</tr>
+	<tr>
+		<td>pLsr_rbs_LsrR_rbs </td>
+		<td>This part is an AI-2 (autoinducer 2 from the Lsr Operon) dependent promoter that self regulates itself. pLsr is the specific promoter that is bidirectional. Dimers of the LsrR gene bind to and repress this promoter. However, AI-2P (phosphorylated AI-2) can bind to these dimers and cause them to dissociate, depressing the promoter.  Since the expression of this plasmid produces LsrR, which represses the promoter pLsr, this system is self regulating. </td>
+		<td>K2535018</td>
+	</tr>
+	<tr>
+		<td>sQS: Synthetic Quorum Response Plasmid Insert</td>
+		<td>term_pLsr_rbs_LsrR_rbs_T7_term. Built in low copy pACYC cloning vector and optimized for use in a low copy vector to prevent leakiness of AI-2 regulated promoter. This plasmid contains an AI-2 regulated promoter, pLsr, which is bidirectional. Dimers of LsrR bind to and repress this promoter. However, AI-2P can bind to these dimers and cause them to dissociate, depressing the promoter.  Since the expression of this plasmid produces LsrR, which represses the promoter pLsr, this system is self regulating. sQS plasmid is used to regulate quorum enhancement plasmids. T7 is therefore only expressed in the presence of AI-2P. This plasmid can be used to regulate T7 expression based on AI-2 level in a media. </td>
+		<td>K2535019</td>
 	</tr>
 </table>
 
 # References 
-Gonzalez (2006)
+
+Gonzalez J, Neshavan N (2006). Messing with Bacterial Quorum Sensing. Microbiology and Molecular Biology
+Reviews 70, 859-875.    
+
+Herzberg M, Kaye I, Peti W, Wood T (2006) YdgG (TqsA) Controls Biofilm Formation in Escherichia
+coli K-12 through Autoinducer 2 Transport. J Bacteriol. 2006 Jan; 188(2): 587–598.        
+
+Xavier K, Bassler B (2004). Regulation of Uptake and Processing of the Quorum-Sensing Autoinducer AI-2 in
+Escherichia coli. J Bacteriol 187, 238-245.      
