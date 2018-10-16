@@ -1,11 +1,6 @@
 # Integrated Human Practices
 
 <figure>
-	<img src="/images/HumanPractices/papermaking.jpg" alt="PaperMaking">
-	<figcaption> Some team members measuring out and diluting the kombucha solution onto the sheets.</figcaption>
-</figure>
-
-<figure>
 	<img src="/images/HumanPractices/papermaking2.jpg" alt=PaperMaking2>
 	<figcaption> Ryan and Grace learning how to lay out the sheeets of kombucha onto pieces of cardboard to allow it to dry out. (_Photo taken by Angela Yi_) </figcaption>
 </figure>
@@ -13,6 +8,11 @@
 ## Financial Analysis
 
 ### Kraft versus Microbial Manufacturing
+
+<figure>
+	<img src="/images/HumanPractices/papermaking.jpg" alt="PaperMaking">
+	<figcaption> Some team members measuring out and diluting the kombucha solution onto the sheets.</figcaption>
+</figure>
 
 Kombucha Biomaterials, LLC was who inspired us to do this financial analysis. After going through a paper making session with them, we learned more about the process of making paper out of Kombucha solutions, and thought that it would be a good idea to do a comparison between two different ways of producing cellulose, kraft pulping and microbial manufacturing. 
 
