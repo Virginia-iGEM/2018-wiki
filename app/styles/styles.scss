@@ -70,6 +70,9 @@ body {
   }
 }
 
+.vgem-banner {
+  background-color: $background-light-1;
+}
 
 //The main styling for the "meat" and content of our wiki
 main {
@@ -170,7 +173,7 @@ main {
         clear: both;
         flex: 0 0 30em;
         float: right;
-        padding: 5px;
+        margin: 5px;
         position: relative;
 
       }

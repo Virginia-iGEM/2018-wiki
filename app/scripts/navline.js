@@ -92,7 +92,6 @@ $(document).ajaxStop(function(event, xhr, options) {
 
         updatetoc();
 
-
         $(document).on('scroll', updatetoc);
 
         $(window).resize(function() {
