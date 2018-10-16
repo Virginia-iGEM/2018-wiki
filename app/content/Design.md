@@ -135,7 +135,6 @@ We validated all of parts using restriction enzymes digests and running gels on 
 
 
 ## References 
-Bassler, 2005
 
 Bassler B, Miller M (2001). Quorum Sensing in Bacteria. Annual Review of Microbiology 55, 165-199.  
 

@@ -23,9 +23,13 @@ This year, we participated in the event and exchanged postcards with 50 other pa
 
 We participated in the <a href="http://2018.igem.org/Team:UMaryland/meetup" target="_blank">Mid-Atlantic Meetup</a> hosted by the University of Maryland. We gave a presentation on our project and the progress that we’ve made. Other teams that presented include William and Mary, Pittsburgh, Richard Montgomery, and Georgia State.     
 
+We also presented our video <a href="http://2018.igem.org/wiki/images/0/0d/T--Virginia--2018_quorum_sensing_v1.webm" target="_blank">"Quorum Sensing: A Brief Introduction on Quorum Sensing"</a> at the Giant Jamboree. We got our inspiration from making this video from Paul Humphreys, the Commonwealth Professor of Philosophy of Science at UVA. He provided us a philosophical perspective to our research and really made us dive into the ethics of synthetic biology. Talking to him early in the summer help us shape our integrated human practices and helped us created our video about quorum sensing.
+
 During the presentations, we found out that it was the first time for Richard Montgomery High School to have an iGEM team, and that they were also working on a project related to quorum sensing. After more discussion after the presentations, we decided to mentor the RMHS high school team and help them with not only wetlab techniques, but also modeling their project, building a wiki page, and human practice.     
 
 Thank you to UMaryland for holding such a successful event, we got lots of feedbacks for our project, and started many collaborations with other participating teams during the meetup! 
+
+
 
 ## Water Quality Test
 
