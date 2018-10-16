@@ -1,9 +1,9 @@
 <main id="top">
-  {{> timeline}}
-  <article id="main-content"></article>
+  {{> navline-notebook}}
+  <article class="main-content"></article>
   <script>
     $(function() {
-      $('article#main-content').load('{{contentpath}}');
+      $('article.main-content').load('{{contentpath}}');
     });
   </script>
   <div class="gutter"></div>

@@ -65,6 +65,7 @@ $(document).ajaxStop(function(event, xhr, options) {
             document.getElementsByClassName("main-content")[0].innerHTML.replace(
                 /<h([\d]) id="(.+)">([^<]+)<\/h([\d])>/gi,
                 function (str, openLevel, id, titleText, closeLevel) {
+                    console.log(str + ' ' +  openLevel);
 
                     if (openLevel > level) {
                         toc += (new Array(openLevel - level + 1)).join("<ul>");
@@ -102,5 +103,7 @@ $(document).ajaxStop(function(event, xhr, options) {
                 $('#va-toc ul').css('display', 'block');
             }
         });
+
+        $('#va-toc .menubutton').on('click', openToc);
     }
 });
