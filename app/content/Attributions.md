@@ -1,4 +1,4 @@
-<h1 id="attributions-attributions">Attributions</h1>
+# Attributions
 
 Over the spring, summer, and fall, we have had tremendous help from a number of generous individuals. Thank you so much to everyone. We can’t express our gratitude for all the help, guidance, and support you’ve given us.
 
@@ -7,7 +7,7 @@ Over the spring, summer, and fall, we have had tremendous help from a number of 
 The Virginia IGEM team would not be where it is today without the tremendous help of several brilliant minds. Thank you to all of them.   
 
 <figure>
-	<img src="/images/Sponsors/Bentley.png" alt="WilliamBentley" id="attributions">
+	<img src="/images/Sponsors/Bentley.png" alt="WilliamBentley" class="attributions">
 	<figcaption> Photo taken from UMD faculty website. </figcaption>
 </figure>
 
@@ -18,7 +18,7 @@ William E. Bentley is the Distinguished Professor and Chair of the Fischell Depa
 We would like to thank the lab of Dr. Bentley and specifically our point of contact, Kristina Stephens, at UMD for sending several plasmids and cell lines that Amin Zargar used in his research. It was important to have these parts because we were able to validate Zargar’s research and test our parts in his chassis also. 
 
 <figure>
-	<img src="/images/Sponsors/Endy.jpg" alt="DrewEndy" id="attributions">
+	<img src="/images/Sponsors/Endy.jpg" alt="DrewEndy" class="attributions">
 	<figcaption> Photo taken from indiebio.com </figcaption>
 </figure>
 
@@ -29,7 +29,7 @@ Drew Endy is a prominent figure in the synthetic biology community and the profe
 <br>
 
 <figure>
-	<img src="/images/Sponsors/Graff.jpg" alt="StevenGraff" id="attributions">
+	<img src="/images/Sponsors/Graff.jpg" alt="StevenGraff" class="attributions">
 	<figcaption> Photo taken from LinkedIn </figcaption>
 </figure>
 
@@ -40,7 +40,7 @@ Drew Endy is a prominent figure in the synthetic biology community and the profe
 <br>
 
 <figure>
-	<img src="/images/Sponsors/Hooshangi.png" alt="Hooshangi" id="attributions">
+	<img src="/images/Sponsors/Hooshangi.png" alt="Hooshangi" class="attributions">
 	<figcaption> Photo taken from cps.gwu.edu </figcaption>
 </figure>
 
@@ -51,7 +51,7 @@ Dr. Sara Hooshangi is an associate professor at George Washington University. He
 <br>
 
 <figure>
-	<img src="/images/Sponsors/Humphreys.jpg" alt="Humphreys" id="attributions">
+	<img src="/images/Sponsors/Humphreys.jpg" alt="Humphreys" class="attributions">
 	<figcaption> Photo taken from viginia.edu </figcaption>
 </figure>
 
@@ -62,7 +62,7 @@ Paul Humphreys is a Commonwealth Professor of Philosophy of Science at UVA. Prof
 <br>
 
 <figure>
-	<img src="/images/Sponsors/Moshasha.jpg" alt="ShaunMoshasha" id="attributions">
+	<img src="/images/Sponsors/Moshasha.jpg" alt="ShaunMoshasha" class="attributions">
 	<figcaption>Photo taken from bio.science.com </figcaption>
 </figure>
 
@@ -75,7 +75,7 @@ Paul Humphreys is a Commonwealth Professor of Philosophy of Science at UVA. Prof
 <br>
 
 <figure>
-	<img src="/images/Sponsors/Richardson.jpg" alt="CharlesRichardson" id="attributions">
+	<img src="/images/Sponsors/Richardson.jpg" alt="CharlesRichardson" class="attributions">
 	<figcaption>Photo taken from openbiolabs.org </figcaption>
 </figure>
 
@@ -86,7 +86,7 @@ Charles Richardson is a postdoctoral student studying Chemical Engineering at th
 <br>
 
 <figure>
-	<img src="/images/Sponsors/Saucerman.jpg" alt="Saucerman" id="attributions">
+	<img src="/images/Sponsors/Saucerman.jpg" alt="Saucerman" class="attributions">
 	<figcaption>Photo taken from virginia.edu </figcaption>
 </figure> 
 
@@ -97,7 +97,7 @@ Jeffrey Saucerman is the Associate Professor of Biomedical Engineering at UVA. P
 <br>
 
 <figure>
-	<img src="/images/Sponsors/Sturgill.jpg" alt="Sturgill" id="attributions">
+	<img src="/images/Sponsors/Sturgill.jpg" alt="Sturgill" class="attributions">
 	<figcaption>Photo taken from LinkedIn </figcaption>
 </figure> 
 
@@ -107,6 +107,11 @@ Beattie Sturgill was our PurSolutions Contact. Thank you to Beattie Sturgill for
 
 <br>
 
+<figure>
+	<img src="/images/Sponsors/Madison_Telles.jpg" alt="Madison" class="attributions">
+	<figcaption>Photo provided</figcaption>
+</figure> 
+
 **Madison Telles**
 
 Madison Telles is our Commissioned Illustrator! Thank you to Madison Telles for helping us in the last few weeks of the project. She is a digital artist who specializes in character design, and we commissioned her to work on the banners seen at the head of every major section of our Wiki; her illustrations added a bit of flair to the Wiki that was missing before. 
@@ -114,7 +119,7 @@ Madison Telles is our Commissioned Illustrator! Thank you to Madison Telles for 
 <br>
 
 <figure>
-	<img src="/images/Sponsors/Zargar.jpg" alt="AminZargar" id="attributions">
+	<img src="/images/Sponsors/Zargar.jpg" alt="AminZargar" class="attributions">
 	<figcaption>Photo taken from LinkedIn </figcaption>
 </figure>
 
@@ -127,7 +132,7 @@ Amin Zargar's paper, _"Enhancing Intercellular Coordination: Rewiring Quorum Sen
 **Kay Christopher** 
 
 <figure>
-	<img src="/images/Sponsors/Kay.jpg" alt="Kay" id="attributions">
+	<img src="/images/Sponsors/Kay.jpg" alt="Kay" class="attributions">
 	<figcaption> Photo taken from UVA Biology </figcaption>
 </figure>
 
@@ -136,7 +141,7 @@ Kay Christopher is a Preparator for Upper Levels in the UVA Biology Department. 
 **Keith Kozminski**
 
 <figure>
-	<img src="/images/Sponsors/Kozminski.jpg" alt="Kozminski" id="attributions">
+	<img src="/images/Sponsors/Kozminski.jpg" alt="Kozminski" class="attributions">
 	<figcaption> Photo taken from UVA Biology </figcaption>
 </figure>
 
@@ -148,12 +153,12 @@ We would like to sincerely thank him for his dedication to the team.
 
 <div class="figure-gallery float">
     <figure>
-        <img src="/images/Sponsors/Marshall.jpg" alt="Marshall" id="attributions">
+        <img src="/images/Sponsors/Marshall.jpg" alt="Marshall" class="attributions">
         <figcaption>Patty Marshall: Photo taken from UVA Biology </figcaption>
     </figure>
 
     <figure>
-        <img src="/images/Sponsors/Liberman.jpg" alt="Liberman" id="attributions">
+        <img src="/images/Sponsors/Liberman.jpg" alt="Liberman" class="attributions">
         <figcaption> Mary Liberman: Photo taken from UVA Biology </figcaption>
     </figure>
 </div>
@@ -161,7 +166,7 @@ We would like to sincerely thank him for his dedication to the team.
 Patty Marshall is the Grants Specialist at UVA Department of Biology and Mary Liberman, Fiscal Technician at UVA Department of Biology. We would like to thank Ms. Marshall and Ms. Liberman for helping our financial team handle the use of our funds. Without their assistance and administrative knowhow, our financial activities and MTAs would have been much more time consuming.
 
 <figure>
-	<img src="/images/Sponsors/Papin.jpg" alt="Papin" id="attributions">
+	<img src="/images/Sponsors/Papin.jpg" alt="Papin" class="attributions">
 	<figcaption>Photo taken from virginia.edu </figcaption>
 </figure>
 
