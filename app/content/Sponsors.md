@@ -16,7 +16,7 @@ We are especially thankful for the **University of Virginia Experiential Learnin
 
 <figure>
 	<img src="images/Sponsors/VPR.jpg" alt="VPR" id="sponsors">
-	<figcaption> Figure 2. Melur K. Ramasurbramanian </figcaption>
+	<figcaption> Figure 2: Melur K. Ramasurbramanian </figcaption>
 </figure>
 
 ## Melur K. Ramasurbramanian
@@ -24,7 +24,7 @@ We are especially thankful for the **University of Virginia Experiential Learnin
 
 <figure>
 	<img src="images/Sponsors/Helmke.jpg" alt="VPR" id="sponsors">
-	<figcaption> Figure 3. Brian P. Helmke </figcaption>
+	<figcaption> Figure 3: Brian P. Helmke </figcaption>
 </figure>
 
 ## Brian P. Helmke, Director of Undergraduate Research
@@ -37,17 +37,30 @@ We would like to thank the University of Virginia Biomedical Engineering Departm
 We are grateful to the Computer Science Department for their intellectual and financial support and especially to Jim Cohoon, an Associate Professor in the Computer Science department for talking with us.  
 
 
-
 # Corporate Sponsors
 
-<a href="https://www.genscript.com/"><img src="images/Sponsors/Genscript_logo_transparent.png" alt="GenScript" id="sponsors"></a>
+<figure>
+	<img src="images/Sponsors/Genscript_logo_transparent.png" alt="IDT" id="sponsors">
+	<figcaption> Figure 4: Genscript </figcaption>
+</figure>
 
 Thank you to GenScript, who provided us with $4,000 for our project! 
 
-<a href="https://www.idtdna.com/pages"><img src="images/Sponsors/IDT_logo_transparent.png" alt="IDT" id="sponsors"></a>
+<figure>
+	<img src="images/Sponsors/IDT_logo_transparent.png" alt="IDT" id="sponsors">
+	<figcaption> Figure 5: IDT </figcaption>
+</figure>
 
-<a href="https://www.neb.com/"><img src="images/Sponsors/NewEnglandBiolabs_logo_transparent.png" alt="NEB" id="sponsors"></a>
+<figure>
+	<img src="images/Sponsors/NewEnglandBiolabs_logo_transparent.png" alt="NEB" id="sponsors">
+	<figcaption> Figure 6: New England Biolabs </figcaption>
+</figure>
 
-<a href="https://puresoluble.com/"><img src="images/Sponsors/purSolutions_logo_transparent.png" alt="PurSolutions" id="sponsors"></a>
+<figure>
+	<img src="images/Sponsors/purSolutions_logo_transparent.png" alt="PurSolutions" id="sponsors">
+	<figcaption> Figure 7: PurSolutions </figcaption>
+</figure>
+
+
 
 
