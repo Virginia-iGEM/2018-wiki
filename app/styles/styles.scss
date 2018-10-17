@@ -201,6 +201,18 @@ main {
         }
       }
 
+      .figure-gallery {
+        .float {
+          float: right;
+          clear: both;
+        }
+        display: flex;
+        justify-content: center;
+        figure {
+          float: none;
+        }
+      }
+
       figure {
         //width: 30em;
         //margin-left: 5em;
@@ -213,6 +225,7 @@ main {
         }
         margin: 5px;
         position: relative;
+
         &.block {
           display: block;
           margin: 5px auto !important;

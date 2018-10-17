@@ -34,21 +34,23 @@ Thank you to UMaryland for holding such a successful event, we got lots of feedb
 
 <a href="http://2018.igem.org/Team:Exeter/Collaborations" target="_blank">Team Exeter</a> is creating a bioreactor that can break down perchlorate this year. They were looking for water quality reports from US local councils or water purification plants for a water assay of the drinking water, specifically testing for perchlorate.    
 
+Levels of perchlorate that cause health risks are typically associated with areas containing sites involved in the manufacture, maintenance, use and disposal of ammunition and rocket fuel. Virginia is currently not required to test for perchlorate because we are not at the risk for this kind of contamination. We went through Virginia’s Department of Health, got in contact with many people, and got a report from Fairfax County when they measured the perchlorate level in drinking water back in 2013.     
+
+Providing the water quality report gave them a better idea of what test is performed on drinking water in the US. We also did a perchlorate assay on our tap water. We compared tap water under the microscope with DI water as our negative control, and three different concentrations of sodium perchlorate solutions as the positive control.      
+
+After doing the water quality test, we had a Skype meeting with members from Team Exeter and talked about how the protocol may be revised so that a more accurate result can be produced. We suggested that the amount of perchlorate added in the water and the size of the droplet we put on the microscope slides may need to be adjusted. We did a second run of the water quality test after they revised their protocol, and this time we got a much more desired result!    
+
+<div class="figure-gallery">
 <figure>
     <img src="/images/Collaborations/WaterQuality1.jpg" alt=WaterQuality>
     <figcaption> We were able to observe the chemicals that are commonly present in drinking water.</figcaption>
 </figure>
 
-Levels of perchlorate that cause health risks are typically associated with areas containing sites involved in the manufacture, maintenance, use and disposal of ammunition and rocket fuel. Virginia is currently not required to test for perchlorate because we are not at the risk for this kind of contamination. We went through Virginia’s Department of Health, got in contact with many people, and got a report from Fairfax County when they measured the perchlorate level in drinking water back in 2013.     
-
 <figure>
     <img src="/images/Collaborations/WaterQuality2.jpg" alt=WaterQuality>
     <figcaption> One of the images from the water quality test.</figcaption>
 </figure>
-
-Providing the water quality report gave them a better idea of what test is performed on drinking water in the US. We also did a perchlorate assay on our tap water. We compared tap water under the microscope with DI water as our negative control, and three different concentrations of sodium perchlorate solutions as the positive control.      
-
-After doing the water quality test, we had a Skype meeting with members from Team Exeter and talked about how the protocol may be revised so that a more accurate result can be produced. We suggested that the amount of perchlorate added in the water and the size of the droplet we put on the microscope slides may need to be adjusted. We did a second run of the water quality test after they revised their protocol, and this time we got a much more desired result!    
+</div>
 
 
 ## Richard Montgomery High School (RMHS) 
