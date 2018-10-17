@@ -36,14 +36,19 @@ body {
   position: relative;
   width: 350px;
 
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    margin: 0 !important;
+  }
   p {
     border: hidden;
-    bottom: 70px;
-    display: inline-block;
-    margin-left: 3em;
+    //bottom: 70px;
+    //display: inline-block;
     padding: 15px 32px;
-    position: absolute;
-    text-align: left;
+    //position: absolute;
+    text-align: center;
+    padding: 0 !important;
+    margin: 1em !important;
   }
 
 
@@ -52,12 +57,18 @@ body {
     background-color: $accent-cold-1;
     border: hidden;
     bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
     color: $text-light !important;
     cursor: pointer;
-    display: inline-block;
-    margin-left: 3em;
+    display: block;
+    margin: 0 auto !important;
     padding: 15px 32px;
     position: absolute;
+    &:hover {
+      color: $text-light !important;
+      text-shadow: none;
+    }
   }
 
   .buttonoverview:hover {
