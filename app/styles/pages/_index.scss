@@ -3,6 +3,12 @@ main.landing-page {
   //flex-direction: column;
   //padding: 5em 2em;
 
+  img {
+    &.inline {
+      display: inline !important;
+      max-height: 100%;
+    }
+  }
   height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -72,6 +78,13 @@ main.landing-page {
       h1, h2, h3, h4, h5, h6 {
         @include center-text;
         margin: 1em !important;
+        &.image {
+          color: red !important;
+          display: flex;
+          img {
+            max-height: 100% !important;
+          }
+        } 
       }
     }
 
