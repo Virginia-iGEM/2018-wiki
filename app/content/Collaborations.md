@@ -111,7 +111,7 @@ After doing the water quality test, we had a Skype meeting with members from Tea
 During the summer, we completed a reciprocal collaboration with iGEM at the <a href="http://2018.igem.org/Team:William_and_Mary" target="_blank">College of William and Mary</a>. First, we tested two experiments for W&M’s 3G assembly, which combines golden gate and gibson assembly into a single multi-step cloning and assembly technique. The W&M team sent us a kit containing most of the parts and reagents necessary for the completion of the experiments as well as the protocols. We completed the experiments and gave feedback on the clarity and ease of completing each protocol. In addition, we provided fluorescence data for the cells that were transformed with the constructs, which helped to characterize and troubleshoot the system. 
 
 <figure>
-    <img src="/images/Collaborations/W&M.png" alt=W&M>
+    <img src="/images/Collaborations/W-M.png" alt=W&M>
     <figcaption> Figure 6: Our labwork done in collaboration with William and Mary iGEM. These are the plates for testing the final constructs of the 2 experiments. </figcaption>
 </figure>   
 
