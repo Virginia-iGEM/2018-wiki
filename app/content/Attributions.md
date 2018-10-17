@@ -107,12 +107,12 @@ Jeffrey Saucerman is the Associate Professor of Biomedical Engineering at UVA. P
 ## Beattie Sturgill
 Beattie Sturgill was our PurSolutions Contact. Thank you to Beattie Sturgill for helping us design our seminar which Pur Solutions created modules for. We are also grateful for the various reagents including an NEB Golden Gate reaction mix that he graciously bought for us! 
 
+<br>
+
 <figure>
 	<img src="/images/Sponsors/Madison_Telles.jpg" alt="Madison" class="attributions">
 	<figcaption>Figure 10: Madison Telles Photo provided</figcaption>
 </figure> 
-
-<br>
 
 ## Madison Telles
 
@@ -129,12 +129,12 @@ Madison Telles is our Commissioned Illustrator! Thank you to Madison Telles for 
 
 Amin Zargar's paper, _"Enhancing Intercellular Coordination: Rewiring Quorum Sensing Networks for Increased Protein Expression through Autonomous Induction"_ significantly helped us guide our project. We were fortunate enough to be able to contact him through Skype and ask him for advice on various aspects of our project.
 
+<br>
+
 <figure>
 	<img src="/images/Sponsors/Zorychta.jpg" alt="Zorychta" class="attributions">
 	<figcaption>Figure 12: Alexander Zorychta (virginia.edu). </figcaption>
 </figure>
-
-<br>
 
 ## Alexander Zorychta
 
@@ -192,6 +192,10 @@ Jason Papin is the Professor of Biomedical Engineering at UVA. Professor Papin w
 ## UVA Flow Cytometry Center
 
 We would like to thank everyone that worked with us at the UVA Flow Cytometry center. They helped us run many of our flow assays to measure sfGFP expression in our cells. They showed us how to use the software and helped us analyze much of data. 
+
+## UVA ARCS
+
+We'd like to thank the Advanced Research Computing Services' High Power Computing division for giving our team an allocation on their Rivanna computing cluster free of charge. With their support we were able to run upwards of 30 population models in parallels for several days at a time. Without Rivanna, we wouldn't have had the computing power to perform sensitivity tests and complete our model in a reasonable amount of time.
 
 # Our Committees
 

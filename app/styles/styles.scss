@@ -121,11 +121,19 @@ main {
   z-index: 1;
 
 //Styling for tables
-
-  table, th,td {
+  table {
+    display: block;
+    margin: 1em auto !important;
+    max-width: 90%;
+  }
+  tbody {
+    margin: 0 auto !important;
+  }
+  th,td {
     border: 1px solid #ddd;
     padding: 8px;
-    margin: 1em 3em !important;
+    //min-width: 10em;
+    //width: 80%;
   }
   .va-parts tr:nth-child(even){
     background-color: #f2f2f2;

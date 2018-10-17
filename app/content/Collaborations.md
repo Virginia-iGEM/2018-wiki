@@ -17,8 +17,8 @@ Besides assisting RMHS with wetlab techniques, we also gave them advice on how t
 
 For public outreach and education, we collaborated with RMHS to design a one-day activity package for elementary school kids. Since both our teams' project were related to quorum sensing, this one-day activity is aimed to let participants learn more about bacterias and even quorum sensing. Below is the schedule for the event: 
 
-<table style="width:100%" class="va-parts">
-<pre><code><tr>
+<table class="va-parts">
+<tr>
     <th>Description</th>
     <th>Time</th> 
 </tr>
