@@ -2,7 +2,7 @@
 
 ## GMO Discussion Packet
 
-<strong>View our discussion packet <a href="http://2018.igem.org/wiki/images/5/5d/T--Virginia--2018_Discussion_Packet.pdf" target="_blank">here!</a></strong>
+<strong>View our discussion packet <a href="http://2018.igem.org/wiki/images/a/ae/T--Virginia--2018_Discussion_Packet_Print1.pdf" target="_blank">here!</a></strong>
 
 <figure>
 	<img src="/images/HumanPractices/Forum.png" alt=PublicForum>
@@ -76,7 +76,7 @@ The event covered a variety of topics in molecular biology and connected them wi
 
 <figure>
 	<img src="/images/HumanPractices/UVA2018_Outreach.jpg" alt="SummerCamp1">
-	<figcaption>Figure 7:  Some team members posing with Shaun Moshasha, CEO of Open BioLabs.  </figcaption>
+	<figcaption>Figure 7:  Some team members posing with Shaun Moshasha, Executive Director of Open BioLabs.  </figcaption>
 </figure>
 
 <figure>
