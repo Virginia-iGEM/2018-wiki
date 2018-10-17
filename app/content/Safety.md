@@ -4,6 +4,18 @@
 
 ## Lab Safety
 
+<!-- <figure> -->
+<!-- ![Lab Picture 1](/images/IMG_20181012_170520.jpg) -->
+<!-- </figure> -->
+
+<figure>
+![Lab Picture 1](/images/lab-project.jpg)
+</figure>
+
+<br>
+<br>
+<br>
+
 In the lab over the summer and fall, safety was always a primary concern. Even before starting work in the lab, all members of the team, including those not working in wetlab, took the following training modules: Autoclaving Safety, BSL-2 Training, Chemical Safety and Waste Training, and Housekeeping Practice in Research Labs. 
 
 When in lab, we observed several measures to ensure proper safety levels.
