@@ -5,8 +5,8 @@ header {
 
   //Keeps the nav bar sticking on the top
   $nav-background-color: $background-dark;
-  $nav-text-color: $text-light;
-  $nav-accent-color: $accent-cold;
+  $nav-text-color: $accent-cold-2;
+  $nav-accent-color: $accent-warm;
 
   // Custom grids for navbar and dropdown
   $nav-grid: (
@@ -112,7 +112,7 @@ header {
         a,
         a:visited {
           align-items: center;
-          color: $nav-text-color;
+          color: $nav-text-color !important;
           display: flex;
           font-size: 1em;
           padding: 0 20px;
@@ -129,7 +129,7 @@ header {
           }
 
           &:hover {
-            color: $nav-accent-color;
+            color: $nav-accent-color !important;
             text-shadow: 0 0 8px $nav-accent-color;
           }
 

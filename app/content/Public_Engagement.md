@@ -4,7 +4,7 @@
 
 <figure>
 	<img src="/images/HumanPractices/ActivitiesFair.png" alt="SummerCamp1">
-	<figcaption>Grace flyering for iGEM at the University of Virginia Activities Fair!  </figcaption>
+	<figcaption>Fig. 1 Grace flyering for iGEM at the University of Virginia Activities Fair!  </figcaption>
 </figure>
 
 
@@ -16,7 +16,7 @@ Over 200 people expressed interest and joined our email listserv and will hopefu
 
 <figure>
 	<img src="/images/HumanPractices/UVA2018_Outreach.jpg" alt="SummerCamp1">
-	<figcaption> Some team members posing with Shaun Moshasha, CEO of Open BioLabs.  </figcaption>
+	<figcaption>Fig. 2 Some team members posing with Shaun Moshasha, CEO of Open BioLabs.  </figcaption>
 </figure>
 
 <figure>
@@ -59,13 +59,17 @@ For the seminar, we collaborated with PurSolutions by using the <a href="http://
 
 The event covered a variety of topics in molecular biology and connected them with synthetic biology. Participants brainstormed world problems that could be solved with synthetic biology. They came up with problems like air pollution, microplastic, and even world hunger. 
 
+<br>
+<br>
+
 ## Public Forum
+
+<strong>View our discussion packet <a href="http://2018.igem.org/wiki/images/5/5d/T--Virginia--2018_Discussion_Packet.pdf" target="_blank">here!</a></strong>
 
 <figure>
 	<img src="/images/HumanPractices/Forum.png" alt=PublicForum>
 	<figcaption> Our flyer for our public forum. (_Design by Dylan Culfogienis_) </figcaption>
 </figure>
-
 
 There were two things that inspired us to develop this forum discussion packet: a company that rejected us and a public forum that we participated in.
 
@@ -93,6 +97,3 @@ During the discussion on cultured meat, some self-identified vegetarians had a d
 The discussion on GMO products covered the fields of science, technology, politics, ethics, economics, and even religion. Because many customers have an inherent fear of GMOs, we realized that they are constantly trying to get more information about GMO-related products. When marketing GMO products, we should avoid words like, "refined" and "synthetic", as it has a negative connotation in consumers' minds. 
 
 After the run through, we fixed and improved parts in the discussion packet by adding supplemental information about gene editing of GMOs and making some of the questions more specific. We envision this packet as a ready-to-use discussion packet for public forums, and hope that future teams may put it into use.
-
-
-View our discussion packet <a href="http://2018.igem.org/wiki/images/5/5d/T--Virginia--2018_Discussion_Packet.pdf" target="_blank">here!</a>

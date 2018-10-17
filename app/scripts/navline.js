@@ -105,5 +105,11 @@ $(document).ajaxStop(function(event, xhr, options) {
         });
 
         $('#va-toc .menubutton').on('click', openToc);
+        var tocitems = $('#va-toc  ul li');
+
+        if (tocitems.length < 2) {
+            //console.log('FUCK');
+            $('#va-toc').hide();
+        }
     }
 });

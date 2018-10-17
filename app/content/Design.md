@@ -60,7 +60,7 @@ Our AI-2 sensitive plasmid or Synthetic Quorum Sensing Plasmid is controlled by 
 
 
 <figure>
-	<img src="/images/Wetlab/sPQS.png" alt=sPQS class="clear">
+	<img src="/images/Wetlab/sPQS.png" alt=sPQS>
 	<figcaption> Figure 1: Synthetic Quorum Sensing Plasmid (pSQS) </figcaption>
 </figure>
 
@@ -86,7 +86,7 @@ We then proceeded to design various plasmids that have different iterations of L
 Below how the first plasmid was originally first designed:      
 
 <figure>
-	<img src="/images/Wetlab/Original.png" alt=Original class="clear">
+	<img src="/images/Wetlab/Original.png" alt=Original>
 	<figcaption> Figure 2: Proposed design of single plasmid system </figcaption>
 </figure>
 
@@ -115,7 +115,7 @@ Since our gene of interest to express in the system is sfGFP, an sfGFP-block (pT
 We built a total of 7 different T7 regulated plasmids: LuxS-sfGFP, LsrK-sfGFP, YdgG-sfGFP, LsrK-LuxS-sfGFP, LsrK-YdgG-sfGFP, LuxS-YdgG-sfGFP, and LsrK-LuxS-YdgG-sfGFP. These are all modular gene blocks put together. Figure 4 shows an example the T7 regulated plasmid YdgG-sfGFP.
 
 <figure>
-	<img src="/images/Wetlab/T7.png" alt=T7 class="clear">
+	<img src="/images/Wetlab/T7.png" alt=T7>
 	<figcaption>Figure 5: An example of a T7 regulated plasmid would look like. This depicts the sfGFP block and YdgG block put together to form YdgG-sfGFP plasmid.  </figcaption>
 </figure>
 

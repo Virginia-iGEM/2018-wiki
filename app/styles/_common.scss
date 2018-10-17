@@ -24,7 +24,7 @@ $text-light:          $background-light;
 //$link-color:                $accent-cold-1;
 
 //$breakpoint: 1000px; // If the screen is under this width, switch to mobile view
-$breakpoint: calc(20em + 76em); // If the screen is under this width, switch to mobile view
+$breakpoint: 1000px; // If the screen is under this width, switch to mobile view
 $breakpoint-navbar: 76em;
 
 $font-family: 'Open Sans', sans-serif;
@@ -32,12 +32,13 @@ $font-size: medium;
 
 @mixin common-style {
   h1, h2, h3, h4, h5, h6 {
+    text-align: left;
     font-family: 'Montserrat', cursive !important;
     font-size: $font-size !important;
     //font-weight: bold !important;
     letter-spacing: 0.15em;
-    margin-bottom: 2em !important;
-    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+    margin-top: 2em !important;
     @media screen and (max-width: $breakpoint) {
       //text-align: center !important;
       //margin: auto 0;
@@ -46,27 +47,27 @@ $font-size: medium;
   }
   h1 {
     font-size: 2.4em !important;
-    margin-left: 1em !important;
+    //margin-left: 1em !important;
   }
   h2 {
     font-size: 2em !important;
-    margin-left: 2em !important;
+    margin-left: 1em !important;
   }
   h3 {
     font-size: 1.8em !important;
-    margin-left: 4em !important;
+    margin-left: 2em !important;
   }
   h4 {
     font-size: 1.6em !important;
-    margin-left: 4em !important;
+    margin-left: 3em !important;
   }
   h5 {
     font-size: 1.4em !important;
-    margin-left: 4em !important;
+    margin-left: 3em !important;
   }
   h6 {
     font-size: 1.2em !important;
-    margin-left: 4em !important;
+    margin-left: 3em !important;
   }
 
   p {
@@ -74,7 +75,10 @@ $font-size: medium;
     font-family: $font-family !important;
     font-size: $font-size !important;
     line-height: 2.5em !important;
-    margin: 2em 2em !important;
+    margin: 2em 4em !important;
+    em {
+      font-style: italic !important;
+    }
   }
 
   //Links
