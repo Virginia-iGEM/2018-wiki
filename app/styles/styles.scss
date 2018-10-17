@@ -200,7 +200,7 @@ main {
           margin: 0.5em 1em;
         }
       }
-      img,
+
       figure {
         //width: 30em;
         //margin-left: 5em;
@@ -213,7 +213,31 @@ main {
         }
         margin: 5px;
         position: relative;
-
+        &.block {
+          display: block;
+          margin: 5px auto !important;
+          max-width: 100% !important;
+          min-width: 100% !important;
+          float: none;
+        }
+        &.inline-block {
+          display: block;
+          margin: 5px 5px !important;
+          max-width: 50% !important;
+          min-width: 50% !important;
+          float: left;
+          clear: both;
+          img {
+            margin: 1em 1em !important;
+          }
+        }
+        img {
+          display: block;
+          float: none !important;
+          margin: 1em auto !important;
+          max-width: 90% !important;
+          min-width: 10% !important;
+        }
       }
 
       //adding captions

@@ -1,25 +1,22 @@
 # Collaborations
 
+## Postcard Exchange
+
 <figure>
 	<img src="/images/Collaborations/Postcard_Front.png" alt=PostcardExchange>
 	<figcaption> Our postcard design for the exchange. </figcaption>
 </figure>
 
-## Postcard Exchange
-
 This year, <a href="http://2018.igem.org/Team:Duesseldorf/Collaborations" target="_blank">Team Düesseldorf</a> held a postcard exchange event for iGEM teams in order to promote synthetic biology within various communities. Each iGEM team that participated designed a different postcard and exchanged their postcard with other participating teams so that every team could receive postcards from all over the world. 
 
 This year, we participated in the event and exchanged postcards with 50 other participating schools! The word cloud on our postcard was generated from the most frequency used words in all 2018 iGEM project descrptions in the shape of the University of Virginia Rotunda, the icon of our university.
+
+## Mid-Atlantic Meetup
 
 <figure>
 	<img src="/images/Collaborations/MAM.jpg" alt=MAM>
 	<figcaption>The team posing with Professor Kozminski at the Mid-Atlantic Meetup. </figcaption>
 </figure>
-
-<br>
-<br>
-
-## Mid-Atlantic Meetup
 
 We participated in the <a href="http://2018.igem.org/Team:UMaryland/meetup" target="_blank">Mid-Atlantic Meetup</a> hosted by the University of Maryland. We gave a presentation on our project and the progress that we’ve made. Other teams that presented include William and Mary, Pittsburgh, Richard Montgomery, and Georgia State.     
 
@@ -29,29 +26,26 @@ During the presentations, we found out that it was the first time for Richard Mo
 
 Thank you to UMaryland for holding such a successful event, we got lots of feedbacks for our project, and started many collaborations with other participating teams during the meetup! 
 
-
-
 ## Water Quality Test
 
-![Exeter Logo](/images/Collaborations/T--Exeter--LogoWikiSmall.png)
+<figure>
+    <img alt="Exeter's Logo" src="/images/Collaborations/T--Exeter--LogoWikiSmall.png">
+</figure>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at bibendum metus, a accumsan libero. Quisque tincidunt risus a efficitur fringilla. Pellentesque id augue congue, tempor lacus non, sollicitudin est. Nam non dui posuere, convallis dolor quis, fringilla odio. Etiam id metus at lorem maximus tincidunt vitae et felis. In hac habitasse platea dictumst. Nam ac nisl id massa egestas tristique.
+<a href="http://2018.igem.org/Team:Exeter/Collaborations" target="_blank">Team Exeter</a> is creating a bioreactor that can break down perchlorate this year. They were looking for water quality reports from US local councils or water purification plants for a water assay of the drinking water, specifically testing for perchlorate.    
 
 <figure>
     <img src="/images/Collaborations/WaterQuality1.jpg" alt=WaterQuality>
     <figcaption> We were able to observe the chemicals that are commonly present in drinking water.</figcaption>
 </figure>
 
+Levels of perchlorate that cause health risks are typically associated with areas containing sites involved in the manufacture, maintenance, use and disposal of ammunition and rocket fuel. Virginia is currently not required to test for perchlorate because we are not at the risk for this kind of contamination. We went through Virginia’s Department of Health, got in contact with many people, and got a report from Fairfax County when they measured the perchlorate level in drinking water back in 2013.     
+
 <figure>
     <img src="/images/Collaborations/WaterQuality2.jpg" alt=WaterQuality>
     <figcaption> One of the images from the water quality test.</figcaption>
 </figure>
 
-
-<a href="http://2018.igem.org/Team:Exeter/Collaborations" target="_blank">Team Exeter</a> is creating a bioreactor that can break down perchlorate this year. They were looking for water quality reports from US local councils or water purification plants for a water assay of the drinking water, specifically testing for perchlorate.    
-
-Levels of perchlorate that cause health risks are typically associated with areas containing sites involved in the manufacture, maintenance, use and disposal of ammunition and rocket fuel. Virginia is currently not required to test for perchlorate because we are not at the risk for this kind of contamination. We went through Virginia’s Department of Health, got in contact with many people, and got a report from Fairfax County when they measured the perchlorate level in drinking water back in 2013.     
- 
 Providing the water quality report gave them a better idea of what test is performed on drinking water in the US. We also did a perchlorate assay on our tap water. We compared tap water under the microscope with DI water as our negative control, and three different concentrations of sodium perchlorate solutions as the positive control.      
 
 After doing the water quality test, we had a Skype meeting with members from Team Exeter and talked about how the protocol may be revised so that a more accurate result can be produced. We suggested that the amount of perchlorate added in the water and the size of the droplet we put on the microscope slides may need to be adjusted. We did a second run of the water quality test after they revised their protocol, and this time we got a much more desired result!    
@@ -72,10 +66,10 @@ In regards to wetlab, we reached out to RMHS over email and video call to give s
 
 Besides assisting RMHS with wetlab techniques, we also gave them advice on how they can approach modeling and incorporate it effectively into their project. We even gave them a tutorial on Simbiology to get them acquainted with the software. Since the project of both teams were both on quorum sensing, and that a big portion of our projects can be modeled by using the same system, we gave them a Simbiology model of pCT6 which can be used for future work to investigate one of their plasmid’s dynamics or expand upon to model their system in Simbiology in future iterations of their project.
 
-For public outreach and education, we collaborated with RMHS to design a one-day activity package for elementary school kids. Since both our teams’ project were related to quorum sensing, this one-day activity is aimed to let participants learn more about bacterias and even quorum sensing. Below is the schedule for the event: 
+For public outreach and education, we collaborated with RMHS to design a one-day activity package for elementary school kids. Since both our teams' project were related to quorum sensing, this one-day activity is aimed to let participants learn more about bacterias and even quorum sensing. Below is the schedule for the event: 
 
 <table style="width:100%" id="parts">
-<pre><code><tr>
+<tr>
     <th>Description</th>
     <th>Time</th> 
 </tr>
@@ -121,29 +115,33 @@ While developing our wiki, we realized that the media wiki template could be imp
 
 For more technical information on the tool, see the [Software page](/Software.html).
 
-In the process of building these tools, we encountered a number of areas of the iGEM Wiki that could benefit from changes or upgrades. This is detailed on the [Wiki page](/Wiki.html#open-letter-on-the-state-of-the-igem-wiki)
+In the process of building these tools, we encountered a number of areas of the iGEM Wiki that could benefit from changes or upgrades. This analysis is detailed on the [Wiki page](/Wiki.html#open-letter-on-the-state-of-the-igem-wiki).
 
 ### Tutorials
 
 Since iGEM is mainly focused on synthetic biology, we realized that many teams may not have a computer science background, making it difficult to edit and style the wiki in the desired manner. We created several detailed tutorials that cover the basics of coding in the terminal, using the Wiki Build Tool, and using the webscraper.
 
+These tools can be found on each of our respective tools' GitHub pages, which are linked below.
+
 ### Teams
 
 We would like to thank all the teams who expressed interest in using our tool.
 
-**University of Toronto**, who built the igemwiki-api and the original generator.
-**University of Pittsburgh**
-**William and Mary**
-**Georgia State University**
-**Richard Montgomery High School**
-**BiolQS Barcelona**, who featured our Wiki Build Tool in their wiki video tutorials.
-**CPU_China**
-**ICT_Mumbai**, who tested the tool and intend to contribute an additional template to the generator
-**Columbia University**
-**OUCiGEM**
-**Vienna**
+- **University of Toronto**, who built the igemwiki-api and the original generator.
+- **University of Pittsburgh**
+- **William and Mary**
+- **Georgia State University**
+- **Richard Montgomery High School**
+- **BiolQS Barcelona**, who featured our Wiki Build Tool in their wiki video tutorials.
+- **CPU_China**
+- **ICT_Mumbai**, who tested the tool and intend to contribute an additional template to the generator
+- **Columbia University**
+- **OUCiGEM**
+- **Vienna**
 
-We're excited to say that we have one (confirmed) 2018 team using our tool: **IISER-Bhopal-India**
+We're excited to say that we have two (confirmed) 2018 team using our tool!
+- **IISER-Bhopal-India**, whose beautiful Wiki can be found [here](http://2018.igem.org/Team:IISER-Bhopal-India)
+- **BioIQS iGEM**, whose Wiki can be found [here](http://2018.igem.org/Team:BioIQS-Barcelona). BioIQS additionally wrote a tutorial on wiki editing which can be found on their Wiki.
 
 ### External Resources
 
