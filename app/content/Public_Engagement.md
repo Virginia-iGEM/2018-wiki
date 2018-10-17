@@ -85,8 +85,13 @@ Inspired by these two events, our team decided to make a discussion packet on th
 After developing the discussion packet, our team members came together with our advisor, Professor Kozminski, and some members of the non-scientific community to have a run through of the discussion scenarios.
 
 <figure>
+	<img src="/images/HumanPractices/forum2.jpg" alt=PublicForum>
+	<figcaption>Our team member Nir enthusiastically discussing lab-grown meat.</figcaption>
+</figure>
+
+<figure>
 	<img src="/images/HumanPractices/forum3.jpg" alt=PublicForum>
-	<figcaption> Members of the community actively engaging in discussion about GMOs. </figcaption>
+	<figcaption>Members of the community actively engaging in discussion about GMOs. </figcaption>
 </figure>
 
 Attendees at the run through gave us some insights on what people’s perspectives on GMO products were. Many people's perceptions on GMO products are influenced by their families, especially if they came from a family that heavily emphasized “organic” and “non-GMO” products. 
