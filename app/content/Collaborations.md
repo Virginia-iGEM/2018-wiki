@@ -1,67 +1,10 @@
 # Collaborations
 
-<figure>
-	<img src="/images/Collaborations/Postcard_Front.png" alt=PostcardExchange>
-	<figcaption> Our postcard design for the exchange. </figcaption>
-</figure>
-
-## Postcard Exchange
-
-This year, <a href="http://2018.igem.org/Team:Duesseldorf/Collaborations" target="_blank">Team Düesseldorf</a> held a postcard exchange event for iGEM teams in order to promote synthetic biology within various communities. Each iGEM team that participated designed a different postcard and exchanged their postcard with other participating teams so that every team could receive postcards from all over the world. 
-
-This year, we participated in the event and exchanged postcards with 50 other participating schools! The word cloud on our postcard was generated from the most frequency used words in all 2018 iGEM project descrptions in the shape of the University of Virginia Rotunda, the icon of our university.
-
-<figure>
-	<img src="/images/Collaborations/MAM.jpg" alt=MAM>
-	<figcaption>The team posing with Professor Kozminski at the Mid-Atlantic Meetup. </figcaption>
-</figure>
-
-<br>
-<br>
-
-## Mid-Atlantic Meetup
-
-We participated in the <a href="http://2018.igem.org/Team:UMaryland/meetup" target="_blank">Mid-Atlantic Meetup</a> hosted by the University of Maryland. We gave a presentation on our project and the progress that we’ve made. Other teams that presented include William and Mary, Pittsburgh, Richard Montgomery, and Georgia State.     
-
-We also presented our video <a href="http://2018.igem.org/wiki/images/0/0d/T--Virginia--2018_quorum_sensing_v1.webm" target="_blank">"Quorum Sensing: A Brief Introduction on Quorum Sensing"</a> at the Giant Jamboree. We got our inspiration from making this video from Paul Humphreys, the Commonwealth Professor of Philosophy of Science at UVA. He provided us a philosophical perspective to our research and really made us dive into the ethics of synthetic biology. Talking to him early in the summer help us shape our integrated human practices and helped us created our video about quorum sensing.
-
-During the presentations, we found out that it was the first time for Richard Montgomery High School to have an iGEM team, and that they were also working on a project related to quorum sensing. After more discussion after the presentations, we decided to mentor the RMHS high school team and help them with not only wetlab techniques, but also modeling their project, building a wiki page, and human practice.     
-
-Thank you to UMaryland for holding such a successful event, we got lots of feedbacks for our project, and started many collaborations with other participating teams during the meetup! 
-
-
-
-## Water Quality Test
-
-![Exeter Logo](/images/Collaborations/T--Exeter--LogoWikiSmall.png)
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at bibendum metus, a accumsan libero. Quisque tincidunt risus a efficitur fringilla. Pellentesque id augue congue, tempor lacus non, sollicitudin est. Nam non dui posuere, convallis dolor quis, fringilla odio. Etiam id metus at lorem maximus tincidunt vitae et felis. In hac habitasse platea dictumst. Nam ac nisl id massa egestas tristique.
-
-<figure>
-    <img src="/images/Collaborations/WaterQuality1.jpg" alt=WaterQuality>
-    <figcaption> We were able to observe the chemicals that are commonly present in drinking water.</figcaption>
-</figure>
-
-<figure>
-    <img src="/images/Collaborations/WaterQuality2.jpg" alt=WaterQuality>
-    <figcaption> One of the images from the water quality test.</figcaption>
-</figure>
-
-
-<a href="http://2018.igem.org/Team:Exeter/Collaborations" target="_blank">Team Exeter</a> is creating a bioreactor that can break down perchlorate this year. They were looking for water quality reports from US local councils or water purification plants for a water assay of the drinking water, specifically testing for perchlorate.    
-
-Levels of perchlorate that cause health risks are typically associated with areas containing sites involved in the manufacture, maintenance, use and disposal of ammunition and rocket fuel. Virginia is currently not required to test for perchlorate because we are not at the risk for this kind of contamination. We went through Virginia’s Department of Health, got in contact with many people, and got a report from Fairfax County when they measured the perchlorate level in drinking water back in 2013.     
- 
-Providing the water quality report gave them a better idea of what test is performed on drinking water in the US. We also did a perchlorate assay on our tap water. We compared tap water under the microscope with DI water as our negative control, and three different concentrations of sodium perchlorate solutions as the positive control.      
-
-After doing the water quality test, we had a Skype meeting with members from Team Exeter and talked about how the protocol may be revised so that a more accurate result can be produced. We suggested that the amount of perchlorate added in the water and the size of the droplet we put on the microscope slides may need to be adjusted. We did a second run of the water quality test after they revised their protocol, and this time we got a much more desired result!    
-
-
 ## Richard Montgomery High School (RMHS) 
 
 <figure>
-	<img src="/images/Collaborations/MAM1.jpg" alt=MAM1>
-	<figcaption> We are thankful to have the opportunity to collaborate with the Richard Montgomery High School iGEM team! </figcaption>
+    <img src="/images/Collaborations/MAM1.jpg" alt=MAM1>
+    <figcaption> Figure 1: We are thankful to have the opportunity to collaborate with the Richard Montgomery High School iGEM team! </figcaption>
 </figure>
 
 We were fortunate enough to collaborate with and mentor <a href="http://2018.igem.org/Team:RMHS_Maryland" target="_blank">RMHS</a>, a high school team who is also working with quorum sensing. Since they are in close collaboration with the University of Maryland, they were able to give us PCT6, which is an integral part of our project. As mentors, we helped RMHS with various aspects of their project, including helping edit their wiki, develop wetlab techniques, design events for human practices, and build a model.   
@@ -74,7 +17,7 @@ Besides assisting RMHS with wetlab techniques, we also gave them advice on how t
 
 For public outreach and education, we collaborated with RMHS to design a one-day activity package for elementary school kids. Since both our teams’ project were related to quorum sensing, this one-day activity is aimed to let participants learn more about bacterias and even quorum sensing. Below is the schedule for the event: 
 
-<table style="width:100%" id="parts">
+<table style="width:100%" class="va-parts">
 <pre><code><tr>
     <th>Description</th>
     <th>Time</th> 
@@ -101,6 +44,8 @@ For public outreach and education, we collaborated with RMHS to design a one-day
 </tr></code></pre>
 </table>
 
+Table 1: Schedule Outline for Teaching Module
+
 We were planning to host the event in collaboration with [Kid Museum](https://kid-museum.org/) since they host weekend workshops. However, due to time conflicts and reservation for the physical space, the event was not executed. We then developed our plan into a ready-to-use packet for one-day activities so future teams can use it as a public outreach and education event. The one-day event will be an opportunity to introduce the concept of quorum sensing and bacteria to kids through a relaxing and fun environment.   
 
 *Here is a list of materials needed for making the 3D model of a bacteria:   
@@ -115,17 +60,55 @@ On the wiki part, both teams revied each other’s website and gave constructive
 
 Besides collaborating on the 2018 iGEM competition, the collaboration between Virginia iGEM and the RMHS team are also planned to expand beyond the competition. In the future, RMHS can use Virginia’s Synthetic Quorum Sensing (sQS) plasmid rather than pCT6 in their system to make it 100% iGEM compatible. Also, RMHS can run tests to verify sQS and compare it to the functionality of pCT6. In order to do this, a test could be run with pT7-sfGFP paired with either sQS or pCT6 and a comparison of fluorescence could be made. sQS would have to be ligated by using 3A assembly and moved to a low or single copy plasmid first. A one-day educational event for kids can also be delivered by using the ready-to-use packet developed by the teams this year.  
 
-## Wiki 
 
-See our [Wiki](/Wiki.html) page for more details.
+## Mid-Atlantic Meetup
+
+We participated in the <a href="http://2018.igem.org/Team:UMaryland/meetup" target="_blank">Mid-Atlantic Meetup</a> hosted by the University of Maryland. We gave a presentation on our project and the progress that we’ve made. Other teams that presented include William and Mary, Pittsburgh, Richard Montgomery, and Georgia State.     
+
+
+<figure>
+    <img src="/images/Collaborations/MAM.jpg" alt=MAM>
+    <figcaption>Figure 2: The team posing with Professor Kozminski at the Mid-Atlantic Meetup. </figcaption>
+</figure>
+
+We also presented our video <a href="http://2018.igem.org/wiki/images/0/0d/T--Virginia--2018_quorum_sensing_v1.webm" target="_blank">"Quorum Sensing: A Brief Introduction on Quorum Sensing"</a> at the Giant Jamboree. We got our inspiration from making this video from Paul Humphreys, the Commonwealth Professor of Philosophy of Science at UVA. He provided us a philosophical perspective to our research and really made us dive into the ethics of synthetic biology. Talking to him early in the summer help us shape our integrated human practices and helped us created our video about quorum sensing.
+
+During the presentations, we found out that it was the first time for Richard Montgomery High School to have an iGEM team, and that they were also working on a project related to quorum sensing. After more discussion after the presentations, we decided to mentor the RMHS high school team and help them with not only wetlab techniques, but also modeling their project, building a wiki page, and human practice.     
+
+Thank you to UMaryland for holding such a successful event, we got lots of feedbacks for our project, and started many collaborations with other participating teams during the meetup! 
+
+## Water Quality Test
+
+![Exeter Logo](/images/Collaborations/T--Exeter--LogoWikiSmall.png)
+
+<figure>
+    <img src="/images/Collaborations/WaterQuality1.jpg" alt=WaterQuality>
+    <figcaption> Figure 3: We were able to observe the chemicals that are commonly present in drinking water.</figcaption>
+</figure>
+
+<figure>
+    <img src="/images/Collaborations/WaterQuality2.jpg" alt=WaterQuality>
+    <figcaption>Figure 4: One of the images from the water quality test.</figcaption>
+</figure>
+
+
+<a href="http://2018.igem.org/Team:Exeter/Collaborations" target="_blank">Team Exeter</a> is creating a bioreactor that can break down perchlorate this year. They were looking for water quality reports from US local councils or water purification plants for a water assay of the drinking water, specifically testing for perchlorate.    
+
+Levels of perchlorate that cause health risks are typically associated with areas containing sites involved in the manufacture, maintenance, use and disposal of ammunition and rocket fuel. Virginia is currently not required to test for perchlorate because we are not at the risk for this kind of contamination. We went through Virginia’s Department of Health, got in contact with many people, and got a report from Fairfax County when they measured the perchlorate level in drinking water back in 2013.     
+ 
+Providing the water quality report gave them a better idea of what test is performed on drinking water in the US. We also did a perchlorate assay on our tap water. We compared tap water under the microscope with DI water as our negative control, and three different concentrations of sodium perchlorate solutions as the positive control.      
+
+After doing the water quality test, we had a Skype meeting with members from Team Exeter and talked about how the protocol may be revised so that a more accurate result can be produced. We suggested that the amount of perchlorate added in the water and the size of the droplet we put on the microscope slides may need to be adjusted. We did a second run of the water quality test after they revised their protocol, and this time we got a much more desired result!    
+
+<a href="http://2018.igem.org/wiki/images/e/e0/T--Virginia--2018_Water_Test_Results.pdf"> Here</a> is the final result for our water quality tests! 
 
 ## William and Mary 
 
 During the summer, we completed a reciprocal collaboration with iGEM at the <a href="http://2018.igem.org/Team:William_and_Mary" target="_blank">College of William and Mary</a>. First, we tested two experiments for W&M’s 3G assembly, which combines golden gate and gibson assembly into a single multi-step cloning and assembly technique. The W&M team sent us a kit containing most of the parts and reagents necessary for the completion of the experiments as well as the protocols. We completed the experiments and gave feedback on the clarity and ease of completing each protocol. In addition, we provided fluorescence data for the cells that were transformed with the constructs, which helped to characterize and troubleshoot the system. 
 
 <figure>
-	<img src="/images/Collaborations/W&M.png" alt=W&M>
-	<figcaption> Our labwork done in collaboration with William and Mary iGEM. These are the plates for testing the final constructs of the 2 experiments. </figcaption>
+    <img src="/images/Collaborations/W&M.png" alt=W&M>
+    <figcaption> Figure 5: Our labwork done in collaboration with William and Mary iGEM. These are the plates for testing the final constructs of the 2 experiments. </figcaption>
 </figure>   
 
 Next, we sent the William and Mary team each of our basic parts for them to adapt into their 3G system. Since our project was designed with modular assembly and testing in mind, having the parts on W&M’s system will allow future teams to more easily reproduce our results, as well as have the building blocks to improve upon it further.     
@@ -136,3 +119,19 @@ Adapted Parts (should have links to our parts and to theirs, but some were proba
 • LsrR    
 • LsrK (was already a part in the registry)    
 
+<figure>
+	<img src="/images/Collaborations/Postcard_Front.png" alt=PostcardExchange>
+	<figcaption> Figure 6: Our postcard design for the exchange. </figcaption>
+</figure>
+
+## Wiki 
+
+We developed our wiki using our own tool, Wiki Build Tool, in order to iterate upon our design faster. We shared our tool with other teams and began to develop our code base that could be shared and improved upon by the current iGEM community and future iGEM teams.
+
+See our [Wiki](/Wiki.html) page for more details.
+
+## Postcard Exchange
+
+This year, <a href="http://2018.igem.org/Team:Duesseldorf/Collaborations" target="_blank">Team Düesseldorf</a> held a postcard exchange event for iGEM teams in order to promote synthetic biology within various communities. Each iGEM team that participated designed a different postcard and exchanged their postcard with other participating teams so that every team could receive postcards from all over the world. 
+
+This year, we participated in the event and exchanged postcards with 50 other participating schools! The word cloud on our postcard was generated from the most frequency used words in all 2018 iGEM project descrptions in the shape of the University of Virginia Rotunda, the icon of our university.

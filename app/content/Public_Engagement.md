@@ -2,7 +2,7 @@
 
 ## GMO Discussion Packet
 
-<strong>View our discussion packet <a href="http://2018.igem.org/wiki/images/5/5d/T--Virginia--2018_Discussion_Packet.pdf" target="_blank">here!</a></strong>
+<strong>View our discussion packet <a href="http://2018.igem.org/wiki/images/a/ae/T--Virginia--2018_Discussion_Packet_Print1.pdf" target="_blank">here!</a></strong>
 
 <figure>
 	<img src="/images/HumanPractices/Forum.png" alt=PublicForum>
