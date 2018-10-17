@@ -1,6 +1,6 @@
 # Composite Parts 
 
-<table style="width:100%" id="parts">
+<table style="width:100%" class="va-parts">
 	<tr>
 		<th>Name</th>
 		<th>Description</th> 
@@ -9,7 +9,7 @@
 	<tr>
 		<td>LuxS-Block</td>
 		<td>spacer_pT7_rbs_LuxS_term_spacer. LuxS is a protein, not native to the Lsr Operon, that catalyzes the cleavage of metabolites to synthesize the autoinducer molecule AI-2 (Gonzalez et al 2006). The LuxS gene is regulated by a T7 driven promoter in order to cooperate with the AI-2 sensitive plasmid that this part is used in conjunction with. </td>
-		<td> BBa_K2535005 </td>
+		<td> K2535005 </td>
 	</tr>
 	<tr>
 		<td>LuxS-sfGFP</td>

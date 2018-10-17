@@ -58,7 +58,7 @@ Kombucha Biomaterials, LLC was who inspired us to do this financial analysis. Af
 
 To simplify the analysis, we are making two assumptions here. The first assumption is that the end product of kraft pulping has the same concentration of cellulose with that produced by microbial manufacturing, which makes these two products interchangeable. Secondly, we assume that all cellulose are the same, no matter what it was made from, or what they are used to produce later on. From Table 1, we can see that the unit cost of producing cellulose by using microbio manufacturing is much lower than that of kraft pulping. 
 
-<table style="width:100%" id="parts">
+<table style="width:100%" class="va-parts">
 	<tr>
 		<th></th>
 		<th>Kraft Pulping</th> 

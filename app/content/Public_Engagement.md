@@ -76,7 +76,7 @@ The event covered a variety of topics in molecular biology and connected them wi
 
 <figure>
 	<img src="/images/HumanPractices/UVA2018_Outreach.jpg" alt="SummerCamp1">
-	<figcaption>Figure 7:  Some team members posing with Shaun Moshasha, CEO of Open BioLabs.  </figcaption>
+	<figcaption>Figure 7:  Some team members posing with Shaun Moshasha, Executive Director of Open BioLabs.  </figcaption>
 </figure>
 
 <figure>
