@@ -3,6 +3,12 @@ main.landing-page {
   //flex-direction: column;
   //padding: 5em 2em;
 
+  img {
+    &.inline {
+      display: inline !important;
+      max-height: 100%;
+    }
+  }
   height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -52,7 +58,7 @@ main.landing-page {
     .sticky {
       position: sticky;
       overflow: hidden;
-      top: -2em;
+      top: 2em;
       z-index: -1;
       p {
         margin: 0em 0 !important;
@@ -169,6 +175,15 @@ main.landing-page {
           & .petri {
             display: none;
           }
+        }
+      }
+    }
+
+    &#reader-break {
+      section {
+        margin: auto 15vw;
+        p {
+          text-align: center;
         }
       }
     }

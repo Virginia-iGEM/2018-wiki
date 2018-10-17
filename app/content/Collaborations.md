@@ -17,8 +17,8 @@ Besides assisting RMHS with wetlab techniques, we also gave them advice on how t
 
 For public outreach and education, we collaborated with RMHS to design a one-day activity package for elementary school kids. Since both our teams' project were related to quorum sensing, this one-day activity is aimed to let participants learn more about bacterias and even quorum sensing. Below is the schedule for the event: 
 
-<table style="width:100%" class="va-parts">
-<pre><code><tr>
+<table class="va-parts">
+<tr>
     <th>Description</th>
     <th>Time</th> 
 </tr>
@@ -111,7 +111,7 @@ After doing the water quality test, we had a Skype meeting with members from Tea
 During the summer, we completed a reciprocal collaboration with iGEM at the <a href="http://2018.igem.org/Team:William_and_Mary" target="_blank">College of William and Mary</a>. First, we tested two experiments for W&M’s 3G assembly, which combines golden gate and gibson assembly into a single multi-step cloning and assembly technique. The W&M team sent us a kit containing most of the parts and reagents necessary for the completion of the experiments as well as the protocols. We completed the experiments and gave feedback on the clarity and ease of completing each protocol. In addition, we provided fluorescence data for the cells that were transformed with the constructs, which helped to characterize and troubleshoot the system. 
 
 <figure>
-    <img src="/images/Collaborations/W&M.png" alt=W&M>
+    <img src="/images/Collaborations/W-M.png" alt=W&M>
     <figcaption> Figure 6: Our labwork done in collaboration with William and Mary iGEM. These are the plates for testing the final constructs of the 2 experiments. </figcaption>
 </figure>   
 
