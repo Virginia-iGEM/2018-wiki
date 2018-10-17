@@ -55,11 +55,7 @@ The students came up with many interesting project ideas related to synthetic bi
 
 Besides doing research, another important mission of iGEM is to inform the public about the emerging field of synthetic biology. Since the University of Virginia (UVA) does not have a department dedicated to synthetic biology, many UVA students do not even know what it is. In order to expose more students to the field, the 2018 Virginia iGEM team hosted a seminar, "Pizza and Pipettes", for UVA students. 
 
-<<<<<<< HEAD
 For the seminar, we collaborated with PurSolutions by using the <a href="http://puresoluble.com/self-assembly" target="_blank">self-assembly module</a> that they developed. Participants learned about self-assembly through hands-on wetlab experience using tubulin to build the world's smallest tubes! This gave them a better sense of how protein engineering works and allowed them to think about questions like, "What would happen if we modified DNA?"  
-=======
-We collaborated with PurSolutions, by using the self-assembly module developed by PurSolutions. Through the module, participants learned about self-assembly and got a sense of protein engineering. They even got some hands-on wetlab experience by assembling the smallest tubulin in the world! After learning that proteins are useful tools for solving problems, we had them think about the DNA level of biology. Since proteins are encoded by and created from DNA, what would happen if we modified DNA? 
->>>>>>> 93362c1207d6dab5a12bd711ae415966e475bed1
 
 The event covered a variety of topics in molecular biology and connected them with synthetic biology. Participants brainstormed world problems that could be solved with synthetic biology. They came up with problems like air pollution, microplastic, and even world hunger. 
 
@@ -78,17 +74,9 @@ The event covered a variety of topics in molecular biology and connected them wi
 	<figcaption> Our flyer for our public forum. (_Design by Dylan Culfogienis_) </figcaption>
 </figure>
 
-<<<<<<< HEAD
 There were two things that inspired us to develop this forum discussion packet: a company that rejected us and a public forum that we participated in.
 
 While trying to reach out to some bio-manufacturing companies for potential collaborations, a company turned us down and said they did not want to be associated with “genetic engineered bacteria”. We followed up with them and found out that the only reason they tried so hard to get non-GMO certified and emphasized that was because of “customer reasons”, as customers prefer “non-GMO” products. We were surprised that some consumers chose non-GMO over GMO products even when they did not know the difference. 
-=======
-There were two things that inspired us to develop this discussion packet that can be used to host public forums, a company that rejected us, and a public forum that we participated in.
-
-First, while trying to reach out to some bio-manufacturing companies for potential collaborations, a company turned us down and said that they did not want to be associated with “genetic engineered bacteria”. We followed up with them and had a short talk about why they did not wanted to be associated about genetic engineered bacteria. We found out that the only reason they tried so hard to get non-GMO certified, and emphasized so much on that, was solely because of “customer reasons”, since customers prefer “non-GMO” products. We were actually surprised about how customers choose non-GMO over GMO products, when they sometimes don’t actually know the difference. 
-
-Then, we went to a public forum, <b>Editing Our Evolution: Rewriting the Human Genome</b>. This public forum was part of the Building with Biology initiative, funded by the National Science Foundation (NSF), and hosted by Charlottesville Open Bio Labs. Our team participated in the forum, and found that the scenarios we discussed about during the event was an effective way of letting people express their opinions on certain topics, and get to know some scientific facts that they never knew about from the participating scientists. 
->>>>>>> 93362c1207d6dab5a12bd711ae415966e475bed1
 
 The second thing that inspired us was going to the public forum <a href="http://www.nisenet.org/catalog/editing-our-evolution-rewriting-human-genome-forum"><b>Editing Our Evolution: Rewriting the Human Genome</b></a>. This public forum was part of the Building with Biology initiative, funded by the National Science Foundation (NSF), and hosted by Charlottesville Open Bio Labs. Our team participated in the forum discussion and we were inspired by the scenarios we discussed during the event. We realized that a forum was an effective way of letting people express their opinions on certain topics while learning information from participating scientists. 
 
@@ -107,12 +95,8 @@ While discussing microbial leather, an interesting question was brought up. Sinc
 
 The discussion on genetically modified corn brought up some concerns that people had about GMOs. Do GMO products really have a correlation with allergies? Does GMO corn deplete the nutrients in the soil more quickly than non-GMO corn? 
 
-<<<<<<< HEAD
 During the discussion on cultured meat, some self-identified vegetarians had a difficult time deciding whether lab grown meat is considered “vegetarian”, because the production of lab grown meat still involves taking a sample of cells from a real animal. “This is just really weird, I can’t imagine having meat that is produced in this way put into my burger!” was also a comment from someone who is non-vegetarian. During the run through, many people said that they did not feel knowledgable about GMO products, and it led to their fear of it. Some also thought that there should be more policies and regulations regarding GMO products. 
 
 The discussion on GMO products covered the fields of science, technology, politics, ethics, economics, and even religion. Because many customers have an inherent fear of GMOs, we realized that they are constantly trying to get more information about GMO-related products. When marketing GMO products, we should avoid words like, "refined" and "synthetic", as it has a negative connotation in consumers' minds. 
 
 After the run through, we fixed and improved parts in the discussion packet by adding supplemental information about gene editing of GMOs and making some of the questions more specific. We envision this packet as a ready-to-use discussion packet for public forums, and hope that future teams may put it into use.
-=======
-After the run through, We fixed some parts in the discussion packet and improved it by adding some supplement information for those who didn’t really understand how the techniques worked and wanted to get an idea of it, and also modified the questions a bit so they are more specific and the discussion could go on smoothly. We envision this packet as a ready-to-use discussion packet for public forums, and hope that future teams may put it into use.
->>>>>>> 93362c1207d6dab5a12bd711ae415966e475bed1
