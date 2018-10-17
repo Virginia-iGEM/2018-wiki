@@ -58,7 +58,7 @@ main.landing-page {
     .sticky {
       position: sticky;
       overflow: hidden;
-      top: -2em;
+      top: 2em;
       z-index: -1;
       p {
         margin: 0em 0 !important;
@@ -78,13 +78,6 @@ main.landing-page {
       h1, h2, h3, h4, h5, h6 {
         @include center-text;
         margin: 1em !important;
-        &.image {
-          color: red !important;
-          display: flex;
-          img {
-            max-height: 100% !important;
-          }
-        } 
       }
     }
 
@@ -182,6 +175,15 @@ main.landing-page {
           & .petri {
             display: none;
           }
+        }
+      }
+    }
+
+    &#reader-break {
+      section {
+        margin: auto 15vw;
+        p {
+          text-align: center;
         }
       }
     }
