@@ -72,7 +72,7 @@ To simplify the analysis, we are making two assumptions here. The first assumpti
 	<tr>
 		<td>Cost per unit</td>
 		<td>$1500~$2000/ton </td>
-		<td> $2300/ton </td>
+		<td> $2300/ton (2010, Hungund & Gupta)</td>
 	</tr>
 </table>
 
@@ -85,4 +85,10 @@ Besides the financial cost, the environmental impact of different cellulose prod
 ### IPTG versus Quorum Sensing
 
 # References
+<<<<<<< HEAD
+
+Hungund B., Gupta, S. (2010) Production of Bacterial Cellulose from Enterobacter Amnigenus GH-1 Isolated From Rotten Apple. World Journal Microbiology and Biotechnology, 2010, Vol. 26, No. 10. Retrieved from https://link.springer.com/article/10.1007/s11274-010-0363-1      
+
+=======
+>>>>>>> 93362c1207d6dab5a12bd711ae415966e475bed1
 Zargar A, Quan D, Bentley W (2016) Enhancing Intercellular Coordination: Rewiring Quorum Sensing Networks for Increased Protein Expression through Autonomous Induction. ACS Synth. Biol 2016, 5, 923-928

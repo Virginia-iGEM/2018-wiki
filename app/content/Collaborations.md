@@ -37,8 +37,6 @@ Thank you to UMaryland for holding such a successful event, we got lots of feedb
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at bibendum metus, a accumsan libero. Quisque tincidunt risus a efficitur fringilla. Pellentesque id augue congue, tempor lacus non, sollicitudin est. Nam non dui posuere, convallis dolor quis, fringilla odio. Etiam id metus at lorem maximus tincidunt vitae et felis. In hac habitasse platea dictumst. Nam ac nisl id massa egestas tristique.
 
-Nam sit amet nulla tempor, faucibus lacus id, sodales turpis. Aenean vel laoreet elit, sed convallis mi. Nullam a ligula elementum, molestie orci in, finibus arcu. Mauris quis dui lorem. Ut ornare, sapien nec pellentesque cursus, turpis urna luctus turpis, nec ultricies quam sapien sit amet felis. Etiam viverra odio vitae tellus lobortis, ac fermentum dui lobortis. Aenean varius vehicula metus, vitae aliquam felis maximus ac. Ut placerat eleifend varius. Nulla quis nulla nec orci finibus fringilla eget vel sem. Curabitur pretium quis lectus non viverra. Nunc urna odio, fermentum non sollicitudin at, tincidunt vitae massa. 
-
 <figure>
     <img src="/images/Collaborations/WaterQuality1.jpg" alt=WaterQuality>
     <figcaption> We were able to observe the chemicals that are commonly present in drinking water.</figcaption>
