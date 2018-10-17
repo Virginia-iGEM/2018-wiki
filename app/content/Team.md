@@ -67,7 +67,7 @@ We are the twelve undergraduates of Virginia iGEM! Click the portraits to see de
 			<h4>Kevin Park</h4>
 			<img src="images/TeamPhotos/2018Kevin1.jpg" alt="2018Kevin" id="img-bio">
                      <q>I am not afraid of fire.</q>
-			<p>Kevin is a fourth year biology major and a core member of Wetlab, surprising us with his machine-like consistency. The only time Kevin ever expresses anger is when lab rule are violated. For whatever reason he has an obsession with replating the T7 Promoter.</p> 
+			<p>Kevin is a fourth year biology major and a core member of Wetlab, surprising us with his machine-like consistency. The only time Kevin ever expresses anger is when lab rules are violated. For whatever reason he has an obsession with replating the T7 Promoter.</p> 
 			<br>
 		</div>
 		<div class= "hidden" id="Ryan">
