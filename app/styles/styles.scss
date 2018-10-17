@@ -145,7 +145,7 @@ main {
       }
       text-align: justify;
 
-      & > p {
+      & > p:not(.noinitial){
         &::first-letter {
           font-size: 1.3em;
           font-family: 'Raleway', serif !important;
@@ -155,7 +155,8 @@ main {
 
       ul {
         list-style-type: circle;
-        margin: 2em 2em;
+        margin: 2em 0 !important;
+        margin-left: 5em !important;
         li {
           line-height: 1.5em;
           margin: 0.5em 1em;
@@ -163,7 +164,8 @@ main {
       }
       ol {
         list-style-type: decimal;
-        margin: 2em 2em;
+        margin: 2em 0 !important;
+        margin-left: 5em !important;
         li {
           line-height: 1.5em;
           margin: 0.5em 1em;

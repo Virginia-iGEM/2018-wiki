@@ -1,7 +1,7 @@
 # Our Team
 
-<figure>
-<img src="/images/TeamPhotos/GroupPic.jpg" alt="GroupPic">
+<figure style="min-width: 50% !important;">
+<img src="/images/TeamPhotos/GroupPic.jpg" alt="GroupPic"  style="min-width: 100% !important;">
 <figcaption>Our team posing in front of the University of Virginia Rotunda!</figcaption>
 </figure>
 

@@ -1,4 +1,6 @@
-# Model of Population Growth and Activation With Heterogenous Induction
+# Growth and Heterogeneity
+
+> Model of Population Growth and Activation With Heterogenous Induction
 
 ## Background and Goals
 
@@ -8,8 +10,9 @@ This model is an analytical interpretation of a 2016 computational study Quan et
 
 <figure>
 	<img src="/images/Modeling/Desynch.png" alt=QSDesync>
-	<figcaption> Figure 1: “Quorum Sensing Desynchronization Leads to Bimodality and Patterned Behaviors” Quan et al (2016) </figcaption>
 </figure>
+
+_Figure 1: “Quorum Sensing Desynchronization Leads to Bimodality and Patterned Behaviors” Quan et al (2016)_
 
 Our approach to this model uses a system of analytical equations to simulate the effect of induction bimodality in a way applicable to batch biomanufacturing. The system relies on three essential functions. The first is **Initial(x)**, the normalized distribution of cell activation at time zero that is comprised of a normalized set of gaussian curves, see **Section I**. This function defines the initial“activation profile,”  or the distribution of the population across percentages of maximal activation. This function is characterized by five parameters, which are the size ratio between the more activated population A and less activated population B, and the means and standard deviations of each population. This is a function of activation (x) , and its  output  is the population proportion density, which can be integrated to find the fraction of the population found between two levels of activation.
 
@@ -21,29 +24,33 @@ The second is **Rate(x)**, which relates cell activation (x) to the exponential 
 
 <figure>
 	<img src="/images/Modeling/Bimodal.png" alt=Bimodal>
-	<figcaption> Figure 2: Bimodal Activation - Plot of initial activation distribution of in bimodal population with k = 0.7, ma = 0.8, sa = 0.05, mb = 0.3, sb = 0.1. With these parameters, ~70% of the cells lie within 0.1 normalized activation units of the higher mode, with a mean of 0.8 units. The population activation mean is equal to 0.65 normalized activation units. </figcaption>
 </figure>
+
+_Figure 2: Bimodal Activation_ - Plot of initial activation distribution of in bimodal population with k = 0.7, ma = 0.8, sa = 0.05, mb = 0.3, sb = 0.1. With these parameters, ~70% of the cells lie within 0.1 normalized activation units of the higher mode, with a mean of 0.8 units. The population activation mean is equal to 0.65 normalized activation units.
 
 <figure>
-	<img src="/images/Modeling/Unimodal.png" alt=Unimodal">
-	<figcaption>Figure 3: Unimodal Activation - Plot of initial activation distribution of a unimodal population with k = 1, ma = 0.65, sa = 0.075. This population has the same mean of activation as the bimodal one from Figure 2, but is more homogeneously activated due to its unimodality. </figcaption>
+	<img src="/images/Modeling/Unimodal.png" alt="Unimodal">
 </figure>
 
-## Section II: Heterogenous Growth and a Changing Activation Profile      
+_Figure 3: Unimodal Activation_ - Plot of initial activation distribution of a unimodal population with k = 1, ma = 0.65, sa = 0.075. This population has the same mean of activation as the bimodal one from Figure 2, but is more homogeneously activated due to its unimodality.
+
+## Section II: Heterogenous Growth and a Changing Activation Profile
 
 With the concept of unimodal and bimodal activation distributions encoded in an analytical equation, we applied activation-dependent growth mode to study how these heterogeneously induced systems behaved over time. Due to lack of information in literature about the relationship between growth rate and activation, the relationship was assumed to be linear and negatively correlated, with a maximum rate at zero activation and a rate of zero at maximum activation (x=1).
 
 <figure>
 	<img src="/images/Modeling/BiVsUni.gif" alt=BiVsUni>
-	<figcaption>Figure 4: Unimodality versus Bimodality - The graphs above are of the effect of growth on the activation distribution of the initial profiles in Figures 2 and 3. As time progresses, the bimodal activation profile (orange) undergoes a much more drastic change than the unimodal (blue). As a result, after seven  hours have passed, the bimodal distribution has approached a near unimodal distribution with an average activation three times smaller. Meanwhile, the mean activation of the unimodal profile only decreases by 5%.  </figcaption>
 </figure>
+
+_Figure 4: Unimodality versus Bimodality_ - The graphs above are of the effect of growth on the activation distribution of the initial profiles in Figures 2 and 3. As time progresses, the bimodal activation profile (orange) undergoes a much more drastic change than the unimodal (blue). As a result, after seven  hours have passed, the bimodal distribution has approached a near unimodal distribution with an average activation three times smaller. Meanwhile, the mean activation of the unimodal profile only decreases by 5%.
 
 From Figure 4, we can clearly see the importance of reducing bimodality in activation to ensure a homogenous, well-induced culture for many bacterial generations. Without measures to ensure quorum sensing does not yield the fractional activation illustrated in Figure 1 and Figure 2,  the predictability of population phenotypes and mean cellular gene expression are significantly diminished. 
 
 <figure>
 	<img src="/images/Modeling/UniUniUni.gif" alt=BiVsUni>
-	<figcaption>Figure 5: Effects of Variance in a Unimodal Population - The orange graph above is identical to the unimodal population found in Figures 3 and 4, and remains within 10% of its initial activation mean. However, when the initial variance (σ squared) and standard deviation (σ) of this unimodal profile is changed, there is a drastic change in growth dynamics. In the case of halving the standard deviation (blue), the total drift of the mean activation is less than half that of the control. If the standard standard deviation is doubled (green), there is a significantly greater degree of drift, over four times that of control.  </figcaption>
 </figure>
+
+_Figure 5: Effects of Variance in a Unimodal Population_ - The orange graph above is identical to the unimodal population found in Figures 3 and 4, and remains within 10% of its initial activation mean. However, when the initial variance (σ squared) and standard deviation (σ) of this unimodal profile is changed, there is a drastic change in growth dynamics. In the case of halving the standard deviation (blue), the total drift of the mean activation is less than half that of the control. If the standard standard deviation is doubled (green), there is a significantly greater degree of drift, over four times that of control.
 
 From this, we can see it is not enough to simply minimize bimodality. To ensure a homogeneity among cells and through time, the variance of the largest mode must also be minimized. When it comes to quorum activation, compounding upon the adverse effects of an initially heterogeneous system are the effects of heterogeneous growth illustrated in this section.
 
@@ -62,6 +69,8 @@ Some abstract examples of experiments that would benefit this model are as follo
 - Inducing populations bimodally to characterize the dynamics of heterogeneous growth in vivo for comparison
 
 ## Mathematica Code
+
+<p class="noinitial">
 maxRate = 1;         
 **Rate**[activation_] = maxRate*(1-activation);         
 **Initial**[x_,k_,ma_,sa_,mb_,sb_] := (1/Sqrt[2*Pi])*((k/sa)*E^(-(x-ma)^2/(2*sa^2))+((1-k)/sb)*E^(-(x-mb)^2/(2*sb^2)));         
@@ -74,9 +83,12 @@ maxRate = 1;
 **SPostTimeMax**[t_] := SatTimeMax;         
 **TsPostTimeMax** [t_, TimeMax_ ,SatTimeMax_,TsAtTimeMax_] :=  SatTimeMax*(t-TimeMax)+TsAtTimeMax;         
 **TimeMax**[maxPop,endTime,K,MA,SA,MB,SB ] = FindRoot[Population[t,K,MA,SA,MB,SB ]==maxPop,{t,endTime/2 ,0,endTime}];         
+</p>
 
 
 ## Functions
+
+<p class="noinitial">
 **Rate(x)**: function of exponential growth constant versus level activation for our simulation         
 **Initial**: initial population proportion density distribution of A and B; AUC =  total initial population = 1 unit ;          
 **Population**: total population over time as a multiple of initial size         
@@ -88,8 +100,11 @@ maxRate = 1;
 **SPostTimeMax**: when incorporating a population ceiling, indicates total rate of protein production of the colony once the ceiling is reached         
 **TsPostTimeMax**: when incorporating a population ceiling, indicates total protein produced of any t after the ceiling is reached         
 **TimeMax**: indicates the time at which the population ceiling is reached         
+</p>
 
 ## Variables and Constants
+
+<p class="noinitial">
 x = Level of activation as a proportion of maximal induction; x = [0,1]         
 t = time in hours         
 k = initial proportion of cells in population A         
@@ -100,6 +115,7 @@ mb = mean activation of B
 sb = std dev of activation in B         
 endTime = total time the batch is grown for         
 maxPop = multiple of initial population where growth stops         
+</p>
 
 # References
 

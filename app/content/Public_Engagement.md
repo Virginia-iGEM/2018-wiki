@@ -4,7 +4,7 @@
 
 <figure>
 	<img src="/images/HumanPractices/ActivitiesFair.png" alt="SummerCamp1">
-	<figcaption>Grace flyering for iGEM at the University of Virginia Activities Fair!  </figcaption>
+	<figcaption>Fig. 1 Grace flyering for iGEM at the University of Virginia Activities Fair!  </figcaption>
 </figure>
 
 
@@ -16,7 +16,7 @@ Over 200 people expressed interest and joined our email listserv and will hopefu
 
 <figure>
 	<img src="/images/HumanPractices/UVA2018_Outreach.jpg" alt="SummerCamp1">
-	<figcaption> Some team members posing with Shaun Moshasha, CEO of Open BioLabs.  </figcaption>
+	<figcaption>Fig. 2 Some team members posing with Shaun Moshasha, CEO of Open BioLabs.  </figcaption>
 </figure>
 
 <figure>
@@ -55,20 +55,24 @@ The students came up with many interesting project ideas related to synthetic bi
 
 Besides doing research, another important mission of iGEM is to let the public learn more about the emerging field of synthetic biology. At UVA, we don’t really have a department dedicated for synthetic biology, and many students don’t actually have an idea on what synthetic biology actually is. In order to let more students learn about the field of synthetic biology, the 2018 Virginia iGEM team hosted a seminar, Pizza and Pipettes, for UVA students. 
 
-We collaborated with PurSolutions, by using the self-assembly module developed by PurSolutions. Through the module, participants learned about self-assembly and got a sense of protein engineering. They even got some hands-on wetlab experience by assembling the smallest tubiline in the world! After learning that proteins are useful tools for solving problems, we had them think about the DNA level of biology. Since proteins are encoded by and created from DNA, what would happen if we modified DNA? 
+We collaborated with PurSolutions, by using the self-assembly module developed by PurSolutions. Through the module, participants learned about self-assembly and got a sense of protein engineering. They even got some hands-on wetlab experience by assembling the smallest tubulin in the world! After learning that proteins are useful tools for solving problems, we had them think about the DNA level of biology. Since proteins are encoded by and created from DNA, what would happen if we modified DNA? 
 
 The event covered topics in molecular biology and brought it into synthetic biology. Participants also brainstormed about what world problems they would like to solve with synthetic biology. Many people came up with the problems of air pollution, microplastic, and even world hunger. 
 
 
 Link to PurSolutions’ self-assembly module: <a href="http://puresoluble.com/self-assembly" target="_blank">http://puresoluble.com/self-assembly</a>
 
+<br>
+<br>
+
 ## Public Forum
+
+<strong>View our discussion packet <a href="http://2018.igem.org/wiki/images/5/5d/T--Virginia--2018_Discussion_Packet.pdf" target="_blank">here!</a></strong>
 
 <figure>
 	<img src="/images/HumanPractices/Forum.png" alt=PublicForum>
 	<figcaption> Our flyer for our public forum. (_Design by Dylan Culfogienis_) </figcaption>
 </figure>
-
 
 There were two things that inspired us to develop this discussion packet that can be used to host public forums, a company that rejected us, and a public forum that we participated in.
 
@@ -97,6 +101,3 @@ Attendees at the run through gave us some valuable insights on what people’s p
 The discussion on GMO products crossed through the fields of science, technology, politics, ethics, economics, and even religions. We realized that when trying to market a product that is related to GMO, one should be more aware that customers are always trying to get more information, only when they have enough information will they think that they are able to make a decision. The market of a GMO product should also avoid using some words that people generally don’t like, those words often lead to a rejection regardless of whether people have tried to actually know more about the product or not. 
 
 After the run through, We fixed some parts in the discussion packet and improved it by adding some supplement information for those who didn’t really understand how the techniques worked and wanted to get an idea of it, and also modified the questions a bit so they are more specific and the discussion could go on smoothly. We envision this packet as a ready-to-use discussion packet for public forums, and hope that future teams may put it into use.
-
-
-View our discussion packet <a href="http://2018.igem.org/wiki/images/5/5d/T--Virginia--2018_Discussion_Packet.pdf" target="_blank">here!</a>   
