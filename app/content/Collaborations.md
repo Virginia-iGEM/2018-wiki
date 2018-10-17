@@ -117,7 +117,43 @@ Besides collaborating on the 2018 iGEM competition, the collaboration between Vi
 
 ## Wiki 
 
-See our [Wiki](/Wiki.html) page for more details.
+While developing our wiki, we realized that the media wiki template could be improved upon, as editing was slow and inefficient. We began to think of ways to developing a tool that would improve the Wiki workflow; thus, the Wiki Build Tool, later named igem-wikibrick, was born. We shared our tool with other teams and began to develop a code base that could be shared and improved upon by the current iGEM community and future iGEM teams. 
+
+For more technical information on the tool, see the [Software page](/Software.html).
+
+In the process of building these tools, we encountered a number of areas of the iGEM Wiki that could benefit from changes or upgrades. This is detailed on the [Wiki page](/Wiki.html#open-letter-on-the-state-of-the-igem-wiki)
+
+### Tutorials
+
+Since iGEM is mainly focused on synthetic biology, we realized that many teams may not have a computer science background, making it difficult to edit and style the wiki in the desired manner. We created several detailed tutorials that cover the basics of coding in the terminal, using the Wiki Build Tool, and using the webscraper.
+
+### Teams
+
+We would like to thank all the teams who expressed interest in using our tool.
+
+**University of Toronto**, who built the igemwiki-api and the original generator.
+**University of Pittsburgh**
+**William and Mary**
+**Georgia State University**
+**Richard Montgomery High School**
+**BiolQS Barcelona**, who featured our Wiki Build Tool in their wiki video tutorials.
+**CPU_China**
+**ICT_Mumbai**, who tested the tool and intend to contribute an additional template to the generator
+**Columbia University**
+**OUCiGEM**
+**Vienna**
+
+We're excited to say that we have one (confirmed) 2018 team using our tool: **IISER-Bhopal-India**
+
+### External Resources
+
+All these tutorials and tools can be found directly on our GitHub page:
+
+[Wiki Build Tool](https://github.com/Virginia-iGEM/igem-wikibrick)
+[Wiki Build Tool Tutorial](https://github.com/Virginia-iGEM/igem-wikibrick/tree/master/docs/tutorial)
+[Yeoman Generator](https://github.com/Virginia-iGEM/generator-igemwiki) - creates a template of the wiki instead of starting from scratch.
+[Webscraper](https://github.com/Virginia-iGEM/igem-wikiscraper)
+[Command Line Tutorial](https://github.com/Virginia-iGEM/2018-tutorials/tree/master/cli)
 
 ## William and Mary 
 

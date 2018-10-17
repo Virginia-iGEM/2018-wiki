@@ -11,19 +11,7 @@ Over the course of the summer, all of us at Virginia iGEM have gone from complet
 
 We couldn't have done everything we did without the fantastic contributions and hard work of everyone on the team. Whether it was through Wetlab, Human Practices, Modeling, or Wiki, it was all vital to the success of our project. We became better friends on the team and made a lot of good memories outside of lab through beach volleyball, potlucks, playing Super Smash Bros, and rock climbing. 
 
-We are the twelve undergraduates of Virginia iGEM and here is our team!
-
-## Advisors
-<img src="/images/Sponsors/Kozminski.jpg" alt="KeithKozminski" id="advisor">
-<img src="/images/Sponsors/Papin.jpg" alt="JasonPapin" id="advisor">
-
-**Keith Kozminski** is our amazing advisor who helps guide our research and keeps us on track for the iGEM Jamboree. From teaching a prepatory iGEM course in the spring to helping us with various aspects of our project, Professor Kozminski's wise words and advice has warmed our hearts. (_Photo taken from the Department of Biology at UVA_)
-
-**Jason Papin** is the modeling advisor for our team. With his help and advice, we have developed several models that have significantly shaped our project. We are thankful for all the advice and encouragement that Professor Papin has given us throughout our research! (_Photo taken from UVA Today_)
-
-## Meet the Team 
-
-Our team has been hard at work in the lab! See what everyone's been doing.
+We are the twelve undergraduates of Virginia iGEM! Click the portraits to see descriptions of every team member.
 
 <p>
 	<div class="team-bio">
@@ -126,3 +114,12 @@ Our team has been hard at work in the lab! See what everyone's been doing.
 	<img src="images/TeamPhotos/2018Grace.jpg" alt="2018Grace" id="2018Grace">
 	<img src="images/TeamPhotos/2018Angela.jpg" alt="2018Angela" id="2018Angela">
 </p>
+
+## Advisors
+<img src="/images/Sponsors/Kozminski.jpg" alt="KeithKozminski" id="advisor">
+<img src="/images/Sponsors/Papin.jpg" alt="JasonPapin" id="advisor">
+
+**Keith Kozminski** is our amazing advisor who helps guide our research and keeps us on track for the iGEM Jamboree. From teaching a prepatory iGEM course in the spring to helping us with various aspects of our project, Professor Kozminski's wise words and advice has warmed our hearts. (_Photo taken from the Department of Biology at UVA_)
+
+**Jason Papin** is the modeling advisor for our team. With his help and advice, we have developed several models that have significantly shaped our project. We are thankful for all the advice and encouragement that Professor Papin has given us throughout our research! (_Photo taken from UVA Today_)
+

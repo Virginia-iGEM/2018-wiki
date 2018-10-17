@@ -9,16 +9,16 @@
 <!-- </figure> -->
 
 <figure>
-![Lab Picture 1](/images/lab-project.jpg)
+<img alt="Lab Picture 1" src="/images/lab-project.jpg" style="height: 20em">
 </figure>
 
-<br>
-<br>
-<br>
 
 In the lab over the summer and fall, safety was always a primary concern. Even before starting work in the lab, all members of the team, including those not working in wetlab, took the following training modules: Autoclaving Safety, BSL-2 Training, Chemical Safety and Waste Training, and Housekeeping Practice in Research Labs. 
 
+<br>
+
 When in lab, we observed several measures to ensure proper safety levels.
+
 - Always using proper PPE for all experiments, including eye protection when using the UV transilluminator for analyzing gels
 - Using a fume hood when working with the carcinogen Ethidium Bromide
 - Proper handling of all accidents, and disposal of all waste products, autoclaving when necessary
