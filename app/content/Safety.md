@@ -10,6 +10,7 @@
 
 <figure>
 <img alt="Lab Picture 1" src="/images/lab-project.jpg" style="height: 20em">
+<figcaption>Figure 1: Stack of petri dishes! </figcaption>
 </figure>
 
 
