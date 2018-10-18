@@ -298,9 +298,11 @@ Our model of quorum-sensing based induction produced many predictions of experim
 	<img src="images/Modeling/ODE3.png" alt="Activation">
 </figure>
 
-# Resources 
+# Additional Resources 
 
 <a href="http://2018.igem.org/wiki/images/2/2d/T--Virginia--2018_ModelingFiles.zip">Click here</a> to view our MATLAB code, sensitivity tests, and figures for final runs.  
+
+<a href="http://2018.igem.org/wiki/images/b/b3/T--Virginia--2018_Parameter_Table.pdf">Click here</a> to view our complete parameter table. 
 
 # References
 

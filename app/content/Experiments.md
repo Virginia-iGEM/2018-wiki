@@ -18,21 +18,6 @@ The general workflow of our team occurred as follows.
 8) Creation of BioBrick.    
 9) Sequencing of final part.  
 
-# Overall Laboratory Tips
-
-<figure>
-	<img src="/images/Wetlab/Streaking.png" alt=Streaking>
-	<figcaption> Restreak places using this or similar techniques. Resterlize and cool inoculation loop after each step. </figcaption>
-</figure>
-  
--  Always check the proper storage temperature for buffers, reagents, etc.          
--  Buffers that freeze at -20˚C and need to be thawed for each use should be aliquoted into usable amounts. Many of these buffers degrade after multiple thawings. Aliquoting ensures that each buffer you use has only been thawed once before and minimizes losses if left out of the freezer.    
--  Fully thaw and mix all buffers before use. Use the vortex.      
--  Take enzymes out of the -20˚C only before you are about to add them.     
--  Glass spreaders take a long time to cool. On your first time spreading, sterilize one, wait until you believe it is cool, then touch the glass to get an idea of the time it takes.    
--  When growing overnight cultures for miniprep from a ligation, choose at least 7-9 colonies from each plate of transformants and grow them is separate tubes. This increases the chances of miniprep with a successful gel and without backbone reannealing.    
-*Below are unique protocols that UVA IGEM teams have developed and edited over the years   
-
 # Protocols
 
 ## Chemically Competent E. Coli Cells
@@ -124,11 +109,51 @@ For ligation reactions, add 2-4 uL of plasmid. Pipet up and down to mix thorough
 8) Plate 150 uL of cells in one plate and 50 uL of cells on another plate. Sterilize spreader using ethanol and flame. Then let the spreader cool down before using it. Take respective amount of cells and pipette them onto the plate. Use spreader to thoroughly spread the cells around the plate.         
 9) Incubate at 37C overnight.        
 
+## Flow Cytometry Experimental Design
+
+Why we chose 6 hour time period with one hour sampling: Data from previous work (Dr. Zargar’s work) showed that 5 hours of observation captured quorum response. We chose to extend the timeframe by an hour to ensure our ability to capture the window of quorum activation and accommodate for slower growth. Samples are taken at 60 minute intervals to assess the effect of population growth on sfGFP expression over time. After consulting Dr. Zargar, we concluded that intervals less than one hour would not show significant change between time points, with one hour better capturing trends.
+
+Why we chose that t = 0 is OD600 0.4: We chose OD600 = 0.4 as our t=0 after consulting Dr. Zargar about the density at which quorum activation begins. At OD600 = 0.4, population density is high enough to reach the quorum activation threshold. 
+
+### Flow Cytometry
+**Purpose**: To visualize the percent of sfGFP fluorescence in a population and trends in sfGFP expression over time.   
+**Intent**: To determine whether our modifications to the lsr operon positively affect population level protein expression over time.   
+**Materials**: LB (or similar) nutrient broth, spectrophotometer, PBS buffer    
+1) Grow an overnight culture of bacteria transformed with a version of the synthetic quorum sensing system. Always grow a negative control culture that has no sfGFP and a positive control that has constitutively promoted sfGFP.    
+2) From the overnight culture, inoculate 1000 uL into 4 mL of LB.   
+3) At OD~0.4, take first sample. This will be t = 0 hours. Take 300 uL from culture and inoculate into 700 uL of LB. VERY IMPORTANT- Label tubes properly to avoid mixing time points or test strains with controls. Place sample in 4˚C fridge. Samples are cooled to prevent further growth and protein expression, essentially pausing them at the time point they were taken, but without the possible damage or cell death caused by freezing.    
+4) Take a sample every 60 minutes for the next 6 hours and repeat step 3a & 3b each time.     
+5) ~60 mins before flow cytometry appointment, take cells out of 4˚C fridge.     
+6) Spin down cells for 2 minutes at 8,000 rpm.     
+7) Resuspend pellet GENTLY in 1 mL of PBS (DO NOT VORTEX).     
+8) Spin down cells again for 2 minutes at 8,000 rpm.     
+9) Resuspend pellet gently again in 1 mL of PBS (DO NOT VORTEX).     
+10) Transfer samples from eppendorf tubes to flow cytometry tubes and transport on ice to the center.     
+11) Collect flow cytometry measurements with at least 40,000 events for each run.     
+
+### Flow Cytometry Data Analysis
+When analyzing our flow cytometry data, we used a negative control (pSQS alone with no sfGFP containing second plasmid) to set sfGFP gates. Gates are essentially constraints on a graph. Our negative control, pSQS, seemed to autofluorescence a little bit. Figures 1 and 2 show percent sfGFP expression of the negative control cell populations. Ideal the gates would be placed so that Q5 and Q8 (quadrants in the figures) contain all of the natural fluorescence of molecules in sfGFP negative cells so that this data can be used as a blank. In results for our strains with sfGFP containing constructs, any fluorescence that occurs in Q6 and Q7 would be considered sfGFP expression and any fluorescence in Q5 and Q8 would be considered natural autofluorescence that the flow cytometer is picks up even in sfGFP negative cells. We had an unusually high amount of autofluorescence in our negative control. After discussing this is with the experts at the Flow Cytometry Center at the University of Virginia, they suggested that this autofluorescence is likely happening due to debris in the sample or large cell clumps the machine is picking up. They suggested that we use an image cytometer to verify this but due to time constraints, we were not able to complete this in time. Instead, we decided to create liberal gates (Figure 1) and conservative gates (Figure 2). The liberal gates take into account the possible debris in the sample and shift the gate to the left. The conservative gates assume that there is no debris or cell clumping and moves the gates past all the blue dots. We used both gates to analyze our data and compared each to the results we expected based on our model. When using the conservative gates, many of our sfGFP expression levels were below 5%, with some samples showing negative sfGFP expression (below 0%). With this gating, it was difficult to see quorum activation curves. We decided to use liberal gates for our analysis so that trends of quorum activation curves were visible in our data. As a result, our results are more representative of quorum trends with relative sfGFP expression than pure sfGFP expression.
+
+<figure>
+	<img src="images/Wetlab/Experiment1.png" alt="Experiment">
+	<figcaption>Figure 1: Liberal Flow Gates </figcaption>
+</figure>
+
+<figure>
+	<img src="images/Wetlab/Experiment1.png" alt="Experiment">
+	<figcaption>Figure 2: Conservative Flow Gates </figcaption>
+</figure>
+
+
+
 ## Miniprep
 Completed using GenScript QuickClean II Plasmid miniprep kit.
 
 ## Digestion
 Completed according to NEB guidelines.
+
+
+
 
 
 

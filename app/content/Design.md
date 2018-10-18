@@ -2,11 +2,10 @@
 
 # What is quorum sensing?
  
-Quorum sensing is the mechanism by which bacteria communicate with each other what the current cell population density is.   
+Quorum sensing is the mechanism bacteria use to communicate cell population density to each other. Many bacteria constantly produce and export a molecule called an autoinducer. If a bacterial strain produces an autoinducer, the total concentration of that autoinducer in the extracellular environment will increase as the population density of the bacteria increases. Bacteria are constantly monitoring autoinducer concentration in the environment, and can detect when the concentration exceeds a certain threshold (which indicates that the population density exceeds a threshold). This triggers responses such as biofilm formation, luminescence, or production of virulence factors on a population wide scale; that is, the population induces itself based on the concentration of the autoinducer made, without input of stimuli from outside the system.
 
-Many bacteria constantly produce and export out of the cell a chemical called **autoinducer**. All bacteria of a same species produce the same autoinducer, so if the population density of the bacteria producing the autoinducer increases, it leads to increased concentration of that autoinducer in the extracellular environment. Bacteria are constantly monitoring the concentration of the autoinducer in the environment, and if the concentration exceeds a certain threshold (which indicates that the population density exceeds a threshold), bacteria detect that and trigger responses such as formation of biofilms, luminescence, or production of virulence factors; that is, they auto-induce themselves based on the concentration of the autoinducer they made, without input of stimuli from outside.    
-
-On the other hand, if the population density of the bacteria is not high, any autoinducer produced will diffuse away from the bacteria faster than it accumulates, so autoinducer concentration will not increase, not triggering a population-specific response from the bacteria.    
+If the population density of the bacteria is not high enough, any autoinducer produced will diffuse away from the bacteria faster than it accumulates, preventing autoinducer concentration from reaching the threshold, and not triggering a population-dependent response from the bacteria.
+    
 
 See our video <a href="http://2018.igem.org/wiki/images/0/0d/T--Virginia--2018_quorum_sensing_v1.webm" target="_blank">"Quorum Sensing: A Brief Introduction on Quorum Sensing"</a> to learn more.
 
