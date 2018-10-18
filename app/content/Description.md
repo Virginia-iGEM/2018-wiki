@@ -47,7 +47,7 @@ The design of quorum-sensitive devices is relatively unexplored in iGEM, but, us
 	<figcaption>An overview of our system. </figcaption>
 </figure>
 
-## Quorus is composed of four components.
+### Quorus is composed of four components.
 1) **The sQS Plasmid**  produces Synthetic Quorum Response using the bidirectional Lsr promoter region and T7 RNA polymerase (T7RPol).     
 2) **The Enhancement System** is a set of genes that operate on the universal autoinducer AI-2 to enhance quorum activation.     
 3) **The Response System** is for custom gene expression based on Quorus autoinduction.     

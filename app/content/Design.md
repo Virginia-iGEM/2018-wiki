@@ -6,124 +6,123 @@ Quorum sensing is the mechanism bacteria use to communicate cell population dens
 
 If the population density of the bacteria is not high enough, any autoinducer produced will diffuse away from the bacteria faster than it accumulates, preventing autoinducer concentration from reaching the threshold, and not triggering a population-dependent response from the bacteria.
     
-
+<figure>
+	<img src="images/Wetlab/Design1.jpg" alt="Activation">
+	<figcaption>Figure 0: Autoinducer diagram.</figcaption>
+</figure>
+   
 See our video <a href="http://2018.igem.org/wiki/images/0/0d/T--Virginia--2018_quorum_sensing_v1.webm" target="_blank">"Quorum Sensing: A Brief Introduction on Quorum Sensing"</a> to learn more.
-
+ 
 ## Quorum sensing in E. coli
  
-E. coli uses quorum sensing to determine population density and respond to high density by producing biofilms or amplifying virulence. Autoinducer used by E. coli is named **Autoinducer-2 (AI-2)**, and is also used among other bacterial species.     
+Like many other bacteria, *E. coli* use quorum sensing to determine population density and respond to high density by producing biofilms or virulence factors. The autoinducer used by E. coli and some other bacterial strains is called Autoinducer-2 (AI-2).
 
-The AI-2 quorum sensing pathway of E. coli is regulated by the following genes: lsrACDB (which are four different proteins that are expressed and work together), lsrK, lsrR, luxS and ydgG. The lsrACDB, lsrK, and lsrR are all adjacent to one another and affect each other’s transcription rate; luxS and ydgG are distant and their transcription is unaffected by other Lsr proteins.     
-
-First, the LuxS protein uses the precursor molecule DPD (S-4,5-dihydroxypentane-2,3-dione) to produce the AI-2 molecule. The AI-2 is then exported out of the cell through YdgG, a transmembrane transport protein. The exported AI-2 accumulates outside the cell, and upon reaching a certain concentration, is imported into the cell through a different set of transmembrane transport proteins, LsrACDB. The imported AI-2 is then phosphorylated by LsrK kinase, turning into AI-2P. AI-2P can then inhibit LsrR, which is a repressor that binds to pLsr and inhibits the transcription of lsrACDB. Therefore, by importing AI-2 that is then phosphorylated and inhibits LsrR, LsrACDB is inhibiting the expression of its inhibitor LsrR. And since it inhibits its inhibitor, expression of LsrACDB is a positive feedback loop, allowing more LsrACDB to be produced and accelerating the import of AI-2, until there is no more AI-2 to take in and the AI-2 already taken in is dissolved, letting LsrR bind to pLsr again (Bassler, 2005).    
-
-# Literature
-
-## Dr. Zargar's Paper
- 
-Our project is heavily based on Dr Zargar's paper, "Enhancing Intercellular Coordination: Rewiring Quorum Sensing Networks for Increased Protein Expression through Autonomous Induction". In the paper, Dr. Zargar recognizes a problem with E. coli quorum sensing; when the E. coli cells start intaking the extracellular AI-2, not all of the cells start that process at the exact same time. Because some cells start the intake process later than others, by the time the LsrACDB expression is activated and the slower cells really start absorbing the AI-2, there is no more AI-2 left in the extracellular environment. This causes part of the population of E. coli to not be activated by quorum sensing, thus “losing” the competition of intaking AI-2 and not responding to cell density increase like all the other cells do. Zargar found that due to such reason, wild type bacteria population has only about 70% of its population activated by autoinduction with AI-2 (2016, Zargar et al).      
-
-Dr. Zargar manipulated two different genes in the Lsr pathway (which are a part of what we manipulate later on): he inserted a synthetic feedback loop where even more LsrACDB or LsrK is produced along with the natural feedback loop of Lsr operon. LsrACDB and LsrK were chosen because LsrACDB complex is the primary AI-2 intake protein and LsrK is the kinase that phosphorylates AI-2 to activate the cells.     
-
-To make the synthetic feedback loop, Dr. Zargar added pCT6 plasmid, an AI-2 induced expresser of T7RNA polymerase, into the E. coli system because the native pLSR promoter is weak and does not transcribe well enough to yield observable experimental results; having pCT6 would amplify the AI-2 quorum sensing signal by producing T7RNA polymerase when intracellular AI-2 level is high, while T7RNA polymerase in turn activates the GFP gene in another synthetic plasmid, pET, making the increase in AI-2 level observable. Then Dr. Zargar added LsrACDB, LsrK, or none (as a control) onto the pET plasmid. The added gene in pET is attached to T7 promoter, so it does not transcribe when LsrR is inhibited but rather when large quantities of T7RNA polymerase is produced, or when AI-2 is taken into the cell. The addition of the synthetic loop produced additional LsrACDB or LsrK along with the native pathway, which led to increased rate of AI-2 intake in the cells.      
-
-By incorporating the pCT6 and enhanced pET plasmid, Dr. Zargar was able to increase the percentage of cells being activated by auto-induction from the wild type’s 70% to 90% for enhanced LsrK and 94% for enhanced LsrACDB feedback system. Not only did the percentage of cells that were activated by autoinduction increase, but the mean fluorescence intensity for the enhanced cells was 1.6 times that of the control cells. Dr. Zargar credits this increase in percentage of cells being auto-induced and increase in mean fluorescence due to the decrease in variability and heterogeneity in the AI-2 intake process. **Since the cells were designed to have faster AI-2 uptake rate, more cells could take in AI-2 to be auto-induced, while a few cells were too slow with AI-2 uptake to be to be auto-induced.**    
-
-## What problem are we trying to solve?
-Upon coming across Dr. Zargar’s paper, we thought that we could apply his work to revolutionize biomanufacturing.
-Today, biomanufacturing using bacteria involves mainly one of two methods; inserting a constitutively active gene that will always produce the wanted product, or using inducers to induce the bacteria to produce the product. However, both methods each have a disadvantage; while the use of a constitutively active gene will guarantee that the bacteria will always be producing the product, because that gene is constitutively active, it places a metabolic strain on the bacteria, hindering their growth. Thus it takes a longer than usual time for those bacteria fully grow and reach their full potential for production, meaning that the waiting time before efficient harvesting is long.     
-
-The use of inducers can avoid this problem, since the bacteria will multiply normally while not expressing the wanted product, and the inducer will be added to cause expression of the product only after there are plenty of bacteria grown. But while this may be effective, using inducers has its own problem; they are expensive.
-A solution to both of these is quorum sensing. If a gene is linked to quorum sensing, then it will not be expressed until the bacteria have grown to a certain population density, so the gene causes no strain involved in bacterial growth. On the other hand, once the bacteria have grown enough, they will auto-induce themselves to express the gene, not requiring the use of any inducers. If bacteria are designed to produce based on quorum signaling, then one has to worry neither about growth rate nor cost of inducers. The only problem was efficiency, since not all bacteria in a population will be activated by quorum signaling, but that is now solved through Zargar’s research decreasing the heterogeneity of AI-2 intake and greatly increasing the percentage of bacteria that are sensitive to AI-2.     
-
-So in our project, we aimed to utilize and improve upon Zargar’s enhanced quorum sensing system to apply it to biomanufacturing. We tried to incorporate two new genes into Zargar’s system; luxS and ydgG. By adding genes that we think will be helpful to the quorum sensing system and developing multiple combinations of them to use in combination with an AI-2 sensitive plasmid, we tried to further decrease heterogeneity and increase the % of cells activated by auto-induction, so that it is closer to 100%.    
-
-# A Quorus Design 
-We extensively used the engineering design method to effective construct and test our various Quorum Sensing parts. We followed the following process:     
-1) Define a Problem       
-2) Background Research      
-3) Constraints/Design Requirements       
-4) Conceptualize Solutions      
-5) Select a Solution       
-6) Detailed Design/Plan      
-7) Implementation       
-8) Validation       
-9) Communicate       
-10) Iterate       
-
-We designed our constructs and methodology based on the advice we received from Dr. Zargar and various other advisors at UVA. Our problem is constrained to limiting the bimodal expression graphs that Zargar’s research showed. We want to all the cells to be expressing the gene of interest (in our case sfGFP) rather than a group of cells no expressing the gene of interest because there is not enough AI-2 available for them to express. Our project is divided into two main design goals similar to Dr. Zargar’s work: Design an AI-2 sensitive plasmid and design various iterations of T7 regulated plasmids.    
-
-## AI-2 Sensitive Plasmid
-
-Our AI-2 sensitive plasmid or Synthetic Quorum Sensing Plasmid is controlled by an inducible promoter sensitive to AI-2. The promoter is called pLsr. pLsr works concurrently with LsrR. Dimers of LsrR bind to and repress this promoter. However, AI-2P can bind to these dimers and cause them to dissociate, depressing the promoter. Since the expression of this plasmid produces LsrR, which represses the promoter pLsr, this system is self regulating (Basseler et al 2001). We added T7 RNA polymerase to the plasmid also so that when AI-2 is present, T7 is transcribed. This T7 is used to activate T7 promoters (pT7) in the T7 regulated plasmids. pSQS is built in a low copy vector in order to prevent leakiness of the AI-2 sensitive promoter.
-
+The AI-2 quorum sensing pathway of *E. coli* is regulated by the following genes: *lsrACDB* (which encodes four different proteins that are expressed and work together), *lsrF*, *lsrG*, *lsrK*, *lsrR*, *luxS* and *ydgG*. *lsrACDB*, *lsrF*, *lsrG*, *lsrK*, and *lsrR* are all adjacent to one another, as shown below, and affect each other’s transcription rate; *luxS* and *ydgG* are distant and their transcription is unaffected by other Lsr proteins.
 
 <figure>
-	<img src="/images/Wetlab/sPQS.png" alt=sPQS>
-	<figcaption> Figure 1: Synthetic Quorum Sensing Plasmid (pSQS) </figcaption>
+	<img src="images/Wetlab/Design2.jpg" alt="Activation">
+	<figcaption>Figure 1: The lsr operon and related genes. Details about each part are below.</figcaption>
 </figure>
 
-<br>
-<br> 
-<br>
-<br> 
+First, (1) the LuxS protein uses precursor molecules (omitted in figure) to produce the AI-2 molecule. (2) The AI-2 is then exported through YdgG, a transmembrane transport protein. Exported AI-2 accumulates outside the cell, and upon reaching a certain concentration, (3) is imported through a different transmembrane transport protein, LsrACDB. Import can happen in a different cell from the one that exported the AI-2 originally. (4) The imported AI-2 is then phosphorylated by LsrK kinase, converting it into AI-2P. (4.5) AI-2P can then inhibit the binding of LsrR, a repressor that inhibits the transcription of *lsrACDB*. Since LsrACDB imports AI-2, whose phosphorylated form inhibits repressor LsrR, the expression of LsrACDB creates a positive feedback loop. That is, the expression of LsrACDB accelerates the import of AI-2, indirectly allowing more LsrACDB to be produced, and creating a positive feedback loop. The positive feedback loop goes on until there is insufficient AI-2 to import and (5) the AI-2 already imported are degraded by LsrF and LsrG, letting LsrR inhibit pLsr again (Xavier & Bassler, 2005).
 
-pSQS was built using NEB golden gate assembly. It was important to build this plasmid in a low or single copy plasmid. We decided to use the low copy plasmid pACYC.   
+# The State of the Art, which we are improving upon
 
-## T7 Regulated Plasmids: 
+In a 2016 paper, Dr. Zargar, Quan, and Bentley recognized a problem with E. coli quorum sensing; when *E. coli* cells start importing AI-2, not all of them start that process at the exact same time, some cells being slower than others. So by the time LsrACDB expression is activated and the slower cells seriously begin importing the AI-2, the faster cells have already imported most of the AI-2 in the extracellular environment and there is very little AI-2 left for slower cells to import. This causes part of the population of E. coli to be effectively blind to high AI-2 concentration, and they will not be activated by quorum sensing nor respond to high cell density like all the other cells do. Zargar et al found that due to such reason, wild type bacteria population has only about 70% of its population activated by autoinduction with AI-2 (Zargar, Quan, & Bentley, 2016).
 
-Our T7 regulated plasmids are used to help optimize the efficiency of the Lsr Operon in relation to its wild-type process. In our project, the gene of interest to produce is sfGFP so all of the T7 regulated parts will end up producing sfGFP. The T7 regulated plasmids are focused around three main genes: LsrK, LuxS, and YdgG. The plasmids are regulated by pT7.    
+To increase the percentage of population that is activated by autoinduction, they manipulated two different genes in the *lsr* pathway (which are part of what we manipulate later on) inserting a synthetic feedback loop where even more LsrACDB or LsrK is produced along with the natural feedback loop of *lsr* operon. LsrACDB and LsrK were chosen because LsrACDB are the primary AI-2 intake proteins and LsrK is the kinase that phosphorylates AI-2 to activate them. 
+   
+<figure>
+	<img src="images/Wetlab/Design3.png" alt="Activation">
+	<figcaption>Figure 2: A figure by Zargar et al (2016). (A) Depiction of E. coli quorum sensing system without modifications to the feedback loop. The only modification is the addition of an AI-2 sensitive plasmid (pCT6) and sfGFP gene (in pET plasmid) sensitive to pCT6 activation. This is a representation of the wild type quorum sensing system. (B) E. coli quorum sensing system with modifications to the feedback loop. pET plasmid has in it either lsrK or lsrACDB gene in addition to the sfGFP gene.</figcaption>
+</figure>
 
-LsrK is a kinase that phosphorylates AI-2 so that it can be turned into AI-2P (Basseler et al 2001).. LsrK is necessary because AI-2P is what binds to LsrR to inhibit the transcription of the system when there is no AI-2 present.       
+To make the synthetic feedback loop, Zargar et al added pCT6 plasmid, an AI-2 induced expresser of T7RNA polymerase, into E. coli because the native *lsrACDB* promoter is weak and does not transcribe well enough to yield observable results; having pCT6 would amplify the AI-2 quorum sensing signal by producing T7RNA polymerase when intracellular AI-2 level is high, while T7RNA polymerase in turn activates the GFP gene in another synthetic plasmid, pET, making the increase in AI-2 level observable. Then they added onto the pET plasmid either lsrACDB or lsrK. The added gene in pET was attached to T7 promoter, so they transcribe not when LsrR is inhibited but rather when T7RNA polymerase is produced, which ultimately means the same thing, that AI-2 is imported by the cell. The addition of the synthetic loop produced additional LsrACDB or LsrK along with the native pathway, which led to increased rate of AI-2 intake in the cells.
 
-Based on our research, we were able to find two unique genes that help optimize the Lsr operon: LuxS and YdgG. LuxS is a gene that is able to synthesize AI-2 intracellularly by cleaving various metabolites (Gonzalez et al 2006). YdgG is a transmembrane protein that is able to export AI-2 outside of the cell (Herzberg et al 2006). Based on these two processes, we realized that we could solve the bimodality problem by increasing the amount of AI-2 outside the cell by using YdgG. This would increase the extracellular AI-2 concentration so that more cells could be activated. However, we do not want the amount AI-2 inside the cell to be depleted so we realized that LuxS would be useful to produce more AI-2 inside the cell. We originally decided to also implement a gene called LsrACDB, a vital in Zargar’s system, which would import AI-2 from outside the cell inside the cell. After having a discussion with Dr. Zargar, he suggested that LsrACDB would not be necessary since LuxS is already producing AI-2 inside the cell so there would be no need to import more AI-2 in. We took his advice and decided to constrain our project to only upregulating phosphorylation, export, and synthesis of AI-2 rather than worry about import right now. Phosphorylation through LsrK is necessary in this system because as we are upregulating a process that produces more AI-2, it must be converted to AI-2P so that inhibition of the system eventually occurs when there is no more AI-2 in the cells. Otherwise, the excess AI-2 would cause a strain on the wild-type Lsr Operon process already present in the cell.     
+By incorporating the pCT6 and enhanced pET plasmid, Zargar et al were able to increase the percentage of cells being activated by auto-induction from the wild type’s 70% to 90% for enhanced LsrK and 94% for enhanced LsrACDB feedback system. Also, not only did the percentage of cells that were activated by autoinduction increase, but the mean fluorescence intensity for the enhanced cells were 1.6 times that of control cells. Zargar et al credit this increase in percentage of cells being auto-induced and increase in mean fluorescence to the decrease in heterogeneity(bimodality of population) in the AI-2 intake process; because the cells were designed to have faster AI-2 uptake rate, more cells could import AI-2 in time to be auto-induced, while less cells were too slow importing AI-2 and failed to be auto-induced. Thus, bacteria were more consistently being auto-induced as they should.
 
-We then proceeded to design various plasmids that have different iterations of LsrK, YdgG, and LuxS. Dr. Zargar advised us to work combinatorially so that we could construct all the iterations in time. We originally decided to approach the problem the way Dr. Zargar did by using a double plasmid system. We were worried about this at first since working with double plasmids in one cell tends to be difficult but after looking at the Vilnius-Lithuania 2017 IGEM project on double plasmid systems, we realized that it isn’t a bad idea after all. Dr. Zargar suggested a 3 pathway approach: single plasmid, double plasmid, and clonetegration. A single plasmid approach would combine the AI-2 sensitive plasmid and the T7-regulated plasmids into one plasmid. This is an interesting approach because we are able to combine both systems into a single plasmid so that the end product is one plasmid rather than two. The double plasmid system involves the system using both the AI-2 sensitive plasmid and the T7 regulated plasmid as two separate units in one cell. The clonetegration method involves incorporating the AI-2 sensitive plasmid into the genome of the bacteria. This way, only the T7 regulated plasmid has to be transformed into the bacteria to complete the system. We split the team into 3 groups to each work on a different pathway concurrently.       
+<figure>
+	<img src="images/Wetlab/Design4.png" alt="Activation">
+	<figcaption>Figure 3: From a figure by Zargar et al (2016). (C) shows that the fluorescent population of enhanced E. coli is up to 20% greater than that of control, and (D) shows that fluorescent intensity of enhanced E. coli is up to 1.6 times that of control cells.</figcaption>
+</figure>
+
+## What problem are we trying to solve?
+
+Upon coming across Zargar et al’s paper, we thought of applying his work to revolutionize biomanufacturing.
+
+Today’s biomanufacturing involves the use of recombinant DNA encoding for the wanted product in combination with inducers as either activators or repressors. In the case of insulin, a ubiquitous product produced and sold universally, IPTG is used as an activator. IPTG is added to fully grown bacterial cultures to activate and start transcription of recombinant DNA in bacteria. Another common method to produce insulin is using tryptophan as a repressor. Tryptophan is constantly added to bacterial culture while it is growing to repress the recombinant DNA until the culture is fully grown; when the bacteria culture reaches full growth, no more tryptophan is added so that bacteria degrade all the tryptophan present and de-repress the gene of interest in the recombinant DNA. In both cases, the addition of IPTG/halt of addition of tryptophan is done only when the bacteria culture is fully grown, because production of the wanted product is proportional to cell density and premature production stops cell growth. (Ladisch & Kohlmann, 1982) A problem with this method of biomanufacturing is that inducers are costly; IPTG costs $305 per 100g (Seller: P212121. Product ID: GB-I0920-100G), and while tryptophan costs less ($105 per 100g. Seller: Sigma-Aldrich. Product ID: T0254-L-Tryptophan), much greater amount of it is needed because it must be constantly added onto the bacterial culture until bacterial population reaches the ideal level.
+
+A potential solution to expensive inducers is quorum sensing. If a gene is linked to quorum sensing, then it will not be expressed until the bacteria have grown to a certain population density, so the gene causes no strain involved in bacterial growth. On the other hand, once the bacteria have grown enough, they will auto-induce themselves to express the gene, not requiring the use of any inducers. If bacteria are designed to produce based on quorum signaling, then one has to worry neither about growth rate nor cost of inducers. The only concern is efficiency, since not all bacteria in a population will be activated by quorum signaling, but efficiency has been improved through Zargar’s research decreasing the heterogeneity of AI-2 intake and greatly increasing the percentage of bacteria that are sensitive to AI-2.
+
+Therefore, the goal of our project is to utilize and improve upon Zargar et al’s enhanced quorum sensing system and apply it to the biomanufacturing industry. We incorporated new genes into Zargar’s system that will be helpful to the quorum sensing system and developing multiple combinations of them to use in concert with an AI-2 sensitive plasmid, so that heterogeneity further decreases and the % of cells activated by auto-induction increases closer to 100%.
+
+# A Quorus Design 
+We extensively used the engineering design method to effectively construct and test our various Quorum Sensing parts. We followed the following process.
+1) Define a Problem           
+2) Background Research          
+3) Constraints/Design Requirements           
+4) Conceptualize Solutions          
+5) Consult Experts          
+6) Select a Solution           
+7) Detailed Design/Plan          
+8) Implementation           
+9) Validation           
+10) Communicate           
+11) Iterate  
+
+We designed our constructs and methodology based on the advice we received from Dr. Zargar and various other advisors at University of Virginia. Our problem is constrained to decreasing the heterogeneity that occurs among E. coli when they import AI-2. We want as many cells as possible to be expressing the gene of interest (in our case sfGFP) and eliminate as much as possible the group of cells not expressing the gene of interest because they had insufficient AI-2 available for them to import. Our project is divided into two main design goals similar to Zargar et al’s work: Design an AI-2 sensitive plasmid and design various iterations of T7 regulated plasmids. 
+
+## AI-2 Sensitive Plasmid/pSQS
+
+Our AI-2 sensitive plasmid or Synthetic Quorum Sensing Plasmid (pSQS) is controlled by an inducible promoter sensitive to AI-2. Figure 4 shows the plasmid. The promoter is called pLsr. pLsr works concurrently with LsrR. Dimers of LsrR bind to and repress this promoter. However, AI-2P can bind to these LsrR dimers and cause them to dissociate, de-repressing the promoter. Because the expression of this plasmid produces LsrR, which represses the promoter pLsr, this system is self regulating (Basseler et al 2001). We added a gene that encodes T7 RNA polymerase to the plasmid also so that when AI-2 is present, T7 is transcribed. This T7 is used to activate T7 promoters (pT7) in the T7 regulated plasmids.
+
+<figure>
+	<img src="images/Wetlab/sPQS.png" alt="Activation">
+	<figcaption>Figure 4: Synthetic Quorum Sensing Plasmid (pSQS). </figcaption>
+</figure>
+
+pSQS was built using New England Biolabs’ Golden Gate assembly. It was important to build this plasmid in a low or single copy plasmid.  pSQS is built in a low copy vector in order to minimize premature production of T7 RNA polymerase due to any leakiness of the AI-2 sensitive promoter. We decided to use the low copy plasmid pACYC184 because it has a copy number around 5, has tetracycline resistance which will be useful for double transformations with other resistance plasmids, and is readily available from the American Type Culture Collection. pACYC184 was constructed by Chang and Cohen in 1978 (Chang, 1978). We would’ve ideally liked to built the plasmid in a single copy backbone. We initially tried to do this but had great difficulty doing so due to incredibly low copy number and the shear size of the plasmid (~10kb). We would’ve liked to use an IGEM low copy backbone however after discussion with students at the Mid-Atlantic Meetup at the University of Maryland, it was suggested no to use IGEM low copy backbones as they are not reliable to be low copy. For future research, it is important that IGEM adopts a reliable low copy and single copy backbone to its registry. 
+
+## T7 Regulated Plasmids
+
+Our T7 regulated plasmids are used to help optimize the efficiency of the lsr Operon in relation to its wild-type process. In our project, the gene of interest to produce is sfGFP so all of the T7 regulated parts will end up producing sfGFP. The T7 regulated plasmids are focused around three main genes: *lsrK*, *luxS*, and *ydgG*. The plasmids are regulated by pT7. 
+
+LsrK is a kinase that phosphorylates AI-2 so that it can be turned into AI-2P (Basseler et al 2001). LsrK is necessary because AI-2P is what binds to LsrR to inhibit the transcription of the system when there is no AI-2 present. 
+
+Based on our research, we were able to find two unique genes that help optimize the lsr operon: *luxS* and *ydgG*. LuxS is a protein that synthesizes AI-2 intracellularly by cleaving the precursor molecule DPD (Gonzalez et al 2006). YdgG is a transmembrane protein that exports AI-2 outside of the cell (Herzberg et al 2006). Based on these two processes, we realized that we could solve the heterogeneity problem by increasing the amount of AI-2 outside the cell by using YdgG. This would increase the extracellular AI-2 concentration so that more cells could be activated. However, we do not want the amount of AI-2 inside the cell to be depleted due to extra YdgG produced, so we realized that we also need extra LuxS to produce more AI-2 inside the cell. We originally decided to also implement LsrACDB, a gene vital in Zargar et al’s system, which would import AI-2 from outside the cell. After having a discussion with Dr. Zargar, he suggested that LsrACDB is not necessary since LuxS is already producing AI-2 inside the cell so there would be no need to import more AI-2. We took his advice and decided to constrain our project to only upregulating phosphorylation, export, and synthesis of AI-2 rather than worry about import right now. Phosphorylation through LsrK is necessary in this system because as we are upregulating a process that produces more AI-2, it must be converted to AI-2P so that inhibition of the system eventually occurs when there is no more AI-2 in the cells. Otherwise, the excess AI-2 would cause a strain on the wild-type Lsr Operon process already present in the cell. 
+
+We then proceeded to design various plasmids that have different combinations of *lsrK*, *ydgG*, and *luxS*. Dr. Zargar advised us to work combinatorially so that we could construct all the iterations in time. We originally decided to approach the problem the way Dr. Zargar did by using a double plasmid system. We were worried about this at first since working with double plasmids in one cell tends to be difficult. But after looking at the Vilnius-Lithuania 2017 IGEM project on double plasmid systems, we realized that it isn’t a bad idea after all. Dr. Zargar suggested a 3 pathway approach: single plasmid, double plasmid, and clonetegration. A single plasmid approach would combine the AI-2 sensitive plasmid and the T7-regulated plasmids into one plasmid. This is an interesting approach because we are able to combine both systems into a single plasmid so that the end product is one plasmid rather than two. The double plasmid system involves the system using both the AI-2 sensitive plasmid and the T7 regulated plasmid as two separate units in one cell. The clonetegration method involves incorporating the AI-2 sensitive plasmid into the genome of the bacteria. This way, only the T7 regulated plasmid has to be transformed into the bacteria to complete the system. We split the team into 3 groups to each work on a different pathway concurrently. 
 
 ## Single Plasmid
 
-Below how the first plasmid was originally first designed:      
+Below is how the first plasmid was originally first designed. 
 
 <figure>
-	<img src="/images/Wetlab/Original.png" alt=Original>
-	<figcaption> Figure 2: Proposed design of single plasmid system </figcaption>
+	<img src="images/Wetlab/Original.png" alt="Activation">
+	<figcaption>Figure 5: Proposed design of single plasmid system </figcaption>
 </figure>
 
-<br>
-<br> 
-<br>
-<br> 
+As we starting designing this, we ran into several problems. Due to the size of the plasmid (~10000 bp), constructing the plasmid was difficult and we had trouble transforming the whole plasmid. The main problem was the expression of LsrK, LuxS, and YdgG. Since all three of the genes are controlled by a single promoter (pT7), the expression of each gene will go down as the genes are transcribed down the plasmid. 
 
-As we starting designing this, we ran into several problems. Constructing the plasmid was difficult due to the size of the plasmid (~10000 bp). We had trouble transforming the whole plasmid. The main problem was the expression of LsrK, LuxS, and YdgG. Since all three of the genes are controlled by a single promoter (pT7), the expression of each gene will go down as the genes are transcribed down the plasmid.         
-
+As a result, we decided to redesign this system. We decided to create blocks of LsrK, YdgG, and LuxS so that each gene is controlled by its own T7 promoter. Now each gene will be expressed equally. This redesign let us create modular parts. Figure 6 shows how these parts are redesigned. Modular parts are essential to IGEM because it allows us to easily switch parts in and out of a system. We decided to take this modular design to the double plasmid system also. Due to the difficulties we experienced with the single plasmid system, we decided to put this method on hold until we could perfect the double plasmid system. A generic gene-block is composed of pT7_rbs_(LsrK/LuxS/YdgG)_terminator. Our three main blocks: LsrK-block, YdgG-block, and LuxS-block were all synthesized using IDT. 
 
 <figure>
-	<img src="/images/Wetlab/Modular.png" alt="Modular" align="middle">
-	<figcaption> Figure 3: Modular Block Design. These four parts when put together make LsrK/LuxS/YdgG-Block. For instance, the LuxS-Block is composed of pT7-rbs-LuxS-terminator. </figcaption>
+	<img src="images/Wetlab/Modular.png" alt="Activation">
+	<figcaption>Figure 6: Modular Block Design. These four parts when put together make LsrK/LuxS/YdgG-Block. For instance, the LuxS-Block is composed of pT7-rbs-LuxS-terminator</figcaption>
 </figure>
 
-As a result, we decided to redesign this system. We decided to create blocks of LsrK, YdgG, and LuxS so that each gene is controlled by its own T7 promoter. Now each gene will be expressed equally. This redesign let us create modular parts. Figure 3 shows how these parts are redesigned. Modular parts are essential to IGEM because it allows us to easily switch parts in and out of a system. We decided to take this modular design to the double plasmid system also. Due to the difficulties we experienced with the single plasmid system, we decided to put this method on hold until we could perfect the double plasmid system. A generic gene-block is composed of pT7_rbs_(LsrK/LuxS/YdgG)_terminator. Our three main blocks: LsrK-block, YdgG-block, and LuxS-block were all synthesized using IDT.         
+## Double Plasmid
 
-
-
-## Double Plasmid:
-Once we built modular parts, we built the double plasmid system using them. The double plasmid system is split into to the synthetic Quorum Sensing plasmid (pSQS) and the T7 regulated parts. Figure 1 shows how we built pSQS. For building the T7 regulated plasmids, we were approached with the challenge of deciding which iteration of LsrK-Block, LuxS-Block, and YdgG-Block to use. The mathematical model to predict which iteration would be the best was still being built so we decided to approach the problem by building all iterations of those three parts. In addition to putting all the three of the gene blocks in one plasmid, we decided to break them up further to understand how each of these genes work better. 
+Once we built modular parts, we built the double plasmid system using them. The double plasmid system is split into to the synthetic Quorum Sensing plasmid (pSQS) and the T7 regulated parts. Figure 4 shows how we built pSQS. For building the T7 regulated plasmids, we were approached with the challenge of deciding which iteration of LsrK-Block, LuxS-Block, and YdgG-Block to use. The mathematical model to predict which iteration would be the best was still being built so we decided to approach the problem by building all iterations of those three parts. In addition to putting all the three of the gene blocks in one plasmid, we decided to break them up further to understand how each of these genes work better. 
 
 Since our gene of interest to express in the system is sfGFP, an sfGFP-block (pT7_rbs_sfGFP_terminator) is added to every T7 regulated plasmid. Luckily, the registry already has a T7 promoter regulated sfGFP part (BBa_I719005), we did not have to build one. 
 
-We built a total of 7 different T7 regulated plasmids: LuxS-sfGFP, LsrK-sfGFP, YdgG-sfGFP, LsrK-LuxS-sfGFP, LsrK-YdgG-sfGFP, LuxS-YdgG-sfGFP, and LsrK-LuxS-YdgG-sfGFP. These are all modular gene blocks put together. Figure 4 shows an example the T7 regulated plasmid YdgG-sfGFP.
+We built a total of 7 different T7 regulated plasmids: LuxS-sfGFP, LsrK-sfGFP, YdgG-sfGFP, LsrK-LuxS-sfGFP, LsrK-YdgG-sfGFP, LuxS-YdgG-sfGFP, and LsrK-LuxS-YdgG-sfGFP. These are all modular gene blocks put together. Figure 7 shows an example the T7 regulated plasmid YdgG-sfGFP.
 
 <figure>
-	<img src="/images/Wetlab/T7.png" alt=T7>
-	<figcaption>Figure 5: An example of a T7 regulated plasmid would look like. This depicts the sfGFP block and YdgG block put together to form YdgG-sfGFP plasmid.  </figcaption>
+	<img src="images/Wetlab/T7.png" alt="Activation">
+	<figcaption>Figure 7: An example of a T7 regulated plasmid would look like. This depicts the sfGFP block and YdgG block put together to form YdgG-sfGFP plasmid. </figcaption>
 </figure>
-
-<br>
-<br> 
-<br>
-<br> 
-<br>
-<br> 
 
 All of the T7 regulated plasmids were built using NEB golden gate assembly inside the pGGA backbone. This backbone was used for simplicity since it is optimized for golden gate assembly with its BSA1 recognition sites. When designing the primers for golden gate assembly, we ran into another problem with our design. Since each block begins with the same promoter-rbs sequences and ends with same terminator sequence, there ended up being too much similarity between the parts so would not have ended up being assembled in the right order. To solve this problem, redesigned out 3 main blocks using a unique 10 nucleotide sequence at the beginning and end of each block. 
 
@@ -141,13 +140,18 @@ We validated all of parts using restriction enzymes digests and running gels on 
 
 Bassler B, Miller M (2001). Quorum Sensing in Bacteria. Annual Review of Microbiology 55, 165-199.  
 
+Chang AC, Cohen SN. Construction and characterization of amplifiable multicopy DNA cloning vehicles derived from the P15A cryptic miniplasmid. J. Bacteriol. 134: 1141-1156, 1978. 
+
 Gonzalez J, Neshavan N (2006). Messing with Bacterial Quorum Sensing. Microbiology and Molecular Biology
 Reviews 70, 859-875.   
 
 Herzberg M, Kaye I, Peti W, Wood T (2006) YdgG (TqsA) Controls Biofilm Formation in Escherichia
 coli K-12 through Autoinducer 2 Transport. J Bacteriol. 2006 Jan; 188(2): 587–598.    
 
+Ladisch MR, Kohlmann KL. Recombinant Human Insulin. Biotechnology Progress 8: 469-478, 1992   
+
+Xavier KB, Bassler BL. 2005. Regulation of uptake and processing of the quorum-sensing autoinducer AI-2 in Escherichia coli. J Bacteriol 187:238–248. doi:10.1128/JB.187.1.238-248.2005.  
+
 Zargar A, Quan D, Bentley W (2016) Enhancing Intercellular Coordination: Rewiring Quorum Sensing Networks
-for Increased Protein Expression through Autonomous Induction. ACS Synth. Biol 2016, 5, 923-928
-26.     
+for Increased Protein Expression through Autonomous Induction. ACS Synth. Biol 2016, 5, 923-928 26.     
 
