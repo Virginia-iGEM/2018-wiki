@@ -41,9 +41,9 @@ For the first step in building the model, we had to clearly define our system an
 ## Defining Equations and Relationships
 
 After we clearly defined the system, we were ready to begin developing the mathematical components of the model. There were three main types of interactions we needed to develop equations for:
-Repression/Activation: LsrR repression of pLsr, T7 activation of pT7
-Enzymatic reactions (transport, catalysis, and degradation)
-Standard mass action reactions
+- Repression/Activation: LsrR repression of pLsr, T7 activation of pT7
+- Enzymatic reactions (transport, catalysis, and degradation)
+- Standard mass action reactions
 
 For repression of the lsr operon by LsrR, we used the hill function model with cooperativity:
 
@@ -52,7 +52,7 @@ For repression of the lsr operon by LsrR, we used the hill function model with c
 	<figcaption>Equation 1: Hill function model for repression of the lsr operon. </figcaption>
 </figure>
 
-where [S] is the concentration of the substrate (LsrR), Vmax is the maximum rate of transcription of the genes repressed by LsrR, n (cooperativity) is the number of repressors needed for repression (4 in the case of LsrR), and K is the repression coefficient (Stan 2014).
+where *[S]* is the concentration of the substrate (LsrR), Vmax is the maximum rate of transcription of the genes repressed by LsrR, n (cooperativity) is the number of repressors needed for repression (4 in the case of LsrR), and K is the repression coefficient (Stan 2014).
 
 For activation of pT7 by T7 RNA polymerase, we also used the hill function model:
 
@@ -61,7 +61,7 @@ For activation of pT7 by T7 RNA polymerase, we also used the hill function model
 	<figcaption>Equation 2: Hill function model for activation of pT7 </figcaption>
 </figure>
 
-where [S] is the concentration of the substrate (T7), Vmax is the maximum rate of transcription of the genes activated by T7, n (cooperativity) is the number of activators needed for activation (1 in the case of T7), and K is the activation coefficient (Stan 2014). 
+where *[S]* is the concentration of the substrate (T7), Vmax is the maximum rate of transcription of the genes activated by T7, n (cooperativity) is the number of activators needed for activation (1 in the case of T7), and K is the activation coefficient (Stan 2014). 
 
 For the enzymatic reaction of LsrK, we were able to find better documentation of enzyme kinetics, so we used the standard form of the Michaelis-Menten equation:
 
@@ -70,7 +70,7 @@ For the enzymatic reaction of LsrK, we were able to find better documentation of
 	<figcaption>Equation 3: standard form of the Michaelis-Menten equation </figcaption>
 </figure>
 
-where [P] is the concentration of the product, kcat is the catalytic rate, [B] is the concentration of the enzyme, [A] is the concentration of the substrate, and KM is the [A] at half the maximum rate of reaction (Stan 2014).
+where *[P]* is the concentration of the product, kcat is the catalytic rate, *[B]* is the concentration of the enzyme, *[A]* is the concentration of the substrate, and KM is the *[A]* at half the maximum rate of reaction (Stan 2014).
 
 For the enzymatic reaction of LsrFG as well as the transport reactions of LsrACDB and YdgG, we used the following reduction of the Michaelis-Menten equation:
 
@@ -280,6 +280,49 @@ Our model of quorum-sensing based induction produced many predictions of experim
 	<img src="images/Modeling/Activation16.png" alt="Activation">
 	<figcaption>Figure 10: Activation Distributions of Enhancement System Variants</figcaption>
 </figure>
+
+# ODE
+
+## Diffusion
+<figure>
+	<img src="images/Modeling/ODE1.png" alt="Activation">
+</figure>
+
+## Cellular Equations 
+
+<figure>
+	<img src="images/Modeling/ODE2.png" alt="Activation">
+</figure>
+
+<figure>
+	<img src="images/Modeling/ODE3.png" alt="Activation">
+</figure>
+
+# Resources 
+
+<a href="http://2018.igem.org/wiki/images/2/2d/T--Virginia--2018_ModelingFiles.zip">Click here</a> to view our MATLAB code, sensitivity tests, and figures for final runs.  
+
+# References
+
+Herzberg M, Kaye I, Peti W, Wood T (2006) YdgG (TqsA) Controls Biofilm Formation in Escherichia coli K-12 through Autoinducer 2 Transport. J Bacteriol. 2006 Jan; 188(2): 587–598.         
+
+G.-B. Stan. (2014). Modelling in Biology. [Online]. Available: http://www.bg.ic.ac.uk/research/g.stan/2010_Course_MiB_handouts.pdf   
+
+Gonzalez J, Neshavan N (2006). Messing with Bacterial Quorum Sensing. Microbiology and Molecular Biology Reviews 70, 859-875.   
+
+Graff, Steven. “A Mathematical Model to Study the Role of the Lsr Intergenic Region in Mediation of Autoinducer-2 Quorum Sensing in Escherichia Coli” University of Maryland, 2013.     
+
+Graff, Steven M., and William E. Bentley. “Mathematical Model of LsrR-Binding and Derepression in Escherichia Coli K12.” Journal of Bioinformatics and Computational Biology, vol. 15, no. 01, 2017, p. 1650039., doi:10.1142/s0219720016500396.   
+
+Tropini, Carolina. Modeling Diffusion Equations... A Simple Tutorial. 2008, carolina.tropini.org/assets/files/Diffusion_Equation_Tutorial.pdf.   
+
+Tsao, C.-Y., Hooshangi, S., Wu, H.-C., Valdes, J. J., and Bentley, W. E. (2010) Autonomous induction of recombinant proteins by minimally rewiring native quorum sensing regulon of E. coli Metab. Eng. 12, 291– 297DOI: 10.1016/j.ymben.2010.01.002   
+
+Quan, D. N., Tsao, C.-Y., Wu, H. C., and Bentley, W. E. (2016) Quorum sensing desynchronization leads to bimodality and patterned behaviors. PLoS Comp. Biol., DOI: 10.137/journal/pcbi.1004781.    
+
+Zargar A, Quan D, Bentley W (2016)  Enhancing Intercellular Coordination: Rewiring Quorum Sensing Networks for Increased Protein Expression through Autonomous Induction. ACS Synth. Biol 2016, 5,  923-928.   
+
+
 
 
 
