@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="281.6" height="281.6" version="1.1" viewBox="0 0 74.508 74.508" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="linearGradient5199-4-5">
+   <stop stop-color="#26fffa" offset="0"/>
+   <stop stop-color="#7a6df0" offset=".5"/>
+   <stop stop-color="#eb0068" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient8308" x1="47.893" x2="68.127" y1="223.51" y2="223.51" gradientTransform="matrix(3.3315 0 0 3.3315 -284.49 -671.12)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient5199-4-5"/>
+  <linearGradient id="linearGradient8306" x1="47.893" x2="68.127" y1="223.51" y2="223.51" gradientTransform="matrix(3.6481 0 0 3.6481 -302.85 -741.89)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient5199-4-5"/>
+  <radialGradient id="radialGradient3373" cx="166.17" cy="79.309" r="18.108" gradientTransform="matrix(1.5904 0 0 1.5904 -354.47 -52.341)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#eb0068" offset="0"/>
+   <stop stop-color="#eb0068" offset=".4"/>
+   <stop stop-color="#eb0068" stop-opacity="0" offset="1"/>
+  </radialGradient>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(128.48 -36.255)">
+  <g fill="none" stroke="#ff157c" stroke-linecap="round" stroke-width="1.587">
+   <path d="m-88.677 65.067 0.01 6.0163"/>
+   <path d="m-91.561 70.065-0.62354 5.984"/>
+   <path d="m-84.156 61.545-1.2621 5.8825"/>
+   <path d="m-88.587 73.867-0.62353 5.984"/>
+   <path d="m-80.2 72.02-5.9568-0.84456"/>
+   <path d="m-92.971 66.642-3.7452-4.7085"/>
+   <path d="m-80.448 79.065-5.6436-2.0848"/>
+   <path d="m-92.387 78.694-3.6893 4.7525"/>
+   <path d="m-83.059 86.277-3.0724-5.1728"/>
+   <path d="m-88.874 88.104-1.7437-5.7581"/>
+   <path d="m-96.433 71.703-1.7437-5.7581"/>
+   <path d="m-80.792 67.534 0.23111-6.0119"/>
+   <path d="m-97.742 74.373 0.01 6.0163"/>
+   <path d="m-101.51 67.578-0.62355 5.9839"/>
+   <path d="m-101.02 78.279-0.62353 5.984"/>
+   <path d="m-101.88 64.075-3.7452-4.7085"/>
+   <path d="m-93.59 85.593-3.6893 4.7524"/>
+   <path d="m-104.86 79.163-1.7437-5.7581"/>
+   <path d="m-75.788 75.71-5.9568-0.84456"/>
+   <path d="m-90.413 55.609-1.2621 5.8825"/>
+   <path d="m-87.049 61.598 0.23111-6.0119"/>
+   <path d="m-76.802 87.801-3.0723-5.1728"/>
+   <path d="m-83.74 93.238-1.7437-5.7581"/>
+  </g>
+  <circle cx="-90.188" cy="73.792" r="28.798" fill="url(#radialGradient3373)" opacity=".608" style="paint-order:normal"/>
+  <circle cx="-91.228" cy="73.509" r="36.725" enable-background="new" fill="none" stroke="url(#linearGradient8306)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.0583" style="paint-order:markers stroke fill"/>
+  <circle cx="-91.228" cy="73.509" r="33.537" enable-background="new" fill="none" stroke="url(#linearGradient8308)" stroke-linecap="round" stroke-linejoin="round" stroke-width=".52917" style="paint-order:markers stroke fill"/>
+ </g>
+</svg>

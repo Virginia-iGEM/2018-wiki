@@ -35,7 +35,8 @@ body {
   padding: 20px;
   position: relative;
   width: 350px;
-  background-color: #fff !important;
+  background-color: $background-dark-1 !important;
+  color: $text-light !important;
 
   h1, h2, h3, h4, h5, h6 {
     text-align: center;
@@ -43,6 +44,7 @@ body {
   }
   p {
     border: hidden;
+    color: $text-light !important;
     //bottom: 70px;
     //display: inline-block;
     padding: 15px 32px;
@@ -56,28 +58,27 @@ body {
     text-align: middle
   }
   img {
-    max-width: 100% !important;
+    max-width: 70% !important;
+    margin: 0 auto !important;
+    display: block;
     position: relative;
-    top: 50%;
-    transform: translateY(-125%);
   }
 
 
   //Button for Overview
   a.buttonoverview {
-    background-color: $accent-cold-1;
+    background-color: $text-light;
+    text-align: center;
     border: hidden;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    color: $text-light !important;
     cursor: pointer;
     display: block;
     margin: 0 auto !important;
     padding: 15px 32px;
     position: absolute;
     &:hover {
-      color: $text-light !important;
       text-shadow: none;
     }
   }
