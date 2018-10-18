@@ -1,6 +1,6 @@
 # Quorum Activation Model
 
-# Introduction
+# Overview
 
 At first, we relied on experts and literature to guide the design of our plasmids for modifying quorum sensing (QS). However, we quickly realized that having a model would help us better understand our system and predict which synthetic edits would best decrease bimodality. We then developed a mass action kinetics model of the interactions between the lsr operon, AI-2, and our Synthetic Quorum Sensing Plasmid (pSQS) system to predict quorum activation. Using this model to simulate a population cell-by-cell in solution, we worked to establish model parameters where none existed in literature. From here, we inserted circuit-altering genes from our Synthetic Quorum Sensing (sQS) related parts into the model to determine how different combinations of genes will affect quorum activation and bimodality. These results provide a platform that future projects can use to effectively engineer optimal activation dynamics and more complex devices using quorum sensing.
 
@@ -172,8 +172,10 @@ A sensitivity test is an analysis of how much impact a change in a parameter wil
 
 For our first round of tests, we ran the model with the initial parameter values, studied the dynamics of the runs, and made hypotheses about which parameters would need to be changed, and how, to drive the dynamics of the system toward that of previous work (Quan et al. 2016). Once we identified the parameters we suspected most impacted the results, we designed a set tests to run.
 
-# Modeling
-## Section I: Characterization and Comparison of QS Response Topologies
+# Simulation & Results
+## Section I: Characterization 
+<h5>Characterization and Comparison of QS Response Topologies</h5>  
+
 In a 2016 study by Quan et al, the molecular dynamics of quorum activation in the Lsr operon were modeled in a system of differential equations. The results of this model are depicted in Figure 2 and illustrate the qualitative dynamics of quorum activation with normalized concentration curves of extracellular AI-2, phosphorylated AI-2 (AI2-P) and the gene induction of the lsr operon (lsrACDBFG). 
 
 <figure>
@@ -201,7 +203,8 @@ While for the development of this model we were unable to obtain the code that p
 
 In the simulation shown in Figure 4, the dynamics of AI2-P and extracellular AI-2 are nearly identical to in Figure 3. However, the time of activation is shifted to 280 minutes, within 2% of the time Quan et al predicted. However, at this copy number, T7RPol overshoots a stable concentration and begins to fall around 350 min. In this way, the single copy pSQS test remains more consistent with predicted results. This change in topology as a result of pSQS copy number has important implications for the exploration of activation by Quorus because a delay in activation can correspond to a change in sensitivity of sQS to population density.
 
-## Section II: Validation of Quorum-Sensitive Activation
+## Section II: Validation 
+<h5>Validation of Quorum-Sensitive Activation</h5>
 
 To validate that activation in our model relied on external AI-2 accumulation and cellular cooperativity, and not individual self-activation, we simulated QS dynamics in a single cell. The cells were placed in a small virtual medium with the bounds one unit from the edges of the cell. Two different boundary conditions (BC) for AI-2 diffusion in the medium were simulated in compared for this test. These two BC were designed to simulate the behavior of a cell in a group of other quorum sensing cells versus when isolated in an AI-2 deficient solution.
 
@@ -222,7 +225,8 @@ The steady-state, post-activation levels of AI2-P found at time greater than 400
 
 There is still noticeably a problem with the model. Though significantly less than in true quorum response, the cell in Isolation still produces protein at 30% of Group due to the accumulation of AI2-P. This indicates that while our Quorum Activation Model captures some of the cooperative behavior found in quorum sensing, some fraction of the observed quorum response will simply be due to the self-induction of a single cell. Potential causes of this problem and ways future iterations of this model can be improved to address it will be discussed in “Limitations and Future Work.”
 
-## Section III: Investigation of sQS Plasmid Copy Number and Leaky Expression
+## Section III: pSQS Copy Number
+<h5>Investigation of sQS Plasmid Copy Number and Leaky Expression</h5>
 
 When first designing our Synthetic Quorum Response plasmid, there was concern over the potential leaky expression if it were put in a mid to high copy backbone. In previous designs of plasmids similar to the sQS plasmid (pSQS), chiefly its predecessor pCT6, the backbone has been single copy to avoid AI-2 independent self-activation (Zargar). This reasoning arises from the logic that fewer pLsr binding sites, from less pCT6, mean a higher ratio of LsrR protein to its operator binding site and an overall more reliable OFF state. The justification for avoiding a higher copy number of pSQS is that it would cause activation to occur earlier and less cooperatively.
 
@@ -239,7 +243,9 @@ The results of this simulation call into question whether a high copy number ind
 
 This begs for experimental validation. A simple set of  pSQS + pT7-sfGFP transformed cells, with pSQS copy number as the independent variable and pT7-sfGFP on a high copy backbone could be analyzed with flow cytometry. The results from an experiment of this kind would further validate the conclusions of this simulation.
 
-## Section IV: Exploring the Quorus Enhancement System
+## Section IV: Combinatorial Tests
+
+<h5>Exploring the Quorus Enhancement System</h5>
 
 In this section, a combinatorial approach is taken to the design of the Quorus Enhancement System. When we discussed our project with Dr. Amin Zargar, whose work we used as the foundation of our project, he suggested performing these tests experimentally. Due to time constraints, not all of these combinations could be constructed and tested. As a result, this model provides insight into the future design of the Quorus Enhancement and Response System.
 
@@ -273,7 +279,9 @@ Orange block coloring corresponds to a negative change, where activation happens
 
 This exploration of the dynamics of the Quorus Enhancement System elucidate the dimensions of control that can be exerted over a quorum sensing population. In Figures 7 and 8, the factors directly related to manufacturing, mean and homogeneity of induction, are found to be manipulable by selecting certain pairs of genes from the Modular T7-Regulated Library of parts. Additionally, the sensitivity of quorum response can be modulated from the natural value by similar pairings, as shown in Figure 9.
 
-## Section V: Comparison to Experimental Results
+## Section V: Experimental Validation
+<h5>Comparison to Experimental Results</h5>
+
 Our model of quorum-sensing based induction produced many predictions of experimental behavior. Figures 7 through 9 from Section IV contain  The strongest agreement between experimental results and our model predictions is in our predictions from Figure 8: Standard Deviation of Peak Activation Among Cells. Using our population model of an array of quorum sensing cells, we computed the variance of activation levels among the cells. These measures of activation variance, and consequently standard deviation, provided comparative predictions for how different Enhancement System variants might affect population activation distributions.
 
 <figure>
@@ -281,6 +289,7 @@ Our model of quorum-sensing based induction produced many predictions of experim
 	<figcaption>Figure 10: Activation Distributions of Enhancement System Variants</figcaption>
 </figure>
 
+# Future Work
 
 # Additional Resources 
 
