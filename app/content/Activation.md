@@ -114,13 +114,13 @@ Our model incorporates several more assumptions aside from those already listed:
 **Assumption 4**: All reactions requiring ATP (LsrACDB and YdgG) are assumed to have it in excess (Graff 2013)    
 **Assumption 5**: We did not include the AI-2 importer PTS into our model, and instead assumed that the refined import dynamics of LsrACDB and YdgG after sensitivity testing would make PTS unnecessary     
 
-A list of all the equations used in our model can be found below.
+A list of all the <a href="http://2018.igem.org/wiki/images/8/8d/T--Virginia--2018_ODE.pdf">equations</a> used in our model can be found below.
 
 ## Parameter Searching
 
 After we had established the set of equations we wanted to use to model our system, we had to start searching through literature to find values for our parameters and initial conditions. While it is always easier to have the correct values at the outset, this is not always possible. Often, not enough research has been done about a system for it to be easy or even possible to determine many of the parameters in any given model. Since we were having trouble finding some of our parameter values, we settled with finding a general order of magnitude for some, and left others to be entirely determined through sensitivity testing. We recommend that future teams begin moving on to set up sensitivity testing sooner rather than later, and prioritize finding parameters and initial conditions within some order of magnitude.
 
-A table outlining all of the parameter values and initial conditions used can be found below. 
+A <a href="http://2018.igem.org/wiki/images/b/b3/T--Virginia--2018_Parameter_Table.pdf">table</a> outlining all of the parameter values and initial conditions used can be found below. 
 
 ## Choosing a Platform
 
@@ -281,28 +281,14 @@ Our model of quorum-sensing based induction produced many predictions of experim
 	<figcaption>Figure 10: Activation Distributions of Enhancement System Variants</figcaption>
 </figure>
 
-# ODE
-
-## Diffusion
-<figure>
-	<img src="images/Modeling/ODE1.png" alt="Activation">
-</figure>
-
-## Cellular Equations 
-
-<figure>
-	<img src="images/Modeling/ODE2.png" alt="Activation">
-</figure>
-
-<figure>
-	<img src="images/Modeling/ODE3.png" alt="Activation">
-</figure>
 
 # Additional Resources 
 
 <a href="http://2018.igem.org/wiki/images/2/2d/T--Virginia--2018_ModelingFiles.zip">Click here</a> to view our MATLAB code, sensitivity tests, and figures for final runs.  
 
-<a href="http://2018.igem.org/wiki/images/b/b3/T--Virginia--2018_Parameter_Table.pdf">Click here</a> to view our complete parameter table. 
+<a href="http://2018.igem.org/wiki/images/b/b3/T--Virginia--2018_Parameter_Table.pdf">Table of Parameters and Initial Values</a> 
+
+<a href="http://2018.igem.org/wiki/images/8/8d/T--Virginia--2018_ODE.pdf">System of Equations for Cellular Quorum Sensing</a>
 
 # References
 
