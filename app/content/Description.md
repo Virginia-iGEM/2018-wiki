@@ -12,18 +12,19 @@ Our project, Quorus, explores quorum sensing and how it can be applied to bioman
 	<div class="grid-selection">
 		<h2>Design</h2>
 		<p>Learn more about the structure of our project. </p>
-            <img src="/images/Wetlab/Modular.png" alt="Modular">
+            <img src="/images/icons/design.svg" alt="Design">
 		<a href="/Design.html" class="buttonoverview">Design</a>
 	</div>	
 		<div class="grid-selection">
 		<h2>Demonstrate</h2>
 		<p>See our proof of concept for our project.</p>
+            <img src="/images/icons/demonstrate.svg" alt="Modular">
 		<a href="/Demonstrate.html" class="buttonoverview">Demonstrate</a>
 	</div>
 	<div class="grid-selection">
 		<h2>Safety</h2>
 		<p>Learn about how we keep the lab safe.</p>
-            <img src="/images/goggles.jpg" alt="Modular">
+            <img src="/images/icons/safety.svg" alt="Safety">
 		<a href="/Safety.html" class="buttonoverview">Notebook</a>
 	</div>
 </div>

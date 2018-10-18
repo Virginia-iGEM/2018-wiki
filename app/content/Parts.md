@@ -7,18 +7,21 @@ We have been able to create a library of Lsr Operon genes that are able to contr
 
 <div class="row">
 	<div class="grid-selection">
-		<h1>Basic Parts</h1>
+		<h1>Basic</h1>
 		<p>Check out our best basic parts! </p>
+            <img src="/images/icons/part.svg" alt="Modular">
 		<a href="/Basic_Part.html" class="buttonoverview">Basic Parts</a>
 	</div>
 	<div class="grid-selection">
-		<h1>Composite Parts</h1>
+		<h1>Composite</h1>
 		<p>Come see our composite parts. </p>
+            <img src="/images/icons/part_composite.svg" alt="Modular">
 		<a href="/Composite_Part.html" class="buttonoverview">Composite Parts</a>
 	</div>	
 	<div class="grid-selection">
-		<h1>Parts Collection</h1>
+		<h1>Collection</h1>
 		<p>Our extensive library of parts. </p>
+            <img src="/images/icons/dna.svg" alt="Modular">
 		<a href="/Demonstrate.html" class="buttonoverview">Parts Collection</a>
 	</div>
 </div>
