@@ -98,3 +98,23 @@ In the case of Human SOD1, it is known that ~80 mg of SOD1 was produced per 1g o
 </figure>
 
 For Discussion of Results, see the <a href="/Human_Practices.html" target="_blank">Financial Analysis</a>. 
+
+# References
+
+Apolipoprotein A-I from human plasma A0722. (n.d.). Retrieved October 15, 2018, from https://www.sigmaaldrich.com/catalog/product/sigma/a0722   
+
+Human Apolipoprotein E3 Protein, CF | R&D Systems 4144-AE-500 product information. (n.d.). Retrieved October 15, 2018, from https://www.labome.com/product/R-D-Systems/4144-AE-500.html
+
+IPTG | Isopropyl b-D-1-thiogalactopyranoside | CAS 367-93-1 | P212121 Store. (n.d.). Retrieved October 15, 2018, from https://store.p212121.com/IPTG/
+
+IPTG I6758. (n.d.). Retrieved October 15, 2018, from https://www.sigmaaldrich.com/catalog/product/sial/i6758
+
+Marisch, K., Bayer, K., Cserjan-Puschmann, M., Luchner, M., & Striedner, G. (2013). Evaluation of three industrial Escherichia coli strains in fed-batch cultivations during high-level SOD protein production. Microbial Cell Factories, 12, 58. https://doi.org/10.1186/1475-2859-12-58
+
+Mouse APOA1 / Apolipoprotein A 1 Protein (Recombinant His) - LS-G3282 | LifeSpan Biosciences LS-G3282 product information. (n.d.). Retrieved October 15, 2018, from https://www.labome.com/product/LifeSpan-Biosciences/LS-G3282.html
+
+RAP, Human, Recombinant, E. coli 553506M. (n.d.). Retrieved October 15, 2018, from https://www.sigmaaldrich.com/catalog/product/mm/553506m
+
+Sivashanmugam, A., Murray, V., Cui, C., Zhang, Y., Wang, J., & Li, Q. (2009). Practical protocols for production of very high yields of recombinant proteins using Escherichia coli. Protein Science : A Publication of the Protein Society, 18(5), 936–948. https://doi.org/10.1002/pro.102
+SOD1 - Superoxide dismutase [Cu-Zn] - Homo sapiens (Human) - SOD1 gene & protein. (n.d.). Retrieved October 15, 2018, from https://www.uniprot.org/uniprot/P00441
+
