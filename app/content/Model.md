@@ -1,7 +1,5 @@
 # Modeling
 
-![QSgif](/images/Modeling/QS.gif) 
-
 <div class="row">
 	<div class="grid-selection">
 		<h2>Activation</h2>

@@ -34,8 +34,8 @@ We designed this webscraper to be easily modifiable and extendable, with the hop
 ### External Resources
 
 All these tutorials and tools can be found directly on our GitHub page:
-[Wiki Build Tool](https://github.com/Virginia-iGEM/igem-wikibrick)
-[Wiki Build Tool Tutorial](https://github.com/Virginia-iGEM/igem-wikibrick/tree/master/docs/tutorial)
-[Yeoman Generator](https://github.com/Virginia-iGEM/generator-igemwiki) - creates a template of the wiki instead of starting from scratch.
-[Webscraper](https://github.com/Virginia-iGEM/igem-wikiscraper)
-[Command Line Tutorial](https://github.com/Virginia-iGEM/2018-tutorials/tree/master/cli)
+[Wiki Build Tool](https://github.com/Virginia-iGEM/igem-wikibrick)    
+[Wiki Build Tool Tutorial](https://github.com/Virginia-iGEM/igem-wikibrick/tree/master/docs/tutorial)        
+[Yeoman Generator](https://github.com/Virginia-iGEM/generator-igemwiki) - creates a template of the wiki instead of starting from scratch.        
+[Webscraper](https://github.com/Virginia-iGEM/igem-wikiscraper)     
+[Command Line Tutorial](https://github.com/Virginia-iGEM/2018-tutorials/tree/master/cli)    

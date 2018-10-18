@@ -13,6 +13,7 @@ We couldn't have done everything we did without the fantastic contributions and 
 
 We are the twelve undergraduates of Virginia iGEM! Click the portraits to see descriptions of every team member.
 
+## The team!
 <p>
 	<div class="team-bio">
 		<div class= "unhidden" id="Ngozi">

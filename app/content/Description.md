@@ -1,9 +1,3 @@
-# Project Description
-
-Heterogeneity of cell populations caused by {{{define "quorum sensing"}}} leads to variability in gene expression that is hard to predict. During biomanufacturing, elevating quorum-induced protein expression will lead to gain of profit. Decreasing this expression can also be beneficial in situations where undesirable {{{define "biofilms"}}} may form on medical equipment or controlling {{{define "virulence"}}} in bacteria. We will modify the existing bacterial quorum sensing system controlled by the {{{define "Lsr operon"}}} by upregulating the synthesis and excretion of {{{define "Autoinducer-2"}}}, a universal quorum molecule. This will increase population-scale AI-2 intake and {{{define "phosphorylation"}}} after the initial AI-2 threshold concentrations have been reached to reduce variability in induced gene expression.
-
-A model is used to predict the impacts of manipulating the expression of quorum sensing genes and guide design and experimentation. DNA assembly of a Biobricks containing {{{define "pLsr"}}}, {{{define "T7 RNA Polymerase"}}}, {{{define "LsrK"}}}, {{{define "LsrACDB"}}}, {{{define "LuxS"}}}, {{{define "YdgG"}}}, and {{{define "sfGFP"}}} enables both the enhancement of natural quorum sensing and the quantification of protein activation among the bacteria in a colony. This device will improve the viability of {{{define "autoinduction"}}} as an induction method in industries such as biomanufacturing by decreasing the variability of a cell phenotypes and increasing expression within a single culture to reduce costs leading to an increase in profits. In addition, by insertion of T7 polymerase into a quorum-sensitive region of the genome of _E. coli_, we will create a chassis with specific, customizable quorum response for engineering and scientific applications.
-
 # Project Overview 
 
 Our project, Quorus, explores quorum sensing and how it can be applied to biomanufacturing. Learn more about the various aspects of our project by clicking on the links below. 
@@ -28,3 +22,41 @@ Our project, Quorus, explores quorum sensing and how it can be applied to bioman
 		<a href="/Safety.html" class="buttonoverview">Notebook</a>
 	</div>
 </div>
+
+# Quorus
+
+Quorus is a modular gene network for bacterial biomanufacturing and engineerable quorum sensing response. This device takes advantage of innate quorum sensitive genes in the AI-2-sensitive *lsr* operon which bacteria use to sense each other and coordinate a chorus of genetic response.
+
+<figure>
+	<img src="images/Description/Description1.png" alt="Description">
+	<figcaption>An overview of our system. </figcaption>
+</figure>
+
+ As the population grows, the universal signaling molecule AI-2 accumulates in the extracellular environment. The lsr operon and the Quorus Synthetic Quorum Sensing (sQS) plasmid cooperate to interpret this accumulation as population density and activate quorum response by internalizing and phosphorylating AI-2 to AI2-P. Through this response, the population is homogeneously activated to steady-state, where metabolic flux is redirected from growth to protein synthesis. In this activation, the sQS plasmid produces the biologically orthogonal T7 RNA Polymerase for synthetic quorum response and the self-induction of gene expression.
+
+Our motive for forwarding the development of this technology is in the promise of microbial manufacturing and its need for reliable, cost effective methods of gene induction. Current methods of induction, like those using IPTG, are insufficient because they require exogenous reagents and meticulous monitoring to determine the optimal density for induction. Quorus provides a solution this. By redirecting and amplifying natural quorum sensing pathways with Quorus, we can provide regulated self-induction and enhanced gene expression for biomanufacturing. By incorporating AI-2-regulating parts in the Quorus Enhancement System, the cell density required for activation can be tuned, and the mean and homogeneity of cellular induction can be improved over the state of the art (Zargar et a, 2016). 
+
+This QS-based autoinduction is also advantageous over devices based on constitutive expression by delaying metabolic strain of a device to stationary phase. allowing the colony to grow less hindered by the plasmid. Minimizing metabolic strain of a device during growth phase decreases the evolutionary disadvantage transferred to its chassis, reducing the risk of plasmid loss and improving device functionality.
+
+In a future where the application of bacteria as devices and tools is commonplace, synthetic biology will need to enable engineers to control everything from foundational to emergent behavior in bacteria. Because quorum sensing is a mechanism for organizing group behavior from growth to death, its manipulation allows for the design of phenotypes on the level of the population, rather than simply the cell.
+
+The design of quorum-sensitive devices is relatively unexplored in iGEM, but, using the Synthetic Quorum Sensing, Enhancement, and Response systems of Quorus, there is a promising future in the development of quorum-based genetic circuits.
+
+<figure>
+	<img src="images/Description/Description2.png" alt="Description">
+	<figcaption>An overview of our system. </figcaption>
+</figure>
+
+## Quorus is composed of four components.
+1) **The sQS Plasmid**  produces Synthetic Quorum Response using the bidirectional Lsr promoter region and T7 RNA polymerase (T7RPol).     
+2) **The Enhancement System** is a set of genes that operate on the universal autoinducer AI-2 to enhance quorum activation.     
+3) **The Response System** is for custom gene expression based on Quorus autoinduction.     
+4) **The Modular T7-Regulated Library** contains interchangeable blocks of Enhancement and Response genes that are transcribed specifically by T7 RNA Polymerase.     
+
+By producing the bacteriophage polymerase T7RPol, the sQS plasmid provides a harnessable wave of transcription upon quorum activation for T7-regulated genes. By using our Modular T7-Regulated Library to build Enhancement and Response Systems, an entire synthetic quorum sensing circuit can be engineered. 
+
+The Enhancement System, which we have begun to develop and refine in this project, is designed to decrease heterogeneity in quorum response among cells in a colony while maintaining high levels of induction. The QS-modifying genes we investigated for this system include LsrK, LsrACDB, LuxS, and YdgG. The Response System, which can be applied for autoinduced gene expression and biomanufacturing, uses this enhanced induction to express a custom gene sequence. By the future expansion of our Modular T7-Regulated Library, Quorus will make for a promising future in QS-based synthetic biology.
+
+# References
+
+Zargar A, Quan D, Bentley W (2016)  Enhancing Intercellular Coordination: Rewiring Quorum Sensing Networks for Increased Protein Expression through Autonomous Induction. ACS Synth. Biol 2016, 5,  923-928
