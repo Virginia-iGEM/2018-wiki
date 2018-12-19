@@ -7,13 +7,13 @@ Our project, Quorus, explores quorum sensing and how it can be applied to bioman
 		<h2>Experiments</h2>
 		<p>All the experiments we did.</p>
             <img src="/images/icons/labwork.svg" alt="Modular">
-		<a href="/Experiments.html" class="buttonoverview">Design</a>
+		<a href="/Experiments.html" class="buttonoverview">Experiment</a>
 	</div>	
 		<div class="grid-selection">
 		<h2>Results</h2>
 		<p>And the outcome of those experiments!</p>
             <img src="/images/icons/writeups.svg" alt="Modular">
-		<a href="/Results.html" class="buttonoverview">Demonstrate</a>
+		<a href="/Results.html" class="buttonoverview">Results</a>
 	</div>
 	<div class="grid-selection">
 		<h2>Notebook</h2>
@@ -25,6 +25,6 @@ Our project, Quorus, explores quorum sensing and how it can be applied to bioman
 		<h2>InterLab</h2>
 		<p>Plates upon plates upon plates, for standardization!</p>
             <img src="/images/icons/interlab.svg" alt="Modular">
-		<a href="/InterLab.html" class="buttonoverview">Notebook</a>
+		<a href="/InterLab.html" class="buttonoverview">InterLab</a>
 	</div>
 </div>

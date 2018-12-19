@@ -22,6 +22,6 @@ We have been able to create a library of Lsr Operon genes that are able to contr
 		<h1>Collection</h1>
 		<p>Our extensive library of parts. </p>
             <img src="/images/icons/dna.svg" alt="Modular">
-		<a href="/Demonstrate.html" class="buttonoverview">Parts Collection</a>
+		<a href="/Part_Collection.html" class="buttonoverview">Parts Collection</a>
 	</div>
 </div>

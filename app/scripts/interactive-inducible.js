@@ -1,25 +1,13 @@
-/**
- * @author Dylan Culfogienis
- * @email dtc9bb@virginia.edu
- * @date 9/17/2018
- * @file interactive.js
- * @brief Javascript for interactive cell simulation. Heavily inspired by
- * Luca Spardella's D3 Game of Life implementation.
- */
-
 var d3 = require('d3');
 
 var triggered = false;
 
 $(document).ajaxStop(function() {
-    if (!triggered && $('#petri-normal').length > 0) {
-        //var toolbarHeight = 64;
-        // Set interactive height to be equal to the width
-        $('#petri-normal').css('height', $('#petri-normal').css('width'));
+    if (!triggered && $('#petri-inducible').length > 0) {
 
         // GENERAL INITIALIZATION
         // Grab our <div> container
-        var container = d3.select('#petri-normal');
+        var container = d3.select('#petri-inducible');
         // Establish dimensions of simulation
         var dim = parseInt(container.style('width'));
         // Establish SVG drawing
@@ -81,7 +69,7 @@ $(document).ajaxStop(function() {
             age: 1,
             angle: Math.random() * Math.PI * 2,
                 color: function() {
-                    return '#fff';
+                    return '#33ffbe';
                 } 
             };}); // Start with just one cell
         };
@@ -108,7 +96,7 @@ $(document).ajaxStop(function() {
             angle: Math.random() * Math.PI * 2,
                 color: function() {
                     if (inducer) {
-                        return '#6e5eff';
+                        return '#33ffbe';
                     }
                     return '#fff';
                 } 
@@ -270,19 +258,19 @@ $(document).ajaxStop(function() {
         }
 
         // DOM function bindings
-        $('.constitutive_button').click(function() {
-            initialState = constitutiveState;
-            growthTime = 4000;
-            resetMedium();
+        $('.inducible_button').click(function() {
+            inducer = true;
+            restart(globalNodes);
+            growthTime = 3000;
         });
 
         var initialGrowth = false;
         $('main').scroll(function() {
-            var offset = $('#first-card').offset().top - $('main').scrollTop();
+            var offset = $('#petri-inducible').offset().top - $('main').scrollTop();
             //console.log(offset);
             if (!initialGrowth && offset <= 0) {
                 initialGrowth = true;
-                initialState = simpleState;
+                initialState = inducedState;
                 growthTime = 1000;
                 resetMedium();
             }
@@ -290,4 +278,3 @@ $(document).ajaxStop(function() {
         triggered = true;
     }
 });
-

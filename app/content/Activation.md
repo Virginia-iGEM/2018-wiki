@@ -1,14 +1,24 @@
 # Quorum Activation Model
 
-# Overview
+## Overview
 
-At first, we relied on experts and literature to guide the design of our plasmids for modifying quorum sensing (QS). However, we quickly realized that having a model would help us better understand our system and predict which synthetic edits would best decrease bimodality. We then developed a mass action kinetics model of the interactions between the lsr operon, AI-2, and our Synthetic Quorum Sensing Plasmid (pSQS) system to predict quorum activation. Using this model to simulate a population cell-by-cell in solution, we worked to establish model parameters where none existed in literature. From here, we inserted circuit-altering genes from our Synthetic Quorum Sensing (sQS) related parts into the model to determine how different combinations of genes will affect quorum activation and bimodality. These results provide a platform that future projects can use to effectively engineer optimal activation dynamics and more complex devices using quorum sensing.
+Information on the effects of genetic modifications on population and cellular scale quorum sensing responses was limited during project development, even after consulting experts and literature. To address this deficiency, we developed a model incorporating intracellular and intercellular quorum sensing (QS) dynamics which allowed for the testing of specific genetic and environmental changes on a quorum sensitive population of cells.  The goal of developing our model was to provide a foundation for simulating QS populations with synthetic quorum responses and recombinant genes for auto-inductive expression. A model of this kind has not been produced before, as previous models have not gone beyond the level of wild-type quorum dynamics.
+
+The intracellular half of the model relies on mass action kinetics to predict interactions between the lsr operon, the Quorus device, AI-2, and the surrounding medium. Incorporating this intracellular model on a cell-by-cell basis, we simulated an array of cells to capture the intercellular interactions and population dynamics that arise from this highly interconnected system.
+
+Using this two-phase model to simulate a population of cells, we worked to establish and refine model parameters where information was lacking in literature. Through iterative sensitivity tests based on a cycle of prediction, modification, simulation and analysis, we were able to replicate the dynamic character of studied lsr quorum sensing systems while incorporating Quorus’ Synthetic Quorum Sensing response plasmid, pSQS.
+
+Following these iterative sensitivity tests, we combinatorially modelled the effects of the Enhancement System using pairs of genes from the pool of LsrK, LsrACDB, LuxS, and YdgG. This was to enable an expanded understanding of our project when the resources available for testing the Enhancement System combinatorially were limited.
+
+After refining and validating the design of our model in Simulation & Results Sections I and II, and exploring determining factors of QS activation characteristics in Sections III and IV, we tested the predictions of our model versus actual experimental data in Section V. From this last section, the model proved its predictive power in its ability to forecast the relative variance of QS activation in a population. 
+
+The development and tuning of this computational tool, along with the implications of predictions already made by the model, will allow for more precise engineering of synthetic quorum sensing circuits and the construction of even more dynamically complex systems.
 
 # Background
 
 ## Quorum Sensing and the lsr Operon
 
-Quorum sensing (QS) is a system bacteria used to coordinate population based behaviors, such as the release of virulence factors and the formation of biofilms (Zargar et al. 2016). These types of behaviors are called quorum responses, and are only beneficial to a cell if others around it are engaging in the same behavior. For example, a single cell will not accomplish anything, but a population of cells all acting together can make an effective biofilm. Quorum responses are controlled by a class of molecules called autoinducers. Bacteria produce these molecules at low levels and export them into their environment until a threshold extracellular concentration reached. This concentration indicates that the population density is high enough for a quorum response to be appropriate. At this point, the autoinducer importers bring the molecules into the cell where they activate a set of genes associated with promoting quorum responses. 
+Quorum sensing (QS) is a system bacteria used to coordinate population based behaviors, such as the release of virulence factors and the formation of biofilms (Zargar et al. 2016). These types of behaviors are called quorum responses, and are only beneficial to a cell if others around it are engaging in the same behavior. For example, a population of cells all acting together can make an effective biofilm, but a single cell can not do much alone. Quorum responses are controlled by a class of molecules called autoinducers. Bacteria produce these molecules at low levels and export them into their environment until a threshold extracellular concentration reached. This concentration indicates that the population density is high enough for a quorum response to be appropriate. At this point, autoinducer importers bring the molecules into the cell where they activate a set of genes associated with promoting quorum responses. 
 
 The QS system we are working with is the lsr operon, which is regulated by the autoinducer molecule called autoinducer-2 (AI-2) (Figure 1).
 
@@ -17,33 +27,30 @@ The QS system we are working with is the lsr operon, which is regulated by the a
 	<figcaption> Figure 1: The lsr operon feedback loop in a wild type bacterium. (Quan et al 2016) </figcaption>
 </figure>
 
-This process has many components that allow it to operate as a QS system. The operon can be broken up into five main sections and a bidirectional AI-2 sensitive promoter, pLsr. One one side of this promoter are the genes LsrR and LsrK. LsrR is a repressor of the operon (Quan et al. 2016). Two dimers of LsrR bind together and associate with an operator sequence to repress both sides of the promoter. LsrK is a kinase which phosphorylates AI-2 to phospho-AI-2 (AI2-P) (Zargar et al. 2016). AI2-P is the form of AI-2 that derepresses the operon by binding to LsrR and causing it to dissociate from pLsr, which permits transcription. On the other side of the operon are the genes LsrACDB, LsrF, and LsrG. LsrACDB is an AI-2 importer complex. LsrFG is a set of enzymes which break down intracellular AI2-P. In the wild type, when the threshold extracellular AI-2 concentration is reached, AI-2 enters the cell and activates the lsr operon. This allows LsrACDB and LsrK to increase the uptake of extracellular AI-2 and phosphorylation of intracellular AI-2 to AI2-P, respectively, which activates the operon even further. This positive feedback loop is the quorum response, and is linked to the expression of quorum regulated genes. Once there is no more AI-2 to import, this activation is eventually shut off by the increased LsrR and LsrFG that repress the operon and take AI2-P out of the system. Three other genes are also important to the dynamics of the system. LuxS is an enzyme that catalyzes cellular metabolites to intracellular AI-2 (Gonzalez et al. 2006). YdgG is a transport protein that exports AI-2 from the cell (Herzberg et al. 2006). PTS is another transport protein that imports AI-2 into the cell. 
+This process has many components that allow it to operate as a QS system. The operon can be broken up into five main sections and a bidirectional AI-2 sensitive promoter, pLsr. On one side of this promoter,  are the genes LsrR and LsrK. LsrR is a repressor of the operon (Quan et al. 2016). Two dimers of LsrR bind together and associate with an operator sequence to repress both sides of the promoter. LsrK is a kinase which phosphorylates AI-2 to phospho-AI-2 (AI2-P) (Zargar et al. 2016). AI2-P is the form of AI-2 that derepresses the operon by binding to LsrR and causing it to dissociate from pLsr, which permits transcription. On the other side of the operon are the genes LsrACDB and LasFG. LsrACDB is an AI-2 importer complex, and LsrFG is a set of enzymes which break down intracellular AI2-P. In the wild type, when the threshold extracellular AI-2 concentration is reached, AI-2 enters the cell and activates the lsr operon. This allows LsrACDB and LsrK to increase the uptake of extracellular AI-2 and phosphorylation of intracellular AI-2 to AI2-P, respectively, which activates the operon even further. This positive feedback loop is the quorum response, and is linked to the expression of quorum regulated genes. Once there is no more AI-2 to import, this activation is eventually shut off by the increased LsrR and LsrFG that repress the operon and take AI2-P out of the system. Three other genes are also important to the dynamics of the system. LuxS is an enzyme that catalyzes cellular metabolites to intracellular AI-2 (Gonzalez et al. 2006). YdgG is a transport protein that exports AI-2 from the cell (Herzberg et al. 2006). PTS is another transport protein that imports AI-2 into the cell. 
 
-Previous research has shown that, in natural populations, small population heterogeneity can lead to bimodal activation of cells (Zargar et al. 2016, Quan et al. 2016). Because of the positive feedback dynamic of the operon, early activation of some cells causes them to uptake extracellular AI-2 quickly enough that others never get the chance to activate. It has also been shown that quorum activation can be linked to protein production to provide autonomous induction (Tsao et al. 2010). However, this bimodality means that only about 70% of cells are activated by a quorum response, decreasing the amount of potential protein produced (Zargar 2016). Our project centers on reducing this bimodality and increasing the levels of activation in a quorum response to boost protein yields and provide higher quorum regulated control of genes of interest. 
+Previous research has shown that, in natural populations, small population heterogeneity can lead to bimodal activation of cells (Zargar et al. 2016, Quan et al. 2016). Because of the positive feedback dynamic of the operon, early activation of some cells causes them to uptake extracellular AI-2 quickly enough that others never get the chance to activate. It has also been shown that quorum activation can be linked to protein production to provide autonomous induction (Tsao et al. 2010). However, this bimodality means that only about 70% of cells are activated by a quorum response, decreasing the amount of potential protein produced (Zargar 2016). With our Synthetic Quorum Sensing response plasmid, pSQS, our project centers on reducing this bimodality and increasing the levels of activation in a quorum response to boost protein yields and provide higher quorum regulated control of genes of interest. 
 
-A previous paper by Zargar et al. (2016) upregulated LsrACDB and LsrK to decrease bimodality and increase protein production. In this paper, a two plasmid system was used. The first plasmid was single copy, and included the LsrR gene, the pLsr promoter, and a gene for T7 RNA polymerase. This allowed the plasmid to have the same regulatory dynamics as the lsr operon. The second plasmid contained the genes to be upregulated under the control of a pT7 promoter, which requires T7 RNA polymerase for transcription. This second plasmid was a higher copy, allowing for upregulation of the genes it controlled. We built our project off of this paper, and were interested in seeing how upregulating those genes (LsrACDB and LsrK), as well as LuxS and YdgG would impact the bimodality of activation levels in our own synthetic QS plasmid (pSQS). After talking to Dr. Zargar (see Integrated Human Practices) we decided to construct and test multiple combinations of these genes on a similar two plasmid system to what he used.
-
-When first developing our project, we relied on experts and literature to guide the design of our plasmids for modifying QS. However, information on the potential effects of our genetic modifications on QS dynamics was limited. In addition, even though several previous models of the lsr operon existed, most were not accessible or did not go into specific cellular dynamics and could not accommodate the addition of synthetic plasmids (Quan et al. 2016, Hooshangi et al. 2011, Li et al. 2006). To address this, we decided to develop a mass-action model of the interactions of the lsr operon, our synthetic plasmids, and the QS molecule AI-2. This model enables us and future teams to predict and study how QS response with the Lsr  operon can be engineered for a designed end.
+A previous paper by Zargar et al. (2016) upregulated LsrACDB and LsrK to decrease bimodality and increase protein production. In this paper, a two plasmid system was used. The first plasmid was single copy, and included the LsrR gene, the pLsr promoter, and a gene for T7 RNA polymerase. This allowed the plasmid to have the same regulatory dynamics as the lsr operon. The second plasmid contained the genes to be upregulated under the control of a pT7 promoter, which requires T7 RNA polymerase for transcription. This second plasmid was of a higher copy, allowing for upregulation of the genes it controlled. We built our project off of this paper, and were interested in seeing how upregulating those genes (LsrACDB and LsrK), as well as LuxS and YdgG would impact the bimodality of activation levels in our own synthetic plasmid, pSQS. After talking to Dr. Zargar (see Integrated Human Practices) we decided to construct and test multiple combinations of these genes on a similar two plasmid system to what he used.
 
 # Development
 
 ## Identifying the System and Scope of Model
 
 For the first step in building the model, we had to clearly define our system and what the model should include. After some thought, and reviewing how past papers modeled the lsr operon, we decided that the abstract system in which we wanted to model quorum activation was a colony of cells in a Petri dish. This provided the following contexts for our model:
-
-- Cells with fixed location in 2 dimensional space
-- Medium considered to act like water for diffusion 
-- AI-2 free to diffuse within the system
-- No growth, fixed number of cells (model starts at stationary phase where reproduction is slowed)
-- Bounded or unbounded in space (Dirichlet or Neumann boundary conditions, respectively)
-- Cells’ only interaction with the medium and each other is through AI-2 flux
+Cells with fixed location in two dimensional space
+Medium considered to behave like water for diffusion 
+AI-2 free to diffuse within the system
+No growth, fixed number of cells (model starts at stationary phase where reproduction is slowed)
+Bounded or unbounded in space (Dirichlet or Neumann boundary conditions, respectively)
+Cells’ only interaction with the medium and each other is through AI-2 flux
 
 ## Defining Equations and Relationships
 
 After we clearly defined the system, we were ready to begin developing the mathematical components of the model. There were three main types of interactions we needed to develop equations for:
-- Repression/Activation: LsrR repression of pLsr, T7 activation of pT7
-- Enzymatic reactions (transport, catalysis, and degradation)
-- Standard mass action reactions
+Repression/Activation: LsrR repression of pLsr, T7 activation of pT7
+Enzymatic reactions (transport, catalysis, and degradation)
+Standard mass action reactions
 
 For repression of the lsr operon by LsrR, we used the hill function model with cooperativity:
 
@@ -114,13 +121,13 @@ Our model incorporates several more assumptions aside from those already listed:
 **Assumption 4**: All reactions requiring ATP (LsrACDB and YdgG) are assumed to have it in excess (Graff 2013)    
 **Assumption 5**: We did not include the AI-2 importer PTS into our model, and instead assumed that the refined import dynamics of LsrACDB and YdgG after sensitivity testing would make PTS unnecessary     
 
-A list of all the <a href="http://2018.igem.org/wiki/images/8/8d/T--Virginia--2018_ODE.pdf">equations</a> used in our model can be found below.
+A list of all the equations used in our model can be found <a href="http://2018.igem.org/wiki/images/8/8d/T--Virginia--2018_ODE.pdf">here</a>.
 
 ## Parameter Searching
 
 After we had established the set of equations we wanted to use to model our system, we had to start searching through literature to find values for our parameters and initial conditions. While it is always easier to have the correct values at the outset, this is not always possible. Often, not enough research has been done about a system for it to be easy or even possible to determine many of the parameters in any given model. Since we were having trouble finding some of our parameter values, we settled with finding a general order of magnitude for some, and left others to be entirely determined through sensitivity testing. We recommend that future teams begin moving on to set up sensitivity testing sooner rather than later, and prioritize finding parameters and initial conditions within some order of magnitude.
 
-A <a href="http://2018.igem.org/wiki/images/b/b3/T--Virginia--2018_Parameter_Table.pdf">table</a> outlining all of the parameter values and initial conditions used can be found below. 
+A table describing all of the parameter values and initial conditions used can be found <a href="http://2018.igem.org/wiki/images/b/b3/T--Virginia--2018_Parameter_Table.pdf">here</a>
 
 ## Choosing a Platform
 
@@ -128,53 +135,39 @@ As part of iGEM, we were given access to the SimBiology software package from Ma
 
 # Structure
 
-After getting within an order of magnitude for most of our parameters, we were ready to construct the actual model and begin sensitivity testing. The structure and code of our model can be separated into five main scripts.
+After getting within an order of magnitude for most of our parameters, we were ready to construct the actual model and begin sensitivity testing. The structure of our model can be broken into three main parts.
 
-**Model_Population.m**
+## Population Simulation
 
-- Holds the initial conditions for all variables.
-- Initializes a matrix of n cells.
-- Initializes a matrix of n “boxes” to store the extracellular AI-2 relevant to each cell. This matrix holds the “AO” parameter for each cell (see the Cellular Equations).
-- Sets the boundary conditions for diffusion.
-	- Dirilecht - allows AI-2 to diffuse past the boundary of cells. This models an open system.
-	- Neumann - keeps AI-2 from diffusing away past the boundary of cells. This models a closed system.
-- Calls Structure.m with the matrix of cells and the matrix of extracellular AI-2 as inputs.
+This section holds an matrix of n cell and another of n “locations” to store the extracellular AI-2 relevant to each cell. The boundary conditions are also defined in this section, and can be either Dirilecht or Neumann. Dirilecht boundary conditions allow AI-2 to diffuse past the boundary of cells. This models an open system. Neumann boundary conditions keep AI-2 from diffusing away past the boundary of cells. This models a closed system. 
 
-**Structure.m**
-- Calls Cellular_Function.m for all cells at every time step with extracellular AI-2 matrix as input.
-- Calls Diffusion.m at every time step to update the extracellular AI-2 matrix.
-- At each timestep, logs the values of the parameters in each cell and the state of the extracellular AI-2 matrix. This data will be used later for analysis.
+At every time step, this section makes a call to each of the other sections of the model. Simulation uses Cellular Dynamics to update the concentration of each variable for all cells, then uses Diffusion to update the AI-2 concentration outside of each cell 
 
-**Cellular_Function.m**
-- Contains the system of 23 interdependent differential equations which define how each of the concentrations of molecules in the cell change from one timestep to another. Each differential equation corresponds to a parameter we have incorporated into our model.
+## Cellular Dynamics
 
-**Diffusion.m**
-- Defines how extracellular AI-2 moves from block to block through each time step
+This section of the model contains the system of 23 interdependent differential equations which define how each of the concentrations of molecules in the cell change from one timestep to another. Each differential equation corresponds to a variable we have incorporated into our model. The differential equations can be quickly edited to incorporate pSQS enhancement and response edits to the system. These equations can be found here. 
 
-**Analyze_Model.m**
-- Allows the user to produce graphs of the average and standard deviation of each parameter across all cells over time.
-- Allows user to produce a heat mat showing AI-2 diffusion and lsr activation of each cell with an interactive slider to observe changes over time
+## Diffusion
+
+This section of the model contains the equation for a numerical solution to finite element diffusion. It defines how extracellular AI-2 moves from block to block through each time step
 
 # Sensitivity Testing
-Engineering design cycle:
-Identify and demonstrate understanding of the problem
-- Gather data (and cite sources) and recognize unknowns and constraints
-- Select applicable guiding principles and theories
-- List assumptions, approximations and simplifications
-- Establish quantifiable measures of success
-- Show how the problem was solved
-- Validate the results
-- Communicate the solution
 
-After finishing the code for our model and populating the Diffusion.m and Cellular_Function.m files with our diffusion equation and cellular equations, respectively, we had a working model. However, when we ran the model using the parameter values we had found by searching through literature, we did not get the results or dynamics we expected. This divergence from previous work (Quan et al. 2016) and experimental data was expected, since some of the parameter values were only broad approximations or completely unknown. To determine the correct value (or order of magnitude for most cases) of the unknown or dubious parameters, we designed an iterative process of sensitivity testing, keeping the engineering design cycle in mind when planning and analyzing each round of tests.
+After finishing the code for our model and populating the Diffusion.m and Cellular_Function.m files with our diffusion equation and cellular equations, respectively, we had a working model. However, when we ran the model using the parameter values we found searching through literature, we did not get the correct results or dynamics. However, this divergence from previous work (Quan et al. 2016) and experimental data was expected, since some of the parameter values were only broad approximations or completely unknown. To determine the correct value (or correct order of magnitude for most cases) of the unknown parameters, we designed an iterative process of sensitivity testing, keeping the **engineering design cycle** in mind when planning and analyzing each round of tests, as exemplified with bolded text. 
 
-A sensitivity test is an analysis of how much impact a change in a parameter will have the results of a model. All of our tests were done without introducing any synthetic changes to the model. We optimized the model’s parameters using these “wild type” runs because expected results were available for them from previous work (Quan et al. 2016).For a description and graphic of the previous work we were trying to replicate, see see Section I of results.
+A sensitivity test is an analysis of how much impact changing a parameter will have on the results of a model. All of our tests were done without incorporating any synthetic changes into the model. We optimized the model’s parameters using these “wild type” runs because previous research provided expected results for them (Quan et al. 2016). For a description and graphic of the previous work we were trying to replicate, see Section I of results.
 
-For our first round of tests, we ran the model with the initial parameter values, studied the dynamics of the runs, and made hypotheses about which parameters would need to be changed, and how, to drive the dynamics of the system toward that of previous work (Quan et al. 2016). Once we identified the parameters we suspected most impacted the results, we designed a set tests to run.
+For our first round of tests, we ran the model with the initial parameter values, **studied the dynamics** of the runs, and **made hypotheses** about which parameters would need to be changed to drive the dynamics of the system toward that of previous work. Once we identified the parameters we suspected most impacted the results, we **developed a set of tests** to run, each of which changed only one or two variables so that we could attribute any changes in the dynamics to a single variable. 
 
-# Simulation & Results
-## Section I: Characterization 
-<h5>Characterization and Comparison of QS Response Topologies</h5>  
+For each subsequent round of sensitivity testing, we analyzed the results of the previous round and **compared it to the expected results**. If some parameter’s new value clearly brought the dynamics closer to what is expected, we made it the new default value for future tests. Then, we repeated the process of **designing tests** for new parameters, **analyzing the results** of these tests, **comparing them to previous research**, and **updating the default parameter values**. We repeated this iterative process of updating the model through sensitivity testing 10 times, until the **default values showed similar dynamics to that of previous research.** 
+
+This successful model of the wild type made it possible to simulate the effects of any possible combination of sQS edits to the system.
+
+# Simulations and Results
+
+## Section I: Characterization
+
+<h5>Characterization and Comparison of Quorum Sensing</h5>
 
 In a 2016 study by Quan et al, the molecular dynamics of quorum activation in the Lsr operon were modeled in a system of differential equations. The results of this model are depicted in Figure 2 and illustrate the qualitative dynamics of quorum activation with normalized concentration curves of extracellular AI-2, phosphorylated AI-2 (AI2-P) and the gene induction of the lsr operon (lsrACDBFG). 
 
@@ -204,6 +197,7 @@ While for the development of this model we were unable to obtain the code that p
 In the simulation shown in Figure 4, the dynamics of AI2-P and extracellular AI-2 are nearly identical to in Figure 3. However, the time of activation is shifted to 280 minutes, within 2% of the time Quan et al predicted. However, at this copy number, T7RPol overshoots a stable concentration and begins to fall around 350 min. In this way, the single copy pSQS test remains more consistent with predicted results. This change in topology as a result of pSQS copy number has important implications for the exploration of activation by Quorus because a delay in activation can correspond to a change in sensitivity of sQS to population density.
 
 ## Section II: Validation 
+
 <h5>Validation of Quorum-Sensitive Activation</h5>
 
 To validate that activation in our model relied on external AI-2 accumulation and cellular cooperativity, and not individual self-activation, we simulated QS dynamics in a single cell. The cells were placed in a small virtual medium with the bounds one unit from the edges of the cell. Two different boundary conditions (BC) for AI-2 diffusion in the medium were simulated in compared for this test. These two BC were designed to simulate the behavior of a cell in a group of other quorum sensing cells versus when isolated in an AI-2 deficient solution.
@@ -226,6 +220,7 @@ The steady-state, post-activation levels of AI2-P found at time greater than 400
 There is still noticeably a problem with the model. Though significantly less than in true quorum response, the cell in Isolation still produces protein at 30% of Group due to the accumulation of AI2-P. This indicates that while our Quorum Activation Model captures some of the cooperative behavior found in quorum sensing, some fraction of the observed quorum response will simply be due to the self-induction of a single cell. Potential causes of this problem and ways future iterations of this model can be improved to address it will be discussed in “Limitations and Future Work.”
 
 ## Section III: pSQS Copy Number
+
 <h5>Investigation of sQS Plasmid Copy Number and Leaky Expression</h5>
 
 When first designing our Synthetic Quorum Response plasmid, there was concern over the potential leaky expression if it were put in a mid to high copy backbone. In previous designs of plasmids similar to the sQS plasmid (pSQS), chiefly its predecessor pCT6, the backbone has been single copy to avoid AI-2 independent self-activation (Zargar). This reasoning arises from the logic that fewer pLsr binding sites, from less pCT6, mean a higher ratio of LsrR protein to its operator binding site and an overall more reliable OFF state. The justification for avoiding a higher copy number of pSQS is that it would cause activation to occur earlier and less cooperatively.
@@ -256,17 +251,18 @@ The key population characteristics we used as bases for comparison between combi
 	<figcaption>Figure 7: Mean GFP Accumulation per Cell at 600 minutes (in μM of GFP)</figcaption>
 </figure>
 
+Figure 7 above is a table that details the total GFP expression for different combinations of AI-2 regulating genes on the Enhancement System (ES) plasmid. The color of each block reflects its value versus the control system (None,None). The simulation suggests that **LuxS is the most beneficial to protein production**, as it more than doubles the expression of the empty Enhancement System (None and None). Combining LuxS and LsrK genes in the ES not only increases the rate of AI-2 production in the cytoplasm but increases the concentration of LsrK protein available to convert that AI-2 to AI2-P.
 
-Figure 7 above is a table that details the total GFP expression for different combinations of AI-2 regulating genes on the Enhancement System (ES) plasmid. The color of each block reflects its value versus the control system (None,None). The simulation suggests that LuxS is the most beneficial to protein production, as it more than doubles the expression of the empty Enhancement System (None and None). Combining LuxS and LsrK genes in the ES not only increases the rate of AI-2 production in the cytoplasm but increases the concentration of LsrK protein available to convert that AI-2 to AI2-P.
+A discrepancy between the model above and known experimental data is in the incorporation of LsrACDB. In Zargar et al (2016), incorporating LsrACDB improved overall induction levels of a system with pCT6 as its synthetic quorum response. What is consistent is that LsrK results in higher 
 
 <figure>
 	<img src="images/Modeling/Activation14.png" alt="Activation">
 	<figcaption>Figure 8: Standard Deviation of Peak Activation Among Cells (in μM of AI2-P)</figcaption>
 </figure>
 
-Figure 8 above is a table that details the peak standard deviation of activation. As in other parts of this project, activation is operationalized in the concentration of AI2-P, so the units of each block are micromolar of AI2-P in the cell. A red color shift in a block indicates the standard deviation increase from control. Green color shift indicates a decrease. **YdgG significantly decreases activation variance whenever present**. However, **LuxS significantly increases variance of activation**. As predicted in a study by Zargar et al. (2016), the **inclusion of LsrK decreases variance compared to unmodified quorum sensing**, though not as much as by the inclusion of YdgG.
+Figure 8 above is a table that details the peak standard deviation of activation. As in other parts of this project, activation is operationalized in the concentration of AI2-P, so the units of each block are micromolar of AI2-P in the cell. A red color shift in a block indicates the standard deviation increase from control. Green color shift indicates a decrease. **YdgG significantly decreases activation variance whenever present.** However, **LuxS significantly increases variance of activation**. As predicted in a study by Zargar et al. (2016), **the inclusion of LsrK decreases variance compared to unmodified quorum sensing**, though not as much as by the inclusion of YdgG.
 
-Comparing the results from Figures 7 and 8, and balancing the costs of low expression and activation heterogeneity, the **model suggests that LuxS and YdgG are the most effective combination to be incorporated into the Enhancement System**.
+Comparing the results from Figures 7 and 8, and balancing the costs of low expression and activation heterogeneity, **the model suggests that LuxS and YdgG are the most effective combination to be incorporated into the Enhancement System**
 
 However, another important aspect of the Enhancement System is the population density at which activation occurs. Manipulating how cells respond to different concentrations of extracellular AI-2 affects how they will respond to growth and AI-2 accumulation. As shown in Results, modifying the Enhancement System results in a shift of the timing, and population density, of initial quorum activation. As a result, the following table enumerates the time of activation relative to unmodified sQS response.
 
@@ -280,6 +276,7 @@ Orange block coloring corresponds to a negative change, where activation happens
 This exploration of the dynamics of the Quorus Enhancement System elucidate the dimensions of control that can be exerted over a quorum sensing population. In Figures 7 and 8, the factors directly related to manufacturing, mean and homogeneity of induction, are found to be manipulable by selecting certain pairs of genes from the Modular T7-Regulated Library of parts. Additionally, the sensitivity of quorum response can be modulated from the natural value by similar pairings, as shown in Figure 9.
 
 ## Section V: Experimental Validation
+
 <h5>Comparison to Experimental Results</h5>
 
 Our model of quorum-sensing based induction produced many predictions of experimental behavior. Figures 7 through 9 from Section IV contain  The strongest agreement between experimental results and our model predictions is in our predictions from Figure 8: Standard Deviation of Peak Activation Among Cells. Using our population model of an array of quorum sensing cells, we computed the variance of activation levels among the cells. These measures of activation variance, and consequently standard deviation, provided comparative predictions for how different Enhancement System variants might affect population activation distributions.
@@ -289,38 +286,38 @@ Our model of quorum-sensing based induction produced many predictions of experim
 	<figcaption>Figure 10: Activation Distributions of Enhancement System Variants</figcaption>
 </figure>
 
+The figure above depicts the population activation profile histograms for six variants of the induction system. The yellow bars indicate the division between GFP positive and GFP positive fluorescence readings. The y-axis is cell count and the x-axis is the FL1-H GFP level from flow cytometry. FL1-H GFP is the measure of cellular activation for this section. The sample for a given histogram was taken directly after quorum activation, indicated by a significant increase in the average FL1-H GFP level from the prior sample. Because these samples are taken directly post-activation, they can be related to the activation-characterizing results of Section IV.  In these results, the control condition in Figures 7-9 of (None, None) is represented by Figure 10a, which contains only pSQS and pT7-sfGFP-terminator.
+
+Based on the results of Section IV, specifically Figure 8, our model predicts that the incorporation of LuxS tends to significantly increase the spread of activation. The greatest predicted standard deviation of activation is approximately twice that of the control and occurs when LuxS and LsrK are put together. Analyzing the graphs above and estimating relative standard deviation as full-width-at-half-max (FWHM) while ignoring the lowest mode, it is apparent that experimental results agree with this prediction. Figure 10e, pSQS with LuxS and LsrK, not only corresponds to the population with the greatest spread of activation, but also the distribution with greatest number of uninduced cells (lowest bin has count of ~5000 cells). This not only suggests the introduction of more variance with the incorporation of LuxS, but the creation of a more bimodally or multimodally activated population. **In both experiment and model, activation variance is greatest when LuxS and LsrK are combined in the Enhancement System**. This agreement reinforces the predictive power of our model. 
+
+The tests in Figure 8 also predict that the variance brought about by LuxS can be counteracted and eliminated by the inclusion of YdgG. Figure 10f depicts the activation profile of this system. While the FWHM of this system is still larger than the control (Figure 10a) there is still a reduction of FWHM by the incorporation of YdgG compared to LuxS without YdgG in Figure 10e. From this we see that **the incorporation of YdgG is associated with reduced activation variance.**
+
+This method of analysis, using the FWHM of population activation histograms, is limited, as the resolution of the bins does not allow for quantitative comparison of the LuxS-excluding Figures 10a through 10d. While each of these figures depicts the same mean within the positively produced cells, there are differences among them that agree with computational predictions. According to the predictions of Section IV, LsrK (Figure 10b), YdgG (Figure 10c), and LsrK+YdgG (Figure 10d) trials should have lower levels of activation variance than the control (Figure 10a). While this prediction is not supported in the variance within the positively expressed cells, but there is a reduction in overall population variance and bimodality. The cell count in the lowest bin (~0% induction) is ~4250 for the control, but with the incorporation of LsrK and/or YdgG, the count of the lowest bin decreases to ~2000. This represents a significant reduction of both total population variance and bimodality. From this, we see that experimental and computational methods agree that **incorporating LsrK and/or YdgG is effective in decreasing variance in population activation and combating bimodal activation characteristics.**
+
 # Future Work
 
-# Additional Resources 
+Many of the physical and mathematical assumptions made in this model’s development limit its validity and predictive power. One such assumption is that there is no cellular growth in the system. Although QS activation puts a colony in steady state where the rate of growth is greatly reduced, both computational and experimental data indicate that there can be significant variance in this activation within a population. Because of this, certain portions of the population can maintain their rate of growth and change the proportional activation of the group over time. This concept is explored in our Growth and Heterogeneity(link) Model, which remains limited in its predictive ability as it remains highly conceptual. The incorporation of growth dynamics into the Quorum Activation Model would allow for it to bridge into the conceptual and predictive area explored by the Growth Model. The result of this would greatly expand the capability and applicability of the Quorum Activation Model by allowing it to capture the importance of variance reduction and bimodality elimination. It is possible that the thorough development of this extended model the predictive limitations of the Financial Model(link) could be improved by defining in greater detail the dynamics of QS autoinduction over the longer timescales characteristic of biomanufacturing.
+Another set of assumptions limiting the scope of the model relates to enzyme kinetics. The first of these is that the concentration of enzyme substrates are always significantly less than their respective Michaelis-Menten constant. The second is that the concentration of s-ribosylhomocysteine is constant, and the rate of AI-2 synthesis is linearly dependent on the concentration of LuxS. The limitations of these assumptions are evident in Figure 5 and Figure 7. In Figure 5, it is evident that there is quorum-independent activation of the cell in Isolation. This is likely from the substrate catalysis rate lacking the typical sigmoidal curve of Michaelis-Menten kinetics. In Figure 7, the GFP expression is likely overestimated by the model when LuxS is incorporated into the Enhancement System. This stems from the fact that, if s-ribosylhomocysteine where more realistically modeled as not being held constant, the rate of AI-2 production as LuxS concentration increases would appear more sigmoidal. This would put a ceiling on the synthesis rate on AI-2 and reduce the likelihood of unrealistic outcomes of simulations involving LuxS in the Enhancement System.
 
-<a href="http://2018.igem.org/wiki/images/2/2d/T--Virginia--2018_ModelingFiles.zip">Click here</a> to view our MATLAB code, sensitivity tests, and figures for final runs.  
+# Citations
 
-<a href="http://2018.igem.org/wiki/images/b/b3/T--Virginia--2018_Parameter_Table.pdf">Table of Parameters and Initial Values</a> 
+Herzberg M, Kaye I, Peti W, Wood T (2006) YdgG (TqsA) Controls Biofilm Formation in Escherichia coli K-12 through Autoinducer 2 Transport. J Bacteriol. 2006 Jan; 188(2): 587–598.
 
-<a href="http://2018.igem.org/wiki/images/8/8d/T--Virginia--2018_ODE.pdf">System of Equations for Cellular Quorum Sensing</a>
+G.-B. Stan. (2014). Modelling in Biology. [Online]. Available:
+http://www.bg.ic.ac.uk/research/g.stan/2010_Course_MiB_handouts.pdf
 
-# References
+Gonzalez J, Neshavan N (2006). Messing with Bacterial Quorum Sensing. Microbiology and Molecular Biology Reviews 70, 859-875.
 
-Herzberg M, Kaye I, Peti W, Wood T (2006) YdgG (TqsA) Controls Biofilm Formation in Escherichia coli K-12 through Autoinducer 2 Transport. J Bacteriol. 2006 Jan; 188(2): 587–598.         
+Graff, Steven. “A Mathematical Model to Study the Role of the Lsr Intergenic Region in Mediation of Autoinducer-2 Quorum Sensing in Escherichia Coli” University of Maryland, 2013.
 
-G.-B. Stan. (2014). Modelling in Biology. [Online]. Available: http://www.bg.ic.ac.uk/research/g.stan/2010_Course_MiB_handouts.pdf   
+Graff, Steven M., and William E. Bentley. “Mathematical Model of LsrR-Binding and Derepression in Escherichia Coli K12.” Journal of Bioinformatics and Computational Biology, vol. 15, no. 01, 2017, p. 1650039., doi:10.1142/s0219720016500396.
 
-Gonzalez J, Neshavan N (2006). Messing with Bacterial Quorum Sensing. Microbiology and Molecular Biology Reviews 70, 859-875.   
+Tropini, Carolina. Modeling Diffusion Equations... A Simple Tutorial. 2008, carolina.tropini.org/assets/files/Diffusion_Equation_Tutorial.pdf.
 
-Graff, Steven. “A Mathematical Model to Study the Role of the Lsr Intergenic Region in Mediation of Autoinducer-2 Quorum Sensing in Escherichia Coli” University of Maryland, 2013.     
+Tsao, C.-Y., Hooshangi, S., Wu, H.-C., Valdes, J. J., and Bentley, W. E. (2010) Autonomous induction of recombinant proteins by minimally rewiring native quorum sensing regulon of E. coli Metab. Eng. 12, 291– 297DOI: 10.1016/j.ymben.2010.01.002
 
-Graff, Steven M., and William E. Bentley. “Mathematical Model of LsrR-Binding and Derepression in Escherichia Coli K12.” Journal of Bioinformatics and Computational Biology, vol. 15, no. 01, 2017, p. 1650039., doi:10.1142/s0219720016500396.   
+Quan, D. N., Tsao, C.-Y., Wu, H. C., and Bentley, W. E. (2016) Quorum sensing desynchronization leads to bimodality and patterned
+behaviors. PLoS Comp. Biol., DOI: 10.137/journal/pcbi.1004781.
 
-Tropini, Carolina. Modeling Diffusion Equations... A Simple Tutorial. 2008, carolina.tropini.org/assets/files/Diffusion_Equation_Tutorial.pdf.   
-
-Tsao, C.-Y., Hooshangi, S., Wu, H.-C., Valdes, J. J., and Bentley, W. E. (2010) Autonomous induction of recombinant proteins by minimally rewiring native quorum sensing regulon of E. coli Metab. Eng. 12, 291– 297DOI: 10.1016/j.ymben.2010.01.002   
-
-Quan, D. N., Tsao, C.-Y., Wu, H. C., and Bentley, W. E. (2016) Quorum sensing desynchronization leads to bimodality and patterned behaviors. PLoS Comp. Biol., DOI: 10.137/journal/pcbi.1004781.    
-
-Zargar A, Quan D, Bentley W (2016)  Enhancing Intercellular Coordination: Rewiring Quorum Sensing Networks for Increased Protein Expression through Autonomous Induction. ACS Synth. Biol 2016, 5,  923-928.   
-
-
-
-
-
+Zargar A, Quan D, Bentley W (2016)  Enhancing Intercellular Coordination: Rewiring Quorum Sensing Networks for Increased Protein Expression through Autonomous Induction. ACS Synth. Biol 2016, 5,  923-928
 

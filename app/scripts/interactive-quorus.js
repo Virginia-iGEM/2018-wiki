@@ -1,25 +1,13 @@
-/**
- * @author Dylan Culfogienis
- * @email dtc9bb@virginia.edu
- * @date 9/17/2018
- * @file interactive.js
- * @brief Javascript for interactive cell simulation. Heavily inspired by
- * Luca Spardella's D3 Game of Life implementation.
- */
-
 var d3 = require('d3');
 
 var triggered = false;
 
 $(document).ajaxStop(function() {
-    if (!triggered && $('#petri-normal').length > 0) {
-        //var toolbarHeight = 64;
-        // Set interactive height to be equal to the width
-        $('#petri-normal').css('height', $('#petri-normal').css('width'));
+    if (!triggered && $('#petri-qurous').length > 0) {
 
         // GENERAL INITIALIZATION
         // Grab our <div> container
-        var container = d3.select('#petri-normal');
+        var container = d3.select('#petri-qurous');
         // Establish dimensions of simulation
         var dim = parseInt(container.style('width'));
         // Establish SVG drawing
@@ -179,7 +167,13 @@ $(document).ajaxStop(function() {
             if (nodes.length >= maxColonySize) {
                 node
                     //.transition(t)
-                    .style('stroke', function(d) {return d.color();})
+                    .style('stroke', function(d) {
+                        if(Math.random() < 0.9) {
+                            return '#33ffbe';}
+                           else {
+                               return '#fff';
+                           }
+                    })
                     .attr('stroke-width', 6);
             }
             simulation.nodes(nodes);
@@ -278,7 +272,7 @@ $(document).ajaxStop(function() {
 
         var initialGrowth = false;
         $('main').scroll(function() {
-            var offset = $('#first-card').offset().top - $('main').scrollTop();
+            var offset = $('#petri-qurous').offset().top - $('main').scrollTop();
             //console.log(offset);
             if (!initialGrowth && offset <= 0) {
                 initialGrowth = true;
@@ -290,4 +284,3 @@ $(document).ajaxStop(function() {
         triggered = true;
     }
 });
-

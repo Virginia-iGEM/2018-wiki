@@ -24,7 +24,7 @@
       <p>These are normal <em>Escherichia coli.</em> cells. Given nutrients and space, they will grow, producing various proteins.</p>
     </div>
     <div class="spacer" style="height: 10vh"></div>
-    <div class="petri">
+    <div class="petri" id="petri-normal">
     </div>
     <p>
       <strong>Strain:</strong> <span>Unmodified <em>E. coli</em></span>
@@ -77,7 +77,7 @@
     </div>
     <div class="sticky" tabIndex="-1">
       <div class="spacer" style="height: 10vh"></div>
-      <div class="petri">
+      <div class="petri" id="petri-constitutive">
       </div>
       <p>
         <strong>Strain:</strong> <span><em>E. coli</em> with constitutive expression</span>
@@ -127,7 +127,7 @@
     </div>
     <div class="sticky" tabIndex="-1">
       <div class="spacer" style="height: 10vh"></div>
-      <div class="petri">
+      <div class="petri" id="petri-inducible">
       </div>
       <p>
         <strong>Strain:</strong> <span>Inducible <em>E. coli</em></span>
@@ -187,7 +187,7 @@
     </div>
     <div class="sticky" tabIndex="-1">
       <div class="spacer" style="height: 10vh"></div>
-      <div class="petri">
+      <div class="petri" id="petri-qs">
       </div>
       <p>
         <strong>Strain:</strong> <span>Wild-type quorum sensing <em>E. coli</em></span>
@@ -239,24 +239,15 @@
 <article id="quorus-article">
   <section>
     <div class="card">
-      <h3>5.1 What is Quorus</h3>
       <p>Quorus is our system which combines the advantages of both inducible expression and quorum sensing - optimizing yield and activation rate without requiring an artificial inducer.</p>
       <p>As you can see, Quorus, once cells reach quorum, has an activation rate nearly as high as IPTG-based expression, and a similar growth rate. Save for the cells activating themselves, they're as good as inducible cells.</p>
-      <p>This was achieved by modifying the lsr operon, a universal quorum sensing operon used by many species.</p>
-      <br>
-      <p>To understand quorum sensing and Quorus in more details, see Design.</p>
-      <p>To see the ultimate outcome, see Results.</p>
-      <p>To see how we did it, check Experiments and Notebook</p>
-      <p>We've created very detailed population dynamics models that corroborate our data with a literature-derived expression model.</p>
-      <p>To see the parts we've created, check Parts</p>
-      <p>You can find all the things we learned and all the things we taught in Human Practices.</p>
-      <p>Meet the people that made it happen at Team.</p>
+      <p>To learn how it all works, scroll down.</p>
     </div>
   </section>
   <section class="scroll-action">
     <div class="sticky" tabIndex="-1">
       <div class="spacer" style="height: 10vh"></div>
-      <div class="petri">
+      <div class="petri" id="petri-qurous">
       </div>
       <p>
         <strong>Strain:</strong> <span>Quorus</span>
@@ -271,6 +262,53 @@
     </div>
     <div class="spacer" style="height: 50vh"></div>
   </section>
+</article>
+
+<article>
+<div class="row">
+  <div class="grid-selection">
+    <h2>Description</h2>
+    <p>Learn more about how Quorus works.</p>
+    <img src="/images/icons/writeups.svg" alt="Modular">
+    <a href="/Description.html" class="buttonoverview">Description</a>
+  </div>	
+  <div class="grid-selection">
+    <h2>Labwork</h2>
+    <p>See how we made it real.</p>
+    <img src="/images/icons/labwork.svg" alt="Modular">
+    <a href="/Overview_Labwork.html" class="buttonoverview">Labwork</a>
+  </div>
+  <div class="grid-selection">
+    <h2>Parts</h2>
+    <p>See our detailed population and cellular dynamics models.</p>
+    <img src="/images/icons/part_composite.svg" alt="Design">
+    <a href="/Parts.html" class="buttonoverview">Parts</a>
+  </div>	
+  <div class="grid-selection">
+    <h2>Model</h2>
+    <p>See our detailed population and cellular dynamics models.</p>
+    <img src="/images/icons/quorus.svg" alt="Design">
+    <a href="/Model.html" class="buttonoverview">Model</a>
+  </div>	
+  <div class="grid-selection">
+    <h4>Human Practices</h4>
+    <p>All the people we learned from and gave back to.</p>
+    <img src="/images/icons/hp.svg" alt="Design">
+    <a href="/Overview_HP.html" class="buttonoverview">Human Practices</a>
+  </div>	
+  <div class="grid-selection">
+    <h2>Team</h2>
+    <p>Meet the people that put it together.</p>
+    <img src="/images/icons/team.svg" alt="Design">
+    <a href="/Team.html" class="buttonoverview">Team</a>
+  </div>	
+  <div class="grid-selection">
+    <h2>Awards</h2>
+    <p>See our achievements!</p>
+    <img src="/images/icons/awards.svg" alt="Design">
+    <a href="/Awards.html" class="buttonoverview">Awards</a>
+  </div>	
+</div>
 </article>
 
 {{> footer}}

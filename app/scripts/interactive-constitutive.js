@@ -1,25 +1,13 @@
-/**
- * @author Dylan Culfogienis
- * @email dtc9bb@virginia.edu
- * @date 9/17/2018
- * @file interactive.js
- * @brief Javascript for interactive cell simulation. Heavily inspired by
- * Luca Spardella's D3 Game of Life implementation.
- */
-
 var d3 = require('d3');
 
 var triggered = false;
 
 $(document).ajaxStop(function() {
-    if (!triggered && $('#petri-normal').length > 0) {
-        //var toolbarHeight = 64;
-        // Set interactive height to be equal to the width
-        $('#petri-normal').css('height', $('#petri-normal').css('width'));
+    if (!triggered && $('#petri-constitutive').length > 0) {
 
         // GENERAL INITIALIZATION
         // Grab our <div> container
-        var container = d3.select('#petri-normal');
+        var container = d3.select('#petri-constitutive');
         // Establish dimensions of simulation
         var dim = parseInt(container.style('width'));
         // Establish SVG drawing
@@ -94,7 +82,7 @@ $(document).ajaxStop(function() {
             age: 1,
             angle: Math.random() * Math.PI * 2,
                 color: function() {
-                    return '#6e5eff';
+                    return '#33ffbe';
                 } 
             };}); // Start with just one cell
         };
@@ -278,16 +266,15 @@ $(document).ajaxStop(function() {
 
         var initialGrowth = false;
         $('main').scroll(function() {
-            var offset = $('#first-card').offset().top - $('main').scrollTop();
+            var offset = $('#petri-constitutive').offset().top - $('main').scrollTop();
             //console.log(offset);
             if (!initialGrowth && offset <= 0) {
                 initialGrowth = true;
-                initialState = simpleState;
-                growthTime = 1000;
+                initialState = constitutiveState;
+                growthTime = 3000;
                 resetMedium();
             }
         });
         triggered = true;
     }
 });
-

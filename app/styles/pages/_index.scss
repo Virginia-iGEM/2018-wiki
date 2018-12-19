@@ -58,7 +58,7 @@ main.landing-page {
     .sticky {
       position: sticky;
       overflow: hidden;
-      top: 2em;
+      top: -2em;
       z-index: -1;
       p {
         margin: 0em 0 !important;
