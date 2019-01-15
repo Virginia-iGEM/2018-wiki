@@ -33,7 +33,7 @@ $(document).ajaxStop(function() {
         // Global radius of grown cells in pixels
         var cellRadius = 14,
             // The colony size, after which, cells will stop replicating.
-            maxColonySize = 250,
+            maxColonySize = 150,
             // The effect of cell age on reproduction probability. To the power of this number.
             agePower = 1/2,
             // The effect of cell distance from center on reproduction probability. To the power of this number.

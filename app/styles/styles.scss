@@ -195,20 +195,36 @@ main {
 
       ul {
         list-style-type: circle;
-        margin: 2em 0 !important;
+        margin: 1em 0 !important;
         margin-left: 5em !important;
         li {
           line-height: 1.5em;
           margin: 0.5em 1em;
         }
+        ul {
+          margin: 0.2em !important;
+          margin-left: 2em !important;
+        }
+        ol {
+          margin: 0.2em !important;
+          margin-left: 2em !important;
+        }
       }
       ol {
         list-style-type: decimal;
-        margin: 2em 0 !important;
+        margin: 1em 0 !important;
         margin-left: 5em !important;
         li {
           line-height: 1.5em;
           margin: 0.5em 1em;
+        }
+        ol {
+          margin: 0.2em !important;
+          margin-left: 2em !important;
+        }
+        ul {
+          margin: 0.2em !important;
+          margin-left: 2em !important;
         }
       }
 

@@ -1,5 +1,9 @@
 # Quorum Activation Model
 
+## Files
+
+A zip file containing all of the Matlab code created for this model and figures can be found [here](http://2018.igem.org/wiki/images/1/18/T--Virginia--2018_Model.zip). Additionally, the GitHub repository containing the model can be found [here](https://github.com/Virginia-iGEM/2018-modeling). The repository has a more complete record of the model's history, but is also more complex as it was directly used for simulations on UVA's Rivanna HPC.
+
 ## Overview
 
 Information on the effects of genetic modifications on population and cellular scale quorum sensing responses was limited during project development, even after consulting experts and literature. To address this deficiency, we developed a model incorporating intracellular and intercellular quorum sensing (QS) dynamics which allowed for the testing of specific genetic and environmental changes on a quorum sensitive population of cells.  The goal of developing our model was to provide a foundation for simulating QS populations with synthetic quorum responses and recombinant genes for auto-inductive expression. A model of this kind has not been produced before, as previous models have not gone beyond the level of wild-type quorum dynamics.
